@@ -10,7 +10,7 @@ Benjamin McLean, Cha San Koh, Daniel Wiebensohn, Dominic Schirmer, Josepha Grewe
 
 ## Course Materials
 
-Sciebo folder: <https://uni-duesseldorf.sciebo.de/s/KPoKTwFd2jeXfFj>
+Sciebo folders: <https://uni-duesseldorf.sciebo.de/s/KPoKTwFd2jeXfFj>
 
 ## Time Schedule
 
