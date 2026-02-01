@@ -1,0 +1,1741 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Script_flat</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script async type="module">import mermaid from"https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs"</script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js" integrity="sha512-hpZ5pDCF2bRCweL5WoA0/N1elet1KYL5mx3LP555Eg/0ZguaHawxNvEjF6O3rufAChs16HVNhEc6blF/rZoowQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha512-sv0slik/5O0JIPdLBCR2A3XDg/1U3WuDEheZfI/DI5n8Yqc3h5kjrnr46FGBNiUAJF7rE4LHKwQ/SoSLRKAxEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script async src="https://cdn.jsdelivr.net/npm/lucide@0.115.0/dist/umd/lucide.min.js"></script>
+<script>window.addEventListener("load",(()=>{document.querySelectorAll(".callout").forEach((e=>{const t=getComputedStyle(e).getPropertyValue("--callout-icon"),l=t&&t.trim().replace(/^lucide-/,"");if(l){const t=e.querySelector(".callout-title");if(t){const e=document.createElement("div"),c=document.createElement("i");e.appendChild(c),c.setAttribute("icon-name",l),e.setAttribute("class","callout-icon"),t.insertBefore(e,t.firstChild)}}})),lucide.createIcons(),Array.from(document.querySelectorAll(".callout.is-collapsible")).forEach((e=>{e.querySelector(".callout-title").addEventListener("click",(t=>{e.classList.contains("is-collapsed")?e.classList.remove("is-collapsed"):e.classList.add("is-collapsed")}))}))}))</script>
+<script async src="https://fastly.jsdelivr.net/npm/force-graph@1.43.0/dist/force-graph.min.js"></script>
+<script async src="https://fastly.jsdelivr.net/npm/@alpinejs/persist@3.11.1/dist/cdn.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/alpinejs@3.11.1/dist/cdn.min.js" async></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-okaidia.min.css" integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ==" crossorigin="anonymous" referrerpolicy="no-referrer" async>
+<script src="https://fastly.jsdelivr.net/npm/whatwg-fetch@3.6.2/dist/fetch.umd.min.js" crossorigin="anonymous" referrerpolicy="no-referrer" async></script>
+<link href="/styles/digital-garden-base.css" rel="stylesheet">
+<link href="/styles/obsidian-base.css" rel="stylesheet">
+<link href="/styles/_theme.d92311c2.css" rel="stylesheet">
+<link href="/styles/custom-style.css" rel="stylesheet">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<style></style>
+</head>
+<body class="theme-dark markdown-preview-view markdown-rendered markdown-preview-section">
+<nav class="navbar">
+<div class="navbar-inner">
+<a href="/" style="text-decoration:none">
+<h1 style="margin:15px!important">Digital Garden</h1>
+</a>
+</div>
+</nav>
+<main class="content cm-s-obsidian">
+<header>
+<div class="header-meta">
+</div>
+</header>
+<h1 id="course-information" tabindex="-1">Course Information</h1>
+<h2 id="supervisors" tabindex="-1">Supervisors</h2>
+<p>Benjamin McLean, Cha San Koh, Daniel Wiebensohn, Dominic Schirmer, Josepha Grewer, Maria Evangelopoulou, Micail David Müller, Miriam Labusch</p>
+<h2 id="course-materials" tabindex="-1">Course Materials</h2>
+<p>Sciebo folder: <a href="https://uni-duesseldorf.sciebo.de/s/KPoKTwFd2jeXfFj" target="_blank" class="external-link">https://uni-duesseldorf.sciebo.de/s/KPoKTwFd2jeXfFj</a></p>
+<h2 id="time-schedule" tabindex="-1">Time Schedule</h2>
+<figure id="fig:schedule-part1" class="align-left" style="width:100%;float:left;margin-right:1em">
+<img src="figures/schedule_part1.webp" alt="Figure 1" style="width:100%">
+<figcaption>
+<strong>Figure 1.</strong>
+<strong>Time Schedule for the first two weeks of the course.</strong>
+</figcaption>
+</figure>
+<figure id="fig:schedule-part2" class="align-left" style="width:100%;float:left;margin-right:1em">
+<img src="figures/schedule_part2.webp" alt="Figure 2" style="width:100%">
+<figcaption>
+<strong>Figure 2.</strong>
+Time Schedule for the third week of the course like in <strong><span class="citation" data-cites="Fig:schedule-part1">@Fig:schedule-part1</span></strong>.
+</figcaption>
+</figure>
+<h2 id="notes" tabindex="-1">Notes</h2>
+<p><strong>Welcome to the course.</strong> We are looking forward to the next two weeks together with you and hope that you enjoy the course content.</p>
+<p><strong>Preparation</strong></p>
+<p>To understand and enjoy all parts of this practical course, it is required that you work through the script before you perform the experiments. The background section serves as a basis for understanding the individual experiments and will be complemented by our lecture series. Your preparations also allow you to read up on topics where you would like to know more, or that still seem confusing to you. Take the opportunity to ask as many questions as you would like during the course. All experiments provide ample room for discussion among students and between students and supervisors.</p>
+<p><strong>Protocol</strong></p>
+<p>Keep constant documentation of your work. You will need all the information for your protocol. The final protocol must include all experimental parts, and they must be introduced scientifically. The protocol must further comprise raw and analyzed results, which should be presented in a comprehensive format (e.g., Tables, Figures, Schemes, etc.) with clear labels. Each experiment requires a discussion of the results. When referencing other works, these must be clearly cited.</p>
+<p><strong>Information on protocols</strong></p>
+<p>Keep constant documentation of your work. You will need all the information for your protocol. The final protocol must include all experimental parts, and they must be introduced scientifically.</p>
+<p>The protocol of each part of the experiments should include the following sections:</p>
+<p><strong>1) Goal</strong></p>
+<p>3-10 sentences to describe what you would like to achieve with the experiments.</p>
+<p><strong>2) Method and materials</strong></p>
+<p>Describe suitable approaches you need to perform and reproduce the experiment; materials, including the plasmids, cell types, software, or provided datasets, etc. This part can be brief, as we have detailed lists in the script to which you can refer; however, the differences from the information and protocols outlined in the script must be mentioned.</p>
+<p><strong>3) Procedure and results</strong></p>
+<p>Description of how you have performed the experiments. This part cannot simply refer to the script, as you may modify some of the steps. The results part should show annotated, analyzed data such as labeled gels, plots of measurements including axis titles and error estimates, statistics information, representative images of microscopic data, etc. If any source or dataset was from someone or elsewhere, they should be clearly referenced.</p>
+<p><strong>4) Discussion and conclusion</strong></p>
+<p>The discussion and conclusion parts are based on your analyzed data. Did the result achieve your goals? What have I learned? What went wrong? What should be improved?</p>
+<p><strong>Scope</strong></p>
+<p>Limit the text of each experiment to 1–2 pages (depending on font size and formatting), excluding graphical elements and their captions.</p>
+<h1 id="background" tabindex="-1">Background</h1>
+<h2 id="protein-switches" tabindex="-1">Protein Switches</h2>
+<p>Proteins constitute a group of macro-biomolecules that provide cells with unique functions essential for life. Comprising one or several chains of amino acids, proteins adopt complex 3-dimensional shapes serving as scaffolds for their biological role. Within organisms, proteins act, for example, as biocatalysts involved in cell metabolism or homeostasis (e.g., replication of the genome, energy conversion, protein synthesis, signal propagation). Proteins further provide structure to cells and organisms, engage in intra- and extracellular communication (cell signaling cascades, hormones, receptors and ligands, transporters, etc.), or regulate each other (feedback loops, induction of events such as transcription, translation, polymerization, mobility, etc.). Due to the wide range of different biological functions inherent to natural proteins, they offer unique opportunities for engineering novel protein-based functions, for example, using synthetic biology-inspired approaches.</p>
+<h3 id="engineered-protein-switches-and-optogenetics" tabindex="-1">Engineered Protein Switches and Optogenetics</h3>
+<p>Inducible gene expression switches are an example of engineered protein switches. Chemically controlled molecular switches have played a central role in the fundamental study of life, and the emergence of synthetic biology. They have become routine tools in cell biology research and industry (<strong>Figure 3</strong>).</p>
+<figure id="fig:tetracycline-switch" class="align-left" style="width:50%;float:left;margin-right:1em">
+<img src="figures/tetracycline.webp" alt="Figure 3" style="width:100%">
+<figcaption>
+<strong>Figure 3.</strong>
+** Tetracycline-inducible gene expression switch based on an engineered protein switch, the reversed tetracycline transactivator (rtTA). The engineered “reversed” bacterial repressor protein rTetR binds to a cognate operator DNA sequence (Tet-response element, TRE) in the presence of the antibiotic tetracycline. rTetR is fused to a viral transactivator VP16 which induces gene expression from a minimal promoter (Pmin) upon DNA binding to induce transcription of a gene of interest (goi).
+</figcaption>
+</figure>
+<blockquote>
+<p><em>Note: the natural bacterial tetracycline repressor protein TetR acts as a repressor of transcription in gram-negative bacteria and releases DNA in the presence of tetracycline to induce the expression of resistance genes (TetR, the repressor; and TetA, the protein that pumps antibiotic tetracycline extracellularly).</em></p>
+</blockquote>
+<p>However, drawbacks inherent to small molecules like tetracycline, such as difficulties in removing the inducer and diffusion-based transport, have prevented rapid reversibility and spatially-resolved activation. In contrast, light offers unprecedented spatial and temporal resolution. Consequently, the development of light-controlled devices is highly desirable and has recently received much attention, resulting in a variety of different light-controlled tools in bacteria and yeast as well as in mammalian cells. These control diverse cellular activities, including gene expression.</p>
+<p>The first light-controlled molecular tools were constructed by introducing photo-cleavable inhibiting chemical groups into inducers, nucleic acids, and transactivators that could be cleaved off in response to UVB light. However, a significant disadvantage of this method is the need to exogenously apply the caged molecules or to reprogram the translation machinery for the incorporation of non-natural amino acids. This disadvantage has been overcome by the optogenetic approach that combines optical and genetic methods to develop light-responsive tools. The first breakthrough in mammalian optogenetics was the discovery of microbial opsins and their subsequent introduction in neuroscience, which revolutionized the study of neuronal networks. Channelrhodopsin, the first opsin that was applied in mammalian neurons, becomes permeable to cations upon blue light illumination, thus triggering neuronal activation. Later, channelrhodopsin was complemented by other ionotropic receptors, including the orange light-responsive, chloride pump halorhodopsin, which made it possible to use dual‑wavelength control to excite or inhibit neurons with subcellular resolution, even in intact brain tissue and in moving animals. Moving beyond neuroscience, more recent optogenetic tools have been engineered to control diverse signaling processes on the protein level in mammalian cells, including gene expression and protein stability, subcellular localization of proteins, receptor and kinase activity, organelle movement, etc. To this end, photoreceptors from all kingdoms of life that naturally sense environmental light information by responding to light of distinct regions of the light spectrum have been employed as engineering scaffolds based on modulating protein-protein interactions, or protein conformation in response to light stimulation (Müller et al., 2015). <strong>Figure 2</strong> illustrates two photoreceptors that are frequently employed in optogenetic protein engineering approaches.</p>
+<figure id="fig:photoswitchable-domains" class="align-left" style="width:100%;float:left;margin-right:1em">
+<img src="figures/photoswitches.webp" alt="Figure 4" style="width:100%">
+<figcaption>
+<strong>Figure 4.</strong>
+** Photoswitchable domains frequently used for optogenetic engineering.
+<strong>A)</strong> <em>A. thaliana</em> Phytochrome B (PhyB) photoreceptor. Red light (R) induces a conformational change in PhyB via a bound linear billin chromophore (not shown), allowing it to heterodimerize with Phytochrome-Interacting-Factor 6 (PIF6). Far-red light (FR) induces the dissociation of the PhyB/PIF6 complex.
+<strong>B)</strong> Light-Oxygen-Voltage LOV2 domain of <em>Avena sativa</em> phototropin 1 uses a flavin mononucleotide (FMN, not illustrated) to sense blue light. Photoexcitation leads to relaxation of helix Jα, which rewinds in darkness. <em>As</em>LOV2 is often used either to cage peptides in the dark state (top), or when inserted into other proteins, to induce structural remodeling upon light treatment which influences the function of the target protein.
+</figcaption>
+</figure>
+<h3 id="protein-splicing" tabindex="-1">Protein Splicing</h3>
+<p>Protein splicing is a natural phenomenon catalyzed by autocatalytic protein domains called inteins (internal proteins). Inteins reside within other proteins, usually close to the active site of proteins, which are essential for the fitness of a given organism. After translation, inteins autocatalytically excise themselves from the precursor protein and covalently ligate the flanking protein sequences (exteins) with a regular peptide bond, a process called protein <em>cis</em>-splicing, thereby functionally reconstituting the sequence of the host proteins (<strong>Figure 5</strong>A).</p>
+<figure id="fig:protein-splicing" class="align-left" style="width:100%;float:left;margin-right:1em">
+<img src="figures/inteins.webp" alt="Figure 5" style="width:100%">
+<figcaption>
+<strong>Figure 5.</strong>
+** Protein splicing in cis and trans. <strong>A)</strong> After protein synthesis, protein cis-splicing leads to the self-catalyzed excision of an intein from a precursor protein and the covalent ligation of the flanking extein sequences. <strong>B)</strong> In protein trans-splicing, the association of split intein fragments (IntN and IntC) initiates reconstitution of the intein and triggers protein splicing in trans, leading to the ligation of individual polypeptides.
+</figcaption>
+</figure>
+<p>Little is known about the biological relevance of inteins and therefore, they are mainly seen as selfish genetic elements capable of inserting into protein-encoding genes. Because inteins tend to insert into genes encoding essential proteins with a high degree of conservation, they may be maintained within populations as long as they sufficiently catalyze their self-removal, thereby escaping genetic drifts. However, it seems plausible that some inteins might act as environmental sensors and regulate the activity of their host proteins accordingly (e.g., reduce the growth rate under stress conditions). From genome-mining approaches, split inteins have been identified which can ligate individual polypeptides upon fragment complementation of a N- and C-intein fragment (Int<sub>N</sub> and Int<sub>C</sub>) in a protein trans-splicing reaction (<strong>Figure 5</strong>B). Additionally, one can often engineer <em>cis</em>-splicing into <em>trans</em>-splicing inteins. Protein <em>cis</em>-splicing gave rise to a variety of applications as it allows covalently ligating protein sequences in a solvent-free medium (<em>in vivo</em> or <em>in vitro</em>) without the requirement of additional cofactors and energy sources. Protein splicing of class 1 inteins, representing the most frequently-found examples, occurs in 4 concerted steps, involving the first intein residue (Cys 1 or Ser 1), the first residue of the C‑terminal extein (Cys/Ser/Thr +1), and the last intein residue (typically Asn) (<strong>Figure 4</strong>).</p>
+<figure id="fig:splicing-mechanism" class="align-left" style="width:70%;float:left;margin-right:1em">
+<img src="figures/intein_mechanism.webp" alt="Figure 6" style="width:100%">
+<figcaption>
+<strong>Figure 6.</strong>
+** Conventional protein splicing mechanism of class 1 inteins. Step 1: N-S acyl shift of the Cys 1 (in some cases Ser 1) and the N-terminal extein to form a linear thioester. Step 2: Trans-esterification of Cys +1 (in some cases Ser/Thr +1) to a branched intermediate where the N- and C-exteins are already covalently connected and the intein is still attached. Step 3: Asn cyclization into a succinimide, thereby releasing the intein. Step 4: Spontaneous O-N shift rearrangement into the energetically-favorable peptide bond (not intein-catalyzed). Figure modified from Friedel <em>et al.</em>, 2019.
+</figcaption>
+</figure>
+<p>Split inteins in particular found a wide range of applications including their use for protein labeling, protein semi-synthesis, protein purification, protein cyclization, or for engineering protein logic gates. <strong>Figure 7</strong> summarizes some recent examples of developments utilizing split intein technologies (Friedel <em>et al</em>., 2019).</p>
+<figure id="fig:split-intein-apps" class="align-left" style="width:100%;float:left;margin-right:1em">
+<img src="figures/inteins_applications.webp" alt="Figure 7" style="width:100%">
+<figcaption>
+<strong>Figure 7.</strong>
+** Applications of split intein technologies. <strong>Bi-specific antibodies</strong> ligated in vitro using split inteins and individual Fab fragments. <strong>Biosensors</strong> to detect caspases. <em>In vivo</em> cyclization of the fluorescent protein mNeonGreen2 abolishes fluorescence. Cleavage of the engineered DEVD sequence by caspases releases the cyclic tension, resulting in fluorescence. <strong>Gene therapy</strong> facilitated by individual packaging of two split CRISPR Cas9 enzyme fragments into adeno associated viral vectors (AAVs), thereby respecting the viral packaging capacity. Intein trans splicing reconstitutes the Cas9 enzyme upon co-infection of a target cell with both vectors.
+</figcaption>
+</figure>
+<h2 id="aqua-cloning" tabindex="-1">AQUA Cloning</h2>
+<p>The implementation of synthetic biology approaches, for example to the study of cell signaling, demands a wide variety of constructs, including complex combinations of synthetic protein modules, promoters, reporters, etc. The cloning of numerous constructs is time and cost demanding, therefore novel cloning approaches are necessary to simplify the engineering process. One of such methods is AQUA Cloning (<strong>Figure aqua-cloning</strong>). During the practical part you will be introduced into this technique: Multiple DNA fragments sharing 20-60 bp overlap can easily be assembled into vectors in <em>E. coli</em> cells, based on <em>in vivo</em> recombination, omitting the need for enzymes commonly mediating the DNA cloning reaction in a test tube. In the practical course you will use a polymerase chain reaction (PCR) and AQUA Cloning as well as conventional restriction and ligation cloning to construct bacterial vectors encoding a split intein-based protein logic gate for an experiment in the following week. At the same time, you will engineer suitable control vectors. The resulting vectors will be analyzed using analytical restriction enzyme digestion and agarose gel electrophoresis, followed by Sanger sequencing.</p>
+<p><strong>[FIGURE 6 PLACEHOLDER]</strong></p>
+<p><em>Insert: AQUA Cloning workflow diagram (PDF, panels a+b)</em></p>
+<p id="fig:aqua-cloning"><strong>Figure 6: AQUA Cloning.</strong> Advanced quick assembly cloning is a simple yet versatile cloning method (Beyer et al., 2015). (<strong>a</strong>) DNA parts are produced by PCR, or restriction digest (or both). Oligonucleotides are designed to contribute flanking homologous regions to adjacent DNA fragments of optimally 32 bp in length. DNA parts are assembled into a circular plasmid by sequence-determined directionality <em>in vivo</em> by <em>E. coli</em>. (<strong>b</strong>) AQUA Cloning work-flow. (1) DNA parts are generated by PCR amplification, or derive from an enzymatic digestion. (2) Next, DNA parts are purified by gel-electrophoresis and (3) mixed and simply incubated in water prior to transformation into chemically competent <em>E. coli</em> Top10 cells for <em>in vivo</em> assembly. (4) Finally, the obtained colonies are confirmed for correct assembly by standard methods such as analytical PCR, restriction digest, and/or comprehensive sequencing.</p>
+<h2 id="transfection-of-mammalian-cells" tabindex="-1">Transfection of Mammalian Cells</h2>
+<p>The process of introducing nucleic acids into mammalian cells by non-viral methods is defined as transfection. By using various chemicals, lipid-based or physical methods, this gene transfer technology is a powerful tool to study gene function and protein expression in the context of a cell. Basically, transfection is a method that overcomes the challenge of introducing molecules with a negative charge (e.g. the phosphate backbone of DNA) into cells with a negatively charged membrane.</p>
+<p>Ions like calcium or cationic lipid-based reagents coat the DNA, thus creating an overall positive charge that facilitates uptake of the DNA-transfection reagent complex across the cell membrane (<strong>Figure transfection-mechanism</strong>).</p>
+<p>In the practical course polyethylenimine (PEI) will be employed to exemplify transfection using chemical reagents.</p>
+<p>PEI is a poly-cationic polymer that is mixed with the DNA in a ratio that ensures the formation of complexes that carry a net positive charge. These cationic complexes interact with the negatively charged cell-surface and are taken up by endocytosis. Inside the endosome, PEI acts as a proton sponge, preventing acidification that is required for the activity of endosomal nucleases (<strong>Figure 8</strong>).</p>
+<figure id="fig:pei-transfection" class="align-left" style="width:100%;float:left;margin-right:1em">
+<img src="figures/transfection_pei.webp" alt="Figure 8" style="width:100%">
+<figcaption>
+<strong>Figure 8.</strong>
+** Polyethyleneimine (PEI)-mediated transfection of mammalian cells.
+<strong>(a)</strong> Chemical structure <strong>(b)</strong> Mechanism of PEI-mediated transfection. The positively charged PEI:DNA complexes are taken up by endocytosis. Inside the endosome PEI prevents acidification, which eventually leads to rupture of the endosome and liberation of the DNA into the cytoplasm.
+</figcaption>
+</figure>
+<h2 id="genome-engineering-of-mammalian-cells" tabindex="-1">Genome Engineering of Mammalian Cells</h2>
+<p>Upon transfection into mammalian cells, nucleic acids can contribute to the genetic programming and instruct cells to execute or alter particular activities. Commonly, either RNA- or DNA-molecules are employed, which in most cases perform their biological function in the cytoplasm and nucleus, respectively. Current RNA-based Covid-19 vaccines, for example, rely on mRNA which upon cell uptake, undergoes ribosomal translation into fragments of the viral spike protein in the cytosol. For the production of biopharmaceuticals and research purposes in cell lines, DNA plasmids are commonly used, which require nuclear entry in order to reach the cell compartment where RNA transcription takes place (<strong>Figure 9</strong>).</p>
+<figure id="fig:mammalian-plasmid" class="align-left" style="width:70%;float:left;margin-right:1em">
+<img src="figures/mammalian_cell_plasmid.webp" alt="Figure 9" style="width:100%">
+<figcaption>
+<strong>Figure 9.</strong>
+** Example of a mammalian cell plasmid including mammalian cell-specific, as well as bacterial features.
+</figcaption>
+</figure>
+<p>Both examples lead to a transient activity of the transfected genetic material. However, over time, the RNA/DNA will be cleared, usually within a time frame of a few days. In rare cases, transfected DNA can integrate at random positions into the cell genome (roughly in 1 out of 1.000 transfected cells, strongly depending on the cell, construct, and the exact experimental conditions). By using additional eukaryotic antibiotic resistance genes encoded on the transfected plasmid, one can positively select for these cells. During the past years, several methods have been developed that facilitate the targeted integration of genetic material into mammalian cells or the specific alteration of the cellular genomes. During the theoretical parts of the course, you will have the possibility to familiarize yourself with some examples spanning this topic. Methods to integrate genetic information into cell genomes for example rely on (i) the above-mentioned random DNA integration, (ii) viral gene vehicles, e.g. using lentiviral systems harboring reverse transcriptases and integrases, (iii) homologous recombination-based techniques including the use of recombinases or designer endonucleases and homology templates containing the desired genetic information, or (iv) transposase-technologies originating from transposons (“jumping genes”) which excise and integrate genetic information. Table <strong>Table 1</strong> summarizes particular properties of these four groups.</p>
+<p>Experiment II of this practical course will introduce you to a blue light-sensitive optogenetic gene expression system. Here, you will use mammalian cells that have genomic integrations for the required optogenetic switches and the target gene, which will be expressed upon stimulation with light. These cells were generated using the Sleeping Beauty SB100X transposase, as explained in <strong>Figure 10</strong>. “Sleeping Beauty” refers to a transposase that was originally identified as an inactive enzyme in salmonid fish. Targeted mutagenesis, however, restored the activity after a long evolutionary sleep, and rounds of directed evolution finally yielded a hyperactive transposase enzyme, which is nowadays widely used for genome engineering purposes (Mátés et al., 2009).</p>
+<figure id="fig:sleeping-beauty" class="align-left" style="width:80%;float:left;margin-right:1em">
+<img src="figures/transposases.webp" alt="Figure 10" style="width:100%">
+<figcaption>
+<strong>Figure 10.</strong>
+** Mode of function of SB100X Sleeping Beauty-catalyzed transposition. Cotransfection of plasmids (i) containing a genetic cargo which is flanked by inverted terminal repeats (ITRs), and (ii) a transiently-expressed SB100X transposase gene leads to transposition of the cargo into the cell genome. SB100X excises the genetic cargo from the plasmid and integrates it at random positions (TA sites) into the host genome. Abbreviations: GOI, gene of interest; P, promoter; Res, resistance gene.
+</figcaption>
+</figure>
+<figure id="tbl:integration-methods" class="align-left" style="width:100%;float:left;margin-right:1em">
+<figcaption>
+<strong>Table 1.</strong>
+Properties of the discussed genomic integration method groups.
+</figcaption>
+<table>
+<thead>
+<tr>
+<th>Technology</th>
+<th>Advantages</th>
+<th>Drawbacks</th>
+<th>Additional Info</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Random integration</td>
+<td>No additional components required other than selection.</td>
+<td>Very inefficient. Random integration sites.</td>
+<td></td>
+</tr>
+<tr>
+<td>Lentiviral delivery</td>
+<td>Highly efficient, <em>in vitro</em> and <em>in vivo</em>
+applications possible.</td>
+<td>Complex protocol including viral particle generation, eventually S2 biosafety level. Random integration sites. Size limited by viral packaging capacity.</td>
+<td>Multiple insertions likely.</td>
+</tr>
+<tr>
+<td>Recombination-based integration</td>
+<td>Targeted</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Transposase-based integration</td>
+<td>As efficient as lentiviral systems but under S1 biosafety level. No size limitation of transposed genes.</td>
+<td>Random integration.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</figure>
+<h2 id="mammalian-cell-lines-used-in-this-course" tabindex="-1">Mammalian Cell Lines Used in This Course</h2>
+<figure id="tbl:cell-lines" class="align-left" style="width:100%;float:left;margin-right:1em">
+<figcaption>
+<strong>Table 2.</strong>
+Mammalian cell-lines (Descriptions from Deutsche Sammlung von Mikroorganismen und Zellkultur GmbH (DSMZ) and the American type culture collection (ATCC)).
+</figcaption>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Cultivation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CHO-K1</td>
+<td>Subclone from parental CHO cell line that was initiated from an ovary biopsy of an adult Chinese hamster in 1957.</td>
+<td>90% Ham’s F12 + 10% h.i. FBS</td>
+</tr>
+<tr>
+<td>HeLa</td>
+<td>Human cervix carcinoma cells.<br><br>Established from the epitheloid cervix carcinoma of a 31-year-old woman in 1951; later diagnosis changed to adenocarcinoma</td>
+<td>DMEM medium, completed with 10% FCS and 1 % Penicillin/Streptomycin</td>
+</tr>
+</tbody>
+</table>
+</figure>
+<h1 id="practical-part" tabindex="-1">Practical Part</h1>
+<h2 id="experiment-i-molecular-cloning-of-bacterial-inducible-plasmids" tabindex="-1">Experiment I: Molecular Cloning of Bacterial Inducible Plasmids</h2>
+<p><strong>Supervisors:</strong> Alexander Geidies, Cha San Koh, Maria Medar, Sara Shumka, Daniel Wiebensohn</p>
+<p><a href="mailto:alexander.geidies@hhu.de" target="_blank" class="external-link">alexander.geidies@hhu.de</a>, <a href="mailto:koh@hhu.de" target="_blank" class="external-link">koh@hhu.de</a>, <a href="mailto:marija.medar@hhu.de" target="_blank" class="external-link">marija.medar@hhu.de</a>, <a href="mailto:sara.shumka@uni-duesseldorf.de" target="_blank" class="external-link">sara.shumka@uni-duesseldorf.de</a>, <a href="mailto:daniel.wiebensohn@uni-duesseldorf.de" target="_blank" class="external-link">daniel.wiebensohn@uni-duesseldorf.de</a></p>
+<p>Constructing recombinant genes within plasmids facilitates their recovery, genetic engineering <em>ex-vivo</em>, and shuttling into different desired strains or hosts. Recombinant DNA technologies represent the foundation for generating constitutive or inducible expression systems for the study of heterologous genes in different systems of interest.</p>
+<p>In this first experimental part, we will design the required vectors for Experiment III, the design of protein logic gates based on protein <em>trans</em>-splicing in bacteria. For this purpose, we will use two different molecular DNA cloning techniques:</p>
+<p>A. Restriction and ligation cloning. This technique relies on the presence of restriction enzyme (dE) recognition sites flanking the desired insert and as well as at the desired positions in the recipient plasmid. The REs will then generate double DNA cuts leaving cohesive or blunt ends in both DNA sequences, in two independent reactions. Afterwards, we will purify the digested fragments and ligate them together using an enzyme called T4 DNA ligase, before transformation into chemically competent <em>E. coli</em> TOP10 bacteria for subsequent amplification and selection. T4 DNA ligase will conduct the repair of the broken DNA by forming a phosphodiester bond between a nearby 5’‑phosphate and 3’-OH ends resulting in the assembly of the desired new vector (<strong>Figure 10</strong>).</p>
+<p>B. Advanced Quick Assembly (AQUA) Cloning. In contrast to conventional restriction/ligation cloning, this technique allows us to design a vector independently of the presence of suitable RE sites or the use of DNA restriction enzymes and ligases. This versatile and inexpensive technique relies on <em>in-vivo</em> DNA recombination within <em>E. coli</em> and therefore, requires DNA fragments that share an overlapping region of 20-60 bp at the junction sites. The homology region can for example be generated by PCR using appropriate primers that add these sequences to the products (<strong>Figure 10</strong>). AQUA Cloning can also be used to clone multiple DNA fragments simultaneously, reminiscent to other “DNA assembly cloning” methods. Additionally, a combination of restriction of the backbone and PCR amplification of the insert (as we will see in our exercise) can be used.</p>
+<p>Each group will perform one ligation and one AQUA cloning experiment from one of the four plasmids:</p>
+<ul>
+<li>Groups 1 and 2: pDD259.</li>
+<li>Groups 3 and 4: pDD260.</li>
+<li>Groups 5 and 6: pDD261.</li>
+<li>Groups 7 and 8: pDD262.</li>
+</ul>
+<p>As outlined in <strong>Figure 10</strong>, we will first perform a PCR reaction to amplify: a. The gene encoding the fluorescent protein mCherry interrupted by the full-length <em>Npu</em>DnaE intein gene (Int); b. The mCherry gene was disrupted by a mutated (non-functional) version of the intein; c. A DNA fragment encoding an N-terminal portion of mCherry (mChN) fused to an N-terminal split-fragment of the intein (IntN); and d. a DNA fragment encoding a C-terminal portion of mCherry (mChC) fused to a C-terminal split-fragment of the intein (IntC). The destination vectors will be digested overnight with the annotated restriction enzymes to generate the so-called vector “backbones” (this step will be performed by the supervisors in advance).</p>
+<p>After gel purification of the PCR products, we will need to digest the PCR product with the same enzymes as the destination vectors in order to clone the genes via ligation cloning. We will then prepare a pre-mix with a 3:1 ratio of the corresponding fragments (insert:backbone). For the restriction/ligation protocol, remember to add T4 DNA ligase and the corresponding buffer! After ligation, the DNA mixtures will be transformed into competent Top10 <em>E. coli</em> cells and plated on LB agar plates containing the appropriate antibiotics for selection of transformed cells.</p>
+<p>The engineered vectors will be purified and analyzed using analytical restriction enzyme digestion and agarose gel electrophoresis. We encourage you to consider beforehand which enzymes we could use to differentiate the restriction pattern expected for the original plasmids and that resulting from the digestion of the engineered vectors.</p>
+<p>Finally, we will select some promising samples and analyze them by Sanger sequencing.</p>
+<figure id="fig:cloning-strategy" class="align-left" style="width:80%;float:left;margin-right:1em">
+<img src="figures/cloning_strategies.webp" alt="Figure 11" style="width:100%">
+<figcaption>
+<strong>Figure 11.</strong>
+** Illustration of the cloning strategy. Top, schematic representation of the cloned vectors. Bottom, pRSFDuet-1 plasmid (KanR) digested with
+<em>Bam</em>HI and <em>Kpn</em>I serves as backbone for cloning plasmids pDD259/262 and 260. The inserts for these constructs are the amplification products of pDD002 and pDD083 with the primers oDD561 and oDD562; or the PCR product of pDD002 with oDD561 and oDD563, respectively.
+</figcaption>
+</figure>
+<p>A third insert amplified from pDD002 with the primer oDD564 and oDD565 will be cloned into pHBBAD090 backbone, previously digested with <em>Nde</em>I and <em>Hin</em>dIII, to obtain pDD261. The primers were designed so that the PCR products possess the required homology regions to the digested vector backbones for AQUA Cloning. Alternatively, the PCR products can be digested using the indicated enzymes for ligation cloning. Both approaches result in the same final vectors.The * symbol represents the location of the C1A mutation in the pDD262.</p>
+<h3 id="materials" tabindex="-1">Materials</h3>
+<figure id="tbl:materials-exp1" class="align-center" style="width:fontsize;display:block;margin-left:auto;margin-right:auto">
+<figcaption>
+<strong>Table 3.</strong>
+Materials used in Experiment I.
+</figcaption>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Item</th>
+<th>Composition</th>
+<th>Conc.</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Plasmids</strong></td>
+<td>pRSFDuet-1</td>
+<td>PT7-H6-MCS-term (KanR)</td>
+<td></td>
+<td>Digested backbone</td>
+</tr>
+<tr>
+<td></td>
+<td>pDD002</td>
+<td>PSV40-mCherryN-Int-mCherryC-pA (AmpR)</td>
+<td></td>
+<td>PCR template</td>
+</tr>
+<tr>
+<td></td>
+<td>pHBBAD090</td>
+<td>PBAD-Insert-term (AmpR)</td>
+<td></td>
+<td>Digested backbone</td>
+</tr>
+<tr>
+<td></td>
+<td>pDD083</td>
+<td>PSV40-mCherryN-Int(C1A)-mCherryC-pA (AmpR)</td>
+<td></td>
+<td>PCR template</td>
+</tr>
+<tr>
+<td><strong>Primers</strong></td>
+<td>oDD561</td>
+<td>5’-AGCAGCCATCACCATCATCACCACAGCCAG-GATCCGGTGAGCAAGGGCGAGGAG</td>
+<td>25 µM</td>
+<td>mCh F <em>Bam</em>HI duet</td>
+</tr>
+<tr>
+<td></td>
+<td>oDD562</td>
+<td>5’-GCAGCAGCGGTTTCTTTACCAGACTCGAGGG-TACCTTACTTGTACAGCTCGTCCATGC</td>
+<td>25 µM</td>
+<td>mCh R <em>Kpn</em>I duet</td>
+</tr>
+<tr>
+<td></td>
+<td>oDD563</td>
+<td>5’-GCAGCAGCGGTTTCTTTACCAGACTCGAGGG-TACCTTAATTCGGCAAATTATCAACCCGC</td>
+<td>25 µM</td>
+<td>NpuEN R <em>Kpn</em>I duet</td>
+</tr>
+<tr>
+<td></td>
+<td>oDD564</td>
+<td>5’-TGTTTAACTTTAAGAAGGAGATATACATATG-ATCAAATAGCCACACGTAAATATTTAGG</td>
+<td>25 µM</td>
+<td>NpuE_C F <em>Nde</em>I bad</td>
+</tr>
+<tr>
+<td></td>
+<td>oDD565</td>
+<td>5’-AAAATCTTCTCTCATCCGCCAAAACAGCCA-AGCTTACTTGTACAGCTCGTCCATGC</td>
+<td>25 µM</td>
+<td>mCh R <em>Hind</em>III bad</td>
+</tr>
+<tr>
+<td><strong>PCR reaction</strong></td>
+<td>Q5® High-Fidelity DNA polymerase (NEB)</td>
+<td></td>
+<td>2,000 U/mL</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Q5 Reaction buffer (5x)</td>
+<td>2 mM MgCl<span class="math inline"><sub>2</sub></span></td>
+<td>5X</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>dNTPs</td>
+<td>dATP, dCTP, dGTP and dTTP</td>
+<td>10 mM each</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Digestion reaction</strong></td>
+<td>Cutsmart (10x) (NEB)</td>
+<td>50 mM potassium acetate, 20 mM Tris-acetate, 10 mM magnesium acetate, 100 μg/mL BSA</td>
+<td>10X</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Restriction enzymes (NEB)</td>
+<td>selected during the course</td>
+<td>3,333 U/mL</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Gel electrophoresis</strong></td>
+<td>Agarose</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>TE Buffer</td>
+<td>10 mM Tris-Cl pH 7.5, 1 mM EDTA</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Gelred</td>
+<td></td>
+<td></td>
+<td>Intercalation agent</td>
+</tr>
+<tr>
+<td></td>
+<td>Loading buffer</td>
+<td>50% Glycerol, 100 mM Na<span class="math inline"><sub>2</sub></span>EDTA, pH 8.0, 1% SDS, 0.1% Bromophenol Blue, 0.1% Xylene Cyanol</td>
+<td>6X</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>1 Kb DNA ladder</td>
+<td></td>
+<td></td>
+<td>Ladder for 100 bp up to 10 kb</td>
+</tr>
+<tr>
+<td><strong>M.-Nagel Gel extraction</strong></td>
+<td>NT1 Buffer</td>
+<td></td>
+<td></td>
+<td>Binding buffer</td>
+</tr>
+<tr>
+<td></td>
+<td>NT3 Buffer</td>
+<td></td>
+<td></td>
+<td>Wash buffer</td>
+</tr>
+<tr>
+<td></td>
+<td>M&amp;N spin columns</td>
+<td></td>
+<td></td>
+<td>DNA binding</td>
+</tr>
+<tr>
+<td><strong>Ligation</strong></td>
+<td>T4 Ligase Buffer (NEB)</td>
+<td>300 mM Tris-HCl (pH 7.8), 100 mM MgCl<span class="math inline"><sub>2</sub></span>, 100 mM DTT, 10 mM ATP</td>
+<td>10X</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>T4 DNA-ligase (NEB)</td>
+<td></td>
+<td>400,000 U/mL</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Wizard mini-prep kit</strong></td>
+<td>W1</td>
+<td>50 mM Tris-HCl (pH 7.5), 10 mM EDTA, 100 μg/mL RNase A</td>
+<td></td>
+<td>Resuspension solution</td>
+</tr>
+<tr>
+<td></td>
+<td>W2</td>
+<td>0.2 M NaOH, 1% SDS</td>
+<td></td>
+<td>Lysis solution</td>
+</tr>
+<tr>
+<td></td>
+<td>W3</td>
+<td>4.09 M guanidine hydrochloride, 0.759 M potassium acetate, 2.12 M glacial acetic acid</td>
+<td></td>
+<td>Neutralization solution</td>
+</tr>
+<tr>
+<td></td>
+<td>W4</td>
+<td>60% ethanol, 60 mM potassium acetate, 8.3 mM Tris-HCl, 0.04 mM EDTA</td>
+<td></td>
+<td>Wash solution</td>
+</tr>
+<tr>
+<td></td>
+<td>Wizard columns</td>
+<td></td>
+<td></td>
+<td>DNA purification</td>
+</tr>
+<tr>
+<td><strong>Others</strong></td>
+<td>ddH<span class="math inline"><sub>2</sub></span>O</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>LB media</td>
+<td></td>
+<td></td>
+<td>Bacteria growth media</td>
+</tr>
+<tr>
+<td></td>
+<td>LB-plates with ampicillin</td>
+<td></td>
+<td>100 μg/mL Amp</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>LB-plates with kanamycin</td>
+<td></td>
+<td>50 μg/mL Kan</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Top10 Invitrogen™</td>
+<td>Chemically competent <em>E. coli</em> cells</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</figure>
+<h3 id="protocols" tabindex="-1">Protocols</h3>
+<h4 id="day-1" tabindex="-1">Day 1</h4>
+<h5 id="1-1-pcr" tabindex="-1">1.1 PCR</h5>
+<figure id="tbl:pcr-mixture" class="align-left" style="width:100%;float:left;margin-right:1em">
+<figcaption>
+<strong>Table 4.</strong>
+PCR mixture.
+</figcaption>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Amount</th>
+<th>Unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q5 Reaction Buffer</td>
+<td>10</td>
+<td>µL</td>
+</tr>
+<tr>
+<td>Primer 1, 25 µM</td>
+<td>1</td>
+<td>µL</td>
+</tr>
+<tr>
+<td>Primer 2, 25 µM</td>
+<td>1</td>
+<td>µL</td>
+</tr>
+<tr>
+<td>dNTPs, 10 mM</td>
+<td>1</td>
+<td>µL</td>
+</tr>
+<tr>
+<td>Template DNA</td>
+<td>1</td>
+<td>µL</td>
+</tr>
+<tr>
+<td>Q5 DNA polymerase</td>
+<td>0.5</td>
+<td>µL</td>
+</tr>
+<tr>
+<td>add dH<span class="math inline"><sub>2</sub></span>O</td>
+<td>32.5</td>
+<td>µL</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>50</strong></td>
+<td><strong>µL</strong></td>
+</tr>
+</tbody>
+</table>
+</figure>
+<figure id="tbl:primers-templates" class="align-left" style="width:100%;float:left;margin-right:1em">
+<figcaption>
+<strong>Table 5.</strong>
+Primers and templates.
+</figcaption>
+<table>
+<thead>
+<tr>
+<th>PCR</th>
+<th>Forward primer</th>
+<th>Reverse primer</th>
+<th>Template</th>
+<th>Product size (bp)</th>
+<th>Ta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PCR259 (pDD259)</td>
+<td>oDD561</td>
+<td>oDD562</td>
+<td>pDD002</td>
+<td>ca. 1190</td>
+<td>TBD</td>
+</tr>
+<tr>
+<td>PCR262 (pDD262)</td>
+<td>oDD561</td>
+<td>oDD562</td>
+<td>pDD083</td>
+<td>ca. 1190</td>
+<td>TBD</td>
+</tr>
+<tr>
+<td>PCR260 (pDD260)</td>
+<td>oDD561</td>
+<td>oDD563</td>
+<td>pDD002</td>
+<td>ca. 803</td>
+<td>TBD</td>
+</tr>
+<tr>
+<td>PCR261 (pDD261)</td>
+<td>oDD564</td>
+<td>oDD565</td>
+<td>pDD002</td>
+<td>ca. 454</td>
+<td>TBD</td>
+</tr>
+</tbody>
+</table>
+</figure>
+<p><em><strong>PCR program:</strong></em></p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Temperature</th>
+<th>Time</th>
+<th>Cycles</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>98°C</td>
+<td>5 min</td>
+<td>1×</td>
+</tr>
+<tr>
+<td>98°C</td>
+<td>30 s</td>
+<td>25×</td>
+</tr>
+<tr>
+<td>Ta°C</td>
+<td>30 s</td>
+<td>25×</td>
+</tr>
+<tr>
+<td>72°C</td>
+<td>40 s/kb</td>
+<td>25×</td>
+</tr>
+<tr>
+<td>72°C</td>
+<td>10 min</td>
+<td>1×</td>
+</tr>
+<tr>
+<td>4°C</td>
+<td>Hold</td>
+<td>-</td>
+</tr>
+</tbody>
+</table></div>
+<h5 id="1-2-dna-purification-from-agarose-gel" tabindex="-1">1.2 DNA Purification from Agarose Gel</h5>
+<ol>
+<li>Agarose-gel electrophoresis: 0.8% agarose in TE Buffer, 1:10,000 Gelred Stock solution (Caution! DNA dyes intercalate, thus are mutagenic agents. Handle it with care).</li>
+<li>Sample preparation: Mix 50 µL plasmid DNA with 10 µL of 6x loading buffer.</li>
+<li>Use 12 µL DNA-Ladder (MM).</li>
+<li>Run gel at 120 V for 20–30 min.</li>
+</ol>
+<p><strong>[FIGURE 12 PLACEHOLDER]</strong></p>
+<p><em>Insert: GeneRuler 1 kb DNA Ladder diagram (PDF)</em></p>
+<p id="fig:dna-ladder"><strong>Figure 12: GeneRuler™ 1 kb DNA Ladder</strong> (Fermentas)</p>
+<h5 id="1-3-dna-purification" tabindex="-1">1.3 DNA Purification</h5>
+<ol>
+<li>Cut bands from the gel and transfer each gel slice into a 1.5 mL tube.</li>
+<li>Add approx. 200 µL NTI buffer / 100 mg gel and incubate the tube at 60°C, 200 rpm for ~ 10 min until the gel slice is completely dissolved.</li>
+<li>Add the samples onto M&amp;N spin columns, 1 column per gel slice.</li>
+<li>Centrifuge at max speed for 60 s at RT and discard the flow through.</li>
+<li>Apply remaining sample volumes (if any).</li>
+<li>Centrifuge at max speed for 60 s at RT and discard flow-through.</li>
+<li>Add 700 µL NT3 buffer to the spin column.</li>
+<li>Centrifuge at max speed for 60 s at RT and discard flow through.</li>
+<li>Add 700 µL of NT3 buffer to the spin column as an additional washing step.</li>
+<li>Centrifuge at max speed for 60 s at RT and discard flow through.</li>
+<li>Centrifuge at max speed for 60 s at RT again and discard flow-through! (To dry the column and remove residual EtOH).</li>
+<li>Place the column into a fresh and labelled 1.5 mL tube.</li>
+<li>Add 20 µL ddH2O to the column</li>
+<li>Incubate for 5 min at 70°C.</li>
+<li>Centrifuge at max speed for 90 s at RT.</li>
+<li><strong>KEEP</strong> the flow through, it contains your purified DNA, determine the concentration using the Nanodrop.</li>
+<li>Store at -20°C.</li>
+</ol>
+<h5 id="1-4-backbone-digestion-performed-by-the-supervisors" tabindex="-1">1.4 Backbone Digestion (Performed by the Supervisors)</h5>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Volume</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Plasmid DNA (2 µg)</td>
+<td>x µL</td>
+</tr>
+<tr>
+<td>Cut Smart buffer (10x)</td>
+<td>5 µL</td>
+</tr>
+<tr>
+<td>Enzyme 1</td>
+<td>2.5 µL</td>
+</tr>
+<tr>
+<td>Enzyme 2</td>
+<td>2.5 µL</td>
+</tr>
+<tr>
+<td>CIP (only for the ligation backbone)</td>
+<td>1 µL</td>
+</tr>
+<tr>
+<td>H<mjx-container class="MathJax" jax="SVG" style="direction:ltr;position:relative"><svg style="overflow:visible;min-height:1px;min-width:1px;vertical-align:-.339ex" xmlns="http://www.w3.org/2000/svg" width="0.988ex" height="1.065ex" role="img" focusable="false" viewBox="0 -320.9 436.6 470.9" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"></g><g data-mml-node="mn" transform="translate(33,-150) scale(0.707)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z" style="stroke-width:3"></path></g></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline" style="top:0;left:0;clip:rect(1px,1px,1px,1px);-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;position:absolute;padding:1px 0 0 0;border:0;display:block;width:auto;overflow:hidden"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi></mi><mn>2</mn></msub></math></mjx-assistive-mml></mjx-container>O</td>
+<td>x µL</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>50 µL</strong></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Incubate ON at 37°C.</li>
+</ul>
+<p>We will provide you with the digested destination vectors.</p>
+<h5 id="1-5-pcr-products-digestion-only-for-ligation-cloning" tabindex="-1">1.5 PCR Products Digestion (Only for Ligation Cloning)</h5>
+<p>This step will only be performed by the group member doing ligation cloning.</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Volume</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PCR product</td>
+<td>23 µL</td>
+</tr>
+<tr>
+<td>Cut Smart buffer (10x)</td>
+<td>3 µL</td>
+</tr>
+<tr>
+<td>Enzyme 1</td>
+<td>2 µL</td>
+</tr>
+<tr>
+<td>Enzyme 2</td>
+<td>2 µL</td>
+</tr>
+<tr>
+<td>H<mjx-container class="MathJax" jax="SVG" style="direction:ltr;position:relative"><svg style="overflow:visible;min-height:1px;min-width:1px;vertical-align:-.339ex" xmlns="http://www.w3.org/2000/svg" width="0.988ex" height="1.065ex" role="img" focusable="false" viewBox="0 -320.9 436.6 470.9" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"></g><g data-mml-node="mn" transform="translate(33,-150) scale(0.707)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z" style="stroke-width:3"></path></g></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline" style="top:0;left:0;clip:rect(1px,1px,1px,1px);-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;position:absolute;padding:1px 0 0 0;border:0;display:block;width:auto;overflow:hidden"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi></mi><mn>2</mn></msub></math></mjx-assistive-mml></mjx-container>O</td>
+<td>0 µL</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>30 µL</strong></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Incubate ON at 37°C.</li>
+</ul>
+<h4 id="day-2" tabindex="-1">Day 2</h4>
+<h5 id="2-1-digested-pcr-products-purification-only-for-ligation-cloning" tabindex="-1">2.1 Digested PCR Products Purification (Only for Ligation Cloning)</h5>
+<ol>
+<li>Add approx. 60 µL NTI buffer.</li>
+<li>Add the samples onto M&amp;N spin columns, 1 column per digestion.</li>
+<li>Centrifuge at max speed for 60 s at RT and discard the flow through.</li>
+<li>Apply remaining sample volumes (if any).</li>
+<li>Centrifuge at max speed for 60 s at RT and discard flow-through.</li>
+<li>Add 700 µL NT3 buffer to the spin column.</li>
+<li>Centrifuge at max speed for 60 s at RT and discard flow through.</li>
+<li>Add 700 µL of NT3 buffer to the spin column as an additional washing step.</li>
+<li>Centrifuge at max speed for 60 s at RT and discard flow through.</li>
+<li>Centrifuge at max speed for 60 s at RT again and discard flow through! (To dry the column and remove residual EtOH).</li>
+<li>Place the column into a fresh and labelled 1.5 mL tube.</li>
+<li>Add 20 µL ddH2O to the column</li>
+<li>Incubate 5 min at 70°C.</li>
+<li>Centrifuge at max speed for 90 s at RT.</li>
+<li><strong>KEEP</strong> the flow through, it contains your purified DNA, determine the concentration using the Nanodrop.</li>
+</ol>
+<h5 id="2-2-assembly-of-the-new-vector" tabindex="-1">2.2 Assembly of the New Vector</h5>
+<h6 id="2-2-1-aqua-cloning" tabindex="-1">2.2.1 AQUA Cloning</h6>
+<p>If possible, use approximately 35 ng of DNA for the backbone.</p>
+<p>Calculations for the amount of PCR-DNA needed for a 1:3 ratio:</p>
+<p><strong>Sample 1 Sample 2 (negative control)</strong></p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Volume</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Digested backbone</td>
+<td>x µL</td>
+</tr>
+<tr>
+<td>PCR product</td>
+<td>x µL</td>
+</tr>
+<tr>
+<td>H<mjx-container class="MathJax" jax="SVG" style="direction:ltr;position:relative"><svg style="overflow:visible;min-height:1px;min-width:1px;vertical-align:-.339ex" xmlns="http://www.w3.org/2000/svg" width="0.988ex" height="1.065ex" role="img" focusable="false" viewBox="0 -320.9 436.6 470.9" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"></g><g data-mml-node="mn" transform="translate(33,-150) scale(0.707)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z" style="stroke-width:3"></path></g></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline" style="top:0;left:0;clip:rect(1px,1px,1px,1px);-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;position:absolute;padding:1px 0 0 0;border:0;display:block;width:auto;overflow:hidden"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi></mi><mn>2</mn></msub></math></mjx-assistive-mml></mjx-container>O</td>
+<td>x µL</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>10 µL</strong></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Incubate at RT for 60 min.</li>
+<li>Put samples on ice, 5 min.</li>
+</ul>
+<h6 id="2-2-2-ligation-protocol" tabindex="-1">2.2.2 Ligation Protocol</h6>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Volume</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vector (30-50 ng)</td>
+<td>x µL</td>
+</tr>
+<tr>
+<td>Insert (3x excess)</td>
+<td>y µL</td>
+</tr>
+<tr>
+<td>H<mjx-container class="MathJax" jax="SVG" style="direction:ltr;position:relative"><svg style="overflow:visible;min-height:1px;min-width:1px;vertical-align:-.339ex" xmlns="http://www.w3.org/2000/svg" width="0.988ex" height="1.065ex" role="img" focusable="false" viewBox="0 -320.9 436.6 470.9" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"></g><g data-mml-node="mn" transform="translate(33,-150) scale(0.707)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z" style="stroke-width:3"></path></g></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline" style="top:0;left:0;clip:rect(1px,1px,1px,1px);-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;position:absolute;padding:1px 0 0 0;border:0;display:block;width:auto;overflow:hidden"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi></mi><mn>2</mn></msub></math></mjx-assistive-mml></mjx-container>O (qsf 20 µL)</td>
+<td>z µL</td>
+</tr>
+<tr>
+<td>T4 DNA ligase Buffer 10x</td>
+<td>2 µL</td>
+</tr>
+<tr>
+<td>T4 DNA ligase</td>
+<td>1 µL</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>20 µL</strong></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Incubate at RT for 60 min.</li>
+<li>Heat inactivate the T4 DNA ligase by incubating 10 min at 65 °C.</li>
+</ul>
+<h5 id="2-3-transformation-into-e-coli-competent-cells" tabindex="-1">2.3 Transformation into E. coli Competent Cells</h5>
+<ol>
+<li>AQUA/Ligation mixture and Negative control mixture</li>
+<li>Thaw cells on ice. Carefully add AQUA mix/ negative control (10 µL) or ligation mix/negative control (5 µL). Do not resuspend, just slightly stir using the pipette tip.</li>
+<li>Incubate for 30 min on ice, heat-shock for 45 s at 42°C, place on ice for 2 min, add 250 µL LB‑medium and incubate for 1 h at 37°C, 550 rpm.</li>
+<li>Finally, plate cells on ampicillin (100 µg/mL) or kanamycin (50 µg/mL) LBagar plates. For the AQUA plate 250 µL/plate and for ligation 100 µL/plate. (In this way, one may ensure the convenient isolation of colonies the next day).</li>
+<li>Distribute cells uniformly on the plates.</li>
+<li>Incubate plates overnight at 37°C.</li>
+</ol>
+<h4 id="day-3" tabindex="-1">Day 3</h4>
+<h5 id="3-1-streaking-single-colonies-on-new-lb-ampicillin-plates" tabindex="-1">3.1 Streaking Single Colonies on New LB-Ampicillin Plates</h5>
+<ul>
+<li>Pick 4 single clones and streak out onto LB plates with ampicillin (100 μg/mL) or kanamycin (50 μg/mL). Streak 2 colonies in each plate. Incubate overnight at 37°C. Make sure to evenly spread the picked colony over the <strong>whole surface</strong> of the LB agar plate.</li>
+</ul>
+<h4 id="day-4" tabindex="-1">Day 4</h4>
+<h5 id="4-1-plasmid-dna-isolation" tabindex="-1">4.1 Plasmid DNA Isolation</h5>
+<ol>
+<li>Using a sterile inoculating loop, scrape bacteria off the plate and resuspend in 250 μL of Cell Resuspension Solution (W1).</li>
+<li>Add 250 μL of Cell Lysis Solution (W2) to each sample; <strong>invert</strong> 4 times to mix.</li>
+<li>Incubate for 5 min at RT.</li>
+<li>Add 350 μL of Neutralization Solution (W3); <strong>invert</strong> 4–6 times to mix.</li>
+<li>Centrifuge at max speed for 8 min at RT.</li>
+<li>During the centrifugation insert spin columns into collection tubes.</li>
+<li>Equilibrate columns with 700 µL ddH2O, centrifuge for 60 s at max speed and discard the flow‑through.</li>
+<li>After centrifugation, transfer cleared lysates into spin columns.</li>
+<li>Centrifuge at max speed for 60 s at RT.</li>
+<li>Discard flow-through and reinsert columns into collection tubes.</li>
+<li>Add 750 μl of Wash Solution (WW). Centrifuge at top speed for 60 s. Discard flow-through and reinsert the column into the collection tube.</li>
+<li>Repeat the previous step with 250 μl of Wash Solution (WW).</li>
+<li>Centrifuge at max speed for 60 s at RT.</li>
+<li>Transfer Spin Column into a sterile 1.5 mL tube.</li>
+<li>Add 60 μl of prewarmed MilliQ-Water to the Spin Column and incubate for 4 min at RT. Centrifuge at max speed for 90 s at RT and <strong>KEEP</strong> the tube with the flow through.</li>
+<li>Store extracted plasmids at -20°C.</li>
+<li>Wash the mini column four times with 700 µl of ddH2O and keep them. Do not throw them away.</li>
+</ol>
+<h5 id="4-2-analytical-restriction-enzyme-digestion" tabindex="-1">4.2 Analytical Restriction Enzyme Digestion</h5>
+<p>For each clone, perform one digest of 5 µL as follows:</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Volume</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Plasmid DNA</td>
+<td>4 µL</td>
+</tr>
+<tr>
+<td>Cut Smart buffer (10x)</td>
+<td>0.5 µL</td>
+</tr>
+<tr>
+<td>Enzyme 1</td>
+<td>0.25 µL</td>
+</tr>
+<tr>
+<td>Enzyme 2</td>
+<td>0.25 µL</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>5 µL</strong></td>
+</tr>
+</tbody>
+</table></div>
+<ol>
+<li>Incubate at 37°C for 1–2 h.</li>
+<li>Analyze your digest via Agarose-gel electrophoresis: 1% agarose in TE Buffer, 1:10000 Gelred Stock solution (Caution! DNA dyes intercalate, thus are mutagenic agents. Handle it with care).</li>
+<li>Sample preparation: Mix 5 µL digest with 1–2 µL of 6× loading buffer.</li>
+<li>Run gel 120 V, 20–30 min. Perform graphical analysis of gel.</li>
+</ol>
+<h5 id="4-3-sequencing" tabindex="-1">4.3 Sequencing</h5>
+<p>Selection of positive colonies.</p>
+<p>Send a 12 µL aliquot with a concentration of 40–100 ng/µL. Dilute if necessary.</p>
+<h2 id="experiment-ii-optogenetic-gene-expression-using-stably-engineered-mammalian-cells" tabindex="-1">Experiment II: Optogenetic Gene Expression Using Stably-Engineered Mammalian Cells</h2>
+<p><strong>Supervisors</strong> Maria Medar, David Mohr, Sara Shumka</p>
+<p><a href="mailto:marija.medar@hhu.de" target="_blank" class="external-link">marija.medar@hhu.de</a>, <a href="mailto:david.mohr@hhu.de" target="_blank" class="external-link">david.mohr@hhu.de</a>, <a href="mailto:sara.shumka@uni-duesseldorf.de" target="_blank" class="external-link">sara.shumka@uni-duesseldorf.de</a></p>
+<p>The objective of this experiment is to learn how to control and analyze the induction of gene expression via an optogenetic tool in mammalian cells. To this end, foreign genes encoding the photo-switch and a light-inducible reporter encoding a gene of interest were previously introduced into the genome of Chinese Hamster Ovary (CHO-K1) cells. We will treat this customized cell line with light and dark and quantify the reporter expression over a time course of 24 hours.</p>
+<p>Transient transfection is an efficient method for preliminary reporter assays. CHO-K1 cells normally achieve high transfection rates and express recombinant proteins in large scale when using polyethylenimine (PEI)-based transient transfection methods (see introduction <strong>Figure 7</strong>). In contrast to many commercial transfection agents, PEI is inexpensive yet very efficient for a range of mammalian cell lines. However, the transfection efficiency can be affected by various parameters (cell type, number of plasmids, DNA amount, DNA quality, etc.). Additionally, in transiently transfected cells, the foreign DNA rarely integrates into the host genome and consequently does not replicate, leading to an eventual loss through cycles of cell division over several days.</p>
+<p>Stable genomic integration is often the preferred option as the foreign gene becomes part of the genome which allows for greater process consistency and long-term protein expression. However, the generation of stable cell lines is a time-consuming and expensive process. In this experiment, we will provide a stably-engineered CHO-K1 cell line generated using a sequential genomic integration of two vectors (<strong>Figure optogenetic-switch</strong>). One vector encodes an optogenetic LOVpep/ePDZ-based split transcription factor system under the selection of puromycin, and the other a SEAP reporter under the selection of Hygromycin. The principle of generating stable cell lines using the Sleeping Beauty transposase is explained in the introduction part (<strong>Figure 10</strong>).</p>
+<p>The following experiment will be about handling mammalian cell culture as well as the analysis of a light-induced reporter gene. The human placental <strong>se</strong>creted <strong>a</strong>lkaline <strong>p</strong>hosphatase (SEAP) as a reporter has tremendous advantages. SEAP is very stable, and its secretion into the medium allows a convenient and non-invasive way of acquiring samples. Furthermore, it is a quantitative reporter for gene expression because the SEAP activity in the supernatant of transfected CHO-K1 cells is proportional to shifts in intracellular SEAP mRNA levels. The activity of promoters/enhancers and other elements can be measured due to their direct correlation to SEAP secretion. Finally, the SEAP phosphatase is heat persistent and endures a temperature of 65°C, whereas other phosphatases degrade at this temperature. Therefore, heat treatment can be used to selectively enrich SEAP in samples that might contain additional phosphatases.</p>
+<p><strong>[FIGURE 13 PLACEHOLDER]</strong></p>
+<p><em>Insert: Optogenetic gene switch mechanism and vector diagrams (PDF, panels A+B+C)</em></p>
+<p id="fig:optogenetic-switch"><strong>Figure 13: Mode of function of the optogenetic gene switch in genomically-engineered cells.</strong> <strong>A)</strong> An engineered LOV2 domain from <em>Avena sativa</em> phototropin 1 was fused to the C-terminus of the E-protein (erythromycin resistance protein), thus tethering it to a response construct harboring 8 repeats of the E binding sequence (<em>etr8</em>) upstream of a synthetic minimal promoter, while the PDZ interaction domain was fused to the VP16 transactivation domain. In the dark, the epitope tag of the LOVpep fusion protein is inaccessible for the PDZ domain. Consequently, gene expression is off. Blue light (460 nm) illumination leads to the unwinding of the C-terminal Jα helix of LOVpep and makes the epitope tag accessible for binding of the PDZ domain. Due to the recruitment of the transactivator VP16 to the minimal promoter, the transcriptional machineries are recruited, and the SEAP gene‑expression is induced. Schematic representation of the vector encoding the photo-switch <strong>(B)</strong> and the SEAP reporter gene <strong>(C)</strong> both flanked by inverted terminal repeats (ITRs).</p>
+<h3 id="materials-1" tabindex="-1">Materials</h3>
+<figure id="tbl:materials-exp2" class="align-center" style="width:80%;display:block;margin-left:auto;margin-right:auto">
+<figcaption>
+<strong>Table 6.</strong>
+Materials used in Experiment II.
+</figcaption>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Composition/Concentration</th>
+<th>Application</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ham’s Medium</td>
+<td>90% Ham’s tissue culture medium F12 (PAN-Biotech), 10% fetal bovine serum (FBS, PAN-Biotech), 100 U/mL penicillin, 0.1 mg/mL streptomycin (Gibco).</td>
+<td>Growth medium</td>
+</tr>
+<tr>
+<td>Trypsin/EDTA in PBS</td>
+<td>0.05% Trypsin/ 0.02% EDTA in PBS; (PAN Biotech Cat. No. P10-023500)</td>
+<td>Cell dissociation</td>
+</tr>
+<tr>
+<td>1x PBS</td>
+<td>2.7 mM KCl, 1.5 mM KH2PO4, 8.0 mM Na2HPO4, 137 mM NaCl in dH2O.</td>
+<td>Removal of dead cells</td>
+</tr>
+<tr>
+<td>2x SEAP buffer</td>
+<td>20 mM homoarginine, 1 mM MgCl2, 21% (v/v) diethanolamine, pH 9.8</td>
+<td>Inhibition of endogenous phosphatases</td>
+</tr>
+<tr>
+<td>pNPP</td>
+<td>120 mM in dH2O</td>
+<td>SEAP substrate</td>
+</tr>
+</tbody>
+</table>
+</figure>
+<h3 id="protocol" tabindex="-1">Protocol</h3>
+<h4 id="day-1-seeding-mammalian-cells" tabindex="-1">Day 1: Seeding Mammalian Cells</h4>
+<p>Preparation of materials:</p>
+<ul>
+<li>Pre-warm Ham’s medium, 1X PBS, and Trypsin/EDTA in 37°C water bath.</li>
+<li>15 mL falcons, stripette tips (10 mL), 1000 µL and 200 µL tips (sterilized).</li>
+<li>24-well cell-culture plates for cell seeding.</li>
+<li>Fuchs-Rosenthal counting chamber.</li>
+</ul>
+<p>Procedure:</p>
+<ol>
+<li>Perform all steps under <strong>green safelight</strong> to avoid exposure to ambient light.</li>
+<li>Check cell confluency briefly under the microscope.</li>
+<li>Introduce medium, PBS, and Trypsin into the laminar flow bench and screw all lids open<br>
+(do not remove the lids).</li>
+<li>Remove supernatant (with yellow tip using the pump).<br>
+Tilt the petri dish toward you gently, remove the supernatant, and avoid touching the cells.</li>
+<li>Add 2 mL PBS to wash, then remove it.</li>
+<li>Add 2 mL Trypsin and ensure that all cells are covered. Incubate for 5 min at 37 °C in the incubator.</li>
+<li>Meanwhile, prepare a 15 mL Falcon tube with 8 mL of medium.</li>
+<li>Fully detach and resuspend the cells in the Trypsin solution after the 5 min incubation. Transfer the Trypsin/cell suspension to the Falcon tube with the prepared medium and gently invert.</li>
+<li>Centrifuge cells for 3 min at 300 g. Meanwhile, prepare the Fuchs-Rosenthal chamber for cell counting.</li>
+<li>Remove the supernatant with the pump or by decanting.</li>
+<li>Add 10 mL of fresh medium and resuspend.</li>
+<li>Count cells using the Fuchs-Rosenthal counting chamber.</li>
+</ol>
+<p>Count cells of at least 4 squares and calculate the amount for the whole chamber (16 squares, depth = 0.2 mm, A = 0.0625 mm2, 1 mm3 = 1 µl)</p>
+<ul>
+<li><strong>Calculate 1</strong> (total cells): to get the total cell number, calculate: counted cells * 5,000 (chamber factor) * 10 mL (Volume) = total cells</li>
+</ul>
+<p>The total cell number can also be calculated by cell concentration * (Volume) 10 mL.</p>
+<ul>
+<li><strong>Calculate 2</strong> (cell concentration):  <em>c1</em>.
+<ol>
+<li>Volume:</li>
+<li>Cell concentration: <em>c1</em>= ( ).</li>
+</ol>
+</li>
+<li><strong>Calculate 3</strong> (cells for seeding):</li>
+</ul>
+<p>Dilution of cell suspension. Mix the required volume in of cell stock suspension in the final volume.</p>
+<ol>
+<li>For each group: 4 wells as replicates of each time point (t1 and t2), 2 different incubation conditions (light and dark), therefore prepare 16+1 wells per group and seed into 2 <strong>different</strong> plates!</li>
+<li>Prepare the calculated cells suspension (50,000 cells per well) and medium in a 50 mL falcon (master mix).</li>
+<li>Add 500 µL to each well.</li>
+</ol>
+<p>Incubate the cells overnight at 37°C in the CO2 incubator.</p>
+<h4 id="day-2-illumination-t0-and-t1-supernatant-collection" tabindex="-1">Day 2: Illumination / t0 and t1 Supernatant Collection</h4>
+<p>Preparation of materials:</p>
+<ul>
+<li>Pre-warm Ham’s in a 37°C water bath.</li>
+<li>15 mL Falcon tubes, stripette tips (10 mL), 1000 µL, and 200 µL tips.</li>
+<li>Light boxes adjusted to blue light 460 nm with a light intensity of 10 μmol m-2 s-1.</li>
+<li>Round bottom 96-well plate.</li>
+</ul>
+<p>Procedure:</p>
+<ol>
+<li>Check the cells under the microscope.</li>
+</ol>
+<p>For collecting the t0 sample, we will proceed as follows:</p>
+<ul>
+<li>Groups 1-4 will take the supernatant without any medium change.</li>
+<li>Groups 5-8 will perform a medium change before taking the supernatant.</li>
+</ul>
+<ol>
+<li>Take 200 µL supernatant from each well into the 96-well plate as “0 h” sample (Groups 1-4).</li>
+<li>Remove the rest medium and add 500 µL of fresh medium into each well.</li>
+<li>Transfer 200 µL of the freshly exchanged medium from each well into the 96-well plate as “0 h” sample (Groups 5-8). Replace the 200 µL taken.</li>
+<li>Transfer one of your 24-well plates into a light box with 10 μmol m-2 s-1 blue light and the other one into the dark box.</li>
+<li>After 6 h illumination, take 200 µL supernatant from the t1 wells of each plate into the 96-well plate (clear, round bottom) in the laminar flow bench under green light. Return the cells to the light boxes in the incubator.</li>
+<li>Seal the 96-well plate with tape (make sure it is well sealed).</li>
+<li>Store at -20°C.</li>
+</ol>
+<h4 id="day-3-t2-supernatant-collection-and-seap-assay" tabindex="-1">Day 3: t2 Supernatant Collection and SEAP Assay</h4>
+<p>Preparation of materials:</p>
+<ul>
+<li>Transparent 96-well plate (flat bottom).</li>
+<li>2x SEAP buffer and para-nitrophenyl-phosphate (pNPP) substrate.</li>
+<li>PBS.</li>
+<li>Multichannel and multi-stepper pipettes with tips.</li>
+</ul>
+<ol>
+<li>After 24 h illumination, transfer 200 µL of cell supernatant from the t2 wells into the 96-well plate.</li>
+<li>Incubate the sealed round-bottom 96-well plate for 45 min at 65°C.</li>
+<li>Add 100 µL of SEAP buffer into each well of a flat-bottom 96-well plate using the multi-stepper pipette.</li>
+<li>Add 80 µL of supernatant from the round-bottom 96-well plate. For samples from timepoint t2, first add 40 µL PBS and then only 40 µL of supernatant.</li>
+<li>Set up the program at the plate reader (Absorbance 1h: spectroscopic measurement every minute (60 times, ca. 1 h); wavelength 405 nm.)</li>
+<li>Remove air-bubbles with toothpicks.</li>
+<li>Add 20 µL of pNPP substrate using the multi-stepper pipette. Be fast, as the reaction starts immediately after adding the substrate to the first well. One person should add the substrate for the entire plate. Place the plate immediately into the plate reader and start the measurement.</li>
+</ol>
+<p><strong>[FIGURE PLACEHOLDER: SEAP Assay Formula]</strong></p>
+<p><em>Insert: SEAP activity calculation formula diagram (PDF)</em></p>
+<p>Hints for data processing:</p>
+<p>Subsequent determination of the SEAP activity [U/L] is performed by calculating the slope of the<br>
+respective curves [OD/min] and the Lambert-Beer law, resulting in the following formula:</p>
+<p>∈ = 18,600 M-1cm-1; d= length of the light path [cm] (typically 0.5 cm); = amount of SEAP‑containing supernatant / dilution factor of the sample; = used volume of supernatant.</p>
+<p>It is highly recommended to develop a template with Microsoft Excel for data processing.</p>
+<h2 id="experiment-iii-protein-trans-splicing-for-bacterial-logic-gate-design" tabindex="-1">Experiment III: Protein Trans-Splicing for Bacterial Logic Gate Design</h2>
+<p><strong>Supervisors:</strong> Josepha Grewer, Maria Evangelopoulou, Hannes Beyer</p>
+<p><a href="mailto:josepha.grewer@hhu.de" target="_blank" class="external-link">josepha.grewer@hhu.de</a>, <a href="mailto:cur91fom@hhu.de" target="_blank" class="external-link">cur91fom@hhu.de</a>, <a href="mailto:hannes.beyer@hhu.de" target="_blank" class="external-link">hannes.beyer@hhu.de</a></p>
+<p>In this experiment, we adapt the naturally occurring protein <em>cis</em>- and <em>trans</em>-splicing catalyzed by the DnaE intein from <em>Nostoc punctiforme</em> (<em>Npu</em>DnaE intein) to engineer a synthetic protein logic gate. As previously explained in section 1.1.2, inteins are protein domains with autocatalytic activity that give rise to a reconstituted functional protein after self-excising from the host or precursor protein. Protein splicing can occur either in <em>cis</em> (excision of an intein) or in <em>trans</em>, leading to the ligation of two individual proteins, each fused to one fragment of a split intein. In Experiment I, we have cloned the bacterial inducible plasmids that we need for this experiment (<strong>Figure 11</strong>):</p>
+<ul>
+<li>pDD259: IPTG-inducible promoter guiding the expression of mCherry fluorescent protein hosting a <em>cis</em>-splicing intein.</li>
+<li>pDD262: IPTG-inducible promoter guiding the expression of mCherry fluorescent protein hosting a <em>cis</em>-splicing intein with an inactivating mutation of Cys1 to Ala.</li>
+<li>pD260: IPTG-inducible promoter guiding the expression of the N-terminal region of mCherry fused to the N-terminal fragment of the <em>Npu</em>DnaE intein (IntN, N-terminal split fragment).</li>
+<li>pD261: Arabinose-inducible promoter guiding the expression of the C-terminal region of mCherry fused to the C-terminal fragment of the <em>Npu</em>DnaE intein (IntC, C-terminal split fragment).</li>
+</ul>
+<p>We will transform and induce protein production in the <em>Escherichia coli</em> strain T7-Express using competent cells following the scheme in <strong>Figure 11</strong>:</p>
+<ul>
+<li>Transformation of pDD259: We will use this construct to test intein-based protein <em>cis</em>-splicing. Therefore, if the system is working properly, we should be able to detect mCherry fluorescence upon IPTG induction.</li>
+<li>Transformation of pDD262: The construct is almost identical to pDD259, except for the C1A mutation in the <em>Npu</em>DnaE intein to prevent the initial step (N-S acyl shift) during the protein splicing reaction.</li>
+<li>Co-transformation of pDD260 and pDD261: When the C- and N-terminal domains of the intein are expressed, they should interact to form a functional intein (protein <em>trans</em>-splicing, which will therefore be spliced to give rise to the reconstituted functional mCherry protein). Subsequently, in the cells co-transformed with these two plasmids, we should be able to detect mCherry fluorescence upon induction of expression with IPTG and arabinose. Induction with IPTG or arabinose alone, however, should not yield significant amounts of functional mCherry protein.</li>
+</ul>
+<p>Questions:</p>
+<ol>
+<li>What are the positive and negative controls?</li>
+<li>How many conditions do we need to perform in the experiment?</li>
+</ol>
+<figure id="fig:logic-gate" class="align-center" style="width:80%;display:block;margin-left:auto;margin-right:auto">
+<img src="figures/inteins_boolean_gates.webp" alt="Figure 12" style="width:100%">
+<figcaption>
+<strong>Figure 12.</strong>
+** Scheme for the protein <em>trans</em>-splicing experiment to design logic gates.
+</figcaption>
+</figure>
+<h3 id="materials-2" tabindex="-1">Materials</h3>
+<figure id="tbl:materials-exp3" class="align-left" style="width:100%;float:left;margin-right:1em">
+<figcaption>
+<strong>Table 7.</strong>
+Materials used in Experiment III.
+</figcaption>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Composition/Concentration</th>
+<th>Application</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Arabinose</td>
+<td>20%</td>
+<td>Induce expression of PBAD</td>
+</tr>
+<tr>
+<td>Ampicillin</td>
+<td>100 mg/mL</td>
+<td>Selection marker</td>
+</tr>
+<tr>
+<td>Kanamycin</td>
+<td>50 mg/mL</td>
+<td>Selection marker</td>
+</tr>
+<tr>
+<td>IPTG</td>
+<td>1 M</td>
+<td>Induce expression of PT7</td>
+</tr>
+<tr>
+<td>LB-Medium</td>
+<td>10 g/L tryptone, 5g/L yeast extract, 10 g/L NaCl, pH 7.0.</td>
+<td>Bacteria growth medium</td>
+</tr>
+<tr>
+<td>PBS</td>
+<td>2.7 mM KCl, 1.5 mM KH2PO4, 8.0 mM Na2HPO4, 137 mM NaCl in dH2O</td>
+<td>Buffer used for cell diluting</td>
+</tr>
+<tr>
+<td><em>E. coli</em> T7 express strain</td>
+<td></td>
+<td>Expresses T7 RNA- polymerase</td>
+</tr>
+</tbody>
+</table>
+</figure>
+<h3 id="protocol-1" tabindex="-1">Protocol</h3>
+<h4 id="day-6-transformation-of-bacterial-strains" tabindex="-1">Day 6: Transformation of Bacterial Strains</h4>
+<ol>
+<li>Thaw cells on ice (<em>E. coli</em> T7 Express strain).</li>
+<li>Add ~1 µL of plasmid DNA (see group distribution below) on top of cells (for co-transformation, add 2 µL each).</li>
+<li>Incubate on ice for ~10 min.</li>
+<li>Heat shock at 42°C for 45 s.</li>
+<li><strong>Immediately</strong> incubate on ice for 2 min.</li>
+<li>Add 250 µL LB-medium.</li>
+<li>Shake for ~1 h at 37°C.</li>
+<li>Streak out 10 µL (20 µL for co-transformation) on antibiotic-LB-Agar plates (use correct antibiotics!).</li>
+<li>Incubate at 37°C overnight.</li>
+</ol>
+<h4 id="day-7-intein-experiment-in-e-coli" tabindex="-1">Day 7: Intein Experiment in E. coli</h4>
+<figure id="tbl:experimental-setup" class="align-left" style="width:100%;float:left;margin-right:1em">
+<figcaption>
+<strong>Table 8.</strong>
+Experimental setup distribution. Each group performs 3 inoculation setups with different induction. I = IPTG, A = Arabinose, I/A = IPTG and Arabinose, - = no Induction
+</figcaption>
+<table>
+<thead>
+<tr>
+<th>Plasmid</th>
+<th>Gr. 1</th>
+<th>Gr. 2</th>
+<th>Gr. 3</th>
+<th>Gr. 4</th>
+<th>Gr. 5</th>
+<th>Gr. 6</th>
+<th>Gr. 7</th>
+<th>Gr. 8</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pDD259</td>
+<td>I</td>
+<td>I</td>
+<td>-</td>
+<td>-</td>
+<td>I</td>
+<td>I</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>pDD262</td>
+<td>I</td>
+<td>I</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>pDD260/261</td>
+<td>I/A</td>
+<td>I/A</td>
+<td>I/A</td>
+<td>I/A</td>
+<td>I/A</td>
+<td>I/A</td>
+<td>I/A</td>
+<td>I/A</td>
+</tr>
+<tr>
+<td>pDD260/261 (alt)</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>I</td>
+<td>I</td>
+<td>A</td>
+<td>A</td>
+</tr>
+</tbody>
+</table>
+</figure>
+<ol>
+<li>Prepare an Eppendorf tube (1.5 mL) with 50 µL LB-medium and a Falcon tube (15 mL) with 5 mL LB-medium.</li>
+<li>Pick ~15 colonies and resuspend in an Eppendorf tube.</li>
+<li>Inoculate 5 mL of LB-media (Falcon tube) with 20 µL of cell suspension.</li>
+<li>Add antibiotics (AMP = 100 µg/mL, KAN = 50 µg/mL).</li>
+<li>Place the Falcon tube into the incubator at 37°C and shake for ~1 h.</li>
+<li>Measure OD6600 nm until ~0.6 (better lower than higher!), follow the bacterial growth by noting the OD values on the white board together with the time of measurement. Analyze the growth curve.</li>
+<li>When OD₆₀₀ nm has reached 0.6, induce with IPTG and/or Arabinose (IPTG = 1 mM, Arabinose = 0.04%).</li>
+<li>After induction, transfer the Falcon tube into the incubator at RT and shake overnight.</li>
+</ol>
+<p>(Optional after 3–4 h: Take ~200 µL of cell suspension and spin down until the pellet is visible).</p>
+<p>can you already see a red colored pellet? What does it mean?</p>
+<h4 id="day-8-measurement-and-amp-analysis" tabindex="-1">Day 8: Measurement &amp; Analysis</h4>
+<ol>
+<li>Spin down Falcon at ~3000 <em>xg</em> for 3min.</li>
+<li>Discard supernatant and resuspend cells in 5 mL PBS.</li>
+<li>Load a transparent 96-well plate with 100 µL of cell suspension, pipette three replicates for each condition.</li>
+<li>Measure mCherry fluorescence using the plate reader.</li>
+<li>Measure OD600 nm on the same plate as the normalization readout.</li>
+<li>Determine the mCherry fluorescence of each sample normalized to the cell density (OD600 reading). Illustrate the averaged values graphically.</li>
+</ol>
+<h2 id="experiment-iv-intein-catalyzed-protein-domain-swapping-at-the-plasma-membrane" tabindex="-1">Experiment IV: Intein-Catalyzed Protein Domain Swapping at the Plasma Membrane</h2>
+<p><strong>Supervisors:</strong> Cha San Koh, Daniel Wiebensohn, Hannes Beyer</p>
+<p><a href="mailto:koh@hhu.de" target="_blank" class="external-link">koh@hhu.de</a>, <a href="mailto:dawie106@hhu.de" target="_blank" class="external-link">dawie106@hhu.de</a>, <a href="mailto:hannes.beyer@huu.de" target="_blank" class="external-link">hannes.beyer@huu.de</a></p>
+<p>This experiment aims to induce either the addition or exchange of two protein domains at the plasma membrane of mammalian HeLa cells using split intein technology. Here, the construct design determines whether an intein <em>trans</em>-splicing reaction yields one of the two possible outcomes. To determine the localization of the two proteins, we will use the green fluorescent protein GFP and the red fluorescent protein mCherry, allowing for their analysis via confocal fluorescence microscopy (<strong>Figure 13</strong>). Both fluorescent proteins are genetically fused to one half of the DnaE intein from <em>Nostoc punctiforme</em> (<em>Npu</em>DnaE intein split fragments, abbreviated as IntN and IntC for the N- and C-terminal fragment, respectively), which you also used in Experiment III. GFP is additionally fused to an N-terminal myristylation/palmitylation signal derived from the Src kinase Lck, leading to cotranslational myristoylation at glycine residue 2 and then posttranslational palmitoylation at cysteine residues 3 and 5 (Akimzhanov and Boehning, 2015). Modification with these fatty acids leads to the attachment of the protein to inner cell membranes.</p>
+<p>In the experiment, you will transiently transfect human HeLa cells with different combinations of the following plasmids encoding two versions of the membrane-attached GFP protein fused to IntN, or cytosolic mCherry fused to IntC. While we expect GFP to localize at the membrane and mCherry in the cytosol when transfected into cells, their cotransfection should induce the protein splicing reaction, which we will observe by confocal microscopy.</p>
+<figure id="fig:domain-swapping" class="align-left" style="width:100%;float:left;margin-right:1em">
+<img src="figures/inteins_plasms_membrane.webp" alt="Figure 13" style="width:100%">
+<figcaption>
+<strong>Figure 13.</strong>
+** Split intein-catalyzed protein trans-splicing (PTS) reaction either leading to the addition (left), or exchange (right) of GFP and mCherry at the plasma membrane, depending on the domain order of the GFP constructs (pDD130 vs pDD132). The IntC-fused mCherry construct pDD131 is identical in both approaches.
+</figcaption>
+</figure>
+<p>In cells, many relevant signaling pathways initiate or pass through microdomains at the plasma membrane, often linking the perception of extracellular signals via membrane integral receptors to the cytosol. Therefore, modulating the localization of proteins involved in cell signaling represents an important tool to regulate cellular behavior. However, the induction of protein domain swapping might likewise be employed to regulate diverse cellular mechanisms, for example, by exchanging antagonistically functional protein domains, such as activators and repressors.</p>
+<h3 id="materials-3" tabindex="-1">Materials</h3>
+<p><strong>Plasmids (Minipreps)</strong></p>
+<figure id="tbl:materials-exp4" class="align-center" style="width:80%;display:block;margin-left:auto;margin-right:auto">
+<figcaption>
+<strong>Table 9.</strong>
+Materials used in Experiment IV.
+</figcaption>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Concentration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pDD130</td>
+<td>PSV40-LckM/P-GFP-IntN-pA</td>
+<td>100 ng/µL</td>
+</tr>
+<tr>
+<td>pDD131</td>
+<td>PSV40-IntC-mCherry-pA</td>
+<td>100 ng/µL</td>
+</tr>
+<tr>
+<td>pDD132</td>
+<td>PSV40-LckM/P-IntN-GFP-pA</td>
+<td>100 ng/µL</td>
+</tr>
+</tbody>
+</table>
+</figure>
+<p><strong>Media</strong></p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description/Composition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DMEMcomplete</td>
+<td>Dulbecco’s Modified Eagle Medium (Gibco), 10% fetal bovine serum (FBS, PAN-Biotech), 100 U/mL penicillin, 0.1 mg/mL streptomycin (Gibco).</td>
+</tr>
+<tr>
+<td>Opti-MEMTM</td>
+<td>Optimized minimum essential medium (Gibco), serum-free.</td>
+</tr>
+<tr>
+<td>Lysogeny broth (LB)</td>
+<td>10 g/L tryptone, 5g/L yeast extract, 10 g/L NaCl, pH 7.0.</td>
+</tr>
+<tr>
+<td>LB-agar plates (Amp)</td>
+<td>20 g/L Bacto Agar in 500 mL dH2O, 100 µg/mL Ampicillin.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Cells</strong></p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HeLa</td>
+<td><em>H. sapiens</em> cervix carcinoma derivative, epithelial-like, (ACC 57, DSMZ).</td>
+</tr>
+<tr>
+<td><em>E. coli</em> TOP10</td>
+<td>Chemically-competent cells. Genotyp: F-<em>mcrA</em> Δ(<em>mrr-hsd_RMS-<em>mcr_BC) Φ80</em>Lac</em>ZΔM15 Δ<em>Lac</em>X74 <em>rec</em>A1 <em>ara</em>D139 Δ(<em>araleu</em>) 7697 <em>gal</em>U <em>gal</em>K <em>rps</em>L (StrR) <em>end</em>A1 <em>nup</em>G.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Buffers and chemicals</strong></p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description/Concentration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PBS</td>
+<td>2.7 mM KCl, 1.5 mM KH<sub>2</sub>PO4, 8.0 mM Na<sub>2</sub>HPO4, 137 mM NaCl in dH<sub>2</sub>O.</td>
+</tr>
+<tr>
+<td>Trypsin/EDTA in PBS</td>
+<td>0.05% Trypsin/ 0.02% EDTA in PBS; PAN Biotech Cat. No. P10-023500</td>
+</tr>
+<tr>
+<td>RES/P1</td>
+<td>50 mM Tris-HCl, 10 mM EDTA, 100 μg/mL RNase A, dH<sub>2</sub>O to 1 L.</td>
+</tr>
+<tr>
+<td>LYS/P2</td>
+<td>0.2 M NaOH, 1% SDS, dH<sub>2</sub>O to 1 L.</td>
+</tr>
+<tr>
+<td>NEU/P3</td>
+<td>3.0 M potassium acetate, dH2O to 1 L.</td>
+</tr>
+<tr>
+<td>EQU</td>
+<td>750 mM NaCl, 50 mM MOPS, 15% isopropanol, 0,15% Triton X-100, dH<sub>2</sub>O to 1 L.</td>
+</tr>
+<tr>
+<td>WASH</td>
+<td>1.0M NaCl, 50 mM MOPS, 15% isopropanol, dH2O to 1 L.</td>
+</tr>
+<tr>
+<td>ELU</td>
+<td>1.25M NaCl, 50 mM Tris-Cl, 15% isopropanol, dH2O to 1 L.</td>
+</tr>
+<tr>
+<td>2-Propanol</td>
+<td>(Sigma)</td>
+</tr>
+<tr>
+<td>70% Ethanol</td>
+<td>70 ml Ethanol absolute (Chemsolute), dH2O to 100 mL.</td>
+</tr>
+<tr>
+<td>H2O</td>
+<td></td>
+</tr>
+<tr>
+<td>Polyethyleneimine (PEI)</td>
+<td>1 mg/mL PEI (25 kDa) in dH2O, pH 7 (HCl), sterile filtered with 0.2 μM pore size.</td>
+</tr>
+<tr>
+<td>Mowiol (Roth)</td>
+<td>6 g glycerol, 2.4 g Mowiol 4-88, 6 mL dH2O, 12 mL 0.2 M Tris-HCl pH 8.5.</td>
+</tr>
+<tr>
+<td>DABCO (Roth)</td>
+<td>1,4-diazabicyclo[2.2.2]octane (anti-photobleaching reagent).</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Consumables</strong></p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Midi Columns<br><br>24-well plates</td>
+<td>NucleoBond Xtra Midi Kit; Macherey-Nagel REF. 740410<br><br>Costar® 24-well Clear TC-treated Multiple Well Plates, cat. No. 3524.</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="protocol-2" tabindex="-1">Protocol</h3>
+<h4 id="day-7-plasmid-transformation" tabindex="-1">Day 7: Plasmid Transformation</h4>
+<p>Each participant will transform one plasmid into <em>E. coli</em> TOP10 cells, inoculate a culture on day 4, and perform a plasmid midiprep on day 5.</p>
+<p>The different plasmids are distributed as follows:</p>
+<p><strong>Odd group numbers:</strong> pDD130 and pDD131</p>
+<p><strong>Even group numbers:</strong> pDD131 and pDD132</p>
+<p>Please refer to Experiment I (day 2, p. 22) for the transformation protocol. Use 1 µL of the provided plasmid DNA per transformation into one tube of competent <em>E. coli</em> TOP10 cells. Spread 50 µL of culture on one LB-Amp plate (asymmetrically, you want to be able to pick a single colony the next day). Incubate the plate overnight at 37°C.</p>
+<h4 id="day-8-culture-inoculation" tabindex="-1">Day 8: Culture Inoculation</h4>
+<ol>
+<li>Add 100 µL of Ampicillin to one Erlenmeyer flask containing 100 mL LB medium.</li>
+<li>Using a sterile 200 µL pipette tip, pick one colony from your transformation on day 7 and inoculate the medium.</li>
+<li>Shake the flask overnight at 37°C, shaking at 180 rpm.</li>
+</ol>
+<h4 id="day-9-culture-harvesting" tabindex="-1">Day 9: Culture Harvesting</h4>
+<ol>
+<li>Harvest 100 mL culture by centrifugation for 5 min at 5,000 <em>xg</em> at RT in a 50 mL Falcon tube.</li>
+<li>Remove the supernatant (SN).</li>
+<li>Store at -20°C</li>
+</ol>
+<h4 id="day-10-plasmid-midiprep" tabindex="-1">Day 10: Plasmid Midiprep</h4>
+<ol>
+<li>Add 8 mL of buffer RES supplemented with RNAase (M. Nagel, 60 µg mL-1) to the Falcon tube, thoroughly resuspend the cells.</li>
+<li>Add 8 mL lysis buffer LYS (if you notice precipitated SDS, warm it first until it dissolves). Mix by inverting 6 to 8 times. DO NOT VORTEX.</li>
+<li>Incubate 5 min at RT.</li>
+<li>Add 8 mL neutralization buffer NEU. Mix immediately by inverting the tube 6 to 8 times. DO NOT VORTEX.</li>
+<li>Centrifuge 10 min, 12,000 <em>xg</em> at RT. (Afterwards, set the centrifuge to 4°C for a later step)</li>
+<li>Meanwhile, equilibrate the column/filter with 10 mL equilibration buffer EQU (apply the buffer onto the rim of the column filter, not the center), and allow the column to drain by gravity flow.</li>
+<li>Load supernatant on the filter/column, and allow the column to drain by gravity flow.</li>
+<li>Add 10 mL equilibration buffer EQU for the 1st wash (on the rim of the filter).</li>
+<li>Discard the column filter.</li>
+<li>Add 10 mL of wash buffer WASH for the 2nd wash (directly on the middle of the column).</li>
+<li>Place a 15 mL Falcon tube under the column and elute the DNA with 5 mL elution buffer ELU.</li>
+<li>Add 3.5 mL of isopropanol to the eluate. Vortex thoroughly.</li>
+<li>Centrifuge 30 min, 12,000 <em>xg</em> at 4°C. (Afterwards, set the centrifuge to RT for the next step).</li>
+<li>Discard SN by decanting (Be careful at this step. You should see a small white DNA pellet, which you do not want to lose). Show the pellet to your supervisor to discuss in what volume you should resuspend the pellet in the last step.</li>
+<li>Wash the DNA pellet with 2 mL 70% EtOH.</li>
+<li>Centrifuge 5 min, 12,000 <em>xg</em> at RT.</li>
+<li>Carefully discard the SN using the pipette. The pellet is usually very loose at this step.</li>
+<li>Air-dry the pellet (a few hours at RT, or in the oven at 58°C for approx. 20 min).</li>
+<li>Resuspend with 70–120 µL ddH<mjx-container class="MathJax" jax="SVG" style="direction:ltr;position:relative"><svg style="overflow:visible;min-height:1px;min-width:1px;vertical-align:-.339ex" xmlns="http://www.w3.org/2000/svg" width="0.988ex" height="1.065ex" role="img" focusable="false" viewBox="0 -320.9 436.6 470.9" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"></g><g data-mml-node="mn" transform="translate(33,-150) scale(0.707)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z" style="stroke-width:3"></path></g></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline" style="top:0;left:0;clip:rect(1px,1px,1px,1px);-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;position:absolute;padding:1px 0 0 0;border:0;display:block;width:auto;overflow:hidden"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi></mi><mn>2</mn></msub></math></mjx-assistive-mml></mjx-container>O (sterile).</li>
+<li>Incubate 30 min at 37°C, resuspend by gentle pipetting.</li>
+<li>Dilute the DNA 1:10 and determine the concentration using the nanodrop (eventually adjust the concentration to 2 µg µL⁻¹).</li>
+<li>Freeze the extracted plasmids</li>
+</ol>
+<h4 id="day-11-seeding-he-la-cells-on-glass-coverslips" tabindex="-1">Day 11: Seeding HeLa Cells on Glass Coverslips</h4>
+<p>This step should be performed only by one member of each group in order to prevent overcrowding in the cell culture room. Together with the supervisors, you will prepare a shared cell suspension. Each present group member will then seed the required number of cells in a 24-well plate (one plate per group)</p>
+<ol>
+<li>Prepare a 15 mL Falcon tube containing 8 mL prewarmed DMEMcomplete medium.</li>
+<li>Remove supernatant (pump).</li>
+<li>Add 2 mL Trypsin and incubate the plate for 5 min at 37°C.</li>
+<li>Detach and resuspend the cells using a 1000 µL pipette. Transfer the suspension to the prepared medium. (The serum in the medium will inactivate the Trypsin).</li>
+<li>Centrifuge cells for 3 min, 300 <em>xg</em></li>
+<li>Remove supernatant and resuspend the cell pellet with 10 mL fresh medium.</li>
+<li>Prepare a Countess 3 counting chamber.</li>
+<li>Add 14 µL of the cell suspension to the cup.</li>
+<li>Count cells using the Countess 3.</li>
+<li>The Countess 3 provides information on the concentration (cells/mL) and viability (in %) of the cells. Please record this information for your protocol.</li>
+<li>Determine the number of cells: counted cells/mL * 10 mL (volume) = total cells. The number provided by the Countess 3 for the cell concentration corresponds to <em>µ1</em>.</li>
+<li>Seed HeLa cells as follows:</li>
+</ol>
+<ul>
+<li>Prepare a cell suspension with a concentration of 60,000 cells/mL (🡪 <em>c2)</em> by dilution with DMEMcomplete medium. Prepare 30 mL (🡪 <em>v2)</em> of cell suspension in order to have enough for all groups. Use a 50 mL Falcon tube. The required dilution volume <em>v1</em> can be calculated according to the formula <em>c1</em> * <em>v1</em> = <em>c2</em> * <em>v2</em>.</li>
+<li>Seed 500 µL of cell suspension (containing 30,000 HeLa cells) into each well of a 24-well plate containing a glass cover slip (prepared by supervisors in advance). Each group should seed 6 wells into an individual plate.</li>
+</ul>
+<p><em>Well plate layout: Seed wells 1, 2, and 3 in a 24-well plate (6 wells per group).</em></p>
+<ol>
+<li>Place the cell culture plate into the 37°C incubator to allow them to attach to the glass coverslip for the PEI transfection on day 12.</li>
+</ol>
+<h4 id="day-12-pei-transfection" tabindex="-1">Day 12: PEI Transfection</h4>
+<ol>
+<li>Per well, dilute 0.75 µg of DNA in OptiMEM to a final volume of 50 µL (remember your Midi-prep concentration). Please check <strong>Table 10</strong> and <strong>Table 11</strong> for further information.</li>
+<li>When transfecting multiple plasmids for the same setup, divide the total DNA amount (0.75 µg) by the number of plasmids which are transfected (equal plasmid load). Note: keep ca. 0.75 µg as total DNA amount; the ratio of DNA: PEI is important for the transfection efficiency!</li>
+<li>Per well, dilute 2.5 µL of PEI solution in OptiMEM to a final volume of 50 µL. Vortex. Please check <strong>Table 10</strong> and <strong>Table 11</strong> for further information.</li>
+<li>Add an equal volume of PEI solution to the DNA solution.</li>
+<li>Vortex the solution immediately and thoroughly for 10 s. Complexation of PEI with DNA, into small particles able to enter the cell during transfection, is dependent on thorough mixing at this step.</li>
+<li>Incubate for 15 min at RT.</li>
+<li>Per well, add the premixed 100 µL PEI/DNA mix drop-wise to each well. DO NOT VORTEX!</li>
+<li>Incubate for 4 h at 37°C in the cell culture incubator.</li>
+<li>Exchange medium for fresh cultivation medium (500 µL per well).</li>
+</ol>
+<figure id="tbl:transfection-odd" class="align-left" style="width:100%;float:left;margin-right:1em">
+<figcaption>
+<strong>Table 10.</strong>
+Transfection Set up 1 for odd group numbers.
+</figcaption>
+<table>
+<thead>
+<tr>
+<th>Setup</th>
+<th>Plasmid</th>
+<th>Amount</th>
+<th>DNA conc.</th>
+<th>µL/well</th>
+<th>µL total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Setup 1</td>
+<td>pDD130</td>
+<td>1</td>
+<td>Enter C</td>
+<td>0.75/C = V</td>
+<td>V×3</td>
+</tr>
+<tr>
+<td>-</td>
+<td>OptiMEM</td>
+<td>-</td>
+<td>-</td>
+<td>50-V = O</td>
+<td>O×3</td>
+</tr>
+<tr>
+<td>Setup 2</td>
+<td>pDD131</td>
+<td>1</td>
+<td>Enter C</td>
+<td>0.75/C = V</td>
+<td>V×3</td>
+</tr>
+<tr>
+<td>-</td>
+<td>OptiMEM</td>
+<td>-</td>
+<td>-</td>
+<td>50-V = O</td>
+<td>O×3</td>
+</tr>
+<tr>
+<td>Setup 3</td>
+<td>pDD130 + pDD131</td>
+<td>1 each</td>
+<td>Enter C</td>
+<td>0.375/C = V</td>
+<td>V×3</td>
+</tr>
+<tr>
+<td>-</td>
+<td>OptiMEM</td>
+<td>-</td>
+<td>-</td>
+<td>50-V1-V2 = O</td>
+<td>O×3</td>
+</tr>
+<tr>
+<td>PEI Mix</td>
+<td>PEI</td>
+<td>8 wells</td>
+<td>-</td>
+<td>2.5 µL</td>
+<td>20 µL</td>
+</tr>
+<tr>
+<td>-</td>
+<td>OptiMEM</td>
+<td>8 wells</td>
+<td>-</td>
+<td>47.5 µL</td>
+<td>380 µL</td>
+</tr>
+</tbody>
+</table>
+</figure>
+<figure id="tbl:transfection-even" class="align-left" style="width:100%;float:left;margin-right:1em">
+<figcaption>
+<strong>Table 11.</strong>
+Transfection Set up 1 for even group numbers.
+</figcaption>
+<table>
+<thead>
+<tr>
+<th>Setup</th>
+<th>Plasmid</th>
+<th>Amount</th>
+<th>DNA conc.</th>
+<th>µL/well</th>
+<th>µL total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Setup 1</td>
+<td>pDD131</td>
+<td>1</td>
+<td>Enter C</td>
+<td>0.75/C = V</td>
+<td>V×3</td>
+</tr>
+<tr>
+<td>-</td>
+<td>OptiMEM</td>
+<td>-</td>
+<td>-</td>
+<td>50-V = O</td>
+<td>O×3</td>
+</tr>
+<tr>
+<td>Setup 2</td>
+<td>pDD132</td>
+<td>1</td>
+<td>Enter C</td>
+<td>0.75/C = V</td>
+<td>V×3</td>
+</tr>
+<tr>
+<td>-</td>
+<td>OptiMEM</td>
+<td>-</td>
+<td>-</td>
+<td>50-V = O</td>
+<td>O×3</td>
+</tr>
+<tr>
+<td>Setup 3</td>
+<td>pDD131 + pDD132</td>
+<td>1 each</td>
+<td>Enter C</td>
+<td>0.375/C = V</td>
+<td>V×3</td>
+</tr>
+<tr>
+<td>-</td>
+<td>OptiMEM</td>
+<td>-</td>
+<td>-</td>
+<td>50-V1-V2 = O</td>
+<td>O×3</td>
+</tr>
+<tr>
+<td>PEI Mix</td>
+<td>PEI</td>
+<td>8 wells</td>
+<td>-</td>
+<td>2.5 µL</td>
+<td>20 µL</td>
+</tr>
+<tr>
+<td>-</td>
+<td>OptiMEM</td>
+<td>8 wells</td>
+<td>-</td>
+<td>47.5 µL</td>
+<td>380 µL</td>
+</tr>
+</tbody>
+</table>
+</figure>
+<h4 id="day-13-paraformaldehyde-pfa-fixation-of-cells-for-confocal-microscopy" tabindex="-1">Day 13: Paraformaldehyde (PFA) Fixation of Cells for Confocal Microscopy</h4>
+<ol>
+<li>Wash cells with 500 µL PBS once.</li>
+<li>Overlay cells with 200 µL 4% PFA, incubate on ice for 10 min, followed by an additional 10 min at RT.</li>
+<li>Remove PFA (NOTE: used tips and liquid waste go to special waste containers!).</li>
+<li>Add 400 µL of PBS.</li>
+<li>Prepare and label object slides.</li>
+<li>Add 8 µL of prepared Mowiol with DABCO on the object slides (supervisors will demonstrate how to do it).</li>
+<li>Be careful not to pipette any air bubbles.</li>
+<li>Carefully take out coverslips from the 24-well plate using tweezers.</li>
+<li>Carefully get rid of water droplets with the help of fine tissue.</li>
+<li>Place the coverslips with the cells facing down onto the Mowiol droplet. Avoid air bubbles.</li>
+<li>Dry slides at 37°C for 30 min.</li>
+</ol>
+<h4 id="confocal-microscopy" tabindex="-1">Confocal Microscopy</h4>
+<p>One pair of odd and even group members proceeds to the confocal microscope at a time, accompanied by their supervisors. Afterwards, you may analyze the data using FIJI in the seminar room.</p>
+<h2 id="experiment-v-engineering-chemically-regulated-gene-switch-technology-in-stable-mammalian-cell-culture" tabindex="-1">Experiment V: Engineering Chemically Regulated Gene Switch Technology in Stable Mammalian Cell Culture</h2>
+<p><strong>Supervisors:</strong> Maria Evangelopoulou, Miriam Labusch, Benjamin McLean</p>
+<p><em>[Content for Experiment V to be added]</em></p>
+<h1 id="references" tabindex="-1">References</h1>
+<p>Akimzhanov, A.M., and Boehning, D. (2015). Rapid and transient palmitoylation of the tyrosine kinase Lck mediates Fas signaling. Proc. Natl. Acad. Sci. U. S. A. 112, 11876–11880.</p>
+<p>Beyer, H.M., Gonschorek, P., Samodelov, S.L., Meier, M., Weber, W., and Zurbriggen, M.D. (2015). AQUA Cloning: A Versatile and Simple Enzyme-Free Cloning Approach. PLOS ONE 10, e0137652.</p>
+<p>Friedel, K., Popp, M.A., Matern, J.C.J., Gazdag, E.M., Thiel, I.V., Volkmann, G., Blankenfeldt, W., and Mootz, H.D. (2019). A functional interplay between intein and extein sequences in protein splicing compensates for the essential block B histidine. Chem. Sci. 10, 239–251.</p>
+<p>Mátés, L., Chuah, M.K.L., Belay, E., Jerchow, B., Manoj, N., Acosta-Sanchez, A., Grzela, D.P., Schmitt, A., Becker, K., Matrai, J., et al. (2009). Molecular evolution of a novel hyperactive Sleeping Beauty transposase enables robust stable gene transfer in vertebrates. Nat. Genet. 41, 753–761.</p>
+<p>Müller, K., Naumann, S., Weber, W., and Zurbriggen, M.D. (2015). Optogenetics for gene expression in mammalian cells. Biol. Chem. 396, 145–152. <a class="tag" onclick="toggleTagSearch(this)" data-content="#academic">#academic</a></p>
+</main>
+<script>lucide.createIcons({attrs:{class:["svg-icon"]}})</script>
+</body>
+</html>
