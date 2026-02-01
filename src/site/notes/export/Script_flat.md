@@ -14,7 +14,7 @@ Sciebo folder: <https://uni-duesseldorf.sciebo.de/s/KPoKTwFd2jeXfFj>
 
 ## Time Schedule
 
-<figure id="fig:schedule-part1" class="align-left" style="width: 100%; float: left; margin-right: 1em">
+<figure id="fig:schedule-part1" class="align-left" style="width: 100%; display: block; margin-right: auto">
 
 ![Figure 1](/img/user/figures/schedule_part1.webp)
 
@@ -23,7 +23,7 @@ Sciebo folder: <https://uni-duesseldorf.sciebo.de/s/KPoKTwFd2jeXfFj>
 <strong>Time Schedule for the first two weeks of the course.</strong>
 </figcaption>
 </figure>
-<figure id="fig:schedule-part2" class="align-left" style="width: 100%; float: left; margin-right: 1em">
+<figure id="fig:schedule-part2" class="align-left" style="width: 100%; display: block; margin-right: auto">
 
 ![Figure 2](/img/user/figures/schedule_part2.webp)
 
@@ -83,7 +83,7 @@ Proteins constitute a group of macro-biomolecules that provide cells with unique
 
 Inducible gene expression switches are an example of engineered protein switches. Chemically controlled molecular switches have played a central role in the fundamental study of life, and the emergence of synthetic biology. They have become routine tools in cell biology research and industry (**Figure 3**).
 
-<figure id="fig:tetracycline-switch" class="align-left" style="width: 50%; float: left; margin-right: 1em">
+<figure id="fig:tetracycline-switch" class="align-left" style="width: 50%; display: block; margin-right: auto">
 
 ![Figure 3](/img/user/figures/tetracycline.webp)
 
@@ -106,7 +106,7 @@ However, drawbacks inherent to small molecules like tetracycline, such as diffic
 
 The first light-controlled molecular tools were constructed by introducing photo-cleavable inhibiting chemical groups into inducers, nucleic acids, and transactivators that could be cleaved off in response to UVB light. However, a significant disadvantage of this method is the need to exogenously apply the caged molecules or to reprogram the translation machinery for the incorporation of non-natural amino acids. This disadvantage has been overcome by the optogenetic approach that combines optical and genetic methods to develop light-responsive tools. The first breakthrough in mammalian optogenetics was the discovery of microbial opsins and their subsequent introduction in neuroscience, which revolutionized the study of neuronal networks. Channelrhodopsin, the first opsin that was applied in mammalian neurons, becomes permeable to cations upon blue light illumination, thus triggering neuronal activation. Later, channelrhodopsin was complemented by other ionotropic receptors, including the orange light-responsive, chloride pump halorhodopsin, which made it possible to use dual‑wavelength control to excite or inhibit neurons with subcellular resolution, even in intact brain tissue and in moving animals. Moving beyond neuroscience, more recent optogenetic tools have been engineered to control diverse signaling processes on the protein level in mammalian cells, including gene expression and protein stability, subcellular localization of proteins, receptor and kinase activity, organelle movement, etc. To this end, photoreceptors from all kingdoms of life that naturally sense environmental light information by responding to light of distinct regions of the light spectrum have been employed as engineering scaffolds based on modulating protein-protein interactions, or protein conformation in response to light stimulation (Müller et al., 2015). **Figure 2** illustrates two photoreceptors that are frequently employed in optogenetic protein engineering approaches.
 
-<figure id="fig:photoswitchable-domains" class="align-left" style="width: 100%; float: left; margin-right: 1em">
+<figure id="fig:photoswitchable-domains" class="align-left" style="width: 100%; display: block; margin-right: auto">
 
 ![Figure 4](/img/user/figures/photoswitches.webp)
 
@@ -132,7 +132,7 @@ which influences the function of the target protein.
 
 Protein splicing is a natural phenomenon catalyzed by autocatalytic protein domains called inteins (internal proteins). Inteins reside within other proteins, usually close to the active site of proteins, which are essential for the fitness of a given organism. After translation, inteins autocatalytically excise themselves from the precursor protein and covalently ligate the flanking protein sequences (exteins) with a regular peptide bond, a process called protein *cis*-splicing, thereby functionally reconstituting the sequence of the host proteins (**Figure 5**A).
 
-<figure id="fig:protein-splicing" class="align-left" style="width: 100%; float: left; margin-right: 1em">
+<figure id="fig:protein-splicing" class="align-left" style="width: 100%; display: block; margin-right: auto">
 
 ![Figure 5](/img/user/figures/inteins.webp)
 
@@ -150,7 +150,7 @@ splicing in trans, leading to the ligation of individual polypeptides.
 
 Little is known about the biological relevance of inteins and therefore, they are mainly seen as selfish genetic elements capable of inserting into protein-encoding genes. Because inteins tend to insert into genes encoding essential proteins with a high degree of conservation, they may be maintained within populations as long as they sufficiently catalyze their self-removal, thereby escaping genetic drifts. However, it seems plausible that some inteins might act as environmental sensors and regulate the activity of their host proteins accordingly (e.g., reduce the growth rate under stress conditions). From genome-mining approaches, split inteins have been identified which can ligate individual polypeptides upon fragment complementation of a N- and C-intein fragment (Int<sub>N</sub> and Int<sub>C</sub>) in a protein trans-splicing reaction (**Figure 5**B). Additionally, one can often engineer *cis*-splicing into *trans*-splicing inteins. Protein *cis*-splicing gave rise to a variety of applications as it allows covalently ligating protein sequences in a solvent-free medium (*in vivo* or *in vitro*) without the requirement of additional cofactors and energy sources. Protein splicing of class 1 inteins, representing the most frequently-found examples, occurs in 4 concerted steps, involving the first intein residue (Cys 1 or Ser 1), the first residue of the C‑terminal extein (Cys/Ser/Thr +1), and the last intein residue (typically Asn) (**Figure 4**).
 
-<figure id="fig:splicing-mechanism" class="align-left" style="width: 70%; float: left; margin-right: 1em">
+<figure id="fig:splicing-mechanism" class="align-left" style="width: 70%; display: block; margin-right: auto">
 
 ![Figure 6](/img/user/figures/intein_mechanism.webp)
 
@@ -170,7 +170,7 @@ modified from Friedel <em>et al.</em>, 2019.
 
 Split inteins in particular found a wide range of applications including their use for protein labeling, protein semi-synthesis, protein purification, protein cyclization, or for engineering protein logic gates. **Figure 7** summarizes some recent examples of developments utilizing split intein technologies (Friedel *et al*., 2019).
 
-<figure id="fig:split-intein-apps" class="align-left" style="width: 100%; float: left; margin-right: 1em">
+<figure id="fig:split-intein-apps" class="align-left" style="width: 100%; display: block; margin-right: auto">
 
 ![Figure 7](/img/user/figures/inteins_applications.webp)
 
@@ -210,7 +210,7 @@ In the practical course polyethylenimine (PEI) will be employed to exemplify tra
 
 PEI is a poly-cationic polymer that is mixed with the DNA in a ratio that ensures the formation of complexes that carry a net positive charge. These cationic complexes interact with the negatively charged cell-surface and are taken up by endocytosis. Inside the endosome, PEI acts as a proton sponge, preventing acidification that is required for the activity of endosomal nucleases (**Figure 8**).
 
-<figure id="fig:pei-transfection" class="align-left" style="width: 100%; float: left; margin-right: 1em">
+<figure id="fig:pei-transfection" class="align-left" style="width: 100%; display: block; margin-right: auto">
 
 ![Figure 8](figures/transfection_pei.webp)
 
@@ -229,7 +229,7 @@ liberation of the DNA into the cytoplasm.
 
 Upon transfection into mammalian cells, nucleic acids can contribute to the genetic programming and instruct cells to execute or alter particular activities. Commonly, either RNA- or DNA-molecules are employed, which in most cases perform their biological function in the cytoplasm and nucleus, respectively. Current RNA-based Covid-19 vaccines, for example, rely on mRNA which upon cell uptake, undergoes ribosomal translation into fragments of the viral spike protein in the cytosol. For the production of biopharmaceuticals and research purposes in cell lines, DNA plasmids are commonly used, which require nuclear entry in order to reach the cell compartment where RNA transcription takes place (**Figure 9**).
 
-<figure id="fig:mammalian-plasmid" class="align-left" style="width: 70%; float: left; margin-right: 1em">
+<figure id="fig:mammalian-plasmid" class="align-left" style="width: 70%; display: block; margin-right: auto">
 
 ![Figure 9](/img/user/figures/mammalian_cell_plasmid.webp)
 
@@ -244,7 +244,7 @@ Both examples lead to a transient activity of the transfected genetic material. 
 
 Experiment II of this practical course will introduce you to a blue light-sensitive optogenetic gene expression system. Here, you will use mammalian cells that have genomic integrations for the required optogenetic switches and the target gene, which will be expressed upon stimulation with light. These cells were generated using the Sleeping Beauty SB100X transposase, as explained in **Figure 10**. “Sleeping Beauty” refers to a transposase that was originally identified as an inactive enzyme in salmonid fish. Targeted mutagenesis, however, restored the activity after a long evolutionary sleep, and rounds of directed evolution finally yielded a hyperactive transposase enzyme, which is nowadays widely used for genome engineering purposes (Mátés et al., 2009).
 
-<figure id="fig:sleeping-beauty" class="align-left" style="width: 80%; float: left; margin-right: 1em">
+<figure id="fig:sleeping-beauty" class="align-left" style="width: 80%; display: block; margin-right: auto">
 
 ![Figure 10](/img/user/figures/transposases.webp)
 
@@ -266,6 +266,12 @@ resistance gene.
 Properties of the discussed genomic integration method groups.
   </figcaption>
 <table>
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 38%" />
+<col style="width: 28%" />
+<col style="width: 12%" />
+</colgroup>
 <thead>
 <tr>
 <th>Technology</th>
@@ -317,6 +323,11 @@ Mikroorganismen und Zellkultur GmbH (DSMZ) and the American type culture
 collection (ATCC)).
   </figcaption>
 <table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 40%" />
+<col style="width: 40%" />
+</colgroup>
 <thead>
 <tr>
 <th>Name</th>
@@ -374,7 +385,7 @@ The engineered vectors will be purified and analyzed using analytical restric
 
 Finally, we will select some promising samples and analyze them by Sanger sequencing.
 
-<figure id="fig:cloning-strategy" class="align-left" style="width: 80%; float: left; margin-right: 1em">
+<figure id="fig:cloning-strategy" class="align-left" style="width: 80%; display: block; margin-right: auto">
 
 ![Figure 11](/img/user/figures/cloning_strategies.webp)
 
@@ -400,6 +411,13 @@ A third insert amplified from pDD002 with the primer oDD564 and oDD565 will be c
 Materials used in Experiment I.
   </figcaption>
 <table>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 18%" />
+<col style="width: 42%" />
+<col style="width: 8%" />
+<col style="width: 16%" />
+</colgroup>
 <thead>
 <tr>
 <th>Category</th>
@@ -1343,7 +1361,7 @@ This experiment aims to induce either the addition or exchange of two protein do
 
 In the experiment, you will transiently transfect human HeLa cells with different combinations of the following plasmids encoding two versions of the membrane-attached GFP protein fused to IntN, or cytosolic mCherry fused to IntC. While we expect GFP to localize at the membrane and mCherry in the cytosol when transfected into cells, their cotransfection should induce the protein splicing reaction, which we will observe by confocal microscopy.
 
-<figure id="fig:domain-swapping" class="align-left" style="width: 100%; float: left; margin-right: 1em">
+<figure id="fig:domain-swapping" class="align-left" style="width: 100%; display: block; margin-right: auto">
 
 ![Figure 13](/img/user/figures/inteins_plasms_membrane.webp)
 
