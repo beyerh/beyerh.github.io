@@ -15,6 +15,6 @@ Mátés, L., Chuah, M.K.L., Belay, E., Jerchow, B., Manoj, N., Acosta-Sanchez, A
 
 Müller, K., Naumann, S., Weber, W., and Zurbriggen, M.D. (2015). Optogenetics for gene expression in mammalian cells. Biol. Chem. 396, 145–152. \#academic
 
+
 ---
-*   [Previous: Experiment V](experiment5.md)
-*   [Back to Start](index.md)
+* [[digital_garden/experiment5\|Previous: Experiment 5]]

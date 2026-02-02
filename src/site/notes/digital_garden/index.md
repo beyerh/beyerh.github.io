@@ -30,7 +30,9 @@ Time Schedule for the first two weeks of the course.
 
 <figcaption>
 <strong>Figure 2.</strong> 
-Time Schedule for the third week of the course like in <strong><a href="#fig:schedule-part1">Figure 1</a></strong>.
+Time Schedule for the third week of the course like in <strong><span
+class="citation"
+data-cites="Fig:schedule-part1">@Fig:schedule-part1</span></strong>.
 </figcaption>
 </figure>
 
@@ -72,14 +74,7 @@ The discussion and conclusion parts are based on your analyzed data. Did the res
 
 Limit the text of each experiment to 1–2 pages (depending on font size and formatting), excluding graphical elements and their captions.
 
+
+
 ---
-
-## Navigation
-
-*   [Next: Background](background.md)
-*   [Experiment I: Molecular Cloning](experiment1.md)
-*   [Experiment II: Optogenetic Gene Expression](experiment2.md)
-*   [Experiment III: Protein Trans-Splicing](experiment3.md)
-*   [Experiment IV: Domain Swapping](experiment4.md)
-*   [Experiment V: Chemically Regulated Switch](experiment5.md)
-*   [References](references.md)
+* [[digital_garden/background\|Next: Background]]
