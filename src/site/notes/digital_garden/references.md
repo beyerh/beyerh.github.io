@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/digital-garden/references/","title":"References"}
+{"dg-publish":true,"permalink":"/digital-garden/references/"}
 ---
 
 

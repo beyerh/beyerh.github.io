@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/digital-garden/experiment3/","title":"Experiment III"}
+{"dg-publish":true,"permalink":"/digital-garden/experiment3/"}
 ---
 
 
