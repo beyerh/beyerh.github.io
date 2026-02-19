@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/digital-garden/index/","title":"Current Methods in Synthetic Biology for Biomedical Research","tags":["gardenEntry"]}
+{"dg-publish":true,"permalink":"/digital-garden/index/","tags":["gardenEntry"]}
 ---
 
 
@@ -7,7 +7,7 @@
 
 ## Supervisors
 
-Benjamin McLean, Cha San Koh, Daniel Wiebensohn, Dominic Schirmer, Josepha Grewer, Maria Evangelopoulou, Micail David Müller, Miriam Labusch
+Benjamin McLean, Cha San Koh, Daniel Wiebensohn, Dominic Schirmer, Josepha Grewer, Maria Evangelopoulou, Micail David Müller, Miriam Labusch, Hannes Beyer
 
 ## Course Materials
 
@@ -17,7 +17,11 @@ Sciebo folder: <https://uni-duesseldorf.sciebo.de/s/KPoKTwFd2jeXfFj>
 
 ![Figure 1. Time Schedule for the first two weeks of the course.](/img/user/figures/schedule_part1.png)
 
+**Figure 1.** Time Schedule for the first two weeks of the course.
+
 ![Figure 2. Time Schedule for the third week of the course like in @Fig:schedule-part1.](/img/user/figures/schedule_part2.png)
+
+**Figure 2.** Time Schedule for the third week of the course like in **Figure 1**.
 
 ## Notes
 
@@ -59,4 +63,4 @@ Limit the text of each experiment to 1–2 pages (depending on font size and for
 
 
 ---
-[[digital_garden/background\|Next: Background >]]
+[[digital_garden/Background\|Next: Background >]]
