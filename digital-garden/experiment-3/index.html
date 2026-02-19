@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-<title>Experiment3</title>
+<title>Experiment 3</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <script async type="module">import mermaid from"https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs"</script>
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js" integrity="sha512-hpZ5pDCF2bRCweL5WoA0/N1elet1KYL5mx3LP555Eg/0ZguaHawxNvEjF6O3rufAChs16HVNhEc6blF/rZoowQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -86,7 +86,7 @@ CTRL + K
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="filelist">
-<div @click.stop class="notelink"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration:none" class="filename" href="/digital-garden/experiment-3/">Experiment 3 </a>
+<div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration:none" class="filename" href="/digital-garden/experiment-3/">Experiment 3 </a>
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="filelist">
@@ -106,7 +106,7 @@ CTRL + K
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="filelist">
-<div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration:none" class="filename" href="/digital-garden/experiment3/">Experiment3 </a>
+<div @click.stop class="notelink"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration:none" class="filename" href="/digital-garden/experiment3/">Experiment3 </a>
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="filelist">
@@ -176,13 +176,22 @@ CTRL + K
 <li>What are the positive and negative controls?</li>
 <li>How many conditions do we need to perform in the experiment?</li>
 </ol>
-<p><picture src="/img/user/figures/inteins_boolean_gates.png" alt="Figure 17.  Scheme for the protein trans-splicing experiment to design logic gates."><source media="(max-width:480px)" srcset="/img/optimized/C0_TidDAWv-500.webp" type="image/webp">
+<figure id="fig:logic-gate" class="align-left" style="width:100%;display:block;margin-right:auto">
+<p><picture src="/img/user/figures/inteins_boolean_gates.png" alt="Figure 17"><source media="(max-width:480px)" srcset="/img/optimized/C0_TidDAWv-500.webp" type="image/webp">
 <source media="(max-width:480px)" srcset="/img/optimized/C0_TidDAWv-500.jpeg">
-<source media="(max-width:1920px)" srcset="/img/optimized/C0_TidDAWv-700.webp" type="image/webp"><source media="(max-width:1920px)" srcset="/img/optimized/C0_TidDAWv-700.jpeg"><img class="" src="/img/user/figures/inteins_boolean_gates.png" alt="Figure 17.  Scheme for the protein trans-splicing experiment to design logic gates." width=""></picture></p>
-<p><strong>Figure 17.</strong> ** Scheme for the protein <em>trans</em>-splicing experiment to design logic gates.</p>
+<source media="(max-width:1920px)" srcset="/img/optimized/C0_TidDAWv-700.webp" type="image/webp"><source media="(max-width:1920px)" srcset="/img/optimized/C0_TidDAWv-700.jpeg"><img class="" src="/img/user/figures/inteins_boolean_gates.png" alt="Figure 17" width=""></picture></p>
+<figcaption>
+<strong>Figure 17.</strong>
+** Scheme for the protein <em>trans</em>-splicing experiment to design logic gates.
+</figcaption>
+</figure>
 <h3 id="materials" tabindex="-1">Materials</h3>
-<p><strong>Table 13.</strong> Materials used in Experiment III.</p>
-<div class="table-wrapper"><table>
+<figure id="tbl:materials-exp3" class="align-left" style="width:100%;float:left;margin-right:1em">
+<figcaption>
+<strong>Table 13.</strong>
+Materials used in Experiment III.
+</figcaption>
+<table>
 <thead>
 <tr>
 <th>Item</th>
@@ -218,7 +227,7 @@ CTRL + K
 </tr>
 <tr>
 <td>PBS</td>
-<td>2.7 mM KCl, 1.5 mM KH~2~PO~4~, 8.0 mM Na~2~HPO~4~, 137 mM NaCl in dH~2~O</td>
+<td>2.7 mM KCl, 1.5 mM KH<sub>2</sub>PO<sub>4</sub>, 8.0 mM Na<sub>2</sub>HPO<sub>4</sub>, 137 mM NaCl in dH<sub>2</sub>O</td>
 <td>Buffer used for cell diluting</td>
 </tr>
 <tr>
@@ -227,7 +236,8 @@ CTRL + K
 <td>Expresses T7 RNA- polymerase</td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</figure>
 <h3 id="protocol" tabindex="-1">Protocol</h3>
 <h4 id="day-6-transformation-of-bacterial-strains" tabindex="-1">Day 6: Transformation of Bacterial Strains</h4>
 <ol>
@@ -242,7 +252,11 @@ CTRL + K
 <li>Incubate at 37°C overnight.</li>
 </ol>
 <h4 id="day-7-intein-experiment-in-e-coli" tabindex="-1">Day 7: Intein Experiment in E. coli</h4>
-<div class="table-wrapper"><table>
+<figure id="tbl:experimental-setup" class="align-left" style="width:100%;float:left;margin-right:1em">
+<figcaption>
+<strong>Table 14.</strong>
+</figcaption>
+<table>
 <thead>
 <tr>
 <th>Plasmid</th>
@@ -302,7 +316,8 @@ CTRL + K
 <td>A</td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</figure>
 <ol>
 <li>Prepare an Eppendorf tube (1.5 mL) with 50 µL LB-medium and a Falcon tube (15 mL) with 5 mL LB-medium.</li>
 <li>Pick ~15 colonies and resuspend in an Eppendorf tube.</li>
@@ -325,7 +340,7 @@ CTRL + K
 <li>Determine the mCherry fluorescence of each sample normalized to the cell density (OD~600~ reading). Illustrate the averaged values graphically.</li>
 </ol>
 <hr>
-<p><a class="internal-link" target="" data-note-icon="" href="/digital-garden/experiment2/">&lt; Previous: Experiment II</a> | <a class="internal-link" target="" data-note-icon="" href="/digital-garden/experiment4/">Next: Experiment IV &gt;</a></p>
+<p><a class="internal-link" target="" data-note-icon="" href="/digital-garden/experiment-2/">&lt; Previous: Experiment II</a> | <a class="internal-link" target="" data-note-icon="" href="/digital-garden/experiment-4/">Next: Experiment IV &gt;</a></p>
 </main>
 <aside>
 <div class="sidebar">
@@ -361,8 +376,8 @@ On this page
 </div>
 <div class="backlinks">
 <div class="backlink-title" style="margin:4px 0!important">Pages mentioning this page</div>
-<div class="backlink-list"><div class="backlink-card"><i icon-name="link"></i><a href="/digital-garden/experiment2/" data-note-icon="" class="backlink">Experiment2</a>
-</div><div class="backlink-card"><i icon-name="link"></i><a href="/digital-garden/experiment4/" data-note-icon="" class="backlink">Experiment4</a>
+<div class="backlink-list"><div class="backlink-card"><i icon-name="link"></i><a href="/digital-garden/experiment-2/" data-note-icon="" class="backlink">Experiment 2</a>
+</div><div class="backlink-card"><i icon-name="link"></i><a href="/digital-garden/experiment-4/" data-note-icon="" class="backlink">Experiment 4</a>
 </div></div>
 </div>
 </div>

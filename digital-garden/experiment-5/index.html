@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-<title>Experiment5</title>
+<title>Experiment 5</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <script async type="module">import mermaid from"https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs"</script>
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js" integrity="sha512-hpZ5pDCF2bRCweL5WoA0/N1elet1KYL5mx3LP555Eg/0ZguaHawxNvEjF6O3rufAChs16HVNhEc6blF/rZoowQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -94,7 +94,7 @@ CTRL + K
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="filelist">
-<div @click.stop class="notelink"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration:none" class="filename" href="/digital-garden/experiment-5/">Experiment 5 </a>
+<div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration:none" class="filename" href="/digital-garden/experiment-5/">Experiment 5 </a>
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="filelist">
@@ -114,7 +114,7 @@ CTRL + K
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="filelist">
-<div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration:none" class="filename" href="/digital-garden/experiment5/">Experiment5 </a>
+<div @click.stop class="notelink"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration:none" class="filename" href="/digital-garden/experiment5/">Experiment5 </a>
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="filelist">
@@ -167,10 +167,15 @@ CTRL + K
 <li>A <strong>t</strong>etracycline-controlled <strong>t</strong>rans<strong>a</strong>ctivator (tTA or rtTA-reverse rTA), which binds to tetracycline response elements (TRE) upstream of the gene of interest.</li>
 <li>The target gene, in this case coding for the fluorescent protein neonGreen, downstream of the TRE.</li>
 </ol>
-<p><picture src="/img/user/figures/Tet-On.png" alt="Figure 19.  Schematic representation of the Tet-On system. The Tet-On 3G protein is constitutively expressed under the control of the CAG promoter. Upon addition of tetracycline, the Tet-On 3G protein undergoes a conformational change that enables it to bind to the TRE3G promoter, thereby activating transcription and inducing neonGreen expression."><source media="(max-width:480px)" srcset="/img/optimized/gJdi9c2vKA-500.webp" type="image/webp">
+<figure id="fig:tet-system" class="align-left" style="width:70%;display:block;margin-right:auto">
+<p><picture src="/img/user/figures/Tet-On.png" alt="Figure 19"><source media="(max-width:480px)" srcset="/img/optimized/gJdi9c2vKA-500.webp" type="image/webp">
 <source media="(max-width:480px)" srcset="/img/optimized/gJdi9c2vKA-500.jpeg">
-<source media="(max-width:1920px)" srcset="/img/optimized/gJdi9c2vKA-700.webp" type="image/webp"><source media="(max-width:1920px)" srcset="/img/optimized/gJdi9c2vKA-700.jpeg"><img class="" src="/img/user/figures/Tet-On.png" alt="Figure 19.  Schematic representation of the Tet-On system. The Tet-On 3G protein is constitutively expressed under the control of the CAG promoter. Upon addition of tetracycline, the Tet-On 3G protein undergoes a conformational change that enables it to bind to the TRE3G promoter, thereby activating transcription and inducing neonGreen expression." width=""></picture></p>
-<p><strong>Figure 19.</strong> ** Schematic representation of the Tet-On system.** The Tet-On 3G protein is constitutively expressed under the control of the CAG promoter. Upon addition of tetracycline, the Tet-On 3G protein undergoes a conformational change that enables it to bind to the TRE3G promoter, thereby activating transcription and inducing neonGreen expression.</p>
+<source media="(max-width:1920px)" srcset="/img/optimized/gJdi9c2vKA-700.webp" type="image/webp"><source media="(max-width:1920px)" srcset="/img/optimized/gJdi9c2vKA-700.jpeg"><img class="" src="/img/user/figures/Tet-On.png" alt="Figure 19" width=""></picture></p>
+<figcaption>
+<strong>Figure 19.</strong>
+** Schematic representation of the Tet-On system.** The Tet-On 3G protein is constitutively expressed under the control of the CAG promoter. Upon addition of tetracycline, the Tet-On 3G protein undergoes a conformational change that enables it to bind to the TRE3G promoter, thereby activating transcription and inducing neonGreen expression.
+</figcaption>
+</figure>
 <p>In our experiment, we will implement the Tet-On system in a 3G (third-generation) configuration, which uses an optimized reverse tetracycline-controlled transactivator to achieve tighter regulation and higher sensitivity to induction. In the Tet-On system, gene expression is activated in the presence of tetracycline or its derivative doxycycline. When tetracycline is added to the cells, it binds to the Tet (rtTA/tTA) protein and alters its conformation, enabling it to interact with the TRE promoter and thereby activate gene transcription (in our case: NeonGreen). The amount of tetracycline added determines the extent of activation, allowing for dose-dependent regulation of expression.</p>
 <h4 id="why-different-concentrations-matter" tabindex="-1">Why Different Concentrations Matter</h4>
 <p>Using different tetracycline concentrations enables fine-tuning of expression levels. At low concentrations, only a small fraction of rtTA will be activated, resulting in weak expression. Higher concentrations lead to stronger induction and higher levels of fluorescent protein. However, once all Tet proteins are bound by tetracycline, the system reaches saturation, and further increases in concentration will no longer enhance expression levels. Excessively high concentrations may further cause off-target effects and cellular stress leading to non-linear responses. This dose-dependent approach therefore helps to:</p>
@@ -193,7 +198,11 @@ CTRL + K
 <h4 id="stable-cell-lines-and-their-advantages" tabindex="-1">Stable Cell Lines and Their Advantages</h4>
 <p>Stable cell lines are cell populations that have stably integrated foreign DNA into their genome, allowing long-term and consistent expression of the gene of interest. Unlike transient transfections, where the introduced DNA is only temporarily present and expression levels vary between cells and over time, stable lines provide reproducible and uniform expression profiles across experiments. Testing the tet-inducible system in stable lines offers several advantages: it ensures reliable control of gene expression, reduces variability between samples, and allows for more accurate quantification of induction levels. Additionally, stable integration enables long-term experiments and repeated induction studies without the need to transfect cells again, making it ideal for analyzing dose-dependent responses and optimizing tetracycline concentrations.</p>
 <h3 id="material" tabindex="-1">Material</h3>
-<div class="table-wrapper"><table>
+<figure id="tbl:materials-exp5" class="align-left" style="width:align;float:left;margin-right:1em">
+<figcaption>
+<strong>Table 23.</strong>
+</figcaption>
+<table>
 <thead>
 <tr>
 <th>Item</th>
@@ -214,7 +223,7 @@ CTRL + K
 </tr>
 <tr>
 <td>1x PBS</td>
-<td>2.7 mM KCl, 1.5 mM KH<mjx-container class="MathJax" jax="SVG" style="direction:ltr;position:relative"><svg style="overflow:visible;min-height:1px;min-width:1px;vertical-align:-.339ex" xmlns="http://www.w3.org/2000/svg" width="0.988ex" height="1.065ex" role="img" focusable="false" viewBox="0 -320.9 436.6 470.9" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"></g><g data-mml-node="mn" transform="translate(33,-150) scale(0.707)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z" style="stroke-width:3"></path></g></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline" style="top:0;left:0;clip:rect(1px,1px,1px,1px);-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;position:absolute;padding:1px 0 0 0;border:0;display:block;width:auto;overflow:hidden"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi></mi><mn>2</mn></msub></math></mjx-assistive-mml></mjx-container>PO<mjx-container class="MathJax" jax="SVG" style="direction:ltr;position:relative"><svg style="overflow:visible;min-height:1px;min-width:1px;vertical-align:-.339ex" xmlns="http://www.w3.org/2000/svg" width="0.988ex" height="1.083ex" role="img" focusable="false" viewBox="0 -328.7 436.6 478.7" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"></g><g data-mml-node="mn" transform="translate(33,-150) scale(0.707)"><path data-c="34" d="M462 0Q444 3 333 3Q217 3 199 0H190V46H221Q241 46 248 46T265 48T279 53T286 61Q287 63 287 115V165H28V211L179 442Q332 674 334 675Q336 677 355 677H373L379 671V211H471V165H379V114Q379 73 379 66T385 54Q393 47 442 46H471V0H462ZM293 211V545L74 212L183 211H293Z" style="stroke-width:3"></path></g></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline" style="top:0;left:0;clip:rect(1px,1px,1px,1px);-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;position:absolute;padding:1px 0 0 0;border:0;display:block;width:auto;overflow:hidden"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi></mi><mn>4</mn></msub></math></mjx-assistive-mml></mjx-container>, 8.0 mM Na<mjx-container class="MathJax" jax="SVG" style="direction:ltr;position:relative"><svg style="overflow:visible;min-height:1px;min-width:1px;vertical-align:-.339ex" xmlns="http://www.w3.org/2000/svg" width="0.988ex" height="1.065ex" role="img" focusable="false" viewBox="0 -320.9 436.6 470.9" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"></g><g data-mml-node="mn" transform="translate(33,-150) scale(0.707)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z" style="stroke-width:3"></path></g></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline" style="top:0;left:0;clip:rect(1px,1px,1px,1px);-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;position:absolute;padding:1px 0 0 0;border:0;display:block;width:auto;overflow:hidden"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi></mi><mn>2</mn></msub></math></mjx-assistive-mml></mjx-container>HPO<mjx-container class="MathJax" jax="SVG" style="direction:ltr;position:relative"><svg style="overflow:visible;min-height:1px;min-width:1px;vertical-align:-.339ex" xmlns="http://www.w3.org/2000/svg" width="0.988ex" height="1.083ex" role="img" focusable="false" viewBox="0 -328.7 436.6 478.7" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"></g><g data-mml-node="mn" transform="translate(33,-150) scale(0.707)"><path data-c="34" d="M462 0Q444 3 333 3Q217 3 199 0H190V46H221Q241 46 248 46T265 48T279 53T286 61Q287 63 287 115V165H28V211L179 442Q332 674 334 675Q336 677 355 677H373L379 671V211H471V165H379V114Q379 73 379 66T385 54Q393 47 442 46H471V0H462ZM293 211V545L74 212L183 211H293Z" style="stroke-width:3"></path></g></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline" style="top:0;left:0;clip:rect(1px,1px,1px,1px);-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;position:absolute;padding:1px 0 0 0;border:0;display:block;width:auto;overflow:hidden"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi></mi><mn>4</mn></msub></math></mjx-assistive-mml></mjx-container>, 137 mM NaCl in dH<mjx-container class="MathJax" jax="SVG" style="direction:ltr;position:relative"><svg style="overflow:visible;min-height:1px;min-width:1px;vertical-align:-.339ex" xmlns="http://www.w3.org/2000/svg" width="0.988ex" height="1.065ex" role="img" focusable="false" viewBox="0 -320.9 436.6 470.9" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"></g><g data-mml-node="mn" transform="translate(33,-150) scale(0.707)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z" style="stroke-width:3"></path></g></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline" style="top:0;left:0;clip:rect(1px,1px,1px,1px);-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;position:absolute;padding:1px 0 0 0;border:0;display:block;width:auto;overflow:hidden"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi></mi><mn>2</mn></msub></math></mjx-assistive-mml></mjx-container>O.</td>
+<td>2.7 mM KCl, 1.5 mM KH<span class="math inline"><sub>2</sub></span>PO<span class="math inline"><sub>4</sub></span>, 8.0 mM Na<span class="math inline"><sub>2</sub></span>HPO<span class="math inline"><sub>4</sub></span>, 137 mM NaCl in dH<span class="math inline"><sub>2</sub></span>O.</td>
 <td>Removal of dead cells &amp; Dilution of cells for measurement</td>
 </tr>
 <tr>
@@ -238,7 +247,8 @@ CTRL + K
 <td>Transfection medium</td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</figure>
 <p><strong>Plasmids (Midipreps)</strong> &gt; [!table] <a class="tag" onclick="toggleTagSearch(this)" data-content="#tbl">#tbl</a>:yourtablelabel width=100% align=center columns=0.25,0.45,0.30 colsep=4pt fontsize=footnotesize spacing=1.1 &gt; &gt; Used plasmids prepared by the supervisors.</p>
 <div class="table-wrapper"><table>
 <thead>
@@ -309,8 +319,17 @@ CTRL + K
 <li>Cells seeded in 6-well plate</li>
 <li>Plasmids: pME001 (piggybac transposase), pDD312 (tet inducible neonGreen expression)</li>
 </ul>
-<p><strong>Table 24.</strong> <strong>Here we still need to add a table as pdf figure</strong></p>
-<div class="table-wrapper"><table>
+<figure id="tbl:yourtablelabel" class="align-center" style="width:100%;display:block;margin-left:auto;margin-right:auto">
+<figcaption>
+<strong>Table 24.</strong>
+<strong>Here we still need to add a table as pdf figure</strong>
+</figcaption>
+<table>
+<colgroup>
+<col style="width:25%">
+<col style="width:45%">
+<col style="width:30%">
+</colgroup>
 <thead>
 <tr>
 <th>Column A</th>
@@ -325,7 +344,8 @@ CTRL + K
 <td></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</figure>
 <p><strong>Procedure</strong></p>
 <ol>
 <li>Calculate the volumes needed for OptiMEM and the respective plasmids.</li>
@@ -468,7 +488,7 @@ CTRL + K
 <li>Cytometer Measurement</li>
 </ol>
 <hr>
-<p><a class="internal-link" target="" data-note-icon="" href="/digital-garden/experiment4/">&lt; Previous: Experiment IV</a> | <a class="internal-link" target="" data-note-icon="" href="/digital-garden/references/">Next: References &gt;</a></p>
+<p><a class="internal-link" target="" data-note-icon="" href="/digital-garden/experiment-4/">&lt; Previous: Experiment IV</a> | <a class="internal-link" target="" data-note-icon="" href="/digital-garden/references/">Next: References &gt;</a></p>
 </main>
 <aside>
 <div class="sidebar">
@@ -528,7 +548,8 @@ On this page
 </div>
 <div class="backlinks">
 <div class="backlink-title" style="margin:4px 0!important">Pages mentioning this page</div>
-<div class="backlink-list"><div class="backlink-card"><i icon-name="link"></i><a href="/digital-garden/experiment4/" data-note-icon="" class="backlink">Experiment4</a>
+<div class="backlink-list"><div class="backlink-card"><i icon-name="link"></i><a href="/digital-garden/experiment-4/" data-note-icon="" class="backlink">Experiment 4</a>
+</div><div class="backlink-card"><i icon-name="link"></i><a href="/digital-garden/references/" data-note-icon="" class="backlink">References</a>
 </div></div>
 </div>
 </div>
