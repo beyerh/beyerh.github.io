@@ -1,6 +1,7 @@
 ---
-{"dg-publish":true,"permalink":"/digital-garden/experiment1/","title":"Experiment I"}
+{"dg-publish":true,"permalink":"/digital-garden/experiment1/"}
 ---
+
 
 
 # Experiment I: Molecular Cloning of Bacterial Inducible Plasmids
@@ -298,4 +299,4 @@ Send a 12 µL aliquot with a concentration of 40–100 ng/µL. Dilute if necessa
 
 
 ---
-[< Previous: Background](background.md) | [Next: Experiment II >](experiment2.md)
+[[digital_garden/background\|< Previous: Background]] | [[digital_garden/experiment2\|Next: Experiment II >]]

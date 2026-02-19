@@ -3,6 +3,7 @@
 ---
 
 
+
 # Experiment V: Engineering Chemically Regulated Gene Switch Technology in Stable Mammalian Cell Culture
 
 **Supervisors:** Maria Evangelopoulou, Miriam Labusch, Benjamin McLean
@@ -304,4 +305,4 @@ Here we are going to induce the expression of neonGreen using different concentr
 
 
 ---
-[< Previous: Experiment IV](experiment4.md) | [Next: References >](references.md)
+[[digital_garden/experiment4\|< Previous: Experiment IV]] | [[digital_garden/references\|Next: References >]]

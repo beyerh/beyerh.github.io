@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/digital-garden/background/","title":"Background"}
+{"dg-publish":true,"permalink":"/digital-garden/background/"}
 ---
 
 
@@ -85,4 +85,4 @@ Experiment II of this practical course will introduce you to a blue light-sensit
 
 
 ---
-[< Previous: Course Information](index.md) | [Next: Experiment I >](experiment1.md)
+[[digital_garden/index\|< Previous: Course Information]] | [[digital_garden/experiment1\|Next: Experiment I >]]

@@ -1,6 +1,7 @@
 ---
-{"dg-publish":true,"permalink":"/digital-garden/experiment2/","title":"Experiment II"}
+{"dg-publish":true,"permalink":"/digital-garden/experiment2/"}
 ---
+
 
 
 # Experiment II: Optogenetic Gene Expression Using Stably-Engineered Mammalian Cells
@@ -155,4 +156,4 @@ It is highly recommended to develop a template with Microsoft Excel for data pro
 
 
 ---
-[< Previous: Experiment I](experiment1.md) | [Next: Experiment III >](experiment3.md)
+[[digital_garden/experiment1\|< Previous: Experiment I]] | [[digital_garden/experiment3\|Next: Experiment III >]]

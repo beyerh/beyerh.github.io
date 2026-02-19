@@ -3,6 +3,7 @@
 ---
 
 
+
 # Experiment IV: Intein-Catalyzed Protein Domain Swapping at the Plasma Membrane
 
 **Supervisors:** Cha San Koh, Daniel Wiebensohn, Hannes Beyer
@@ -202,4 +203,4 @@ One pair of odd and even group members proceeds to the confocal microscope at a 
 
 
 ---
-[< Previous: Experiment III](experiment3.md) | [Next: Experiment V >](experiment5.md)
+[[digital_garden/experiment3\|< Previous: Experiment III]] | [[digital_garden/experiment5\|Next: Experiment V >]]

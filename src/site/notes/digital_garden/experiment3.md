@@ -3,6 +3,7 @@
 ---
 
 
+
 # Experiment III: Protein Trans-Splicing for Bacterial Logic Gate Design
 
 **Supervisors:** Josepha Grewer, Maria Evangelopoulou, Hannes Beyer
@@ -90,4 +91,4 @@ can you already see a red colored pellet? What does it mean?
 
 
 ---
-[< Previous: Experiment II](experiment2.md) | [Next: Experiment IV >](experiment4.md)
+[[digital_garden/experiment2\|< Previous: Experiment II]] | [[digital_garden/experiment4\|Next: Experiment IV >]]

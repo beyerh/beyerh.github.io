@@ -59,4 +59,4 @@ Limit the text of each experiment to 1–2 pages (depending on font size and for
 
 
 ---
-[Next: Background >](background.md)
+[[digital_garden/background\|Next: Background >]]

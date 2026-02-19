@@ -3,6 +3,7 @@
 ---
 
 
+
 # References
 
 Akimzhanov, A.M., and Boehning, D. (2015). Rapid and transient palmitoylation of the tyrosine kinase Lck mediates Fas signaling. Proc. Natl. Acad. Sci. U. S. A. 112, 11876–11880.
@@ -17,4 +18,4 @@ Müller, K., Naumann, S., Weber, W., and Zurbriggen, M.D. (2015). Optogenetics 
 
 
 ---
-[< Previous: Experiment V](experiment5.md)
+[[digital_garden/experiment5\|< Previous: Experiment V]]
