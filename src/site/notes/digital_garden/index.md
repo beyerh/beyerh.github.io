@@ -15,13 +15,26 @@ Sciebo folder: <https://uni-duesseldorf.sciebo.de/s/KPoKTwFd2jeXfFj>
 
 ## Time Schedule
 
-![Figure 1. Time Schedule for the first two weeks of the course.](/img/user/figures/schedule_part1.png)
+<figure id="fig:schedule-part1" class="align-left" style="width: 100%; display: block; margin-right: auto">
 
-**Figure 1.** Time Schedule for the first two weeks of the course.
+![Figure 1](/img/user/figures/schedule_part1.png)
 
-![Figure 2. Time Schedule for the third week of the course like in @Fig:schedule-part1.](/img/user/figures/schedule_part2.png)
+<figcaption>
+<strong>Figure 1.</strong> 
+Time Schedule for the first two weeks of the course.
+</figcaption>
+</figure>
+<figure id="fig:schedule-part2" class="align-left" style="width: 100%; display: block; margin-right: auto">
 
-**Figure 2.** Time Schedule for the third week of the course like in **Figure 1**.
+![Figure 2](/img/user/figures/schedule_part2.png)
+
+<figcaption>
+<strong>Figure 2.</strong> 
+Time Schedule for the third week of the course like in <strong><span
+class="citation"
+data-cites="Fig:schedule-part1">@Fig:schedule-part1</span></strong>.
+</figcaption>
+</figure>
 
 ## Notes
 

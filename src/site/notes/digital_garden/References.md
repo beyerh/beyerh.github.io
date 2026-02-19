@@ -17,4 +17,4 @@ Müller, K., Naumann, S., Weber, W., and Zurbriggen, M.D. (2015). Optogenetics 
 
 
 ---
-[[digital_garden/Experiment5\|< Previous: Experiment V]]
+[[digital_garden/Experiment 5\|< Previous: Experiment V]]
