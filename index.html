@@ -23,16 +23,88 @@
 <link rel="manifest" href="/manifest.webmanifest">
 <style></style>
 </head>
-<body class="theme-dark markdown-preview-view markdown-rendered markdown-preview-section">
+<body class="theme-light markdown-preview-view markdown-rendered markdown-preview-section">
+<div x-init="isDesktop = (window.innerWidth>=1400) ? true: false;" x-on:resize.window="isDesktop = (window.innerWidth>=1400) ? true : false;" x-data="{isDesktop: true, showFilesMobile: false}">
+<div x-show.important="!isDesktop" style="display:none">
 <nav class="navbar">
 <div class="navbar-inner">
+<span style="font-size:1.5rem;margin-right:10px" @click="showFilesMobile=!showFilesMobile"><i icon-name="menu"></i></span>
 <a href="/" style="text-decoration:none">
-<h1 style="margin:15px!important">Digital Garden</h1>
+<h1 style="margin:15px!important">M2205</h1>
 </a>
 </div>
+<div class="search-button align-icon" onclick="toggleSearch()">
+<span class="search-icon">
+<i icon-name="search"></i>
+</span>
+<span class="search-text">
+<span>Search</span>
+<span style="font-size:.6rem;padding:2px 2px 0 6px;text-align:center;transform:translateY(4px)" class="search-keys">
+CTRL + K
+</span>
+</span>
+</div>
 </nav>
+</div>
+<div x-show="showFilesMobile && !isDesktop" @click="showFilesMobile = false" style="display:none" class="fullpage-overlay"></div>
+<nav class="filetree-sidebar" x-show.important="isDesktop || showFilesMobile" style="display:none">
+<a href="/" style="text-decoration:none">
+<h1 style="text-align:center">M2205</h1>
+</a>
+<div style="display:flex;justify-content:center">
+<div class="search-button align-icon" onclick="toggleSearch()">
+<span class="search-icon">
+<i icon-name="search"></i>
+</span>
+<span class="search-text">
+<span>Search</span>
+<span style="font-size:.6rem;padding:2px 2px 0 6px;text-align:center;transform:translateY(4px)" class="search-keys">
+CTRL + K
+</span>
+</span>
+</div>
+</div>
+<div class="folder" x-data="{isOpen: true}">
+<div x-show="isOpen" style="display:none" class="">
+<div class="folder inner-folder" x-data="{isOpen: $persist(false).as('export')}" @click.stop="isOpen=!isOpen">
+<div class="foldername-wrapper align-icon">
+<i x-show="isOpen" style="display:none" icon-name="chevron-down"></i>
+<i x-show="!isOpen" icon-name="chevron-right"></i>
+<span class="foldername">export</span>
+</div>
+<div x-show="isOpen" style="display:none" class="filelist">
+<div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration:none" class="filename" href="/">Script_flat </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</div>
+<div class="search-container" id="globalsearch" onclick="toggleSearch()">
+<div class="search-box">
+<input type="search" id="term" placeholder="Start typing...">
+<div id="search-results"></div>
+<footer class="search-box-footer">
+<div class="navigation-hint">
+<span>Enter to select</span>
+</div>
+<div class="navigation-hint align-icon">
+<i icon-name="arrow-up" aria-hidden="true"></i>
+<i icon-name="arrow-down" aria-hidden="true"></i>
+<span>to navigate</span>
+</div>
+<div class="navigation-hint">
+<span>ESC to close</span>
+</div>
+</footer>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/flexsearch@0.7.21/dist/flexsearch.bundle.js"></script>
+<script>document.addEventListener("DOMContentLoaded",init,!1),document.addEventListener("DOMContentLoaded",setCorrectShortcut,!1),window.toggleSearch=function(){document.getElementById("globalsearch").classList.contains("active")?document.getElementById("globalsearch").classList.remove("active"):(document.getElementById("globalsearch").classList.add("active"),document.getElementById("term").focus())},window.toggleTagSearch=function(e){console.log(e.textContent);const t=e.textContent;t&&(window.document.getElementById("term").value=t.trim(),window.toggleSearch(),window.search())};const loadingSvg='\n    <svg width="100" height="100" viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg" stroke="#fff">\n      <g fill="none" fill-rule="evenodd" transform="translate(1 1)" stroke-width="2">\n          <circle cx="22" cy="22" r="6" stroke-opacity="0">\n              <animate attributeName="r"\n                   begin="1.5s" dur="3s"\n                   values="6;22"\n                   calcMode="linear"\n                   repeatCount="indefinite" />\n              <animate attributeName="stroke-opacity"\n                   begin="1.5s" dur="3s"\n                   values="1;0" calcMode="linear"\n                   repeatCount="indefinite" />\n              <animate attributeName="stroke-width"\n                   begin="1.5s" dur="3s"\n                   values="2;0" calcMode="linear"\n                   repeatCount="indefinite" />\n          </circle>\n          <circle cx="22" cy="22" r="6" stroke-opacity="0">\n              <animate attributeName="r"\n                   begin="3s" dur="3s"\n                   values="6;22"\n                   calcMode="linear"\n                   repeatCount="indefinite" />\n              <animate attributeName="stroke-opacity"\n                   begin="3s" dur="3s"\n                   values="1;0" calcMode="linear"\n                   repeatCount="indefinite" />\n              <animate attributeName="stroke-width"\n                   begin="3s" dur="3s"\n                   values="2;0" calcMode="linear"\n                   repeatCount="indefinite" />\n          </circle>\n          <circle cx="22" cy="22" r="8">\n              <animate attributeName="r"\n                   begin="0s" dur="1.5s"\n                   values="6;1;2;3;4;5;6"\n                   calcMode="linear"\n                   repeatCount="indefinite" />\n          </circle>\n      </g>\n  </svg>';function debounce(e,t,n){var a;return function(){var r=this,i=arguments,c=n&&!a;clearTimeout(a),a=setTimeout((function(){a=null,n||e.apply(r,i)}),t),c&&e.apply(r,i)}}function setCorrectShortcut(){navigator.platform.toUpperCase().indexOf("MAC")>=0&&document.querySelectorAll(".search-keys").forEach((e=>e.innerHTML="⌘ + K"))}function createIndex(e){const t=e=>e.toLowerCase().split(/([^a-z]|[^\x00-\x7F])/),n=new FlexSearch.Document({cache:!0,charset:"latin:extra",optimize:!0,index:[{field:"content",tokenize:"reverse",encode:t},{field:"title",tokenize:"forward",encode:t},{field:"tags",tokenize:"forward",encode:t}]});return e.forEach(((e,t)=>{n.add({id:t,title:e.title,content:e.content,tags:e.tags})})),n}async function init(){let e=!0;if(localStorage.getItem("searchIndex")){let{date:t,docs:n}=JSON.parse(localStorage.getItem("searchIndex"));if("2026-02-19T08:15:04.860Z"===t){e=!1;let t=createIndex(n);window.docs=n,window.index=t}}if(e){let e=await(await fetch("/searchIndex.json?v=2026-02-19T08:15:04.860Z")).json(),t=createIndex(e);localStorage.setItem("searchIndex",JSON.stringify({date:"2026-02-19T08:15:04.860Z",docs:e})),window.docs=e,window.index=t}document.addEventListener("keydown",(e=>{if((e.ctrlKey||e.metaKey)&&"k"===e.key&&(e.preventDefault(),toggleSearch()),"Escape"===e.key&&document.getElementById("globalsearch").classList.remove("active"),document.getElementById("globalsearch").classList.contains("active")){if("ArrowDown"===e.key){e.preventDefault();let t=document.querySelector(".searchresult.active");t?(t.classList.remove("active"),t.nextElementSibling?t.nextElementSibling.classList.add("active"):document.querySelector(".searchresult").classList.add("active")):document.querySelector(".searchresult").classList.add("active");let n=document.querySelector(".searchresult.active");n&&n.scrollIntoView({behavior:"smooth",block:"nearest",inline:"start"})}if("ArrowUp"===e.key){e.preventDefault();let t=document.querySelector(".searchresult.active");t?(t.classList.remove("active"),t.previousElementSibling?t.previousElementSibling.classList.add("active"):document.querySelectorAll(".searchresult").forEach((e=>{e.nextElementSibling||e.classList.add("active")}))):document.querySelectorAll(".searchresult").forEach((e=>{e.nextElementSibling&&e.classList.add("active")}));let n=document.querySelector(".searchresult.active");n&&n.scrollIntoView({behavior:"smooth",block:"nearest",inline:"start"})}if("Enter"===e.key){e.preventDefault();let t=document.querySelector(".searchresult.active");t&&(window.location.href=t.querySelector("a").href)}}}));const t=debounce(search,200,!1);field=document.querySelector("#term"),field.addEventListener("keydown",(e=>{"ArrowDown"!==e.key&&"ArrowUp"!==e.key&&t()})),resultsDiv=document.querySelector("#search-results");const n=new URL(location.href).searchParams;n.get("q")&&(field.setAttribute("value",n.get("q")),toggleSearch(),search())}async function search(){let e=field.value.trim();if(!e)return;if(e==lastSearch)return;console.log(`search for ${e}`),window.lastSearch=e,resultsDiv.innerHTML=loadingSvg;let t=offlineSearch(e),n="";if(!t.length){let t=document.createElement("p");return t.innerText=`No results for "${e}"`,resultsDiv.innerHTML="",void resultsDiv.appendChild(t)}n+='<div style="max-width:100%;">',t.forEach((e=>{e.tags&&e.tags.length>0?n+=`<div class="searchresult">\n                    <a class="search-link" href="${e.url}">${e.title}</a>\n                    <div onclick="window.location='${e.url}'">\n                        <div class="header-meta">\n                            <div class="header-tags">\n                                ${e.tags.map((e=>'<a class="tag" href="JavaScript:Void(0);">#'+e+"</a>")).join("")}\n                            </div>\n                        </div>\n                        ${e.content}\n                    </div>\n                </div>`:n+=`<div class="searchresult">\n                    <a class="search-link" href="${e.url}">${e.title}</a>\n                    <div onclick="window.location='${e.url}'">\n                        ${e.content}\n                    </div>\n                </div>`})),n+="</div>",resultsDiv.innerHTML=n}function truncate(e,t){return(e=e.replaceAll(/<[^>]*>/g,"")).length<t?e:e.substring(0,t-3)+"..."}function offlineSearch(e){let t=window.docs,n="#"===e[0]&&e.length>1?index.search(e.substring(1),[{field:"tags"}]):index.search(e,[{field:"title",limit:5},{field:"content",weight:10}]);const a=e=>{const t=n.filter((t=>t.field===e));return 0===t.length?[]:[...t[0].result]};return[...new Set([...a("title"),...a("content"),...a("tags")])].map((e=>{let n=t[e];return n.content=truncate(n.content,400),n.tags=n.tags.filter((e=>"gardenEntry"!=e&&"note"!=e)),n}))}window.lastSearch=""</script>
 <main class="content cm-s-obsidian">
 <header>
+<h1></h1>
 <div class="header-meta">
 </div>
 </header>
@@ -43,18 +115,14 @@
 <p>Sciebo folder: <a href="https://uni-duesseldorf.sciebo.de/s/KPoKTwFd2jeXfFj" target="_blank" class="external-link">https://uni-duesseldorf.sciebo.de/s/KPoKTwFd2jeXfFj</a></p>
 <h2 id="time-schedule" tabindex="-1">Time Schedule</h2>
 <figure id="fig:schedule-part1" class="align-left" style="width:100%;display:block;margin-right:auto">
-<p><picture src="/img/user/figures/schedule_part1.png" alt="Figure 1"><source media="(max-width:480px)" srcset="/img/optimized/kG1hiqS284-500.webp" type="image/webp">
-<source media="(max-width:480px)" srcset="/img/optimized/kG1hiqS284-500.jpeg">
-<source media="(max-width:1920px)" srcset="/img/optimized/kG1hiqS284-700.webp" type="image/webp"><source media="(max-width:1920px)" srcset="/img/optimized/kG1hiqS284-700.jpeg"><img class="" src="/img/user/figures/schedule_part1.png" alt="Figure 1" width=""></picture></p>
+<p><img src="/img/user/figures/schedule_part1.png" alt="Figure 1"></p>
 <figcaption>
 <strong>Figure 1.</strong>
 Time Schedule for the first two weeks of the course.
 </figcaption>
 </figure>
 <figure id="fig:schedule-part2" class="align-left" style="width:100%;display:block;margin-right:auto">
-<p><picture src="/img/user/figures/schedule_part2.png" alt="Figure 2"><source media="(max-width:480px)" srcset="/img/optimized/zyUBuGfxZF-500.webp" type="image/webp">
-<source media="(max-width:480px)" srcset="/img/optimized/zyUBuGfxZF-500.jpeg">
-<source media="(max-width:1920px)" srcset="/img/optimized/zyUBuGfxZF-700.webp" type="image/webp"><source media="(max-width:1920px)" srcset="/img/optimized/zyUBuGfxZF-700.jpeg"><img class="" src="/img/user/figures/schedule_part2.png" alt="Figure 2" width=""></picture></p>
+<p><img src="/img/user/figures/schedule_part2.png" alt="Figure 2"></p>
 <figcaption>
 <strong>Figure 2.</strong>
 Time Schedule for the third week of the course like in <strong><span class="citation" data-cites="Fig:schedule-part1">@Fig:schedule-part1</span></strong>.
@@ -85,9 +153,7 @@ Time Schedule for the third week of the course like in <strong><span class="cita
 <h3 id="engineered-protein-switches-and-optogenetics" tabindex="-1">Engineered Protein Switches and Optogenetics</h3>
 <p>Inducible gene expression switches are an example of engineered protein switches. Chemically controlled molecular switches have played a central role in the fundamental study of life, and the emergence of synthetic biology. They have become routine tools in cell biology research and industry (<strong>Figure 3</strong>).</p>
 <figure id="fig:tetracycline-switch" class="align-left" style="width:50%;display:block;margin-right:auto">
-<p><picture src="/img/user/figures/tetracycline.png" alt="Figure 3"><source media="(max-width:480px)" srcset="/img/optimized/FitJhEF6BF-500.webp" type="image/webp">
-<source media="(max-width:480px)" srcset="/img/optimized/FitJhEF6BF-500.jpeg">
-<source media="(max-width:1920px)" srcset="/img/optimized/FitJhEF6BF-700.webp" type="image/webp"><source media="(max-width:1920px)" srcset="/img/optimized/FitJhEF6BF-700.jpeg"><img class="" src="/img/user/figures/tetracycline.png" alt="Figure 3" width=""></picture></p>
+<p><img src="/img/user/figures/tetracycline.png" alt="Figure 3"></p>
 <figcaption>
 <strong>Figure 3.</strong>
 Tetracycline-inducible gene expression switch based on an engineered protein switch, the reversed tetracycline transactivator (rtTA). The engineered “reversed” bacterial repressor protein rTetR binds to a cognate operator DNA sequence (Tet-response element, TRE) in the presence of the antibiotic tetracycline. rTetR is fused to a viral transactivator VP16 which induces gene expression from a minimal promoter (Pmin) upon DNA binding to induce transcription of a gene of interest (goi).
@@ -99,9 +165,7 @@ Tetracycline-inducible gene expression switch based on an engineered protein swi
 <p>However, drawbacks inherent to small molecules like tetracycline, such as difficulties in removing the inducer and diffusion-based transport, have prevented rapid reversibility and spatially-resolved activation. In contrast, light offers unprecedented spatial and temporal resolution. Consequently, the development of light-controlled devices is highly desirable and has recently received much attention, resulting in a variety of different light-controlled tools in bacteria and yeast as well as in mammalian cells. These control diverse cellular activities, including gene expression.</p>
 <p>The first light-controlled molecular tools were constructed by introducing photo-cleavable inhibiting chemical groups into inducers, nucleic acids, and transactivators that could be cleaved off in response to UVB light. However, a significant disadvantage of this method is the need to exogenously apply the caged molecules or to reprogram the translation machinery for the incorporation of non-natural amino acids. This disadvantage has been overcome by the optogenetic approach that combines optical and genetic methods to develop light-responsive tools. The first breakthrough in mammalian optogenetics was the discovery of microbial opsins and their subsequent introduction in neuroscience, which revolutionized the study of neuronal networks. Channelrhodopsin, the first opsin that was applied in mammalian neurons, becomes permeable to cations upon blue light illumination, thus triggering neuronal activation. Later, channelrhodopsin was complemented by other ionotropic receptors, including the orange light-responsive, chloride pump halorhodopsin, which made it possible to use dual‑wavelength control to excite or inhibit neurons with subcellular resolution, even in intact brain tissue and in moving animals. Moving beyond neuroscience, more recent optogenetic tools have been engineered to control diverse signaling processes on the protein level in mammalian cells, including gene expression and protein stability, subcellular localization of proteins, receptor and kinase activity, organelle movement, etc. To this end, photoreceptors from all kingdoms of life that naturally sense environmental light information by responding to light of distinct regions of the light spectrum have been employed as engineering scaffolds based on modulating protein-protein interactions, or protein conformation in response to light stimulation (Müller et al., 2015). <strong>Figure 2</strong> illustrates two photoreceptors that are frequently employed in optogenetic protein engineering approaches.</p>
 <figure id="fig:photoswitchable-domains" class="align-left" style="width:100%;display:block;margin-right:auto">
-<p><picture src="/img/user/figures/photoswitches.png" alt="Figure 4"><source media="(max-width:480px)" srcset="/img/optimized/LmbHU2KkZQ-500.webp" type="image/webp">
-<source media="(max-width:480px)" srcset="/img/optimized/LmbHU2KkZQ-500.jpeg">
-<source media="(max-width:1920px)" srcset="/img/optimized/LmbHU2KkZQ-700.webp" type="image/webp"><source media="(max-width:1920px)" srcset="/img/optimized/LmbHU2KkZQ-700.jpeg"><img class="" src="/img/user/figures/photoswitches.png" alt="Figure 4" width=""></picture></p>
+<p><img src="/img/user/figures/photoswitches.png" alt="Figure 4"></p>
 <figcaption>
 <strong>Figure 4.</strong>
 <strong>Photoswitchable domains frequently used for optogenetic engineering. A)</strong> <em>A. thaliana</em> Phytochrome B (PhyB) photoreceptor. Red light (R) induces a conformational change in PhyB via a bound linear billin chromophore (not shown), allowing it to heterodimerize with Phytochrome-Interacting-Factor 6 (PIF6). Far-red light (FR) induces the dissociation of the PhyB/PIF6 complex.
@@ -111,9 +175,7 @@ Tetracycline-inducible gene expression switch based on an engineered protein swi
 <h3 id="protein-splicing" tabindex="-1">Protein Splicing</h3>
 <p>Protein splicing is a natural phenomenon catalyzed by autocatalytic protein domains called inteins (internal proteins). Inteins reside within other proteins, usually close to the active site of proteins, which are essential for the fitness of a given organism. After translation, inteins autocatalytically excise themselves from the precursor protein and covalently ligate the flanking protein sequences (exteins) with a regular peptide bond, a process called protein <em>cis</em>-splicing, thereby functionally reconstituting the sequence of the host proteins (<strong>Figure 5</strong>A).</p>
 <figure id="fig:protein-splicing" class="align-left" style="width:100%;display:block;margin-right:auto">
-<p><picture src="/img/user/figures/inteins.png" alt="Figure 5"><source media="(max-width:480px)" srcset="/img/optimized/57pT6n-uI6-500.webp" type="image/webp">
-<source media="(max-width:480px)" srcset="/img/optimized/57pT6n-uI6-500.jpeg">
-<source media="(max-width:1920px)" srcset="/img/optimized/57pT6n-uI6-700.webp" type="image/webp"><source media="(max-width:1920px)" srcset="/img/optimized/57pT6n-uI6-700.jpeg"><img class="" src="/img/user/figures/inteins.png" alt="Figure 5" width=""></picture></p>
+<p><img src="/img/user/figures/inteins.png" alt="Figure 5"></p>
 <figcaption>
 <strong>Figure 5.</strong>
 <strong>Protein splicing in <em>cis</em> and <em>trans</em>. A)</strong>
@@ -123,9 +185,7 @@ In protein trans-splicing, the association of split intein fragments (IntN and I
 </figure>
 <p>Little is known about the biological relevance of inteins and therefore, they are mainly seen as selfish genetic elements capable of inserting into protein-encoding genes. Because inteins tend to insert into genes encoding essential proteins with a high degree of conservation, they may be maintained within populations as long as they sufficiently catalyze their self-removal, thereby escaping genetic drifts. However, it seems plausible that some inteins might act as environmental sensors and regulate the activity of their host proteins accordingly (e.g., reduce the growth rate under stress conditions). From genome-mining approaches, split inteins have been identified which can ligate individual polypeptides upon fragment complementation of a N- and C-intein fragment (Int<sub>N</sub> and Int<sub>C</sub>) in a protein trans-splicing reaction (<strong>Figure 5</strong>B). Additionally, one can often engineer <em>cis</em>-splicing into <em>trans</em>-splicing inteins. Protein <em>cis</em>-splicing gave rise to a variety of applications as it allows covalently ligating protein sequences in a solvent-free medium (<em>in vivo</em> or <em>in vitro</em>) without the requirement of additional cofactors and energy sources. Protein splicing of class 1 inteins, representing the most frequently-found examples, occurs in 4 concerted steps, involving the first intein residue (Cys 1 or Ser 1), the first residue of the C‑terminal extein (Cys/Ser/Thr +1), and the last intein residue (typically Asn) (<strong>Figure 4</strong>).</p>
 <figure id="fig:splicing-mechanism" class="align-left" style="width:70%;display:block;margin-right:auto">
-<p><picture src="/img/user/figures/intein_mechanism.png" alt="Figure 6"><source media="(max-width:480px)" srcset="/img/optimized/EFwUIV0MhQ-500.webp" type="image/webp">
-<source media="(max-width:480px)" srcset="/img/optimized/EFwUIV0MhQ-500.jpeg">
-<source media="(max-width:1920px)" srcset="/img/optimized/EFwUIV0MhQ-700.webp" type="image/webp"><source media="(max-width:1920px)" srcset="/img/optimized/EFwUIV0MhQ-700.jpeg"><img class="" src="/img/user/figures/intein_mechanism.png" alt="Figure 6" width=""></picture></p>
+<p><img src="/img/user/figures/intein_mechanism.png" alt="Figure 6"></p>
 <figcaption>
 <strong>Figure 6.</strong>
 <strong>Conventional protein splicing mechanism of class 1 inteins.</strong> Step 1: N-S acyl shift of the Cys 1 (in some cases Ser 1) and the N-terminal extein to form a linear thioester. Step 2: Trans-esterification of Cys +1 (in some cases Ser/Thr +1) to a branched intermediate where the N- and C-exteins are already covalently connected and the intein is still attached. Step 3: Asn cyclization into a succinimide, thereby releasing the intein. Step 4: Spontaneous O-N shift rearrangement into the energetically-favorable peptide bond (not intein-catalyzed). Figure modified from Friedel <em>et al.</em>, 2019.
@@ -133,9 +193,7 @@ In protein trans-splicing, the association of split intein fragments (IntN and I
 </figure>
 <p>Split inteins in particular found a wide range of applications including their use for protein labeling, protein semi-synthesis, protein purification, protein cyclization, or for engineering protein logic gates. <strong>Figure 7</strong> summarizes some recent examples of developments utilizing split intein technologies (Friedel <em>et al</em>., 2019).</p>
 <figure id="fig:split-intein-apps" class="align-left" style="width:100%;display:block;margin-right:auto">
-<p><picture src="/img/user/figures/inteins_applications.png" alt="Figure 7"><source media="(max-width:480px)" srcset="/img/optimized/gtIIAW1K5m-500.webp" type="image/webp">
-<source media="(max-width:480px)" srcset="/img/optimized/gtIIAW1K5m-500.jpeg">
-<source media="(max-width:1920px)" srcset="/img/optimized/gtIIAW1K5m-700.webp" type="image/webp"><source media="(max-width:1920px)" srcset="/img/optimized/gtIIAW1K5m-700.jpeg"><img class="" src="/img/user/figures/inteins_applications.png" alt="Figure 7" width=""></picture></p>
+<p><img src="/img/user/figures/inteins_applications.png" alt="Figure 7"></p>
 <figcaption>
 <strong>Figure 7.</strong>
 <strong>Applications of split intein technologies.</strong> Bi-specific antibodies ligated in vitro using split inteins and individual Fab fragments. <strong>Biosensors</strong> to detect caspases. <em>In vivo</em> cyclization of the fluorescent protein mNeonGreen2 abolishes fluorescence. Cleavage of the engineered DEVD sequence by caspases releases the cyclic tension, resulting in fluorescence. <strong>Gene therapy</strong> facilitated by individual packaging of two split CRISPR Cas9 enzyme fragments into adeno associated viral vectors (AAVs), thereby respecting the viral packaging capacity. Intein trans splicing reconstitutes the Cas9 enzyme upon co-infection of a target cell with both vectors.
@@ -155,9 +213,7 @@ In protein trans-splicing, the association of split intein fragments (IntN and I
 <p>The process of introducing nucleic acids into mammalian cells by non-viral methods is defined as transfection. By using various chemicals, lipid-based or physical methods, this gene transfer technology is a powerful tool to study gene function and protein expression in the context of a cell. Basically, transfection is a method that overcomes the challenge of introducing molecules with a negative charge (e.g. the phosphate backbone of DNA) into cells with a negatively charged membrane.</p>
 <p>Ions like calcium or cationic lipid-based reagents coat the DNA, thus creating an overall positive charge that facilitates uptake of the DNA-transfection reagent complex across the cell membrane (<strong>Figure 9</strong>).</p>
 <figure id="fig:transfection-mechanism" class="align-left" style="width:100%;display:block;margin-right:auto">
-<p><picture src="/img/user/figures/transfection.png" alt="Figure 9"><source media="(max-width:480px)" srcset="/img/optimized/Xbwh2U6EXZ-500.webp" type="image/webp">
-<source media="(max-width:480px)" srcset="/img/optimized/Xbwh2U6EXZ-500.jpeg">
-<source media="(max-width:1920px)" srcset="/img/optimized/Xbwh2U6EXZ-700.webp" type="image/webp"><source media="(max-width:1920px)" srcset="/img/optimized/Xbwh2U6EXZ-700.jpeg"><img class="" src="/img/user/figures/transfection.png" alt="Figure 9" width=""></picture></p>
+<p><img src="/img/user/figures/transfection.png" alt="Figure 9"></p>
 <figcaption>
 <strong>Figure 9.</strong>
 <strong>Transfection using chemical reagents. A)</strong> Common cationic transfection reagents for the generation of reagent: DNA complexes with a net positive charge. <strong>B)</strong> Overview of the transfection mechanism. DNA is complexed with the cationic reagent. The positively charged complexes associate to the negatively charged membrane and are taken up by endocytosis. Upon escape from the endosome, the DNA is free to enter the nucleus (e.g., during cell division). Figure created with BioRender.com
@@ -166,9 +222,7 @@ In protein trans-splicing, the association of split intein fragments (IntN and I
 <p>In the practical course polyethylenimine (PEI) will be employed to exemplify transfection using chemical reagents.</p>
 <p>PEI is a poly-cationic polymer that is mixed with the DNA in a ratio that ensures the formation of complexes that carry a net positive charge. These cationic complexes interact with the negatively charged cell-surface and are taken up by endocytosis. Inside the endosome, PEI acts as a proton sponge, preventing acidification that is required for the activity of endosomal nucleases (<strong>Figure 10</strong>).</p>
 <figure id="fig:pei-transfection" class="align-left" style="width:100%;display:block;margin-right:auto">
-<p><picture src="/img/user/figures/transfection_pei.png" alt="Figure 10"><source media="(max-width:480px)" srcset="/img/optimized/rx6QETHimf-500.webp" type="image/webp">
-<source media="(max-width:480px)" srcset="/img/optimized/rx6QETHimf-500.jpeg">
-<source media="(max-width:1920px)" srcset="/img/optimized/rx6QETHimf-700.webp" type="image/webp"><source media="(max-width:1920px)" srcset="/img/optimized/rx6QETHimf-700.jpeg"><img class="" src="/img/user/figures/transfection_pei.png" alt="Figure 10" width=""></picture></p>
+<p><img src="/img/user/figures/transfection_pei.png" alt="Figure 10"></p>
 <figcaption>
 <strong>Figure 10.</strong>
 <strong>Polyethyleneimine (PEI)-mediated transfection of mammalian cells. (a)</strong> Chemical structure <strong>(b)</strong> Mechanism of PEI-mediated transfection. The positively charged PEI:DNA complexes are taken up by endocytosis. Inside the endosome PEI prevents acidification, which eventually leads to rupture of the endosome and liberation of the DNA into the cytoplasm.
@@ -177,9 +231,7 @@ In protein trans-splicing, the association of split intein fragments (IntN and I
 <h2 id="genome-engineering-of-mammalian-cells" tabindex="-1">Genome Engineering of Mammalian Cells</h2>
 <p>Upon transfection into mammalian cells, nucleic acids can contribute to the genetic programming and instruct cells to execute or alter particular activities. Commonly, either RNA- or DNA-molecules are employed, which in most cases perform their biological function in the cytoplasm and nucleus, respectively. Current RNA-based Covid-19 vaccines, for example, rely on mRNA which upon cell uptake, undergoes ribosomal translation into fragments of the viral spike protein in the cytosol. For the production of biopharmaceuticals and research purposes in cell lines, DNA plasmids are commonly used, which require nuclear entry in order to reach the cell compartment where RNA transcription takes place (<strong>Figure 11</strong>).</p>
 <figure id="fig:mammalian-plasmid" class="align-left" style="width:70%;display:block;margin-right:auto">
-<p><picture src="/img/user/figures/mammalian_cell_plasmid.png" alt="Figure 11"><source media="(max-width:480px)" srcset="/img/optimized/XQQ7WFMgHE-500.webp" type="image/webp">
-<source media="(max-width:480px)" srcset="/img/optimized/XQQ7WFMgHE-500.jpeg">
-<source media="(max-width:1920px)" srcset="/img/optimized/XQQ7WFMgHE-700.webp" type="image/webp"><source media="(max-width:1920px)" srcset="/img/optimized/XQQ7WFMgHE-700.jpeg"><img class="" src="/img/user/figures/mammalian_cell_plasmid.png" alt="Figure 11" width=""></picture></p>
+<p><img src="/img/user/figures/mammalian_cell_plasmid.png" alt="Figure 11"></p>
 <figcaption>
 <strong>Figure 11.</strong>
 Example of a mammalian cell plasmid including mammalian cell-specific, as well as bacterial features.
@@ -188,9 +240,7 @@ Example of a mammalian cell plasmid including mammalian cell-specific, as well a
 <p>Both examples lead to a transient activity of the transfected genetic material. However, over time, the RNA/DNA will be cleared, usually within a time frame of a few days. In rare cases, transfected DNA can integrate at random positions into the cell genome (roughly in 1 out of 1.000 transfected cells, strongly depending on the cell, construct, and the exact experimental conditions). By using additional eukaryotic antibiotic resistance genes encoded on the transfected plasmid, one can positively select for these cells. During the past years, several methods have been developed that facilitate the targeted integration of genetic material into mammalian cells or the specific alteration of the cellular genomes. During the theoretical parts of the course, you will have the possibility to familiarize yourself with some examples spanning this topic. Methods to integrate genetic information into cell genomes for example rely on (i) the above-mentioned random DNA integration, (ii) viral gene vehicles, e.g. using lentiviral systems harboring reverse transcriptases and integrases, (iii) homologous recombination-based techniques including the use of recombinases or designer endonucleases and homology templates containing the desired genetic information, or (iv) transposase-technologies originating from transposons (“jumping genes”) which excise and integrate genetic information. Table <strong>Table 1</strong> summarizes particular properties of these four groups.</p>
 <p>Experiment II of this practical course will introduce you to a blue light-sensitive optogenetic gene expression system. Here, you will use mammalian cells that have genomic integrations for the required optogenetic switches and the target gene, which will be expressed upon stimulation with light. These cells were generated using the Sleeping Beauty SB100X transposase, as explained in <strong>Figure 12</strong>. “Sleeping Beauty” refers to a transposase that was originally identified as an inactive enzyme in salmonid fish. Targeted mutagenesis, however, restored the activity after a long evolutionary sleep, and rounds of directed evolution finally yielded a hyperactive transposase enzyme, which is nowadays widely used for genome engineering purposes (Mátés et al., 2009).</p>
 <figure id="fig:sleeping-beauty" class="align-left" style="width:80%;display:block;margin-right:auto">
-<p><picture src="/img/user/figures/transposases.png" alt="Figure 12"><source media="(max-width:480px)" srcset="/img/optimized/koD97gExZr-500.webp" type="image/webp">
-<source media="(max-width:480px)" srcset="/img/optimized/koD97gExZr-500.jpeg">
-<source media="(max-width:1920px)" srcset="/img/optimized/koD97gExZr-700.webp" type="image/webp"><source media="(max-width:1920px)" srcset="/img/optimized/koD97gExZr-700.jpeg"><img class="" src="/img/user/figures/transposases.png" alt="Figure 12" width=""></picture></p>
+<p><img src="/img/user/figures/transposases.png" alt="Figure 12"></p>
 <figcaption>
 <strong>Figure 12.</strong>
 <strong>Mode of function of SB100X Sleeping Beauty-catalyzed transposition.</strong> Cotransfection of plasmids (i) containing a genetic cargo which is flanked by inverted terminal repeats (ITRs), and (ii) a transiently-expressed SB100X transposase gene leads to transposition of the cargo into the cell genome. SB100X excises the genetic cargo from the plasmid and integrates it at random positions (TA sites) into the host genome. Abbreviations: GOI, gene of interest; P, promoter; Res, resistance gene.
@@ -296,9 +346,7 @@ applications possible.</td>
 <p>The engineered vectors will be purified and analyzed using analytical restriction enzyme digestion and agarose gel electrophoresis. We encourage you to consider beforehand which enzymes we could use to differentiate the restriction pattern expected for the original plasmids and that resulting from the digestion of the engineered vectors.</p>
 <p>Finally, we will select some promising samples and analyze them by Sanger sequencing.</p>
 <figure id="fig:cloning-strategy" class="align-left" style="width:100%;display:block;margin-right:auto">
-<p><picture src="/img/user/figures/cloning_strategies.png" alt="Figure 13"><source media="(max-width:480px)" srcset="/img/optimized/3g_1fgFoar-500.webp" type="image/webp">
-<source media="(max-width:480px)" srcset="/img/optimized/3g_1fgFoar-500.jpeg">
-<source media="(max-width:1920px)" srcset="/img/optimized/3g_1fgFoar-700.webp" type="image/webp"><source media="(max-width:1920px)" srcset="/img/optimized/3g_1fgFoar-700.jpeg"><img class="" src="/img/user/figures/cloning_strategies.png" alt="Figure 13" width=""></picture></p>
+<p><img src="/img/user/figures/cloning_strategies.png" alt="Figure 13"></p>
 <figcaption>
 <strong>Figure 13.</strong>
 <strong>Illustration of the cloning strategy.</strong> Top, schematic representation of the cloned vectors. Bottom, pRSFDuet-1 plasmid (KanR) digested with <em>Bam</em>HI and <em>Kpn</em>I serves as backbone for cloning plasmids pDD259/262 and 260. The inserts for these constructs are the amplification products of pDD002 and pDD083 with the primers oDD561 and oDD562; or the PCR product of pDD002 with oDD561 and oDD563, respectively.
@@ -743,9 +791,7 @@ PCR program
 <li>Run gel at 120 V for 20–30 min.</li>
 </ol>
 <figure id="fig:dna-ladder" class="align-left" style="width:30%;display:block;margin-right:auto">
-<p><picture src="/img/user/figures/dna_ladder.png" alt="Figure 14"><source media="(max-width:480px)" srcset="/img/optimized/U4oVSMhy9D-500.webp" type="image/webp">
-<source media="(max-width:480px)" srcset="/img/optimized/U4oVSMhy9D-500.jpeg">
-<source media="(max-width:1920px)" srcset="/img/optimized/U4oVSMhy9D-687.webp" type="image/webp"><source media="(max-width:1920px)" srcset="/img/optimized/U4oVSMhy9D-687.jpeg"><img class="" src="/img/user/figures/dna_ladder.png" alt="Figure 14" width=""></picture></p>
+<p><img src="/img/user/figures/dna_ladder.png" alt="Figure 14"></p>
 <figcaption>
 <strong>Figure 14.</strong>
 <strong>GeneRuler™ 1 kb DNA Ladder</strong> (Fermentas)
@@ -1079,9 +1125,7 @@ Test digestion.
 <p>Stable genomic integration is often the preferred option as the foreign gene becomes part of the genome which allows for greater process consistency and long-term protein expression. However, the generation of stable cell lines is a time-consuming and expensive process. In this experiment, we will provide a stably-engineered CHO-K1 cell line generated using a sequential genomic integration of two vectors (<strong>Figure 15</strong>). One vector encodes an optogenetic LOVpep/ePDZ-based split transcription factor system under the selection of puromycin, and the other a SEAP reporter under the selection of Hygromycin. The principle of generating stable cell lines using the Sleeping Beauty transposase is explained in the introduction part (<strong>Figure 12</strong>).</p>
 <p>The following experiment will be about handling mammalian cell culture as well as the analysis of a light-induced reporter gene. The human placental <strong>se</strong>creted <strong>a</strong>lkaline <strong>p</strong>hosphatase (SEAP) as a reporter has tremendous advantages. SEAP is very stable, and its secretion into the medium allows a convenient and non-invasive way of acquiring samples. Furthermore, it is a quantitative reporter for gene expression because the SEAP activity in the supernatant of transfected CHO-K1 cells is proportional to shifts in intracellular SEAP mRNA levels. The activity of promoters/enhancers and other elements can be measured due to their direct correlation to SEAP secretion. Finally, the SEAP phosphatase is heat persistent and endures a temperature of 65°C, whereas other phosphatases degrade at this temperature. Therefore, heat treatment can be used to selectively enrich SEAP in samples that might contain additional phosphatases.</p>
 <figure id="fig:optogenetic-switch" class="align-left" style="width:100%;display:block;margin-right:auto">
-<p><picture src="/img/user/figures/BLUE_gene_switch.png" alt="Figure 15"><source media="(max-width:480px)" srcset="/img/optimized/UE7rT7Hjom-500.webp" type="image/webp">
-<source media="(max-width:480px)" srcset="/img/optimized/UE7rT7Hjom-500.jpeg">
-<source media="(max-width:1920px)" srcset="/img/optimized/UE7rT7Hjom-700.webp" type="image/webp"><source media="(max-width:1920px)" srcset="/img/optimized/UE7rT7Hjom-700.jpeg"><img class="" src="/img/user/figures/BLUE_gene_switch.png" alt="Figure 15" width=""></picture></p>
+<p><img src="/img/user/figures/BLUE_gene_switch.png" alt="Figure 15"></p>
 <figcaption>
 <strong>Figure 15.</strong>
 </figcaption>
@@ -1221,9 +1265,7 @@ Tilt the petri dish toward you gently, remove the supernatant, and avoid touchin
 <li>Add 20 µL of pNPP substrate using the multi-stepper pipette. Be fast, as the reaction starts immediately after adding the substrate to the first well. One person should add the substrate for the entire plate. Place the plate immediately into the plate reader and start the measurement.</li>
 </ol>
 <figure id="fig:seap-formula" class="align-left" style="width:80%;display:block;margin-right:auto">
-<p><picture src="/img/user/figures/seap_formula.png" alt="Figure 16"><source media="(max-width:480px)" srcset="/img/optimized/b5WSyTdbct-500.webp" type="image/webp">
-<source media="(max-width:480px)" srcset="/img/optimized/b5WSyTdbct-500.jpeg">
-<source media="(max-width:1920px)" srcset="/img/optimized/b5WSyTdbct-700.webp" type="image/webp"><source media="(max-width:1920px)" srcset="/img/optimized/b5WSyTdbct-700.jpeg"><img class="" src="/img/user/figures/seap_formula.png" alt="Figure 16" width=""></picture></p>
+<p><img src="/img/user/figures/seap_formula.png" alt="Figure 16"></p>
 <figcaption>
 <strong>Figure 16.</strong>
 Pipetting scheme.
@@ -1256,9 +1298,7 @@ respective curves [OD/min] and the Lambert-Beer law, resulting in the following 
 <li>How many conditions do we need to perform in the experiment?</li>
 </ol>
 <figure id="fig:logic-gate" class="align-left" style="width:80%;display:block;margin-right:auto">
-<p><picture src="/img/user/figures/inteins_boolean_gates.png" alt="Figure 17"><source media="(max-width:480px)" srcset="/img/optimized/L7pepe07-X-500.webp" type="image/webp">
-<source media="(max-width:480px)" srcset="/img/optimized/L7pepe07-X-500.jpeg">
-<source media="(max-width:1920px)" srcset="/img/optimized/L7pepe07-X-700.webp" type="image/webp"><source media="(max-width:1920px)" srcset="/img/optimized/L7pepe07-X-700.jpeg"><img class="" src="/img/user/figures/inteins_boolean_gates.png" alt="Figure 17" width=""></picture></p>
+<p><img src="/img/user/figures/inteins_boolean_gates.png" alt="Figure 17"></p>
 <figcaption>
 <strong>Figure 17.</strong>
 ** Scheme for the protein <em>trans</em>-splicing experiment to design logic gates.
@@ -1424,9 +1464,7 @@ Materials used in Experiment III.
 <p>This experiment aims to induce either the addition or exchange of two protein domains at the plasma membrane of mammalian HeLa cells using split intein technology. Here, the construct design determines whether an intein <em>trans</em>-splicing reaction yields one of the two possible outcomes. To determine the localization of the two proteins, we will use the green fluorescent protein GFP and the red fluorescent protein mCherry, allowing for their analysis via confocal fluorescence microscopy (<strong>Figure 18</strong>). Both fluorescent proteins are genetically fused to one half of the DnaE intein from <em>Nostoc punctiforme</em> (<em>Npu</em>DnaE intein split fragments, abbreviated as IntN and IntC for the N- and C-terminal fragment, respectively), which you also used in Experiment III. GFP is additionally fused to an N-terminal myristylation/palmitylation signal derived from the Src kinase Lck, leading to cotranslational myristoylation at glycine residue 2 and then posttranslational palmitoylation at cysteine residues 3 and 5 (Akimzhanov and Boehning, 2015). Modification with these fatty acids leads to the attachment of the protein to inner cell membranes.</p>
 <p>In the experiment, you will transiently transfect human HeLa cells with different combinations of the following plasmids encoding two versions of the membrane-attached GFP protein fused to IntN, or cytosolic mCherry fused to IntC. While we expect GFP to localize at the membrane and mCherry in the cytosol when transfected into cells, their cotransfection should induce the protein splicing reaction, which we will observe by confocal microscopy.</p>
 <figure id="fig:domain-swapping" class="align-left" style="width:100%;display:block;margin-right:auto">
-<p><picture src="/img/user/figures/inteins_plasms_membrane.png" alt="Figure 18"><source media="(max-width:480px)" srcset="/img/optimized/EzuRBsTOx3-500.webp" type="image/webp">
-<source media="(max-width:480px)" srcset="/img/optimized/EzuRBsTOx3-500.jpeg">
-<source media="(max-width:1920px)" srcset="/img/optimized/EzuRBsTOx3-700.webp" type="image/webp"><source media="(max-width:1920px)" srcset="/img/optimized/EzuRBsTOx3-700.jpeg"><img class="" src="/img/user/figures/inteins_plasms_membrane.png" alt="Figure 18" width=""></picture></p>
+<p><img src="/img/user/figures/inteins_plasms_membrane.png" alt="Figure 18"></p>
 <figcaption>
 <strong>Figure 18.</strong>
 ** Split intein-catalyzed protein trans-splicing (PTS) reaction either leading to the addition (left), or exchange (right) of GFP and mCherry at the plasma membrane, depending on the domain order of the GFP constructs (pDD130 vs pDD132). The IntC-fused mCherry construct pDD131 is identical in both approaches.
@@ -1877,9 +1915,7 @@ Transfection Set up 1 for even group numbers.
 <li>The target gene, in this case coding for the fluorescent protein neonGreen, downstream of the TRE.</li>
 </ol>
 <figure id="fig:tet-system" class="align-left" style="width:70%;display:block;margin-right:auto">
-<p><picture src="/img/user/figures/Tet-On.png" alt="Figure 19"><source media="(max-width:480px)" srcset="/img/optimized/gJdi9c2vKA-500.webp" type="image/webp">
-<source media="(max-width:480px)" srcset="/img/optimized/gJdi9c2vKA-500.jpeg">
-<source media="(max-width:1920px)" srcset="/img/optimized/gJdi9c2vKA-700.webp" type="image/webp"><source media="(max-width:1920px)" srcset="/img/optimized/gJdi9c2vKA-700.jpeg"><img class="" src="/img/user/figures/Tet-On.png" alt="Figure 19" width=""></picture></p>
+<p><img src="/img/user/figures/Tet-On.png" alt="Figure 19"></p>
 <figcaption>
 <strong>Figure 19.</strong>
 ** Schematic representation of the Tet-On system.** The Tet-On 3G protein is constitutively expressed under the control of the CAG promoter. Upon addition of tetracycline, the Tet-On 3G protein undergoes a conformational change that enables it to bind to the TRE3G promoter, thereby activating transcription and inducing neonGreen expression.
@@ -2208,6 +2244,259 @@ Transfection Set up 1 for even group numbers.
 <p>Mátés, L., Chuah, M.K.L., Belay, E., Jerchow, B., Manoj, N., Acosta-Sanchez, A., Grzela, D.P., Schmitt, A., Becker, K., Matrai, J., et al. (2009). Molecular evolution of a novel hyperactive Sleeping Beauty transposase enables robust stable gene transfer in vertebrates. Nat. Genet. 41, 753–761.</p>
 <p>Müller, K., Naumann, S., Weber, W., and Zurbriggen, M.D. (2015). Optogenetics for gene expression in mammalian cells. Biol. Chem. 396, 145–152.</p>
 </main>
+<aside>
+<div class="sidebar">
+<div class="sidebar-container">
+<script>async function fetchGraphData(){const e=await fetch("/graph.json").then((e=>e.json()));return{graphData:e,fullGraphData:filterFullGraphData(e)}}function getNextLevelNeighbours(e,t){const n=Object.values(e).map((e=>e.neighbors)).flat();return Object.keys(t).reduce(((r,l)=>(-1!=n.indexOf(l)?t[l].hide||(e[l]=t[l]):r[l]=t[l],r)),{})}function filterLocalGraphData(e,t){if(null==e)return null;let n=JSON.parse(JSON.stringify(e.nodes)),r=JSON.parse(JSON.stringify(e.links)),l=n[decodeURI(window.location.pathname)]||Object.values(n).find((e=>e.home));if(delete n[l.url],!l.home){delete n[Object.values(n).find((e=>e.home)).url]}l.current=!0;let i={};i[l.url]=l;for(let e=0;e<t;e++)n=getNextLevelNeighbours(i,n);nodes=Object.values(i),l.home||(nodes=nodes.filter((e=>!e.home)));let o=nodes.map((e=>e.id));return{nodes:nodes,links:r.filter((function(e){return o.indexOf(e.target)>-1&&o.indexOf(e.source)>-1}))}}function getCssVar(e){return getComputedStyle(document.body).getPropertyValue(e)}function htmlDecode(e){return(new DOMParser).parseFromString(e,"text/html").documentElement.textContent}function renderGraph(e,t,n,r){if(null==e)return;const l=document.getElementById(t);width=l.offsetWidth,height=l.offsetHeight;const i=new Set;let o=null;const a=getCssVar("--graph-main"),s=getCssVar("--graph-muted");let u=ForceGraph()(l).graphData(e).nodeId("id").nodeLabel("title").linkSource("source").linkTarget("target").d3AlphaDecay(.1).width(width).height(height).linkDirectionalArrowLength(2).linkDirectionalArrowRelPos(.5).autoPauseRedraw(!1).linkColor((e=>null==o||e.source.id==o.id||e.target.id==o.id?a:s)).nodeCanvasObject(((e,t)=>{const n=e.neighbors&&e.neighbors.length||2,r=Math.min(7,Math.max(n/2,2));t.beginPath(),t.arc(e.x,e.y,r,0,2*Math.PI,!1),null==o||e==o||i.has(e.url)?t.fillStyle=a:t.fillStyle=s,t.fill(),e.current&&(t.beginPath(),t.arc(e.x,e.y,r+1,0,2*Math.PI,!1),t.lineWidth=.5,t.strokeStyle=a,t.stroke());const l=htmlDecode(e.title);t.font="3.5px Sans-Serif",t.textAlign="center",t.textBaseline="top",t.fillText(l,e.x,e.y+r+2)})).onNodeClick((e=>{window.location=e.url})).onNodeHover((e=>{i.clear(),e&&(i.add(e),e.neighbors.forEach((e=>i.add(e)))),o=e||null}));return(r||null!=n&&e.nodes.length>4)&&setTimeout((()=>{u.zoomToFit(5,75)}),n||200),u}function renderLocalGraph(e,t,n){window.graph&&window.graph._destructor();return renderGraph(filterLocalGraphData(e,t),"link-graph",null,n)}function filterFullGraphData(e){if(null==e)return null;e=JSON.parse(JSON.stringify(e));const t=Object.values(e.nodes).filter((e=>e.hide)).map((e=>e.id));return{links:JSON.parse(JSON.stringify(e.links)).filter((e=>-1==t.indexOf(e.source)&&-1==t.indexOf(e.target))),nodes:[...Object.values(e.nodes).filter((e=>!e.hide))]}}function openFullGraph(e){return lucide.createIcons({attrs:{class:["svg-icon"]}}),renderGraph(e,"full-graph-container",200,!1)}function closefullGraph(e){return e&&e._destructor(),null}</script>
+<div x-init="{graphData, fullGraphData} = await fetchGraphData();" x-data="{ graphData: null, depth: 1, graph: null, fullGraph: null, showFullGraph: false, fullScreen: false, fullGraphData: null}" id="graph-component" x-bind:class="fullScreen ? 'graph graph-fs' : 'graph'" v-scope>
+<div class="graph-title-container">
+<div class="graph-title">Connected Pages</div>
+<div id="graph-controls">
+<div class="depth-control">
+<label for="graph-depth">Depth</label>
+<div class="slider">
+<input x-model.number="depth" name="graph-depth" list="depthmarkers" type="range" step="1" min="1" max="3" id="graph-depth">
+<datalist id="depthmarkers">
+<option value="1" label="1"></option>
+<option value="2" label="2"></option>
+<option value="3" label="3"></option>
+</datalist>
+</div>
+<span id="depth-display" x-text="depth"></span>
+</div>
+<div class="ctrl-right">
+<span id="global-graph-btn" x-on:click="showFullGraph = true; setTimeout(() => {fullGraph = openFullGraph(fullGraphData)}, 100)"><i icon-name="globe" aria-hidden="true"></i></span>
+<span id="graph-fs-btn" x-on:click="fullScreen = !fullScreen"><i icon-name="expand" aria-hidden="true"></i></span>
+</div>
+</div>
+</div>
+<div x-effect="window.graph = renderLocalGraph(graphData, depth, fullScreen)" id="link-graph"></div>
+<div x-show="showFullGraph" id="full-graph" class="show" style="display:none">
+<span id="full-graph-close" x-on:click="fullGraph = closefullGraph(fullGraph); showFullGraph = false;"><i icon-name="x" aria-hidden="true"></i></span><div id="full-graph-container"></div>
+</div>
+</div>
+<div class="toc">
+<div class="toc-title-container">
+<div class="toc-title">
+On this page
+</div>
+</div>
+<div class="toc-container">
+<nav class="toc">
+<ol>
+<li><a href="#course-information">Course Information</a>
+<ol>
+<li><a href="#supervisors">Supervisors</a>
+</li>
+<li><a href="#course-materials">Course Materials</a>
+</li>
+<li><a href="#time-schedule">Time Schedule</a>
+</li>
+<li><a href="#notes">Notes</a>
+</li>
+</ol>
+</li>
+<li><a href="#background">Background</a>
+<ol>
+<li><a href="#protein-switches">Protein Switches</a>
+<ol>
+<li><a href="#engineered-protein-switches-and-optogenetics">Engineered Protein Switches and Optogenetics</a>
+</li>
+<li><a href="#protein-splicing">Protein Splicing</a>
+</li>
+</ol>
+</li>
+<li><a href="#aqua-cloning">AQUA Cloning</a>
+</li>
+<li><a href="#transfection-of-mammalian-cells">Transfection of Mammalian Cells</a>
+</li>
+<li><a href="#genome-engineering-of-mammalian-cells">Genome Engineering of Mammalian Cells</a>
+</li>
+<li><a href="#mammalian-cell-lines-used-in-this-course">Mammalian Cell Lines Used in This Course</a>
+</li>
+</ol>
+</li>
+<li><a href="#practical-part">Practical Part</a>
+<ol>
+<li><a href="#experiment-i-molecular-cloning-of-bacterial-inducible-plasmids">Experiment I: Molecular Cloning of Bacterial Inducible Plasmids</a>
+<ol>
+<li><a href="#materials">Materials</a>
+</li>
+<li><a href="#protocols">Protocols</a>
+<ol>
+<li><a href="#day-1">Day 1</a>
+<ol>
+<li><a href="#1-1-pcr">1.1 PCR</a>
+</li>
+<li><a href="#1-2-dna-purification-from-agarose-gel">1.2 DNA Purification from Agarose Gel</a>
+</li>
+<li><a href="#1-3-dna-purification">1.3 DNA Purification</a>
+</li>
+<li><a href="#1-4-backbone-digestion-performed-by-the-supervisors">1.4 Backbone Digestion (Performed by the Supervisors)</a>
+</li>
+<li><a href="#1-5-pcr-products-digestion-only-for-ligation-cloning">1.5 PCR Products Digestion (Only for Ligation Cloning)</a>
+</li>
+</ol>
+</li>
+<li><a href="#day-2">Day 2</a>
+<ol>
+<li><a href="#2-1-digested-pcr-products-purification-only-for-ligation-cloning">2.1 Digested PCR Products Purification (Only for Ligation Cloning)</a>
+</li>
+<li><a href="#2-2-assembly-of-the-new-vector">2.2 Assembly of the New Vector</a>
+<ol>
+<li><a href="#2-2-1-aqua-cloning">2.2.1 AQUA Cloning</a>
+</li>
+<li><a href="#2-2-2-ligation-protocol">2.2.2 Ligation Protocol</a>
+</li>
+</ol>
+</li>
+<li><a href="#2-3-transformation-into-em-e-coli-em-competent-cells">2.3 Transformation into E. coli Competent Cells</a>
+</li>
+</ol>
+</li>
+<li><a href="#day-3">Day 3</a>
+<ol>
+<li><a href="#3-1-streaking-single-colonies-on-new-lb-ampicillin-plates">3.1 Streaking Single Colonies on New LB-Ampicillin Plates</a>
+</li>
+</ol>
+</li>
+<li><a href="#day-4">Day 4</a>
+<ol>
+<li><a href="#4-1-plasmid-dna-isolation">4.1 Plasmid DNA Isolation</a>
+</li>
+<li><a href="#4-2-analytical-restriction-enzyme-digestion">4.2 Analytical Restriction Enzyme Digestion</a>
+</li>
+<li><a href="#4-3-sequencing">4.3 Sequencing</a>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a href="#experiment-ii-optogenetic-gene-expression-using-stably-engineered-mammalian-cells">Experiment II: Optogenetic Gene Expression Using Stably-Engineered Mammalian Cells</a>
+<ol>
+<li><a href="#materials-1">Materials</a>
+</li>
+<li><a href="#protocol">Protocol</a>
+<ol>
+<li><a href="#day-1-seeding-mammalian-cells">Day 1: Seeding Mammalian Cells</a>
+</li>
+<li><a href="#day-2-illumination-t0-and-t1-supernatant-collection">Day 2: Illumination / t0 and t1 Supernatant Collection</a>
+</li>
+<li><a href="#day-3-t2-supernatant-collection-and-seap-assay">Day 3: t2 Supernatant Collection and SEAP Assay</a>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a href="#experiment-iii-protein-trans-splicing-for-bacterial-logic-gate-design">Experiment III: Protein Trans-Splicing for Bacterial Logic Gate Design</a>
+<ol>
+<li><a href="#materials-2">Materials</a>
+</li>
+<li><a href="#protocol-1">Protocol</a>
+<ol>
+<li><a href="#day-6-transformation-of-bacterial-strains">Day 6: Transformation of Bacterial Strains</a>
+</li>
+<li><a href="#day-7-intein-experiment-in-e-coli">Day 7: Intein Experiment in E. coli</a>
+</li>
+<li><a href="#day-8-measurement-and-amp-analysis">Day 8: Measurement & Analysis</a>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a href="#experiment-iv-intein-catalyzed-protein-domain-swapping-at-the-plasma-membrane">Experiment IV: Intein-Catalyzed Protein Domain Swapping at the Plasma Membrane</a>
+<ol>
+<li><a href="#materials-3">Materials</a>
+</li>
+<li><a href="#protocol-2">Protocol</a>
+<ol>
+<li><a href="#day-7-plasmid-transformation">Day 7: Plasmid Transformation</a>
+</li>
+<li><a href="#day-8-culture-inoculation">Day 8: Culture Inoculation</a>
+</li>
+<li><a href="#day-9-culture-harvesting">Day 9: Culture Harvesting</a>
+</li>
+<li><a href="#day-10-plasmid-midiprep">Day 10: Plasmid Midiprep</a>
+</li>
+<li><a href="#day-11-seeding-he-la-cells-on-glass-coverslips">Day 11: Seeding HeLa Cells on Glass Coverslips</a>
+</li>
+<li><a href="#day-12-pei-transfection">Day 12: PEI Transfection</a>
+</li>
+<li><a href="#day-13-paraformaldehyde-pfa-fixation-of-cells-for-confocal-microscopy">Day 13: Paraformaldehyde (PFA) Fixation of Cells for Confocal Microscopy</a>
+</li>
+<li><a href="#confocal-microscopy">Confocal Microscopy</a>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a href="#experiment-v-engineering-chemically-regulated-gene-switch-technology-in-stable-mammalian-cell-culture">Experiment V: Engineering Chemically Regulated Gene Switch Technology in Stable Mammalian Cell Culture</a>
+<ol>
+<li><a href="#aim">Aim</a>
+</li>
+<li><a href="#background-1">Background</a>
+<ol>
+<li><a href="#tetracycline-inducible-expression-system-tet-system">Tetracycline-Inducible Expression System (Tet System)</a>
+</li>
+<li><a href="#why-different-concentrations-matter">Why Different Concentrations Matter</a>
+</li>
+<li><a href="#flow-cytometry-for-quantifying-fluorescent-reporters">Flow Cytometry for Quantifying Fluorescent Reporters</a>
+</li>
+<li><a href="#stable-cell-lines-and-their-advantages">Stable Cell Lines and Their Advantages</a>
+</li>
+</ol>
+</li>
+<li><a href="#material">Material</a>
+</li>
+<li><a href="#protocol-3">Protocol</a>
+<ol>
+<li><a href="#day-2-cell-seeding-will-be-performed-by-your-supervisors">Day 2 - Cell Seeding (will be performed by your supervisors)</a>
+</li>
+<li><a href="#day-3-stable-transfection">Day 3 - Stable Transfection</a>
+</li>
+<li><a href="#day-5-split-cells-and-start-selection">Day 5 – Split Cells and Start Selection</a>
+</li>
+<li><a href="#day-6-change-medium-or-split-culture">Day 6 - Change Medium or Split Culture</a>
+</li>
+<li><a href="#day-10-split-cells">Day 10 - Split Cells</a>
+</li>
+<li><a href="#day-11-cell-seeding-for-experiment">Day 11 - Cell Seeding for Experiment</a>
+</li>
+<li><a href="#day-12-tetracycline-induction">Day 12 - Tetracycline Induction</a>
+</li>
+<li><a href="#day-13-flow-cytometry">Day 13 - Flow Cytometry</a>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a href="#references">References</a>
+</li>
+</ol>
+</nav>
+</div>
+</div>
+<div class="backlinks">
+<div class="backlink-title" style="margin:4px 0!important">Pages mentioning this page</div>
+<div class="backlink-list"><div class="backlink-card">
+<span class="no-backlinks-message">No other pages mentions this page</span>
+</div></div>
+</div>
+</div>
+</div>
+</aside>
+<style>#tooltip-wrapper{background:var(--background-primary);padding:1em;border-radius:4px;overflow:hidden;position:fixed;width:80%;max-width:400px;height:auto;max-height:300px;font-size:.8em;box-shadow:0 5px 10px rgba(0,0,0,.1);opacity:0;transition:opacity .1s;unicode-bidi:plaintext;overflow-y:scroll;z-index:10}#tooltip-wrapper:after{content:"";position:absolute;z-index:1;bottom:0;left:0;pointer-events:none;width:100%;unicode-bidi:plaintext;height:75px}</style>
+<div style="opacity:0;display:none" id="tooltip-wrapper">
+<div id="tooltip-content">
+</div>
+</div>
+<iframe style="display:none;height:0;width:0" id="link-preview-iframe" src="">
+</iframe>
+<script>var opacityTimeout,contentTimeout,transitionDurationMs=100,iframe=document.getElementById("link-preview-iframe"),tooltipWrapper=document.getElementById("tooltip-wrapper"),tooltipContent=document.getElementById("tooltip-content"),linkHistories={};function hideTooltip(){opacityTimeout=setTimeout((function(){tooltipWrapper.style.opacity=0,contentTimeout=setTimeout((function(){tooltipContent.innerHTML="",tooltipWrapper.style.display="none"}),transitionDurationMs+1)}),transitionDurationMs)}function showTooltip(t){var e=t.target,o=e.getClientRects()[e.getClientRects().length-1],i=window.pageYOffset||document.documentElement.scrollTop,n=t.target.getAttribute("href");if(-1===n.indexOf("http")||-1!==n.indexOf(window.location.host)){let t=n.split("#")[0];linkHistories[t]?(tooltipContent.innerHTML=linkHistories[t],tooltipWrapper.style.display="block",setTimeout((function(){if(tooltipWrapper.style.opacity=1,-1!=n.indexOf("#")){let t=n.split("#")[1];const e=tooltipWrapper.querySelector(`[id='${t}']`);e.classList.add("referred"),e.scrollIntoView({behavior:"smooth"},!0)}else tooltipWrapper.scroll(0,0)}),1)):(iframe.src=t,iframe.onload=function(){tooltipContentHtml="",tooltipContentHtml+='<div style="font-weight: bold; unicode-bidi: plaintext;">'+iframe.contentWindow.document.querySelector("h1").innerHTML+"</div>",tooltipContentHtml+=iframe.contentWindow.document.querySelector(".content").innerHTML,tooltipContent.innerHTML=tooltipContentHtml,linkHistories[t]=tooltipContentHtml,tooltipWrapper.style.display="block",tooltipWrapper.scrollTop=0,setTimeout((function(){if(tooltipWrapper.style.opacity=1,-1!=n.indexOf("#")){let t=n.split("#")[1];const e=tooltipWrapper.querySelector(`[id='${t}']`);e.classList.add("referred"),console.log(e),e.scrollIntoView({behavior:"smooth"},!0)}else tooltipWrapper.scroll(0,0)}),1)}),tooltipWrapper.style.left=o.left-tooltipWrapper.offsetWidth/2+o.width/2+"px",window.innerHeight-o.top<tooltipWrapper.offsetHeight?tooltipWrapper.style.top=o.top+i-tooltipWrapper.offsetHeight-10+"px":window.innerHeight-o.top>tooltipWrapper.offsetHeight&&(tooltipWrapper.style.top=o.top+i+35+"px"),o.left+o.width/2<tooltipWrapper.offsetWidth/2?tooltipWrapper.style.left="10px":document.body.clientWidth-o.left-o.width/2<tooltipWrapper.offsetWidth/2&&(tooltipWrapper.style.left=document.body.clientWidth-tooltipWrapper.offsetWidth-20+"px")}}function setupListeners(t){t.addEventListener("mouseleave",(function(t){hideTooltip()})),tooltipWrapper.addEventListener("mouseleave",(function(t){hideTooltip()})),t.addEventListener("mouseenter",(function(t){clearTimeout(opacityTimeout),clearTimeout(contentTimeout),showTooltip(t)})),tooltipWrapper.addEventListener("mouseenter",(function(t){clearTimeout(opacityTimeout),clearTimeout(contentTimeout)}))}window.addEventListener("load",(function(t){document.querySelectorAll(".internal-link").forEach(setupListeners),document.querySelectorAll(".backlink-card a").forEach(setupListeners)}))</script>
 <script>lucide.createIcons({attrs:{class:["svg-icon"]}})</script>
 </body>
 </html>
