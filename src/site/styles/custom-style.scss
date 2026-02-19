@@ -1,13 +1,19 @@
 body {
-    /***
-      ADD YOUR CUSTOM STYLING HERE. (INSIDE THE body {...} section.)
-      IT WILL TAKE PRECEDENCE OVER THE STYLING IN THE STYLE.CSS FILE.
-   ***/
-    //  background-color: white;
-    //  .content {
-    //   font-size: 14px;
-    //  }
-    //  h1 {
-    //   color: black;
-    //  }
+    .content-wrapper {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+}
+
+.table-of-contents {
+  grid-column: 1;
+  position: sticky;
+  top: 2rem;
+  height: 90vh;
+  overflow-y: auto;
+  padding-right: 1.5rem;
+}
+
+.note-content {
+  grid-column: 2;
+}
 }
