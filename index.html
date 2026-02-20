@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Course-Information</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script async type="module">import mermaid from"https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs"</script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js" integrity="sha512-hpZ5pDCF2bRCweL5WoA0/N1elet1KYL5mx3LP555Eg/0ZguaHawxNvEjF6O3rufAChs16HVNhEc6blF/rZoowQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha512-sv0slik/5O0JIPdLBCR2A3XDg/1U3WuDEheZfI/DI5n8Yqc3h5kjrnr46FGBNiUAJF7rE4LHKwQ/SoSLRKAxEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script async src="https://cdn.jsdelivr.net/npm/lucide@0.115.0/dist/umd/lucide.min.js"></script>
+<script>window.addEventListener("load",(()=>{document.querySelectorAll(".callout").forEach((e=>{const t=getComputedStyle(e).getPropertyValue("--callout-icon"),l=t&&t.trim().replace(/^lucide-/,"");if(l){const t=e.querySelector(".callout-title");if(t){const e=document.createElement("div"),c=document.createElement("i");e.appendChild(c),c.setAttribute("icon-name",l),e.setAttribute("class","callout-icon"),t.insertBefore(e,t.firstChild)}}})),lucide.createIcons(),Array.from(document.querySelectorAll(".callout.is-collapsible")).forEach((e=>{e.querySelector(".callout-title").addEventListener("click",(t=>{e.classList.contains("is-collapsed")?e.classList.remove("is-collapsed"):e.classList.add("is-collapsed")}))}))}))</script>
+<script async src="https://fastly.jsdelivr.net/npm/force-graph@1.43.0/dist/force-graph.min.js"></script>
+<script async src="https://fastly.jsdelivr.net/npm/@alpinejs/persist@3.11.1/dist/cdn.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/alpinejs@3.11.1/dist/cdn.min.js" async></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-okaidia.min.css" integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ==" crossorigin="anonymous" referrerpolicy="no-referrer" async>
+<script src="https://fastly.jsdelivr.net/npm/whatwg-fetch@3.6.2/dist/fetch.umd.min.js" crossorigin="anonymous" referrerpolicy="no-referrer" async></script>
+<link href="/styles/digital-garden-base.css" rel="stylesheet">
+<link href="/styles/obsidian-base.css" rel="stylesheet">
+<link href="/styles/_theme.cb0118c4.css" rel="stylesheet">
+<link href="/styles/custom-style.css" rel="stylesheet">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<style>body.css-settings-manager{--tag-radius:2em;--cards-border-width:4px;--anp-cursor:pointer;--anp-editor-font-source:"";--anp-editor-font-lp:"TeX Gyre Pagella";--bold-weight:700;--anp-font-live-preview-wt:400;--h1-weight:900;--h1-line-height:1.2;--h2-size:1.9em;--h2-weight:100;--h3-size:1.6em;--h3-weight:700;--h4-weight:700;--h5-weight:700;--h6-size:1.1em;--h6-weight:700;--anp-colorful-frame-opacity:0.2;--anp-file-label-align:0;--anp-rainbow-folder-bg-opacity:0.5;--anp-stacked-header-width:30px;--anp-alt-tab-custom-height:40px;--anp-depth-tab-opacity:0.6;--anp-depth-tab-gap:10px;--anp-safari-tab-radius:5px;--anp-safari-tab-gap:3px;--anp-card-radius:8px;--anp-card-layout-padding:1px;--anp-border-radius:16px;--anp-border-padding:20px}body.theme-light.css-settings-manager{--ctp-custom-peach:221,127,103;--ctp-custom-teal:26,125,164;--ctp-custom-subtext1:238,101,58;--ctp-custom-subtext0:12,159,206;--ctp-custom-overlay2:82,82,82;--ctp-custom-overlay1:204,204,204;--ctp-custom-overlay0:12,159,206}body.theme-dark.css-settings-manager{--ctp-custom-teal:17,183,197;--ctp-custom-subtext0:251,53,216;--ctp-custom-overlay2:10,209,208;--ctp-custom-overlay1:255,166,0;--ctp-custom-overlay0:76,255,210}</style>
+<style></style>
+</head>
+<body class="theme-light markdown-preview-view markdown-rendered markdown-preview-section css-settings-manager mod-macos is-frameless is-hidden-frameless obsidian-app theme-light show-inline-title is-floating-nav auto-full-screen show-ribbon show-view-header is-maximized css-settings-manager anp-td-none ctp-rosepine-light ctp-frappe ctp-accent-light-teal ctp-accent-teal anuppuccin-accent-toggle anp-no-highlight anp-callout-sleek anp-callout-color-toggle anp-custom-checkboxes anp-speech-bubble anp-latex-inline-text anp-latex-block-text anp-color-transition-toggle anp-toggle-scrollbars anp-hide-external-link-icon anp-header-color-toggle anp-header-divider-color-toggle anp-h1-red anp-h1-divider anp-h2-peach anp-h3-green anp-h4-teal anp-h5-lavender anp-h6-mauve anp-decoration-toggle anp-bold-red anp-italic-green anp-highlight-yellow anp-file-icons anp-full-rainbow-color-toggle anp-rainbow-file-toggle anp-simple-rainbow-title-toggle anp-simple-rainbow-indentation-toggle anp-default-tab anp-disable-newtab-align anp-safari-tab-animated anp-card-shadows anp-card-layout-actions anp-card-layout-filebrowser is-focused">
+<nav class="navbar">
+<div class="navbar-inner">
+<a href="/" style="text-decoration:none">
+<h1 style="margin:15px!important">M2205</h1>
+</a>
+</div>
+</nav>
+<main class="content cm-s-obsidian">
+<header>
+<div class="header-meta">
+</div>
+</header>
+<h1 id="course-information" tabindex="-1">Course Information</h1>
+<h2 id="supervisors" tabindex="-1">Supervisors</h2>
+<p>Benjamin McLean, Cha San Koh, Daniel Wiebensohn, Dominic Schirmer, Josepha Grewer, Maria Evangelopoulou, Micail David Müller, Miriam Labusch, Hannes Beyer</p>
+<h2 id="course-materials" tabindex="-1">Course Materials</h2>
+<p><a href="https://uni-duesseldorf.sciebo.de/s/KPoKTwFd2jeXfFj" target="_blank" class="external-link">Shared Sciebo folder</a></p>
+<h2 id="time-schedule" tabindex="-1">Time Schedule</h2>
+<figure id="fig:schedule-part1" class="align-left" style="width:100%;display:block;margin-right:auto">
+<p><picture src="/img/user/figures/schedule_part1.png" alt="Figure 1"><source media="(max-width:480px)" srcset="/img/optimized/AG9TQOvcmg-500.webp" type="image/webp">
+<source media="(max-width:480px)" srcset="/img/optimized/AG9TQOvcmg-500.jpeg">
+<source media="(max-width:1920px)" srcset="/img/optimized/AG9TQOvcmg-700.webp" type="image/webp"><source media="(max-width:1920px)" srcset="/img/optimized/AG9TQOvcmg-700.jpeg"><img class="" src="/img/user/figures/schedule_part1.png" alt="Figure 1" width=""></picture></p>
+<figcaption>
+<strong>Figure 1.</strong>
+Time Schedule for the first two weeks of the course.
+</figcaption>
+</figure>
+<figure id="fig:schedule-part2" class="align-left" style="width:100%;display:block;margin-right:auto">
+<p><picture src="/img/user/figures/schedule_part2.png" alt="Figure 2"><source media="(max-width:480px)" srcset="/img/optimized/k6Vx5zZ6_U-500.webp" type="image/webp">
+<source media="(max-width:480px)" srcset="/img/optimized/k6Vx5zZ6_U-500.jpeg">
+<source media="(max-width:1920px)" srcset="/img/optimized/k6Vx5zZ6_U-700.webp" type="image/webp"><source media="(max-width:1920px)" srcset="/img/optimized/k6Vx5zZ6_U-700.jpeg"><img class="" src="/img/user/figures/schedule_part2.png" alt="Figure 2" width=""></picture></p>
+<figcaption>
+<strong>Figure 2.</strong>
+Time Schedule for the third week of the course.
+</figcaption>
+</figure>
+<h2 id="notes" tabindex="-1">Notes</h2>
+<p><strong>Welcome to the course.</strong> We are looking forward to the next two weeks together with you and hope that you enjoy the course content.</p>
+<p><strong>Preparation</strong></p>
+<p>To understand and enjoy all parts of this practical course, it is required that you work through the script before you perform the experiments. The background section serves as a basis for understanding the individual experiments and will be complemented by our lecture series. Your preparations also allow you to read up on topics where you would like to know more, or that still seem confusing to you. Take the opportunity to ask as many questions as you would like during the course. All experiments provide ample room for discussion among students and between students and supervisors.</p>
+<p><strong>Protocol</strong></p>
+<p>Keep constant documentation of your work. You will need all the information for your protocol. The final protocol must include all experimental parts, and they must be introduced scientifically. The protocol must further comprise raw and analyzed results, which should be presented in a comprehensive format (e.g., Tables, Figures, Schemes, etc.) with clear labels. Each experiment requires a discussion of the results. When referencing other works, these must be clearly cited.</p>
+<p><strong>Information on protocols</strong></p>
+<p>Keep constant documentation of your work. You will need all the information for your protocol. The final protocol must include all experimental parts, and they must be introduced scientifically.</p>
+<p>The protocol of each part of the experiments should include the following sections:</p>
+<p><strong>1) Goal</strong></p>
+<p>3-10 sentences to describe what you would like to achieve with the experiments.</p>
+<p><strong>2) Method and materials</strong></p>
+<p>Describe suitable approaches you need to perform and reproduce the experiment; materials, including the plasmids, cell types, software, or provided datasets, etc. This part can be brief, as we have detailed lists in the script to which you can refer; however, the differences from the information and protocols outlined in the script must be mentioned.</p>
+<p><strong>3) Procedure and results</strong></p>
+<p>Description of how you have performed the experiments. This part cannot simply refer to the script, as you may modify some of the steps. The results part should show annotated, analyzed data such as labeled gels, plots of measurements including axis titles and error estimates, statistics information, representative images of microscopic data, etc. If any source or dataset was from someone or elsewhere, they should be clearly referenced.</p>
+<p><strong>4) Discussion and conclusion</strong></p>
+<p>The discussion and conclusion parts are based on your analyzed data. Did the result achieve your goals? What have I learned? What went wrong? What should be improved?</p>
+<p><strong>Scope</strong></p>
+<p>Limit the text of each experiment to 1–2 pages (depending on font size and formatting), excluding graphical elements and their captions.</p>
+<hr>
+<p><a class="internal-link is-unresolved" href="/404" target="">Next →</a></p>
+</main>
+<script>lucide.createIcons({attrs:{class:["svg-icon"]}})</script>
+</body>
+</html>
