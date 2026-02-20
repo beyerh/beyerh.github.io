@@ -1,8 +1,7 @@
 ---
-{"dg-publish":true,"permalink":"/m2205/index/","title":"Current Methods in Synthetic Biology for Biomedical Research"}
+{"dg-publish":true,"permalink":"/m2205/index/","title":"Current Methods in Synthetic Biology for Biomedical Research","tags":["gardenEntry"]}
 ---
 
-\newpage
 - [[Course-Information\|Course-Information]]
 - [[Background\|Background]]
 # Practical Part

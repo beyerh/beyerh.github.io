@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/m2205/experiment-1/"}
+{"dg-publish":true,"permalink":"/m2205/experiment-1/","title":"Experiment 1 - Molecular DNA Cloning"}
 ---
 
 ## Experiment I: Molecular Cloning of Bacterial Inducible Plasmids
