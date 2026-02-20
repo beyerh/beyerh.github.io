@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/export/garden/course-information/","tags":["gardenEntry"]}
+{"dg-publish":true,"permalink":"/export/garden/course-information/"}
 ---
 
 # Course Information
