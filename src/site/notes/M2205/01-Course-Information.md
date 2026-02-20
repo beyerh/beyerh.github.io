@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/m2205/01-course-information/"}
+{"dg-publish":true,"permalink":"/m2205/01-course-information/","tags":["gardenEntry"]}
 ---
 
 # Course Information
@@ -12,13 +12,13 @@ Benjamin McLean, Cha San Koh, Daniel Wiebensohn, Dominic Schirmer, Josepha Grewe
 
 [Shared Sciebo folder](https://uni-duesseldorf.sciebo.de/s/KPoKTwFd2jeXfFj)
 
-[Download Script PDF](/img/user/Script.pdf)
+[Download Script PDF](https://uni-duesseldorf.sciebo.de/s/kNKCARao5NMeSZ7)
 
 ## Time Schedule
 
 <figure id="fig:schedule-part1" class="align-left" style="width: 100%; display: block; margin-right: auto">
 
-![Figure 1](/img/user/figures/schedule_part1.png)
+![Figure 1](/img/user/M2205/figures/schedule_part1.png)
 
 <figcaption>
 <strong>Figure 1.</strong> 
@@ -27,7 +27,7 @@ Time Schedule for the first two weeks of the course.
 </figure>
 <figure id="fig:schedule-part2" class="align-left" style="width: 100%; display: block; margin-right: auto">
 
-![Figure 2](/img/user/figures/schedule_part2.png)
+![Figure 2](/img/user/M2205/figures/schedule_part2.png)
 
 <figcaption>
 <strong>Figure 2.</strong> 
