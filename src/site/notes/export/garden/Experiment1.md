@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/export/garden/experiment1/"}
+{"dg-publish":true,"permalink":"/export/garden/experiment1/","tags":["gardenEntry"]}
 ---
 
 ## Experiment I: Molecular Cloning of Bacterial Inducible Plasmids

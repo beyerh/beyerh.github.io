@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/export/garden/index/","title":"Current Methods in Synthetic Biology for Biomedical Research","tags":["gardenEntry"]}
+{"dg-publish":true,"permalink":"/export/garden/index/","title":"Current Methods in Synthetic Biology for Biomedical Research"}
 ---
 
 \newpage
