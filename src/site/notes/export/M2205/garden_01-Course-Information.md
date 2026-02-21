@@ -13,6 +13,8 @@ Benjamin McLean, Cha San Koh, Daniel Wiebensohn, Dominic Schirmer, Josepha Grewe
 
 [Shared Sciebo folder](https://uni-duesseldorf.sciebo.de/s/KPoKTwFd2jeXfFj)
 
+[Download Script PDF](https://uni-duesseldorf.sciebo.de/s/kNKCARao5NMeSZ7)
+
 ## Time Schedule
 
 <figure id="fig:schedule-part1" class="align-left" style="width: 100%; display: block; margin-right: auto">
