@@ -10,19 +10,6 @@ This experiment aims to induce either the addition or exchange of two protein do
 
 In the experiment, you will transiently transfect human HeLa cells with different combinations of the following plasmids encoding two versions of the membrane-attached GFP protein fused to Int<sub>N</sub>, or cytosolic mCherry fused to Int<sub>C</sub>. While we expect GFP to localize at the membrane and mCherry in the cytosol when transfected into cells, their cotransfection should induce the protein splicing reaction, which we will observe by confocal microscopy.
 
-<figure id="fig:domain-swapping" class="align-left" style="width: 100%; display: block; margin-right: auto">
-
-![Figure 1](/img/user/figures/inteins_plasms_membrane.png)
-
-<figcaption>
-<strong>Figure 1.</strong> 
-<strong>Split intein-catalyzed protein trans-splicing (PTS)</strong>
-reaction either leading to the addition (left), or exchange (right) of
-GFP and mCherry at the plasma membrane, depending on the domain order of
-the GFP constructs (pDD130 vs pDD132). The Int<sub>C</sub>-fused mCherry
-construct pDD131 is identical in both approaches.
-</figcaption>
-</figure>
 
 In cells, many relevant signaling pathways initiate or pass through microdomains at the plasma membrane, often linking the perception of extracellular signals *via* membrane integral receptors to the cytosol. Therefore, modulating the localization of proteins involved in cell signaling represents an important tool to regulate cellular behavior. However, the induction of protein domain swapping might likewise be employed to regulate diverse cellular mechanisms, for example, by exchanging antagonistically functional protein domains, such as activators and repressors.
 
