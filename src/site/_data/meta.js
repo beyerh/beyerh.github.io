@@ -71,6 +71,7 @@ module.exports = async (data) => {
     siteBaseUrl: baseUrl,
     styleSettingsCss,
     buildDate: new Date(),
+    sitePassword: process.env.SITE_PASSWORD,
   };
 
   return meta;

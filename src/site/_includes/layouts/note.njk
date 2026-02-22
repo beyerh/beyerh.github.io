@@ -92,5 +92,8 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
       {% include imp %}
     {% endfor %}
     {%include "components/lucideIcons.njk"%}
+    {% if meta.sitePassword %}
+    {%include "components/password-protection.njk"%}
+    {% endif %}
   </body>
 </html>
