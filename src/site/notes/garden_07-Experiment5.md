@@ -65,7 +65,7 @@ Stable cell lines are cell populations that have stably integrated foreign DNA i
 
 ### Material
 
-<figure id="tbl:materials-exp5" class="align-left" style="width: 100px; float: left; margin-right: 1em">
+<figure id="tbl:materials-exp5" class="align-left" style="width: 100%; float: left; margin-right: 1em">
   <figcaption>
     <strong>Table 1.</strong> 
 Materials for Experiment V.
