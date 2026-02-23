@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/garden-05-experiment3/","title":"05-Experiment3"}
+{"dg-publish":true,"permalink":"/garden-05-experiment3/","title":"Experiment 3: Protein Splicing Bacteria"}
 ---
 
 

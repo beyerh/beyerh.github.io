@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/garden-03-experiment1/","title":"03-Experiment1"}
+{"dg-publish":true,"permalink":"/garden-03-experiment1/","title":"Experiment 1: Molecular Cloning"}
 ---
 
 

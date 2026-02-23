@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/garden-02-background/","title":"02-Background"}
+{"dg-publish":true,"permalink":"/garden-02-background/","title":"Background"}
 ---
 
 

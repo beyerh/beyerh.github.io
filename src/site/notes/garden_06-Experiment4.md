@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/garden-06-experiment4/","title":"06-Experiment4"}
+{"dg-publish":true,"permalink":"/garden-06-experiment4/","title":"Experiment 4: Protein splicing domain swapping in HeLa cells"}
 ---
 
 

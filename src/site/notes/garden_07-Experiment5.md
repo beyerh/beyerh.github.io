@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/garden-07-experiment5/","title":"07-Experiment5"}
+{"dg-publish":true,"permalink":"/garden-07-experiment5/","title":"Experiment 5: Stable Tet-On cells"}
 ---
 
 

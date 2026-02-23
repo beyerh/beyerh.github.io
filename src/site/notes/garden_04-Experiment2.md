@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/garden-04-experiment2/","title":"04-Experiment2"}
+{"dg-publish":true,"permalink":"/garden-04-experiment2/","title":"Experiment 2: Optogenetics"}
 ---
 
 

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/garden-01-course-information/","title":"01-Course-Information","tags":["gardenEntry"]}
+{"dg-publish":true,"permalink":"/garden-01-course-information/","title":"Course Information","tags":["gardenEntry"]}
 ---
 
 
@@ -12,6 +12,8 @@ Benjamin McLean, Cha San Koh, Daniel Wiebensohn, Dominic Schirmer, Josepha Grewe
 ## Course Links
 
 [Shared Sciebo folder](https://uni-duesseldorf.sciebo.de/s/AQNWFnw45HqJKQe)
+
+[Download Script PDF](https://uni-duesseldorf.sciebo.de/s/xaNCx3MtTeRm4wf)
 
 ## Time Schedule
 
