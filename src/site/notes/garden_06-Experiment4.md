@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/garden-06-experiment4/","title":"Experiment 4: Protein splicing domain swapping in HeLa cells"}
+{"dg-publish":true,"permalink":"/garden-06-experiment4/","title":"06-Experiment4"}
 ---
 
 
@@ -15,16 +15,11 @@ In the experiment, you will transiently transfect human HeLa cells with differen
 
 ![Figure 18](/img/user/figures/inteins_plasms_membrane.png)
 
-<figcaption>
+<figcaption style="font-size: 0.9em; color: #555; margin-top: 0.5em; line-height: 1.4; font-style: normal;">
 
-<strong>Figure 18.</strong> 
+<strong style="color: #333;">Figure 18.</strong> 
 
-<strong>Domain swapping at the plasma membrane.</strong> Split
-intein-catalyzed protein trans-splicing (PTS) reaction either leading to
-the addition (left), or exchange (right) of GFP and mCherry at the
-plasma membrane, depending on the domain order of the GFP constructs
-(pDD130 vs pDD132). The Int<sub>C</sub>-fused mCherry construct pDD131
-is identical in both approaches.
+<strong>Domain swapping at the plasma membrane.</strong> Split intein-catalyzed protein trans-splicing (PTS) reaction either leading to the addition (left), or exchange (right) of GFP and mCherry at the plasma membrane, depending on the domain order of the GFP constructs (pDD130 vs pDD132). The Int<sub>C</sub>-fused mCherry construct pDD131 is identical in both approaches.
 
 </figcaption>
 
@@ -35,8 +30,8 @@ In cells, many relevant signaling pathways initiate or pass through microdomains
 ### Materials
 
 <figure id="tbl:exp4materials" class="align-center" style="width: 100%; display: block; margin-left: auto; margin-right: auto">
-  <figcaption>
-    <strong>Table 15.</strong> 
+  <figcaption style="font-size: 0.9em; color: #555; margin-bottom: 0.5em; line-height: 1.4; font-style: normal;">
+    <strong style="color: #333;">Table 15.</strong> 
 Materials used in Experiment IV.
   </figcaption>
 <table>
@@ -92,8 +87,8 @@ g/L NaCl, pH 7.0.</td>
 </figure>
 
 <figure id="tbl:exp3dna" class="align-left" style="width: 100%; float: left; margin-right: 1em">
-  <figcaption>
-    <strong>Table 16.</strong> 
+  <figcaption style="font-size: 0.9em; color: #555; margin-bottom: 0.5em; line-height: 1.4; font-style: normal;">
+    <strong style="color: #333;">Table 16.</strong> 
 Plasmid DNA (Minipreps)
   </figcaption>
 <table>
@@ -125,8 +120,8 @@ Plasmid DNA (Minipreps)
 </figure>
 
 <figure id="tbl:exp3media" class="align-left" style="width: 100%; float: left; margin-right: 1em">
-  <figcaption>
-    <strong>Table 17.</strong> 
+  <figcaption style="font-size: 0.9em; color: #555; margin-bottom: 0.5em; line-height: 1.4; font-style: normal;">
+    <strong style="color: #333;">Table 17.</strong> 
 Media
   </figcaption>
 <table>
@@ -161,8 +156,8 @@ Ampicillin.</td>
 </figure>
 
 <figure id="tbl:ex3cells" class="align-left" style="width: 100%; float: left; margin-right: 1em">
-  <figcaption>
-    <strong>Table 18.</strong> 
+  <figcaption style="font-size: 0.9em; color: #555; margin-bottom: 0.5em; line-height: 1.4; font-style: normal;">
+    <strong style="color: #333;">Table 18.</strong> 
 Cells
   </figcaption>
 <table>
@@ -190,8 +185,8 @@ Cells
 </figure>
 
 <figure id="tbl:exp3buffers" class="align-left" style="width: 100%; float: left; margin-right: 1em">
-  <figcaption>
-    <strong>Table 19.</strong> 
+  <figcaption style="font-size: 0.9em; color: #555; margin-bottom: 0.5em; line-height: 1.4; font-style: normal;">
+    <strong style="color: #333;">Table 19.</strong> 
 Buffers and chemicals
   </figcaption>
 <table>
@@ -270,8 +265,8 @@ Tris-HCl pH 8.5</td>
 </figure>
 
 <figure id="tbl:exp3cons" class="align-left" style="width: 100%; float: left; margin-right: 1em">
-  <figcaption>
-    <strong>Table 20.</strong> 
+  <figcaption style="font-size: 0.9em; color: #555; margin-bottom: 0.5em; line-height: 1.4; font-style: normal;">
+    <strong style="color: #333;">Table 20.</strong> 
 Consumables
   </figcaption>
 <table>
@@ -368,10 +363,9 @@ This step should be performed only by one member of each group in order to preve
 - Seed 500 µL of cell suspension (containing 30,000 HeLa cells) into each well of a 24-well plate **containing a glass cover slip** (prepared by supervisors in advance). Each group should seed 6 wells into an individual plate.
 
 <figure id="tbl:yourtablelabel" class="align-center" style="width: 30%; display: block; margin-left: auto; margin-right: auto">
-  <figcaption>
-    <strong>Table 21.</strong> 
-Well plate layout: Seed wells 1, 2, and 3 in a 24-well plate (6 wells
-per group).
+  <figcaption style="font-size: 0.9em; color: #555; margin-bottom: 0.5em; line-height: 1.4; font-style: normal;">
+    <strong style="color: #333;">Table 21.</strong> 
+Well plate layout: Seed wells 1, 2, and 3 in a 24-well plate (6 wells per group).
   </figcaption>
 <table>
 <colgroup>
@@ -450,8 +444,8 @@ per group).
 9.  Exchange medium for fresh cultivation medium (500 µL per well).
 
 <figure id="tbl:transfection-odd" class="align-left" style="width: 100%; float: left; margin-right: 1em">
-  <figcaption>
-    <strong>Table 22.</strong> 
+  <figcaption style="font-size: 0.9em; color: #555; margin-bottom: 0.5em; line-height: 1.4; font-style: normal;">
+    <strong style="color: #333;">Table 22.</strong> 
 Transfection Set up 1 for odd group numbers.
   </figcaption>
 <table>
@@ -535,8 +529,8 @@ Transfection Set up 1 for odd group numbers.
 </figure>
 
 <figure id="tbl:transfection-even" class="align-left" style="width: 100%; float: left; margin-right: 1em">
-  <figcaption>
-    <strong>Table 23.</strong> 
+  <figcaption style="font-size: 0.9em; color: #555; margin-bottom: 0.5em; line-height: 1.4; font-style: normal;">
+    <strong style="color: #333;">Table 23.</strong> 
 Transfection Set up 1 for even group numbers.
   </figcaption>
 <table>

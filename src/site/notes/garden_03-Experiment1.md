@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/garden-03-experiment1/","title":"Experiment 1: Molecular Cloning"}
+{"dg-publish":true,"permalink":"/garden-03-experiment1/","title":"03-Experiment1"}
 ---
 
 
@@ -34,17 +34,11 @@ Finally, we will select putatively correct samples and analyze them by Sanger s
 
 ![Figure 13](/img/user/figures/cloning_strategies.png)
 
-<figcaption>
+<figcaption style="font-size: 0.9em; color: #555; margin-top: 0.5em; line-height: 1.4; font-style: normal;">
 
-<strong>Figure 13.</strong> 
+<strong style="color: #333;">Figure 13.</strong> 
 
-<strong>Illustration of the cloning strategy.</strong> Top, schematic
-representation of the cloned vectors. Bottom, pRSFDuet-1 plasmid (KanR)
-digested with <em>Bam</em>HI and <em>Kpn</em>I serves as backbone for
-cloning plasmids pDD259/262 and 260. The inserts for these constructs
-are the amplification products of pDD002 and pDD083 with the primers
-oDD561 and oDD562; or the PCR product of pDD002 with oDD561 and oDD563,
-respectively.
+<strong>Illustration of the cloning strategy.</strong> Top, schematic representation of the cloned vectors. Bottom, pRSFDuet-1 plasmid (KanR) digested with <em>Bam</em>HI and <em>Kpn</em>I serves as backbone for cloning plasmids pDD259/262 and 260. The inserts for these constructs are the amplification products of pDD002 and pDD083 with the primers oDD561 and oDD562; or the PCR product of pDD002 with oDD561 and oDD563, respectively.
 
 </figcaption>
 
@@ -53,8 +47,8 @@ respectively.
 A third insert amplified from pDD002 with the primer oDD564 and oDD565 will be cloned into pHBBAD090 backbone, previously digested with *Nde*I and *Hin*dIII, to obtain pDD261. The primers add the required homology regions to the digested vector backbones during the PCR reaction. Alternatively, the PCR products can be digested using the indicated enzymes for ligation cloning. Both approaches result in the same vectors. The * symbol represents the location of the C1A mutation in pDD262.
 
 <figure id="tbl:materials-exp1" class="align-left" style="width: fontsize; float: left; margin-right: 1em">
-  <figcaption>
-    <strong>Table 3.</strong> 
+  <figcaption style="font-size: 0.9em; color: #555; margin-bottom: 0.5em; line-height: 1.4; font-style: normal;">
+    <strong style="color: #333;">Table 3.</strong> 
 Materials used in Experiment I.
   </figcaption>
 <table>
@@ -330,8 +324,8 @@ EDTA</td>
 ##### PCR
 
 <figure id="tbl:pcr-mixture" class="align-left" style="width: 100%; float: left; margin-right: 1em">
-  <figcaption>
-    <strong>Table 4.</strong> 
+  <figcaption style="font-size: 0.9em; color: #555; margin-bottom: 0.5em; line-height: 1.4; font-style: normal;">
+    <strong style="color: #333;">Table 4.</strong> 
 PCR mixture. Perform 2 PCRs per group.
   </figcaption>
 <table>
@@ -379,8 +373,8 @@ PCR mixture. Perform 2 PCRs per group.
 </figure>
 
 <figure id="tbl:primers-templates" class="align-left" style="width: 100%; float: left; margin-right: 1em">
-  <figcaption>
-    <strong>Table 5.</strong> 
+  <figcaption style="font-size: 0.9em; color: #555; margin-bottom: 0.5em; line-height: 1.4; font-style: normal;">
+    <strong style="color: #333;">Table 5.</strong> 
 Primers and templates.
   </figcaption>
 <table>
@@ -432,8 +426,8 @@ Primers and templates.
 </figure>
 
 <figure id="tbl:pcrprogram" class="align-left" style="width: 100%; float: left; margin-right: 1em">
-  <figcaption>
-    <strong>Table 6.</strong> 
+  <figcaption style="font-size: 0.9em; color: #555; margin-bottom: 0.5em; line-height: 1.4; font-style: normal;">
+    <strong style="color: #333;">Table 6.</strong> 
 PCR program
   </figcaption>
 <table>
@@ -497,9 +491,9 @@ PCR program
 
 ![Figure 14](/img/user/figures/dna_ladder.png)
 
-<figcaption>
+<figcaption style="font-size: 0.9em; color: #555; margin-top: 0.5em; line-height: 1.4; font-style: normal;">
 
-<strong>Figure 14.</strong> 
+<strong style="color: #333;">Figure 14.</strong> 
 
 <strong>GeneRuler™ 1 kb DNA Ladder</strong> (Thermo Scientific™)
 
@@ -530,8 +524,8 @@ PCR program
 ##### Backbone Digestion (Performed by the Supervisors)
 
 <figure id="tbl:digest_bb" class="align-left" style="width: 100%; float: left; margin-right: 1em">
-  <figcaption>
-    <strong>Table 7.</strong> 
+  <figcaption style="font-size: 0.9em; color: #555; margin-bottom: 0.5em; line-height: 1.4; font-style: normal;">
+    <strong style="color: #333;">Table 7.</strong> 
 Digestion of vector backbone. Please keep the buffer and the exzymes.
   </figcaption>
 <table>
@@ -583,8 +577,8 @@ We will provide you with the digested destination vectors.
 This step will only be performed by the group member doing ligation cloning.
 
 <figure id="tbl:pcr_digest" class="align-left" style="width: 100%; float: left; margin-right: 1em">
-  <figcaption>
-    <strong>Table 8.</strong> 
+  <figcaption style="font-size: 0.9em; color: #555; margin-bottom: 0.5em; line-height: 1.4; font-style: normal;">
+    <strong style="color: #333;">Table 8.</strong> 
 Digestion of PCR products.
   </figcaption>
 <table>
@@ -658,10 +652,9 @@ Calculations for the amount of PCR-DNA insert needed for a 3:1 molar insert:vect
 ```
 
 <figure id="tbl:digest" class="align-left" style="width: 100%; float: left; margin-right: 1em">
-  <figcaption>
-    <strong>Table 9.</strong> 
-Pipetting scheme of for your sample. In addition, think of a suitable
-negative control and add it as a second sample.
+  <figcaption style="font-size: 0.9em; color: #555; margin-bottom: 0.5em; line-height: 1.4; font-style: normal;">
+    <strong style="color: #333;">Table 9.</strong> 
+Pipetting scheme of for your sample. In addition, think of a suitable negative control and add it as a second sample.
   </figcaption>
 <table>
 <thead>
@@ -697,8 +690,8 @@ negative control and add it as a second sample.
 ###### Ligation Protocol
 
 <figure id="tbl:ligation" class="align-left" style="width: 100%; float: left; margin-right: 1em">
-  <figcaption>
-    <strong>Table 10.</strong> 
+  <figcaption style="font-size: 0.9em; color: #555; margin-bottom: 0.5em; line-height: 1.4; font-style: normal;">
+    <strong style="color: #333;">Table 10.</strong> 
 DNA ligation
   </figcaption>
 <table>
@@ -782,8 +775,8 @@ DNA ligation
 For each clone, perform one digest of 5 µL as follows. Calculate a Master-Mix for the amount of samples and one additional smample to compensate for pipetting errors:
 
 <figure id="tbl:testdigest" class="align-left" style="width: 100%; float: left; margin-right: 1em">
-  <figcaption>
-    <strong>Table 11.</strong> 
+  <figcaption style="font-size: 0.9em; color: #555; margin-bottom: 0.5em; line-height: 1.4; font-style: normal;">
+    <strong style="color: #333;">Table 11.</strong> 
 Test digestion for one sample. Calculate volumes for a Master-Mix.
   </figcaption>
 <table>

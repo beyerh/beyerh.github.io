@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/garden-04-experiment2/","title":"Experiment 2: Optogenetics"}
+{"dg-publish":true,"permalink":"/garden-04-experiment2/","title":"04-Experiment2"}
 ---
 
 
@@ -19,27 +19,11 @@ The following experiment will be about handling mammalian cell culture as well a
 
 ![Figure 15](/img/user/figures/BLUE_gene_switch.png)
 
-<figcaption>
+<figcaption style="font-size: 0.9em; color: #555; margin-top: 0.5em; line-height: 1.4; font-style: normal;">
 
-<strong>Figure 15.</strong> 
+<strong style="color: #333;">Figure 15.</strong> 
 
-<strong>Mode of function of the optogenetic gene switch in
-genomically-engineered cells.</strong> <strong>A)</strong> An engineered
-LOV2 domain from <em>Avena sativa</em> phototropin 1 was fused to the
-C-terminus of the E-protein (erythromycin resistance protein), thus
-tethering it to a response construct harboring 8 repeats of the E
-binding sequence (<em>etr8</em>) upstream of a synthetic minimal
-promoter, while the PDZ interaction domain was fused to the VP16
-transactivation domain. In the dark, the epitope tag of the LOVpep
-fusion protein is inaccessible for the PDZ domain. Consequently, gene
-expression is off. Blue light (460 nm) illumination leads to the
-unwinding of the C-terminal Jα helix of LOVpep and makes the epitope tag
-accessible for binding of the PDZ domain. Due to the recruitment of the
-transactivator VP16 to the minimal promoter, the transcriptional
-machineries are recruited, and the SEAP gene‑expression is induced.
-Schematic representation of the vector encoding the photo-switch
-<strong>(B)</strong> and the SEAP reporter gene <strong>(C)</strong>
-both flanked by inverted terminal repeats (ITRs).
+<strong>Mode of function of the optogenetic gene switch in genomically-engineered cells.</strong> <strong>A)</strong> An engineered LOV2 domain from <em>Avena sativa</em> phototropin 1 was fused to the C-terminus of the E-protein (erythromycin resistance protein), thus tethering it to a response construct harboring 8 repeats of the E binding sequence (<em>etr8</em>) upstream of a synthetic minimal promoter, while the PDZ interaction domain was fused to the VP16 transactivation domain. In the dark, the epitope tag of the LOVpep fusion protein is inaccessible for the PDZ domain. Consequently, gene expression is off. Blue light (460 nm) illumination leads to the unwinding of the C-terminal Jα helix of LOVpep and makes the epitope tag accessible for binding of the PDZ domain. Due to the recruitment of the transactivator VP16 to the minimal promoter, the transcriptional machineries are recruited, and the SEAP gene‑expression is induced. Schematic representation of the vector encoding the photo-switch <strong>(B)</strong> and the SEAP reporter gene <strong>(C)</strong> both flanked by inverted terminal repeats (ITRs).
 
 </figcaption>
 
@@ -48,8 +32,8 @@ both flanked by inverted terminal repeats (ITRs).
 ### Materials
 
 <figure id="tbl:materials-exp2" class="align-left" style="width: 100%; float: left; margin-right: 1em">
-  <figcaption>
-    <strong>Table 12.</strong> 
+  <figcaption style="font-size: 0.9em; color: #555; margin-bottom: 0.5em; line-height: 1.4; font-style: normal;">
+    <strong style="color: #333;">Table 12.</strong> 
 Materials used in Experiment II.
   </figcaption>
 <table>
@@ -229,9 +213,9 @@ Preparation of materials:
 
 ![Figure 16](/img/user/figures/seap_formula.png)
 
-<figcaption>
+<figcaption style="font-size: 0.9em; color: #555; margin-top: 0.5em; line-height: 1.4; font-style: normal;">
 
-<strong>Figure 16.</strong> 
+<strong style="color: #333;">Figure 16.</strong> 
 
 Pipetting scheme.
 

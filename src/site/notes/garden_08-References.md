@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/garden-08-references/","title":"References"}
+{"dg-publish":true,"permalink":"/garden-08-references/","title":"08-References"}
 ---
 
 

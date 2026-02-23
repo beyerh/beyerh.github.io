@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/garden-01-course-information/","title":"Course Information","tags":["gardenEntry"]}
+{"dg-publish":true,"permalink":"/garden-01-course-information/","title":"01-Course-Information","tags":["gardenEntry"]}
 ---
 
 
@@ -13,17 +13,15 @@ Benjamin McLean, Cha San Koh, Daniel Wiebensohn, Dominic Schirmer, Josepha Grewe
 
 [Shared Sciebo folder](https://uni-duesseldorf.sciebo.de/s/AQNWFnw45HqJKQe)
 
-[Download Script PDF](https://uni-duesseldorf.sciebo.de/s/Pi4tMCWCT3nG9Lt)
-
 ## Time Schedule
 
 <figure id="fig:schedule-part1" class="align-left" style="width: 100%; display: block; margin-right: auto">
 
 ![Figure 1](/img/user/figures/schedule_part1.png)
 
-<figcaption>
+<figcaption style="font-size: 0.9em; color: #555; margin-top: 0.5em; line-height: 1.4; font-style: normal;">
 
-<strong>Figure 1.</strong> 
+<strong style="color: #333;">Figure 1.</strong> 
 
 Time Schedule for the first two weeks of the course.
 
@@ -35,9 +33,9 @@ Time Schedule for the first two weeks of the course.
 
 ![Figure 2](/img/user/figures/schedule_part2.png)
 
-<figcaption>
+<figcaption style="font-size: 0.9em; color: #555; margin-top: 0.5em; line-height: 1.4; font-style: normal;">
 
-<strong>Figure 2.</strong> 
+<strong style="color: #333;">Figure 2.</strong> 
 
 Time Schedule for the third week of the course.
 

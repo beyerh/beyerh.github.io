@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/garden-07-experiment5/","title":"Experiment 5: Stable Tet-On cells"}
+{"dg-publish":true,"permalink":"/garden-07-experiment5/","title":"07-Experiment5"}
 ---
 
 
@@ -24,16 +24,11 @@ The tetracycline (Tet) system is a widely used inducible gene expression system 
 
 ![Figure 19](/img/user/figures/Tet-On.png)
 
-<figcaption>
+<figcaption style="font-size: 0.9em; color: #555; margin-top: 0.5em; line-height: 1.4; font-style: normal;">
 
-<strong>Figure 19.</strong> 
+<strong style="color: #333;">Figure 19.</strong> 
 
-<strong>Schematic representation of the Tet-On system.</strong> The
-Tet-On 3G protein is constitutively expressed under the control of the
-CAG promoter. Upon addition of tetracycline, the Tet-On 3G protein
-undergoes a conformational change that enables it to bind to the TRE3G
-promoter, thereby activating transcription and inducing NeonGreen
-expression.
+<strong>Schematic representation of the Tet-On system.</strong> The Tet-On 3G protein is constitutively expressed under the control of the CAG promoter. Upon addition of tetracycline, the Tet-On 3G protein undergoes a conformational change that enables it to bind to the TRE3G promoter, thereby activating transcription and inducing NeonGreen expression.
 
 </figcaption>
 
@@ -70,8 +65,8 @@ Stable cell lines are cell populations that have stably integrated foreign DNA i
 ### Material
 
 <figure id="tbl:materials-exp5" class="align-left" style="width: 100%; float: left; margin-right: 1em">
-  <figcaption>
-    <strong>Table 24.</strong> 
+  <figcaption style="font-size: 0.9em; color: #555; margin-bottom: 0.5em; line-height: 1.4; font-style: normal;">
+    <strong style="color: #333;">Table 24.</strong> 
 Materials for Experiment V.
   </figcaption>
 <table>
@@ -130,8 +125,8 @@ class="math inline"><sub>2</sub></span>O.</td>
 </figure>
 
 <figure id="tbl:exp5plasmids" class="align-left" style="width: 100%; float: left; margin-right: 1em">
-  <figcaption>
-    <strong>Table 25.</strong> 
+  <figcaption style="font-size: 0.9em; color: #555; margin-bottom: 0.5em; line-height: 1.4; font-style: normal;">
+    <strong style="color: #333;">Table 25.</strong> 
 Used plasmids prepared by the supervisors.
   </figcaption>
 <table>
@@ -247,9 +242,9 @@ For this part of the experiment three groups will form one big group to transfec
 
 ![Figure 20](/img/user/figures/stable_transfection.png)
 
-<figcaption>
+<figcaption style="font-size: 0.9em; color: #555; margin-top: 0.5em; line-height: 1.4; font-style: normal;">
 
-<strong>Figure 20.</strong> 
+<strong style="color: #333;">Figure 20.</strong> 
 
 Stable transfection calculation sheet.
 

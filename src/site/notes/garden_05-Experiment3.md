@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/garden-05-experiment3/","title":"Experiment 3: Protein Splicing Bacteria"}
+{"dg-publish":true,"permalink":"/garden-05-experiment3/","title":"05-Experiment3"}
 ---
 
 
@@ -29,12 +29,11 @@ Questions:
 
 ![Figure 17](/img/user/figures/inteins_boolean_gates.png)
 
-<figcaption>
+<figcaption style="font-size: 0.9em; color: #555; margin-top: 0.5em; line-height: 1.4; font-style: normal;">
 
-<strong>Figure 17.</strong> 
+<strong style="color: #333;">Figure 17.</strong> 
 
-** Scheme for the protein <em>trans</em>-splicing experiment to design
-logic gates.
+** Scheme for the protein <em>trans</em>-splicing experiment to design logic gates.
 
 </figcaption>
 
@@ -43,8 +42,8 @@ logic gates.
 ### Materials
 
 <figure id="tbl:materials-exp3" class="align-left" style="width: 100%; float: left; margin-right: 1em">
-  <figcaption>
-    <strong>Table 13.</strong> 
+  <figcaption style="font-size: 0.9em; color: #555; margin-bottom: 0.5em; line-height: 1.4; font-style: normal;">
+    <strong style="color: #333;">Table 13.</strong> 
 Materials used in Experiment III.
   </figcaption>
 <table>
@@ -113,11 +112,9 @@ Na<sub>2</sub>HPO<sub>4</sub>, 137 mM NaCl in dH<sub>2</sub>O</td>
 #### Day 7: Intein Experiment in *E. coli*
 
 <figure id="tbl:experimental-setup" class="align-left" style="width: 100%; float: left; margin-right: 1em">
-  <figcaption>
-    <strong>Table 14.</strong> 
-Experimental setup distribution. Each group performs 3 inoculation
-setups with different induction. I = IPTG, A = Arabinose, I/A = IPTG and
-Arabinose, - = no Induction
+  <figcaption style="font-size: 0.9em; color: #555; margin-bottom: 0.5em; line-height: 1.4; font-style: normal;">
+    <strong style="color: #333;">Table 14.</strong> 
+Experimental setup distribution. Each group performs 3 inoculation setups with different induction. I = IPTG, A = Arabinose, I/A = IPTG and Arabinose, - = no Induction
   </figcaption>
 <table>
 <thead>

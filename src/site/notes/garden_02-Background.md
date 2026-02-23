@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/garden-02-background/","title":"Background"}
+{"dg-publish":true,"permalink":"/garden-02-background/","title":"02-Background"}
 ---
 
 
@@ -17,18 +17,11 @@ Inducible gene expression switches are an example of engineered protein switches
 
 ![Figure 3](/img/user/figures/tetracycline.png)
 
-<figcaption>
+<figcaption style="font-size: 0.9em; color: #555; margin-top: 0.5em; line-height: 1.4; font-style: normal;">
 
-<strong>Figure 3.</strong> 
+<strong style="color: #333;">Figure 3.</strong> 
 
-Tetracycline-inducible gene expression switch based on an engineered
-protein switch, the reversed tetracycline transactivator (rtTA). The
-engineered “reversed” bacterial repressor protein rTetR binds to a
-cognate operator DNA sequence (Tet-response element, TRE) in the
-presence of the antibiotic tetracycline. rTetR is fused to a viral
-transactivator VP16 which induces gene expression from a minimal
-promoter (Pmin) upon DNA binding to induce transcription of a gene of
-interest (goi).
+Tetracycline-inducible gene expression switch based on an engineered protein switch, the reversed tetracycline transactivator (rtTA). The engineered “reversed” bacterial repressor protein rTetR binds to a cognate operator DNA sequence (Tet-response element, TRE) in the presence of the antibiotic tetracycline. rTetR is fused to a viral transactivator VP16 which induces gene expression from a minimal promoter (Pmin) upon DNA binding to induce transcription of a gene of interest (goi).
 
 </figcaption>
 
@@ -44,23 +37,11 @@ The first light-controlled molecular tools were constructed by introducing photo
 
 ![Figure 4](/img/user/figures/photoswitches.png)
 
-<figcaption>
+<figcaption style="font-size: 0.9em; color: #555; margin-top: 0.5em; line-height: 1.4; font-style: normal;">
 
-<strong>Figure 4.</strong> 
+<strong style="color: #333;">Figure 4.</strong> 
 
-<strong>Photoswitchable domains frequently used for optogenetic
-engineering. A)</strong> <em>A. thaliana</em> Phytochrome B (PhyB)
-photoreceptor. Red light (R) induces a conformational change in PhyB via
-a bound linear billin chromophore (not shown), allowing it to
-heterodimerize with Phytochrome-Interacting-Factor 6 (PIF6). Far-red
-light (FR) induces the dissociation of the PhyB/PIF6 complex.
-<strong>B)</strong> Light-Oxygen-Voltage LOV2 domain of <em>Avena
-sativa</em> phototropin 1 uses a flavin mononucleotide (FMN, not
-illustrated) to sense blue light. Photoexcitation leads to relaxation of
-helix Jα, which rewinds in darkness. <em>As</em>LOV2 is often used
-either to cage peptides in the dark state (top), or when inserted into
-other proteins, to induce structural remodeling upon light treatment
-which influences the function of the target protein.
+<strong>Photoswitchable domains frequently used for optogenetic engineering. A)</strong> <em>A. thaliana</em> Phytochrome B (PhyB) photoreceptor. Red light (R) induces a conformational change in PhyB via a bound linear billin chromophore (not shown), allowing it to heterodimerize with Phytochrome-Interacting-Factor 6 (PIF6). Far-red light (FR) induces the dissociation of the PhyB/PIF6 complex. <strong>B)</strong> Light-Oxygen-Voltage LOV2 domain of <em>Avena sativa</em> phototropin 1 uses a flavin mononucleotide (FMN, not illustrated) to sense blue light. Photoexcitation leads to relaxation of helix Jα, which rewinds in darkness. <em>As</em>LOV2 is often used either to cage peptides in the dark state (top), or when inserted into other proteins, to induce structural remodeling upon light treatment which influences the function of the target protein.
 
 </figcaption>
 
@@ -74,18 +55,11 @@ Protein splicing is a natural phenomenon catalyzed by autocatalytic protein doma
 
 ![Figure 5](/img/user/figures/inteins.png)
 
-<figcaption>
+<figcaption style="font-size: 0.9em; color: #555; margin-top: 0.5em; line-height: 1.4; font-style: normal;">
 
-<strong>Figure 5.</strong> 
+<strong style="color: #333;">Figure 5.</strong> 
 
-<strong>Protein splicing in <em>cis</em> and <em>trans</em>. A)</strong>
-After protein synthesis, protein cis-splicing leads to the
-self-catalyzed excision of an intein from a precursor protein and the
-covalent ligation of the flanking extein sequences. <strong>B)</strong>
-In protein trans-splicing, the association of split intein fragments
-(IntN and IntC) initiates reconstitution of the intein and triggers
-protein splicing in trans, leading to the ligation of individual
-polypeptides.
+<strong>Protein splicing in <em>cis</em> and <em>trans</em>. A)</strong> After protein synthesis, protein cis-splicing leads to the self-catalyzed excision of an intein from a precursor protein and the covalent ligation of the flanking extein sequences. <strong>B)</strong> In protein trans-splicing, the association of split intein fragments (IntN and IntC) initiates reconstitution of the intein and triggers protein splicing in trans, leading to the ligation of individual polypeptides.
 
 </figcaption>
 
@@ -97,19 +71,11 @@ Little is known about the biological relevance of inteins and therefore, they ar
 
 ![Figure 6](/img/user/figures/intein_mechanism.png)
 
-<figcaption>
+<figcaption style="font-size: 0.9em; color: #555; margin-top: 0.5em; line-height: 1.4; font-style: normal;">
 
-<strong>Figure 6.</strong> 
+<strong style="color: #333;">Figure 6.</strong> 
 
-<strong>Conventional protein splicing mechanism of class 1
-inteins.</strong> Step 1: N-S acyl shift of the Cys 1 (in some cases Ser
-1) and the N-terminal extein to form a linear thioester. Step 2:
-Trans-esterification of Cys +1 (in some cases Ser/Thr +1) to a branched
-intermediate where the N- and C-exteins are already covalently connected
-and the intein is still attached. Step 3: Asn cyclization into a
-succinimide, thereby releasing the intein. Step 4: Spontaneous O-N shift
-rearrangement into the energetically-favorable peptide bond (not
-intein-catalyzed). Figure modified from Friedel <em>et al.</em>, 2019.
+<strong>Conventional protein splicing mechanism of class 1 inteins.</strong> Step 1: N-S acyl shift of the Cys 1 (in some cases Ser 1) and the N-terminal extein to form a linear thioester. Step 2: Trans-esterification of Cys +1 (in some cases Ser/Thr +1) to a branched intermediate where the N- and C-exteins are already covalently connected and the intein is still attached. Step 3: Asn cyclization into a succinimide, thereby releasing the intein. Step 4: Spontaneous O-N shift rearrangement into the energetically-favorable peptide bond (not intein-catalyzed). Figure modified from Friedel <em>et al.</em>, 2019.
 
 </figcaption>
 
@@ -121,21 +87,11 @@ Split inteins in particular found a wide range of applications including their u
 
 ![Figure 7](/img/user/figures/inteins_applications.png)
 
-<figcaption>
+<figcaption style="font-size: 0.9em; color: #555; margin-top: 0.5em; line-height: 1.4; font-style: normal;">
 
-<strong>Figure 7.</strong> 
+<strong style="color: #333;">Figure 7.</strong> 
 
-<strong>Applications of split intein technologies.</strong> Bi-specific
-antibodies ligated in vitro using split inteins and individual Fab
-fragments. <strong>Biosensors</strong> to detect caspases. <em>In
-vivo</em> cyclization of the fluorescent protein mNeonGreen2 abolishes
-fluorescence. Cleavage of the engineered DEVD sequence by caspases
-releases the cyclic tension, resulting in fluorescence. <strong>Gene
-therapy</strong> facilitated by individual packaging of two split CRISPR
-Cas9 enzyme fragments into adeno associated viral vectors (AAVs),
-thereby respecting the viral packaging capacity. Intein trans splicing
-reconstitutes the Cas9 enzyme upon co-infection of a target cell with
-both vectors.
+<strong>Applications of split intein technologies.</strong> Bi-specific antibodies ligated in vitro using split inteins and individual Fab fragments. <strong>Biosensors</strong> to detect caspases. <em>In vivo</em> cyclization of the fluorescent protein mNeonGreen2 abolishes fluorescence. Cleavage of the engineered DEVD sequence by caspases releases the cyclic tension, resulting in fluorescence. <strong>Gene therapy</strong> facilitated by individual packaging of two split CRISPR Cas9 enzyme fragments into adeno associated viral vectors (AAVs), thereby respecting the viral packaging capacity. Intein trans splicing reconstitutes the Cas9 enzyme upon co-infection of a target cell with both vectors.
 
 </figcaption>
 
@@ -149,25 +105,11 @@ The implementation of synthetic biology approaches, for example to the study of 
 
 ![Figure 8](figures/aqua_workflow.png)
 
-<figcaption>
+<figcaption style="font-size: 0.9em; color: #555; margin-top: 0.5em; line-height: 1.4; font-style: normal;">
 
-<strong>Figure 8.</strong> 
+<strong style="color: #333;">Figure 8.</strong> 
 
-<strong>AQUA Cloning.</strong> Advanced quick assembly cloning is a
-simple yet versatile cloning method (Beyer et al., 2015).
-(<strong>a</strong>) DNA parts are produced by PCR, or restriction
-digest (or both). Oligonucleotides are designed to contribute flanking
-homologous regions to adjacent DNA fragments of optimally 32 bp in
-length. DNA parts are assembled into a circular plasmid by
-sequence-determined directionality <em>in vivo</em> by <em>E. coli</em>.
-(<strong>b</strong>) AQUA Cloning work-flow. (1) DNA parts are generated
-by PCR amplification, or derive from an enzymatic digestion. (2) Next,
-DNA parts are purified by gel-electrophoresis and (3) mixed and simply
-incubated in water prior to transformation into chemically competent
-<em>E. coli</em> Top10 cells for <em>in vivo</em> assembly. (4) Finally,
-the obtained colonies are confirmed for correct assembly by standard
-methods such as analytical PCR, restriction digest, and/or comprehensive
-sequencing.
+<strong>AQUA Cloning.</strong> Advanced quick assembly cloning is a simple yet versatile cloning method (Beyer et al., 2015). (<strong>a</strong>) DNA parts are produced by PCR, or restriction digest (or both). Oligonucleotides are designed to contribute flanking homologous regions to adjacent DNA fragments of optimally 32 bp in length. DNA parts are assembled into a circular plasmid by sequence-determined directionality <em>in vivo</em> by <em>E. coli</em>. (<strong>b</strong>) AQUA Cloning work-flow. (1) DNA parts are generated by PCR amplification, or derive from an enzymatic digestion. (2) Next, DNA parts are purified by gel-electrophoresis and (3) mixed and simply incubated in water prior to transformation into chemically competent <em>E. coli</em> Top10 cells for <em>in vivo</em> assembly. (4) Finally, the obtained colonies are confirmed for correct assembly by standard methods such as analytical PCR, restriction digest, and/or comprehensive sequencing.
 
 </figcaption>
 
@@ -183,18 +125,11 @@ Ions like calcium or cationic lipid-based reagents coat the DNA, thus creating a
 
 ![Figure 9](/img/user/figures/transfection.png)
 
-<figcaption>
+<figcaption style="font-size: 0.9em; color: #555; margin-top: 0.5em; line-height: 1.4; font-style: normal;">
 
-<strong>Figure 9.</strong> 
+<strong style="color: #333;">Figure 9.</strong> 
 
-<strong>Transfection using chemical reagents. A)</strong> Common
-cationic transfection reagents for the generation of reagent: DNA
-complexes with a net positive charge. <strong>B)</strong> Overview of
-the transfection mechanism. DNA is complexed with the cationic reagent.
-The positively charged complexes associate to the negatively charged
-membrane and are taken up by endocytosis. Upon escape from the endosome,
-the DNA is free to enter the nucleus (e.g., during cell division).
-Figure created with BioRender.com
+<strong>Transfection using chemical reagents. A)</strong> Common cationic transfection reagents for the generation of reagent: DNA complexes with a net positive charge. <strong>B)</strong> Overview of the transfection mechanism. DNA is complexed with the cationic reagent. The positively charged complexes associate to the negatively charged membrane and are taken up by endocytosis. Upon escape from the endosome, the DNA is free to enter the nucleus (e.g., during cell division). Figure created with BioRender.com
 
 </figcaption>
 
@@ -208,16 +143,11 @@ PEI is a poly-cationic polymer that is mixed with the DNA in a ratio that ensure
 
 ![Figure 10](/img/user/figures/transfection_pei.png)
 
-<figcaption>
+<figcaption style="font-size: 0.9em; color: #555; margin-top: 0.5em; line-height: 1.4; font-style: normal;">
 
-<strong>Figure 10.</strong> 
+<strong style="color: #333;">Figure 10.</strong> 
 
-<strong>Polyethyleneimine (PEI)-mediated transfection of mammalian
-cells. (a)</strong> Chemical structure <strong>(b)</strong> Mechanism of
-PEI-mediated transfection. The positively charged PEI:DNA complexes are
-taken up by endocytosis. Inside the endosome PEI prevents acidification,
-which eventually leads to rupture of the endosome and liberation of the
-DNA into the cytoplasm.
+<strong>Polyethyleneimine (PEI)-mediated transfection of mammalian cells. (a)</strong> Chemical structure <strong>(b)</strong> Mechanism of PEI-mediated transfection. The positively charged PEI:DNA complexes are taken up by endocytosis. Inside the endosome PEI prevents acidification, which eventually leads to rupture of the endosome and liberation of the DNA into the cytoplasm.
 
 </figcaption>
 
@@ -231,12 +161,11 @@ Upon transfection into mammalian cells, nucleic acids can contribute to the gene
 
 ![Figure 11](/img/user/figures/mammalian_cell_plasmid.png)
 
-<figcaption>
+<figcaption style="font-size: 0.9em; color: #555; margin-top: 0.5em; line-height: 1.4; font-style: normal;">
 
-<strong>Figure 11.</strong> 
+<strong style="color: #333;">Figure 11.</strong> 
 
-Example of a mammalian cell plasmid including mammalian cell-specific,
-as well as bacterial features.
+Example of a mammalian cell plasmid including mammalian cell-specific, as well as bacterial features.
 
 </figcaption>
 
@@ -250,26 +179,19 @@ Experiment II of this practical course will introduce you to a blue light-sensit
 
 ![Figure 12](/img/user/figures/transposases.png)
 
-<figcaption>
+<figcaption style="font-size: 0.9em; color: #555; margin-top: 0.5em; line-height: 1.4; font-style: normal;">
 
-<strong>Figure 12.</strong> 
+<strong style="color: #333;">Figure 12.</strong> 
 
-<strong>Mode of function of SB100X Sleeping Beauty-catalyzed
-transposition.</strong> Cotransfection of plasmids (i) containing a
-genetic cargo which is flanked by inverted terminal repeats (ITRs), and
-(ii) a transiently-expressed SB100X transposase gene leads to
-transposition of the cargo into the cell genome. SB100X excises the
-genetic cargo from the plasmid and integrates it at random positions (TA
-sites) into the host genome. Abbreviations: GOI, gene of interest; P,
-promoter; Res, resistance gene.
+<strong>Mode of function of SB100X Sleeping Beauty-catalyzed transposition.</strong> Cotransfection of plasmids (i) containing a genetic cargo which is flanked by inverted terminal repeats (ITRs), and (ii) a transiently-expressed SB100X transposase gene leads to transposition of the cargo into the cell genome. SB100X excises the genetic cargo from the plasmid and integrates it at random positions (TA sites) into the host genome. Abbreviations: GOI, gene of interest; P, promoter; Res, resistance gene.
 
 </figcaption>
 
 </figure>
 
 <figure id="tbl:integration-methods" class="align-left" style="width: 100%; float: left; margin-right: 1em">
-  <figcaption>
-    <strong>Table 1.</strong> 
+  <figcaption style="font-size: 0.9em; color: #555; margin-bottom: 0.5em; line-height: 1.4; font-style: normal;">
+    <strong style="color: #333;">Table 1.</strong> 
 Properties of the discussed genomic integration method groups.
   </figcaption>
 <table>
@@ -323,11 +245,9 @@ size limitation of transposed genes.</td>
 ## Mammalian Cell Lines Used in This Course
 
 <figure id="tbl:cell-lines" class="align-left" style="width: 100%; float: left; margin-right: 1em">
-  <figcaption>
-    <strong>Table 2.</strong> 
-Mammalian cell-lines (Descriptions from Deutsche Sammlung von
-Mikroorganismen und Zellkultur GmbH (DSMZ) and the American type culture
-collection (ATCC)).
+  <figcaption style="font-size: 0.9em; color: #555; margin-bottom: 0.5em; line-height: 1.4; font-style: normal;">
+    <strong style="color: #333;">Table 2.</strong> 
+Mammalian cell-lines (Descriptions from Deutsche Sammlung von Mikroorganismen und Zellkultur GmbH (DSMZ) and the American type culture collection (ATCC)).
   </figcaption>
 <table>
 <colgroup>
