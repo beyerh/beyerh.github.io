@@ -18,12 +18,9 @@ Benjamin McLean, Cha San Koh, Daniel Wiebensohn, Dominic Schirmer, Josepha Grewe
 <figure id="fig:schedule-part1" class="align-left" style="width: 100%; display: block; margin-right: auto">
 
 ![Figure 1](/img/user/figures/schedule_part1.png)
+<figcaption style="font-size: 0.9em; color: #555; margin-top: 0.5em; line-height: 1.5; font-style: normal; display: block;">
 
-<figcaption style="font-size: 0.9em; color: #555; margin-top: 0.5em; line-height: 1.4; font-style: normal;">
-
-<strong style="color: #333;">Figure 1.</strong> 
-
-Time Schedule for the first two weeks of the course.
+<strong style="color: #333;">Figure 1.</strong> Time Schedule for the first two weeks of the course.
 
 </figcaption>
 
@@ -32,12 +29,9 @@ Time Schedule for the first two weeks of the course.
 <figure id="fig:schedule-part2" class="align-left" style="width: 100%; display: block; margin-right: auto">
 
 ![Figure 2](/img/user/figures/schedule_part2.png)
+<figcaption style="font-size: 0.9em; color: #555; margin-top: 0.5em; line-height: 1.5; font-style: normal; display: block;">
 
-<figcaption style="font-size: 0.9em; color: #555; margin-top: 0.5em; line-height: 1.4; font-style: normal;">
-
-<strong style="color: #333;">Figure 2.</strong> 
-
-Time Schedule for the third week of the course.
+<strong style="color: #333;">Figure 2.</strong> Time Schedule for the third week of the course.
 
 </figcaption>
 
