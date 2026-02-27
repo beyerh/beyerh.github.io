@@ -1,0 +1,964 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Experiment 1: Molecular Cloning</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script async type="module">import mermaid from"https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs"</script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js" integrity="sha512-hpZ5pDCF2bRCweL5WoA0/N1elet1KYL5mx3LP555Eg/0ZguaHawxNvEjF6O3rufAChs16HVNhEc6blF/rZoowQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha512-sv0slik/5O0JIPdLBCR2A3XDg/1U3WuDEheZfI/DI5n8Yqc3h5kjrnr46FGBNiUAJF7rE4LHKwQ/SoSLRKAxEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script async src="https://cdn.jsdelivr.net/npm/lucide@0.115.0/dist/umd/lucide.min.js"></script>
+<script>window.addEventListener("load",(()=>{document.querySelectorAll(".callout").forEach((e=>{const t=getComputedStyle(e).getPropertyValue("--callout-icon"),l=t&&t.trim().replace(/^lucide-/,"");if(l){const t=e.querySelector(".callout-title");if(t){const e=document.createElement("div"),c=document.createElement("i");e.appendChild(c),c.setAttribute("icon-name",l),e.setAttribute("class","callout-icon"),t.insertBefore(e,t.firstChild)}}})),lucide.createIcons(),Array.from(document.querySelectorAll(".callout.is-collapsible")).forEach((e=>{e.querySelector(".callout-title").addEventListener("click",(t=>{e.classList.contains("is-collapsed")?e.classList.remove("is-collapsed"):e.classList.add("is-collapsed")}))}))}))</script>
+<script async src="https://fastly.jsdelivr.net/npm/force-graph@1.43.0/dist/force-graph.min.js"></script>
+<script async src="https://fastly.jsdelivr.net/npm/@alpinejs/persist@3.11.1/dist/cdn.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/alpinejs@3.11.1/dist/cdn.min.js" async></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-okaidia.min.css" integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ==" crossorigin="anonymous" referrerpolicy="no-referrer" async>
+<script src="https://fastly.jsdelivr.net/npm/whatwg-fetch@3.6.2/dist/fetch.umd.min.js" crossorigin="anonymous" referrerpolicy="no-referrer" async></script>
+<link href="/styles/digital-garden-base.css" rel="stylesheet">
+<link href="/styles/obsidian-base.css" rel="stylesheet">
+<link href="/styles/_theme.cb0118c4.css" rel="stylesheet">
+<link href="/styles/custom-style.css" rel="stylesheet">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<style>body.css-settings-manager{--tag-radius:2em;--cards-border-width:4px;--anp-cursor:pointer;--anp-editor-font-source:"";--anp-editor-font-lp:"TeX Gyre Pagella";--bold-weight:700;--anp-font-live-preview-wt:400;--h1-weight:900;--h1-line-height:1.2;--h2-size:1.9em;--h2-weight:100;--h3-size:1.6em;--h3-weight:700;--h4-weight:700;--h5-weight:700;--h6-size:1.1em;--h6-weight:700;--anp-colorful-frame-opacity:0.2;--anp-file-label-align:0;--anp-rainbow-folder-bg-opacity:0.5;--anp-stacked-header-width:30px;--anp-alt-tab-custom-height:40px;--anp-depth-tab-opacity:0.6;--anp-depth-tab-gap:10px;--anp-safari-tab-radius:5px;--anp-safari-tab-gap:3px;--anp-card-radius:8px;--anp-card-layout-padding:1px;--anp-border-radius:16px;--anp-border-padding:20px}body.theme-light.css-settings-manager{--ctp-custom-peach:221,127,103;--ctp-custom-teal:26,125,164;--ctp-custom-subtext1:238,101,58;--ctp-custom-subtext0:12,159,206;--ctp-custom-overlay2:82,82,82;--ctp-custom-overlay1:204,204,204;--ctp-custom-overlay0:12,159,206}body.theme-dark.css-settings-manager{--ctp-custom-teal:17,183,197;--ctp-custom-subtext0:251,53,216;--ctp-custom-overlay2:10,209,208;--ctp-custom-overlay1:255,166,0;--ctp-custom-overlay0:76,255,210}</style>
+<style></style>
+</head>
+<body class="theme-light markdown-preview-view markdown-rendered markdown-preview-section css-settings-manager mod-macos is-frameless is-hidden-frameless obsidian-app theme-light show-inline-title is-floating-nav auto-full-screen show-ribbon show-view-header is-maximized css-settings-manager anp-td-none ctp-rosepine-light ctp-frappe ctp-accent-light-teal ctp-accent-teal anuppuccin-accent-toggle anp-no-highlight anp-callout-sleek anp-callout-color-toggle anp-custom-checkboxes anp-speech-bubble anp-latex-inline-text anp-latex-block-text anp-color-transition-toggle anp-toggle-scrollbars anp-hide-external-link-icon anp-header-color-toggle anp-header-divider-color-toggle anp-h1-red anp-h1-divider anp-h2-peach anp-h3-green anp-h4-teal anp-h5-lavender anp-h6-mauve anp-decoration-toggle anp-bold-red anp-italic-green anp-highlight-yellow anp-file-icons anp-full-rainbow-color-toggle anp-rainbow-file-toggle anp-simple-rainbow-title-toggle anp-simple-rainbow-indentation-toggle anp-default-tab anp-disable-newtab-align anp-safari-tab-animated anp-card-shadows anp-card-layout-actions anp-card-layout-filebrowser is-focused">
+<div x-init="isDesktop = (window.innerWidth>=1400) ? true: false;" x-on:resize.window="isDesktop = (window.innerWidth>=1400) ? true : false;" x-data="{isDesktop: true, showFilesMobile: false}">
+<div x-show.important="!isDesktop" style="display:none">
+<nav class="navbar">
+<div class="navbar-inner">
+<span style="font-size:1.5rem;margin-right:10px" @click="showFilesMobile=!showFilesMobile"><i icon-name="menu"></i></span>
+<a href="/" style="text-decoration:none">
+<h1 style="margin:15px!important">M2205</h1>
+</a>
+</div>
+<div class="search-button align-icon" onclick="toggleSearch()">
+<span class="search-icon">
+<i icon-name="search"></i>
+</span>
+<span class="search-text">
+<span>Search</span>
+<span style="font-size:.6rem;padding:2px 2px 0 6px;text-align:center;transform:translateY(4px)" class="search-keys">
+CTRL + K
+</span>
+</span>
+</div>
+</nav>
+</div>
+<div x-show="showFilesMobile && !isDesktop" @click="showFilesMobile = false" style="display:none" class="fullpage-overlay"></div>
+<nav class="filetree-sidebar" x-show.important="isDesktop || showFilesMobile" style="display:none">
+<a href="/" style="text-decoration:none">
+<h1 style="text-align:center">M2205</h1>
+</a>
+<div style="display:flex;justify-content:center">
+<div class="search-button align-icon" onclick="toggleSearch()">
+<span class="search-icon">
+<i icon-name="search"></i>
+</span>
+<span class="search-text">
+<span>Search</span>
+<span style="font-size:.6rem;padding:2px 2px 0 6px;text-align:center;transform:translateY(4px)" class="search-keys">
+CTRL + K
+</span>
+</span>
+</div>
+</div>
+<div class="folder" x-data="{isOpen: true}">
+<div x-show="isOpen" style="display:none" class="">
+<div @click.stop class="notelink"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration:none" class="filename" href="/">Course Information </a>
+</div>
+</div>
+<div x-show="isOpen" style="display:none" class="">
+<div @click.stop class="notelink"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration:none" class="filename" href="/garden-02-background/">Background </a>
+</div>
+</div>
+<div x-show="isOpen" style="display:none" class="">
+<div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration:none" class="filename" href="/garden-03-experiment1/">Experiment 1: Molecular Cloning </a>
+</div>
+</div>
+<div x-show="isOpen" style="display:none" class="">
+<div @click.stop class="notelink"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration:none" class="filename" href="/garden-04-experiment2/">Experiment 2: Optogenetics </a>
+</div>
+</div>
+<div x-show="isOpen" style="display:none" class="">
+<div @click.stop class="notelink"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration:none" class="filename" href="/garden-05-experiment3/">Experiment 3: Protein Splicing Bacteria </a>
+</div>
+</div>
+<div x-show="isOpen" style="display:none" class="">
+<div @click.stop class="notelink"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration:none" class="filename" href="/garden-06-experiment4/">Experiment 4: Protein splicing domain swapping in HeLa cells </a>
+</div>
+</div>
+<div x-show="isOpen" style="display:none" class="">
+<div @click.stop class="notelink"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration:none" class="filename" href="/garden-07-experiment5/">Experiment 5: Stable Tet-On cells </a>
+</div>
+</div>
+<div x-show="isOpen" style="display:none" class="">
+<div @click.stop class="notelink"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration:none" class="filename" href="/garden-08-references/">References </a>
+</div>
+</div>
+</div>
+</nav>
+</div>
+<div class="search-container" id="globalsearch" onclick="toggleSearch()">
+<div class="search-box">
+<input type="search" id="term" placeholder="Start typing...">
+<div id="search-results"></div>
+<footer class="search-box-footer">
+<div class="navigation-hint">
+<span>Enter to select</span>
+</div>
+<div class="navigation-hint align-icon">
+<i icon-name="arrow-up" aria-hidden="true"></i>
+<i icon-name="arrow-down" aria-hidden="true"></i>
+<span>to navigate</span>
+</div>
+<div class="navigation-hint">
+<span>ESC to close</span>
+</div>
+</footer>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/flexsearch@0.7.21/dist/flexsearch.bundle.js"></script>
+<script>document.addEventListener("DOMContentLoaded",init,!1),document.addEventListener("DOMContentLoaded",setCorrectShortcut,!1),window.toggleSearch=function(){document.getElementById("globalsearch").classList.contains("active")?document.getElementById("globalsearch").classList.remove("active"):(document.getElementById("globalsearch").classList.add("active"),document.getElementById("term").focus())},window.toggleTagSearch=function(e){console.log(e.textContent);const t=e.textContent;t&&(window.document.getElementById("term").value=t.trim(),window.toggleSearch(),window.search())};const loadingSvg='\n    <svg width="100" height="100" viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg" stroke="#fff">\n      <g fill="none" fill-rule="evenodd" transform="translate(1 1)" stroke-width="2">\n          <circle cx="22" cy="22" r="6" stroke-opacity="0">\n              <animate attributeName="r"\n                   begin="1.5s" dur="3s"\n                   values="6;22"\n                   calcMode="linear"\n                   repeatCount="indefinite" />\n              <animate attributeName="stroke-opacity"\n                   begin="1.5s" dur="3s"\n                   values="1;0" calcMode="linear"\n                   repeatCount="indefinite" />\n              <animate attributeName="stroke-width"\n                   begin="1.5s" dur="3s"\n                   values="2;0" calcMode="linear"\n                   repeatCount="indefinite" />\n          </circle>\n          <circle cx="22" cy="22" r="6" stroke-opacity="0">\n              <animate attributeName="r"\n                   begin="3s" dur="3s"\n                   values="6;22"\n                   calcMode="linear"\n                   repeatCount="indefinite" />\n              <animate attributeName="stroke-opacity"\n                   begin="3s" dur="3s"\n                   values="1;0" calcMode="linear"\n                   repeatCount="indefinite" />\n              <animate attributeName="stroke-width"\n                   begin="3s" dur="3s"\n                   values="2;0" calcMode="linear"\n                   repeatCount="indefinite" />\n          </circle>\n          <circle cx="22" cy="22" r="8">\n              <animate attributeName="r"\n                   begin="0s" dur="1.5s"\n                   values="6;1;2;3;4;5;6"\n                   calcMode="linear"\n                   repeatCount="indefinite" />\n          </circle>\n      </g>\n  </svg>';function debounce(e,t,n){var a;return function(){var r=this,i=arguments,c=n&&!a;clearTimeout(a),a=setTimeout((function(){a=null,n||e.apply(r,i)}),t),c&&e.apply(r,i)}}function setCorrectShortcut(){navigator.platform.toUpperCase().indexOf("MAC")>=0&&document.querySelectorAll(".search-keys").forEach((e=>e.innerHTML="⌘ + K"))}function createIndex(e){const t=e=>e.toLowerCase().split(/([^a-z]|[^\x00-\x7F])/),n=new FlexSearch.Document({cache:!0,charset:"latin:extra",optimize:!0,index:[{field:"content",tokenize:"reverse",encode:t},{field:"title",tokenize:"forward",encode:t},{field:"tags",tokenize:"forward",encode:t}]});return e.forEach(((e,t)=>{n.add({id:t,title:e.title,content:e.content,tags:e.tags})})),n}async function init(){let e=!0;if(localStorage.getItem("searchIndex")){let{date:t,docs:n}=JSON.parse(localStorage.getItem("searchIndex"));if("2026-02-27T09:06:46.569Z"===t){e=!1;let t=createIndex(n);window.docs=n,window.index=t}}if(e){let e=await(await fetch("/searchIndex.json?v=2026-02-27T09:06:46.569Z")).json(),t=createIndex(e);localStorage.setItem("searchIndex",JSON.stringify({date:"2026-02-27T09:06:46.569Z",docs:e})),window.docs=e,window.index=t}document.addEventListener("keydown",(e=>{if((e.ctrlKey||e.metaKey)&&"k"===e.key&&(e.preventDefault(),toggleSearch()),"Escape"===e.key&&document.getElementById("globalsearch").classList.remove("active"),document.getElementById("globalsearch").classList.contains("active")){if("ArrowDown"===e.key){e.preventDefault();let t=document.querySelector(".searchresult.active");t?(t.classList.remove("active"),t.nextElementSibling?t.nextElementSibling.classList.add("active"):document.querySelector(".searchresult").classList.add("active")):document.querySelector(".searchresult").classList.add("active");let n=document.querySelector(".searchresult.active");n&&n.scrollIntoView({behavior:"smooth",block:"nearest",inline:"start"})}if("ArrowUp"===e.key){e.preventDefault();let t=document.querySelector(".searchresult.active");t?(t.classList.remove("active"),t.previousElementSibling?t.previousElementSibling.classList.add("active"):document.querySelectorAll(".searchresult").forEach((e=>{e.nextElementSibling||e.classList.add("active")}))):document.querySelectorAll(".searchresult").forEach((e=>{e.nextElementSibling&&e.classList.add("active")}));let n=document.querySelector(".searchresult.active");n&&n.scrollIntoView({behavior:"smooth",block:"nearest",inline:"start"})}if("Enter"===e.key){e.preventDefault();let t=document.querySelector(".searchresult.active");t&&(window.location.href=t.querySelector("a").href)}}}));const t=debounce(search,200,!1);field=document.querySelector("#term"),field.addEventListener("keydown",(e=>{"ArrowDown"!==e.key&&"ArrowUp"!==e.key&&t()})),resultsDiv=document.querySelector("#search-results");const n=new URL(location.href).searchParams;n.get("q")&&(field.setAttribute("value",n.get("q")),toggleSearch(),search())}async function search(){let e=field.value.trim();if(!e)return;if(e==lastSearch)return;console.log(`search for ${e}`),window.lastSearch=e,resultsDiv.innerHTML=loadingSvg;let t=offlineSearch(e),n="";if(!t.length){let t=document.createElement("p");return t.innerText=`No results for "${e}"`,resultsDiv.innerHTML="",void resultsDiv.appendChild(t)}n+='<div style="max-width:100%;">',t.forEach((e=>{e.tags&&e.tags.length>0?n+=`<div class="searchresult">\n                    <a class="search-link" href="${e.url}">${e.title}</a>\n                    <div onclick="window.location='${e.url}'">\n                        <div class="header-meta">\n                            <div class="header-tags">\n                                ${e.tags.map((e=>'<a class="tag" href="JavaScript:Void(0);">#'+e+"</a>")).join("")}\n                            </div>\n                        </div>\n                        ${e.content}\n                    </div>\n                </div>`:n+=`<div class="searchresult">\n                    <a class="search-link" href="${e.url}">${e.title}</a>\n                    <div onclick="window.location='${e.url}'">\n                        ${e.content}\n                    </div>\n                </div>`})),n+="</div>",resultsDiv.innerHTML=n}function truncate(e,t){return(e=e.replaceAll(/<[^>]*>/g,"")).length<t?e:e.substring(0,t-3)+"..."}function offlineSearch(e){let t=window.docs,n="#"===e[0]&&e.length>1?index.search(e.substring(1),[{field:"tags"}]):index.search(e,[{field:"title",limit:5},{field:"content",weight:10}]);const a=e=>{const t=n.filter((t=>t.field===e));return 0===t.length?[]:[...t[0].result]};return[...new Set([...a("title"),...a("content"),...a("tags")])].map((e=>{let n=t[e];return n.content=truncate(n.content,400),n.tags=n.tags.filter((e=>"gardenEntry"!=e&&"note"!=e)),n}))}window.lastSearch=""</script>
+<main class="content cm-s-obsidian">
+<header>
+<div class="header-meta">
+</div>
+</header>
+<h2 id="experiment-i-molecular-cloning-of-bacterial-inducible-plasmids" tabindex="-1">Experiment I: Molecular Cloning of Bacterial Inducible Plasmids</h2>
+<p><strong>Supervisors:</strong> Dominic Schirmer, Josepha Grewer, Micail David Müller</p>
+<p>Constructing recombinant genes within plasmids facilitates their recovery, <em>ex vivo</em> genetic engineering, and shuttling into different desired strains or hosts. Recombinant DNA technologies represent the foundation for generating constitutive or inducible expression systems for the study of heterologous genes in different systems of interest.</p>
+<p>In this first experimental part, we will design the required vectors for Experiment III, the design of protein logic gates based on protein <em>trans</em>-splicing in bacteria. For this purpose, we will use two different molecular DNA cloning techniques:</p>
+<p><strong>A. Restriction and ligation cloning.</strong> This technique relies on the presence of restriction enzyme (RE) recognition sites flanking the desired insert and at the specified locations within the recipient plasmid. The REs will generate double-stranded DNA cuts, resulting in either cohesive or blunt ends in both DNA sequences through two independent reactions. Subsequently, the digested fragments will be purified and ligated using T4 DNA ligase, an enzyme that facilitates the formation of phosphodiester bonds between adjacent 5’ phosphate and 3’-OH ends. This process will occur prior to the transformation of chemically competent <em>E. coli</em> TOP10 bacterial cells for subsequent plasmid amplification and selection. The T4 DNA ligase will thus conduct the repair of the broken DNA, culminating in the assembly of the desired new vector (<strong><a href="#fig:cloning-strategy" target="_blank" class="external-link">Figure 13</a></strong>).</p>
+<p><strong>B. Advanced Quick Assembly (AQUA) Cloning.</strong> In contrast to conventional restriction/ligation cloning, this technique allows us to design a vector independently of the presence of suitable RE sites or the use of DNA restriction enzymes and ligases. This versatile and inexpensive technique relies on <em>in-vivo</em> DNA recombination within <em>E. coli</em> and therefore requires DNA fragments that share homologous overlapping regions of 20-60 bp at the junction sites. The homology region can, for example, be generated by PCR using appropriate primers that add these sequences to the products (<strong><a href="#fig:cloning-strategy" target="_blank" class="external-link">Figure 13</a></strong>). AQUA Cloning can also be used to clone multiple DNA fragments simultaneously, reminiscent of other “DNA assembly cloning” methods. Additionally, a combination of restriction of the backbone and PCR amplification of the insert (as we will see in our exercise) can be used.</p>
+<p>Each group will perform one ligation and one AQUA cloning experiment from one of the four plasmids:</p>
+<ul>
+<li>Groups 1 and 2: pDD259.</li>
+<li>Groups 3 and 4: pDD260.</li>
+<li>Groups 5 and 6: pDD261.</li>
+<li>Groups 7 and 8: pDD262.</li>
+</ul>
+<p>As outlined in <strong><a href="garden_02-Background.md#fig:sleeping-beauty" target="_blank" class="external-link">Figure 12</a></strong>, we will first perform a PCR reaction to amplify: (i) The gene encoding the fluorescent protein mCherry interrupted by the full-length <em>Npu</em>DnaE intein gene (Int); (ii) The mCherry gene was disrupted by a mutated (non-functional) version of the intein; (iii) A DNA fragment encoding an N-terminal portion of mCherry (mChN) fused to an N-terminal split-fragment of the intein (IntN); and (iv) a DNA fragment encoding a C-terminal portion of mCherry (mChC) fused to a C-terminal split-fragment of the intein (IntC). The destination vectors will be digested overnight with the annotated restriction enzymes to generate the so-called vector “backbones” (this step will be performed by the supervisors in advance).</p>
+<p>After gel purification of the PCR products, we will need to digest the PCR product with the same enzymes as the destination vectors to clone the genes via ligation cloning. We will then prepare a pre-mix with a 3:1 molar ratio of the corresponding fragments (insert:backbone). For the restriction/ligation protocol, remember to add T4 DNA ligase and the corresponding buffer! Following ligation, competent Top10 <em>E. coli</em> cells are transformed with the recombinant plasmids and subsequently spread on LB agar plates containing the appropriate antibiotics, thus facilitating the selection of positive transformants.</p>
+<p>The engineered vectors will be purified and analyzed using analytical restriction enzyme digestion and agarose gel electrophoresis. We encourage you to consider beforehand which enzymes we could use to differentiate the restriction pattern expected for the original plasmids and that resulting from the digestion of the engineered vectors.</p>
+<p>Finally, we will select putatively correct samples and analyze them by Sanger sequencing.</p>
+<figure id="fig:cloning-strategy" class="align-left" style="width:100%;display:block;margin-right:auto">
+<p><img src="/img/user/figures/cloning_strategies.png" alt="Figure 13"></p>
+<figcaption style="font-size:.9em;color:#555;margin-top:.5em;line-height:1.5;font-style:normal;display:block">
+<p><strong style="color:#333">Figure 13.</strong> <strong>Illustration of the cloning strategy.</strong> Top, schematic representation of the cloned vectors. Bottom, pRSFDuet-1 plasmid (KanR) digested with <em>Bam</em>HI and <em>Kpn</em>I serves as backbone for cloning plasmids pDD259/262 and 260. The inserts for these constructs are the amplification products of pDD002 and pDD083 with the primers oDD561 and oDD562; or the PCR product of pDD002 with oDD561 and oDD563, respectively.</p>
+</figcaption>
+</figure>
+<p>A third insert amplified from pDD002 with the primer oDD564 and oDD565 will be cloned into pHBBAD090 backbone, previously digested with <em>Nde</em>I and <em>Hin</em>dIII, to obtain pDD261. The primers add the required homology regions to the digested vector backbones during the PCR reaction. Alternatively, the PCR products can be digested using the indicated enzymes for ligation cloning. Both approaches result in the same vectors. The * symbol represents the location of the C1A mutation in pDD262.</p>
+<figure id="tbl:materials-exp1" class="align-left" style="width:fontsize;float:left;margin-right:1em">
+<figcaption style="font-size:.9em;color:#555;margin-bottom:.5em;line-height:1.5;font-style:normal;display:block">
+<strong style="color:#333">Table 3.</strong> Materials used in Experiment I.
+</figcaption>
+<table>
+<colgroup>
+<col style="width:16%">
+<col style="width:18%">
+<col style="width:42%">
+<col style="width:8%">
+<col style="width:16%">
+</colgroup>
+<thead>
+<tr>
+<th>Category</th>
+<th>Item</th>
+<th>Composition</th>
+<th>Conc.</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Plasmids</strong></td>
+<td>pRSFDuet-1</td>
+<td>PT7-H6-MCS-term (KanR)</td>
+<td></td>
+<td>Digested backbone</td>
+</tr>
+<tr>
+<td></td>
+<td>pDD002</td>
+<td>PSV40-mCherryN-Int-mCherryC-pA (AmpR)</td>
+<td></td>
+<td>PCR template</td>
+</tr>
+<tr>
+<td></td>
+<td>pHBBAD090</td>
+<td>PBAD-Insert-term (AmpR)</td>
+<td></td>
+<td>Digested backbone</td>
+</tr>
+<tr>
+<td></td>
+<td>pDD083</td>
+<td>PSV40-mCherryN-Int(C1A)-mCherryC-pA (AmpR)</td>
+<td></td>
+<td>PCR template</td>
+</tr>
+<tr>
+<td><strong>Primers</strong></td>
+<td>oDD561</td>
+<td>To be determined in the exercise.</td>
+<td>25 µM</td>
+<td>mCh F <em>Bam</em>HI duet</td>
+</tr>
+<tr>
+<td></td>
+<td>oDD562</td>
+<td>To be determined in the exercise.</td>
+<td>25 µM</td>
+<td>mCh R <em>Kpn</em>I duet</td>
+</tr>
+<tr>
+<td></td>
+<td>oDD563</td>
+<td>To be determined in the exercise.</td>
+<td>25 µM</td>
+<td>NpuEN R <em>Kpn</em>I duet</td>
+</tr>
+<tr>
+<td></td>
+<td>oDD564</td>
+<td>To be determined in the exercise.</td>
+<td>25 µM</td>
+<td>NpuE_C F <em>Nde</em>I bad</td>
+</tr>
+<tr>
+<td></td>
+<td>oDD565</td>
+<td>To be determined in the exercise.</td>
+<td>25 µM</td>
+<td>mCh R <em>Hind</em>III bad</td>
+</tr>
+<tr>
+<td><strong>PCR reaction</strong></td>
+<td>Q5® High-Fidelity DNA polymerase (NEB)</td>
+<td></td>
+<td>2,000 U/mL</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Q5 Reaction buffer (5x)</td>
+<td>2 mM MgCl<span class="math inline"><sub>2</sub></span></td>
+<td>5X</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>dNTPs</td>
+<td>dATP, dCTP, dGTP and dTTP</td>
+<td>10 mM each</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Digestion reaction</strong></td>
+<td>Cutsmart (10x) (NEB)</td>
+<td>50 mM potassium acetate, 20 mM Tris-acetate, 10 mM magnesium acetate, 100 μg/mL BSA</td>
+<td>10X</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Restriction enzymes (NEB)</td>
+<td>Chosen during the course</td>
+<td>3,333 U/mL</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Gel electrophoresis</strong></td>
+<td>Agarose</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>TAE Buffer</td>
+<td>40 mM Tris, 20 mM acetic acid, 1 mM EDTA</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>GelRed</td>
+<td></td>
+<td></td>
+<td>Intercalation agent</td>
+</tr>
+<tr>
+<td></td>
+<td>Loading buffer</td>
+<td>50% Glycerol, 100 mM Na<span class="math inline"><sub>2</sub></span>EDTA, pH 8.0, 1% SDS, 0.1% Bromophenol Blue, 0.1% Xylene Cyanol</td>
+<td>6X</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>1 Kb DNA ladder</td>
+<td></td>
+<td></td>
+<td>Ladder for 100 bp up to 10 kb</td>
+</tr>
+<tr>
+<td><strong>M.-Nagel Gel extraction</strong></td>
+<td>NT1 Buffer</td>
+<td></td>
+<td></td>
+<td>Binding buffer</td>
+</tr>
+<tr>
+<td></td>
+<td>NT3 Buffer</td>
+<td></td>
+<td></td>
+<td>Wash buffer</td>
+</tr>
+<tr>
+<td></td>
+<td>M&amp;N spin columns</td>
+<td></td>
+<td></td>
+<td>DNA binding</td>
+</tr>
+<tr>
+<td><strong>Ligation</strong></td>
+<td>T4 Ligase Buffer (NEB)</td>
+<td>300 mM Tris-HCl (pH 7.8), 100 mM MgCl<span class="math inline"><sub>2</sub></span>, 100 mM DTT, 10 mM ATP</td>
+<td>10X</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>T4 DNA-ligase (NEB)</td>
+<td></td>
+<td>400,000 U/mL</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Wizard mini-prep kit</strong></td>
+<td>W1</td>
+<td>50 mM Tris-HCl (pH 7.5), 10 mM EDTA, 100 μg/mL RNase A</td>
+<td></td>
+<td>Resuspension solution</td>
+</tr>
+<tr>
+<td></td>
+<td>W2</td>
+<td>0.2 M NaOH, 1% SDS</td>
+<td></td>
+<td>Lysis solution</td>
+</tr>
+<tr>
+<td></td>
+<td>W3</td>
+<td>4.09 M guanidine hydrochloride, 0.759 M potassium acetate, 2.12 M glacial acetic acid</td>
+<td></td>
+<td>Neutralization solution</td>
+</tr>
+<tr>
+<td></td>
+<td>W4</td>
+<td>60% ethanol, 60 mM potassium acetate, 8.3 mM Tris-HCl, 0.04 mM EDTA</td>
+<td></td>
+<td>Wash solution</td>
+</tr>
+<tr>
+<td></td>
+<td>Wizard columns</td>
+<td></td>
+<td></td>
+<td>Plasmid DNA purification</td>
+</tr>
+<tr>
+<td><strong>Others</strong></td>
+<td>ddH<span class="math inline"><sub>2</sub></span>O</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>LB media</td>
+<td></td>
+<td></td>
+<td>Bacteria growth media</td>
+</tr>
+<tr>
+<td></td>
+<td>LB-plates with ampicillin</td>
+<td></td>
+<td>100 μg/mL Amp</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>LB-plates with kanamycin</td>
+<td></td>
+<td>50 μg/mL Kan</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Top10 Invitrogen™</td>
+<td>Chemically competent <em>E. coli</em> cells</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</figure>
+<h3 id="protocols" tabindex="-1">Protocols</h3>
+<h4 id="day-1" tabindex="-1">Day 1</h4>
+<h5 id="pcr" tabindex="-1">PCR</h5>
+<figure id="tbl:pcr-mixture" class="align-left" style="width:100%;float:left;margin-right:1em">
+<figcaption style="font-size:.9em;color:#555;margin-bottom:.5em;line-height:1.5;font-style:normal;display:block">
+<strong style="color:#333">Table 4.</strong> PCR mixture. Perform 2 PCRs per group.
+</figcaption>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Volume [µL]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q5 Reaction Buffer</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Forward Primer 1 [25 µM]</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Reverse Primer 2 [25 µM]</td>
+<td>1</td>
+</tr>
+<tr>
+<td>dNTPs, 10 mM</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Template DNA (~ 10 ng)</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Q5 DNA polymerase</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td>add dH<span class="math inline"><sub>2</sub></span>O</td>
+<td>32.5</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>50</strong></td>
+</tr>
+</tbody>
+</table>
+</figure>
+<figure id="tbl:primers-templates" class="align-left" style="width:100%;float:left;margin-right:1em">
+<figcaption style="font-size:.9em;color:#555;margin-bottom:.5em;line-height:1.5;font-style:normal;display:block">
+<strong style="color:#333">Table 5.</strong> Primers and templates.
+</figcaption>
+<table>
+<thead>
+<tr>
+<th>PCR</th>
+<th>Forward primer</th>
+<th>Reverse primer</th>
+<th>Template</th>
+<th>Product size (bp)</th>
+<th>Ta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PCR259 (pDD259)</td>
+<td>oDD561</td>
+<td>oDD562</td>
+<td>pDD002</td>
+<td>ca. 1190</td>
+<td>TBD</td>
+</tr>
+<tr>
+<td>PCR262 (pDD262)</td>
+<td>oDD561</td>
+<td>oDD562</td>
+<td>pDD083</td>
+<td>ca. 1190</td>
+<td>TBD</td>
+</tr>
+<tr>
+<td>PCR260 (pDD260)</td>
+<td>oDD561</td>
+<td>oDD563</td>
+<td>pDD002</td>
+<td>ca. 803</td>
+<td>TBD</td>
+</tr>
+<tr>
+<td>PCR261 (pDD261)</td>
+<td>oDD564</td>
+<td>oDD565</td>
+<td>pDD002</td>
+<td>ca. 454</td>
+<td>TBD</td>
+</tr>
+</tbody>
+</table>
+</figure>
+<figure id="tbl:pcrprogram" class="align-left" style="width:100%;float:left;margin-right:1em">
+<figcaption style="font-size:.9em;color:#555;margin-bottom:.5em;line-height:1.5;font-style:normal;display:block">
+<strong style="color:#333">Table 6.</strong> PCR program
+</figcaption>
+<table>
+<thead>
+<tr>
+<th>Temperature</th>
+<th>Time</th>
+<th>Cycles</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>98°C</td>
+<td>5 min</td>
+<td>1×</td>
+<td></td>
+</tr>
+<tr>
+<td>98°C</td>
+<td>30 s</td>
+<td>25×</td>
+<td></td>
+</tr>
+<tr>
+<td>Ta°C</td>
+<td>30 s</td>
+<td>25×</td>
+<td></td>
+</tr>
+<tr>
+<td>72°C</td>
+<td>40 s/kb</td>
+<td>25×</td>
+<td></td>
+</tr>
+<tr>
+<td>72°C</td>
+<td>10 min</td>
+<td>1×</td>
+<td></td>
+</tr>
+<tr>
+<td>4°C</td>
+<td>1 h / end</td>
+<td>-</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</figure>
+<h5 id="dna-purification-from-agarose-gel" tabindex="-1">DNA Purification from Agarose Gel</h5>
+<ol>
+<li>Agarose-gel electrophoresis: 0.8% agarose in TE Buffer, 1:10,000 GelRed working solution (Caution! DNA dyes intercalate, thus are mutagenic agents. Handle it with care).</li>
+<li>Sample preparation: Mix 50 µL plasmid DNA with 10 µL of 6x loading buffer. Keep the loading buffer.</li>
+<li>Use 12 µL DNA-Ladder (MM).</li>
+<li>Run gel at 120 V for 20–30 min.</li>
+</ol>
+<figure id="fig:dna-ladder" class="align-left" style="width:40%;display:block;margin-right:auto">
+<p><img src="figures/dna_ladder.png" alt="Figure 14"></p>
+<figcaption style="font-size:.9em;color:#555;margin-top:.5em;line-height:1.5;font-style:normal;display:block">
+<p><strong style="color:#333">Figure 14.</strong> <strong>GeneRuler™ 1 kb DNA Ladder</strong> (Thermo Scientific™)</p>
+</figcaption>
+</figure>
+<h5 id="dna-purification" tabindex="-1">DNA Purification</h5>
+<ol>
+<li>Cut bands from the gel and transfer each gel slice into a 1.5 mL tube.</li>
+<li>Add approx. 200 µL NTI buffer / 100 mg gel and incubate the tube at 60°C, 200 rpm for ~ 10 min until the gel slice is completely dissolved. (Keep NT1 and NT3).</li>
+<li>Add the samples onto M&amp;N spin columns, 1 column per gel slice.</li>
+<li>Centrifuge at max speed for 60 s at RT and discard the flow through.</li>
+<li>Apply remaining sample volumes (if any).</li>
+<li>Centrifuge at max speed for 60 s at RT and discard flow-through.</li>
+<li>Add 700 µL NT3 buffer to the spin column.</li>
+<li>Centrifuge at max speed for 60 s at RT and discard flow through.</li>
+<li>Add 700 µL of NT3 buffer to the spin column as an additional washing step.</li>
+<li>Centrifuge at max speed for 60 s at RT and discard flow through.</li>
+<li>Centrifuge at max speed for 60 s at RT again and discard flow-through! (To dry the column and remove residual EtOH).</li>
+<li>Place the column into a fresh and labelled 1.5 mL tube.</li>
+<li>Add 20 µL ddH<sub>2</sub>O to the column</li>
+<li>Incubate for 5 min at 70°C.</li>
+<li>Centrifuge at max speed for 90 s at RT.</li>
+<li><strong>KEEP</strong> the flow through, it contains your purified DNA, determine the concentration using the Nanodrop.</li>
+<li>Store at -20°C.</li>
+</ol>
+<h5 id="backbone-digestion-performed-by-the-supervisors" tabindex="-1">Backbone Digestion (Performed by the Supervisors)</h5>
+<figure id="tbl:digest_bb" class="align-left" style="width:100%;float:left;margin-right:1em">
+<figcaption style="font-size:.9em;color:#555;margin-bottom:.5em;line-height:1.5;font-style:normal;display:block">
+<strong style="color:#333">Table 7.</strong> Digestion of vector backbone. Please keep the buffer and the exzymes.
+</figcaption>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Volume</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Plasmid DNA (2 µg)</td>
+<td>x µL</td>
+</tr>
+<tr>
+<td>Cut Smart buffer (10x)</td>
+<td>5 µL</td>
+</tr>
+<tr>
+<td>Enzyme 1</td>
+<td>2.5 µL</td>
+</tr>
+<tr>
+<td>Enzyme 2</td>
+<td>2.5 µL</td>
+</tr>
+<tr>
+<td>CIP (only for the ligation backbone)</td>
+<td>1 µL</td>
+</tr>
+<tr>
+<td>H<span class="math inline"><sub>2</sub></span>O</td>
+<td>x µL</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>50 µL</strong></td>
+</tr>
+</tbody>
+</table>
+</figure>
+<ul>
+<li>Incubate O/N at 37°C.</li>
+</ul>
+<p>We will provide you with the digested destination vectors.</p>
+<h5 id="pcr-products-digestion-only-for-ligation-cloning" tabindex="-1">PCR Products Digestion (Only for Ligation Cloning)</h5>
+<p>This step will only be performed by the group member doing ligation cloning.</p>
+<figure id="tbl:pcr_digest" class="align-left" style="width:100%;float:left;margin-right:1em">
+<figcaption style="font-size:.9em;color:#555;margin-bottom:.5em;line-height:1.5;font-style:normal;display:block">
+<strong style="color:#333">Table 8.</strong> Digestion of PCR products.
+</figcaption>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Volume</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PCR product</td>
+<td>23 µL</td>
+</tr>
+<tr>
+<td>Cut Smart buffer (10x)</td>
+<td>3 µL</td>
+</tr>
+<tr>
+<td>Enzyme 1</td>
+<td>2 µL</td>
+</tr>
+<tr>
+<td>Enzyme 2</td>
+<td>2 µL</td>
+</tr>
+<tr>
+<td>H<span class="math inline"><sub>2</sub></span>O</td>
+<td>0 µL</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>30 µL</strong></td>
+</tr>
+</tbody>
+</table>
+</figure>
+<ul>
+<li>Incubate ON at 37°C.</li>
+</ul>
+<h4 id="day-2" tabindex="-1">Day 2</h4>
+<h5 id="digested-pcr-products-purification-only-for-ligation-cloning" tabindex="-1">Digested PCR Products Purification (Only for Ligation Cloning)</h5>
+<ol>
+<li>Add approx. 60 µL NTI buffer.</li>
+<li>Add the samples onto M&amp;N spin columns, 1 column per digestion.</li>
+<li>Centrifuge at max speed for 60 s at RT and discard the flow through.</li>
+<li>Apply remaining sample volumes (if any).</li>
+<li>Centrifuge at max speed for 60 s at RT and discard flow-through.</li>
+<li>Add 700 µL NT3 buffer to the spin column.</li>
+<li>Centrifuge at max speed for 60 s at RT and discard flow through.</li>
+<li>Add 700 µL of NT3 buffer to the spin column as an additional washing step.</li>
+<li>Centrifuge at max speed for 60 s at RT and discard flow through.</li>
+<li>Centrifuge at max speed for 60 s at RT again and discard flow through! (To dry the column and remove residual EtOH).</li>
+<li>Place the column into a fresh and labeled 1.5 mL tube and incubate with open lid at 70°C for 2-5 min prior to elution.</li>
+<li>Add 20 µL prewarmed (70°C) ddH<sub>2</sub>O onto the matrix of the column.</li>
+<li>Incubate 5 min at 70°C.</li>
+<li>Centrifuge at max speed for 90 s at RT.</li>
+<li><strong>KEEP</strong> the flow through, since it contains your purified DNA. Quantify the concentration using the Nanodrop.</li>
+</ol>
+<h5 id="assembly-of-the-new-vector" tabindex="-1">Assembly of the New Vector</h5>
+<h6 id="aqua-cloning" tabindex="-1">AQUA Cloning</h6>
+<p>If possible, use approximately 35 ng of DNA for the backbone.</p>
+<p>Calculations for the amount of PCR-DNA insert needed for a 3:1 molar insert:vector ratio:</p>
+<mjx-container class="MathJax" jax="SVG" display="true" style="direction:ltr;display:block;text-align:center;margin:1em 0;position:relative"><svg style="overflow:visible;min-height:1px;min-width:1px;vertical-align:-2.172ex" xmlns="http://www.w3.org/2000/svg" width="51.857ex" height="5.475ex" role="img" focusable="false" viewBox="0 -1460 22920.7 2420" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mfrac"><g data-mml-node="mrow" transform="translate(220,710)"><g data-mml-node="mi"><path data-c="1D45A" d="M21 287Q22 293 24 303T36 341T56 388T88 425T132 442T175 435T205 417T221 395T229 376L231 369Q231 367 232 367L243 378Q303 442 384 442Q401 442 415 440T441 433T460 423T475 411T485 398T493 385T497 373T500 364T502 357L510 367Q573 442 659 442Q713 442 746 415T780 336Q780 285 742 178T704 50Q705 36 709 31T724 26Q752 26 776 56T815 138Q818 149 821 151T837 153Q857 153 857 145Q857 144 853 130Q845 101 831 73T785 17T716 -10Q669 -10 648 17T627 73Q627 92 663 193T700 345Q700 404 656 404H651Q565 404 506 303L499 291L466 157Q433 26 428 16Q415 -11 385 -11Q372 -11 364 -4T353 8T350 18Q350 29 384 161L420 307Q423 322 423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 181Q151 335 151 342Q154 357 154 369Q154 405 129 405Q107 405 92 377T69 316T57 280Q55 278 41 278H27Q21 284 21 287Z" style="stroke-width:3"></path></g><g data-mml-node="mi" transform="translate(878,0)"><path data-c="1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z" style="stroke-width:3"></path></g><g data-mml-node="mi" transform="translate(1407,0)"><path data-c="1D460" d="M131 289Q131 321 147 354T203 415T300 442Q362 442 390 415T419 355Q419 323 402 308T364 292Q351 292 340 300T328 326Q328 342 337 354T354 372T367 378Q368 378 368 379Q368 382 361 388T336 399T297 405Q249 405 227 379T204 326Q204 301 223 291T278 274T330 259Q396 230 396 163Q396 135 385 107T352 51T289 7T195 -10Q118 -10 86 19T53 87Q53 126 74 143T118 160Q133 160 146 151T160 120Q160 94 142 76T111 58Q109 57 108 57T107 55Q108 52 115 47T146 34T201 27Q237 27 263 38T301 66T318 97T323 122Q323 150 302 164T254 181T195 196T148 231Q131 256 131 289Z" style="stroke-width:3"></path></g><g data-mml-node="msub" transform="translate(1876,0)"><g data-mml-node="mi"><path data-c="1D460" d="M131 289Q131 321 147 354T203 415T300 442Q362 442 390 415T419 355Q419 323 402 308T364 292Q351 292 340 300T328 326Q328 342 337 354T354 372T367 378Q368 378 368 379Q368 382 361 388T336 399T297 405Q249 405 227 379T204 326Q204 301 223 291T278 274T330 259Q396 230 396 163Q396 135 385 107T352 51T289 7T195 -10Q118 -10 86 19T53 87Q53 126 74 143T118 160Q133 160 146 151T160 120Q160 94 142 76T111 58Q109 57 108 57T107 55Q108 52 115 47T146 34T201 27Q237 27 263 38T301 66T318 97T323 122Q323 150 302 164T254 181T195 196T148 231Q131 256 131 289Z" style="stroke-width:3"></path></g><g data-mml-node="mi" transform="translate(502,-150) scale(0.707)"><path data-c="1D44F" d="M73 647Q73 657 77 670T89 683Q90 683 161 688T234 694Q246 694 246 685T212 542Q204 508 195 472T180 418L176 399Q176 396 182 402Q231 442 283 442Q345 442 383 396T422 280Q422 169 343 79T173 -11Q123 -11 82 27T40 150V159Q40 180 48 217T97 414Q147 611 147 623T109 637Q104 637 101 637H96Q86 637 83 637T76 640T73 647ZM336 325V331Q336 405 275 405Q258 405 240 397T207 376T181 352T163 330L157 322L136 236Q114 150 114 114Q114 66 138 42Q154 26 178 26Q211 26 245 58Q270 81 285 114T318 219Q336 291 336 325Z" style="stroke-width:3"></path></g></g><g data-mml-node="mi" transform="translate(2731.3,0)"><path data-c="1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z" style="stroke-width:3"></path></g><g data-mml-node="mi" transform="translate(3260.3,0)"><path data-c="1D450" d="M34 159Q34 268 120 355T306 442Q362 442 394 418T427 355Q427 326 408 306T360 285Q341 285 330 295T319 325T330 359T352 380T366 386H367Q367 388 361 392T340 400T306 404Q276 404 249 390Q228 381 206 359Q162 315 142 235T121 119Q121 73 147 50Q169 26 205 26H209Q321 26 394 111Q403 121 406 121Q410 121 419 112T429 98T420 83T391 55T346 25T282 0T202 -11Q127 -11 81 37T34 159Z" style="stroke-width:3"></path></g><g data-mml-node="mi" transform="translate(3693.3,0)"><path data-c="1D458" d="M121 647Q121 657 125 670T137 683Q138 683 209 688T282 694Q294 694 294 686Q294 679 244 477Q194 279 194 272Q213 282 223 291Q247 309 292 354T362 415Q402 442 438 442Q468 442 485 423T503 369Q503 344 496 327T477 302T456 291T438 288Q418 288 406 299T394 328Q394 353 410 369T442 390L458 393Q446 405 434 405H430Q398 402 367 380T294 316T228 255Q230 254 243 252T267 246T293 238T320 224T342 206T359 180T365 147Q365 130 360 106T354 66Q354 26 381 26Q429 26 459 145Q461 153 479 153H483Q499 153 499 144Q499 139 496 130Q455 -11 378 -11Q333 -11 305 15T277 90Q277 108 280 121T283 145Q283 167 269 183T234 206T200 217T182 220H180Q168 178 159 139T145 81T136 44T129 20T122 7T111 -2Q98 -11 83 -11Q66 -11 57 -1T48 16Q48 26 85 176T158 471L195 616Q196 629 188 632T149 637H144Q134 637 131 637T124 640T121 647Z" style="stroke-width:3"></path></g><g data-mml-node="mi" transform="translate(4214.3,0)"><path data-c="1D44F" d="M73 647Q73 657 77 670T89 683Q90 683 161 688T234 694Q246 694 246 685T212 542Q204 508 195 472T180 418L176 399Q176 396 182 402Q231 442 283 442Q345 442 383 396T422 280Q422 169 343 79T173 -11Q123 -11 82 27T40 150V159Q40 180 48 217T97 414Q147 611 147 623T109 637Q104 637 101 637H96Q86 637 83 637T76 640T73 647ZM336 325V331Q336 405 275 405Q258 405 240 397T207 376T181 352T163 330L157 322L136 236Q114 150 114 114Q114 66 138 42Q154 26 178 26Q211 26 245 58Q270 81 285 114T318 219Q336 291 336 325Z" style="stroke-width:3"></path></g><g data-mml-node="mi" transform="translate(4643.3,0)"><path data-c="1D45C" d="M201 -11Q126 -11 80 38T34 156Q34 221 64 279T146 380Q222 441 301 441Q333 441 341 440Q354 437 367 433T402 417T438 387T464 338T476 268Q476 161 390 75T201 -11ZM121 120Q121 70 147 48T206 26Q250 26 289 58T351 142Q360 163 374 216T388 308Q388 352 370 375Q346 405 306 405Q243 405 195 347Q158 303 140 230T121 120Z" style="stroke-width:3"></path></g><g data-mml-node="mi" transform="translate(5128.3,0)"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z" style="stroke-width:3"></path></g><g data-mml-node="mi" transform="translate(5728.3,0)"><path data-c="1D452" d="M39 168Q39 225 58 272T107 350T174 402T244 433T307 442H310Q355 442 388 420T421 355Q421 265 310 237Q261 224 176 223Q139 223 138 221Q138 219 132 186T125 128Q125 81 146 54T209 26T302 45T394 111Q403 121 406 121Q410 121 419 112T429 98T420 82T390 55T344 24T281 -1T205 -11Q126 -11 83 42T39 168ZM373 353Q367 405 305 405Q272 405 244 391T199 357T170 316T154 280T149 261Q149 260 169 260Q282 260 327 284T373 353Z" style="stroke-width:3"></path></g><g data-mml-node="mo" transform="translate(6194.3,0)"><path data-c="5B" d="M118 -250V750H255V710H158V-210H255V-250H118Z" style="stroke-width:3"></path></g><g data-mml-node="mi" transform="translate(6472.3,0)"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z" style="stroke-width:3"></path></g><g data-mml-node="mi" transform="translate(7072.3,0)"><path data-c="1D454" d="M311 43Q296 30 267 15T206 0Q143 0 105 45T66 160Q66 265 143 353T314 442Q361 442 401 394L404 398Q406 401 409 404T418 412T431 419T447 422Q461 422 470 413T480 394Q480 379 423 152T363 -80Q345 -134 286 -169T151 -205Q10 -205 10 -137Q10 -111 28 -91T74 -71Q89 -71 102 -80T116 -111Q116 -121 114 -130T107 -144T99 -154T92 -162L90 -164H91Q101 -167 151 -167Q189 -167 211 -155Q234 -144 254 -122T282 -75Q288 -56 298 -13Q311 35 311 43ZM384 328L380 339Q377 350 375 354T369 368T359 382T346 393T328 402T306 405Q262 405 221 352Q191 313 171 233T151 117Q151 38 213 38Q269 38 323 108L331 118L384 328Z" style="stroke-width:3"></path></g><g data-mml-node="mo" transform="translate(7549.3,0)"><path data-c="5D" d="M22 710V750H159V-250H22V-210H119V710H22Z" style="stroke-width:3"></path></g><g data-mml-node="mo" transform="translate(8049.6,0)"><path data-c="2217" d="M229 286Q216 420 216 436Q216 454 240 464Q241 464 245 464T251 465Q263 464 273 456T283 436Q283 419 277 356T270 286L328 328Q384 369 389 372T399 375Q412 375 423 365T435 338Q435 325 425 315Q420 312 357 282T289 250L355 219L425 184Q434 175 434 161Q434 146 425 136T401 125Q393 125 383 131T328 171L270 213Q283 79 283 63Q283 53 276 44T250 35Q231 35 224 44T216 63Q216 80 222 143T229 213L171 171Q115 130 110 127Q106 124 100 124Q87 124 76 134T64 161Q64 166 64 169T67 175T72 181T81 188T94 195T113 204T138 215T170 230T210 250L74 315Q65 324 65 338Q65 353 74 363T98 374Q106 374 116 368T171 328L229 286Z" style="stroke-width:3"></path></g><g data-mml-node="mi" transform="translate(8771.8,0)"><path data-c="1D443" d="M287 628Q287 635 230 637Q206 637 199 638T192 648Q192 649 194 659Q200 679 203 681T397 683Q587 682 600 680Q664 669 707 631T751 530Q751 453 685 389Q616 321 507 303Q500 302 402 301H307L277 182Q247 66 247 59Q247 55 248 54T255 50T272 48T305 46H336Q342 37 342 35Q342 19 335 5Q330 0 319 0Q316 0 282 1T182 2Q120 2 87 2T51 1Q33 1 33 11Q33 13 36 25Q40 41 44 43T67 46Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628ZM645 554Q645 567 643 575T634 597T609 619T560 635Q553 636 480 637Q463 637 445 637T416 636T404 636Q391 635 386 627Q384 621 367 550T332 412T314 344Q314 342 395 342H407H430Q542 342 590 392Q617 419 631 471T645 554Z" style="stroke-width:3"></path></g><g data-mml-node="mi" transform="translate(9522.8,0)"><path data-c="1D436" d="M50 252Q50 367 117 473T286 641T490 704Q580 704 633 653Q642 643 648 636T656 626L657 623Q660 623 684 649Q691 655 699 663T715 679T725 690L740 705H746Q760 705 760 698Q760 694 728 561Q692 422 692 421Q690 416 687 415T669 413H653Q647 419 647 422Q647 423 648 429T650 449T651 481Q651 552 619 605T510 659Q484 659 454 652T382 628T299 572T226 479Q194 422 175 346T156 222Q156 108 232 58Q280 24 350 24Q441 24 512 92T606 240Q610 253 612 255T628 257Q648 257 648 248Q648 243 647 239Q618 132 523 55T319 -22Q206 -22 128 53T50 252Z" style="stroke-width:3"></path></g><g data-mml-node="mi" transform="translate(10282.8,0)"><path data-c="1D445" d="M230 637Q203 637 198 638T193 649Q193 676 204 682Q206 683 378 683Q550 682 564 680Q620 672 658 652T712 606T733 563T739 529Q739 484 710 445T643 385T576 351T538 338L545 333Q612 295 612 223Q612 212 607 162T602 80V71Q602 53 603 43T614 25T640 16Q668 16 686 38T712 85Q717 99 720 102T735 105Q755 105 755 93Q755 75 731 36Q693 -21 641 -21H632Q571 -21 531 4T487 82Q487 109 502 166T517 239Q517 290 474 313Q459 320 449 321T378 323H309L277 193Q244 61 244 59Q244 55 245 54T252 50T269 48T302 46H333Q339 38 339 37T336 19Q332 6 326 0H311Q275 2 180 2Q146 2 117 2T71 2T50 1Q33 1 33 10Q33 12 36 24Q41 43 46 45Q50 46 61 46H67Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628Q287 635 230 637ZM630 554Q630 586 609 608T523 636Q521 636 500 636T462 637H440Q393 637 386 627Q385 624 352 494T319 361Q319 360 388 360Q466 361 492 367Q556 377 592 426Q608 449 619 486T630 554Z" style="stroke-width:3"></path></g><g data-mml-node="mo" transform="translate(11041.8,0)"><path data-c="5B" d="M118 -250V750H255V710H158V-210H255V-250H118Z" style="stroke-width:3"></path></g><g data-mml-node="mi" transform="translate(11319.8,0)"><path data-c="1D458" d="M121 647Q121 657 125 670T137 683Q138 683 209 688T282 694Q294 694 294 686Q294 679 244 477Q194 279 194 272Q213 282 223 291Q247 309 292 354T362 415Q402 442 438 442Q468 442 485 423T503 369Q503 344 496 327T477 302T456 291T438 288Q418 288 406 299T394 328Q394 353 410 369T442 390L458 393Q446 405 434 405H430Q398 402 367 380T294 316T228 255Q230 254 243 252T267 246T293 238T320 224T342 206T359 180T365 147Q365 130 360 106T354 66Q354 26 381 26Q429 26 459 145Q461 153 479 153H483Q499 153 499 144Q499 139 496 130Q455 -11 378 -11Q333 -11 305 15T277 90Q277 108 280 121T283 145Q283 167 269 183T234 206T200 217T182 220H180Q168 178 159 139T145 81T136 44T129 20T122 7T111 -2Q98 -11 83 -11Q66 -11 57 -1T48 16Q48 26 85 176T158 471L195 616Q196 629 188 632T149 637H144Q134 637 131 637T124 640T121 647Z" style="stroke-width:3"></path></g><g data-mml-node="mi" transform="translate(11840.8,0)"><path data-c="1D44F" d="M73 647Q73 657 77 670T89 683Q90 683 161 688T234 694Q246 694 246 685T212 542Q204 508 195 472T180 418L176 399Q176 396 182 402Q231 442 283 442Q345 442 383 396T422 280Q422 169 343 79T173 -11Q123 -11 82 27T40 150V159Q40 180 48 217T97 414Q147 611 147 623T109 637Q104 637 101 637H96Q86 637 83 637T76 640T73 647ZM336 325V331Q336 405 275 405Q258 405 240 397T207 376T181 352T163 330L157 322L136 236Q114 150 114 114Q114 66 138 42Q154 26 178 26Q211 26 245 58Q270 81 285 114T318 219Q336 291 336 325Z" style="stroke-width:3"></path></g><g data-mml-node="mi" transform="translate(12269.8,0)"><path data-c="1D45D" d="M23 287Q24 290 25 295T30 317T40 348T55 381T75 411T101 433T134 442Q209 442 230 378L240 387Q302 442 358 442Q423 442 460 395T497 281Q497 173 421 82T249 -10Q227 -10 210 -4Q199 1 187 11T168 28L161 36Q160 35 139 -51T118 -138Q118 -144 126 -145T163 -148H188Q194 -155 194 -157T191 -175Q188 -187 185 -190T172 -194Q170 -194 161 -194T127 -193T65 -192Q-5 -192 -24 -194H-32Q-39 -187 -39 -183Q-37 -156 -26 -148H-6Q28 -147 33 -136Q36 -130 94 103T155 350Q156 355 156 364Q156 405 131 405Q109 405 94 377T71 316T59 280Q57 278 43 278H29Q23 284 23 287ZM178 102Q200 26 252 26Q282 26 310 49T356 107Q374 141 392 215T411 325V331Q411 405 350 405Q339 405 328 402T306 393T286 380T269 365T254 350T243 336T235 326L232 322Q232 321 229 308T218 264T204 212Q178 106 178 102Z" style="stroke-width:3"></path></g><g data-mml-node="mo" transform="translate(12772.8,0)"><path data-c="5D" d="M22 710V750H159V-250H22V-210H119V710H22Z" style="stroke-width:3"></path></g></g><g data-mml-node="mrow" transform="translate(3794.9,-710)"><g data-mml-node="mi"><path data-c="1D44F" d="M73 647Q73 657 77 670T89 683Q90 683 161 688T234 694Q246 694 246 685T212 542Q204 508 195 472T180 418L176 399Q176 396 182 402Q231 442 283 442Q345 442 383 396T422 280Q422 169 343 79T173 -11Q123 -11 82 27T40 150V159Q40 180 48 217T97 414Q147 611 147 623T109 637Q104 637 101 637H96Q86 637 83 637T76 640T73 647ZM336 325V331Q336 405 275 405Q258 405 240 397T207 376T181 352T163 330L157 322L136 236Q114 150 114 114Q114 66 138 42Q154 26 178 26Q211 26 245 58Q270 81 285 114T318 219Q336 291 336 325Z" style="stroke-width:3"></path></g><g data-mml-node="mi" transform="translate(429,0)"><path data-c="1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z" style="stroke-width:3"></path></g><g data-mml-node="mi" transform="translate(958,0)"><path data-c="1D450" d="M34 159Q34 268 120 355T306 442Q362 442 394 418T427 355Q427 326 408 306T360 285Q341 285 330 295T319 325T330 359T352 380T366 386H367Q367 388 361 392T340 400T306 404Q276 404 249 390Q228 381 206 359Q162 315 142 235T121 119Q121 73 147 50Q169 26 205 26H209Q321 26 394 111Q403 121 406 121Q410 121 419 112T429 98T420 83T391 55T346 25T282 0T202 -11Q127 -11 81 37T34 159Z" style="stroke-width:3"></path></g><g data-mml-node="mi" transform="translate(1391,0)"><path data-c="1D458" d="M121 647Q121 657 125 670T137 683Q138 683 209 688T282 694Q294 694 294 686Q294 679 244 477Q194 279 194 272Q213 282 223 291Q247 309 292 354T362 415Q402 442 438 442Q468 442 485 423T503 369Q503 344 496 327T477 302T456 291T438 288Q418 288 406 299T394 328Q394 353 410 369T442 390L458 393Q446 405 434 405H430Q398 402 367 380T294 316T228 255Q230 254 243 252T267 246T293 238T320 224T342 206T359 180T365 147Q365 130 360 106T354 66Q354 26 381 26Q429 26 459 145Q461 153 479 153H483Q499 153 499 144Q499 139 496 130Q455 -11 378 -11Q333 -11 305 15T277 90Q277 108 280 121T283 145Q283 167 269 183T234 206T200 217T182 220H180Q168 178 159 139T145 81T136 44T129 20T122 7T111 -2Q98 -11 83 -11Q66 -11 57 -1T48 16Q48 26 85 176T158 471L195 616Q196 629 188 632T149 637H144Q134 637 131 637T124 640T121 647Z" style="stroke-width:3"></path></g><g data-mml-node="mi" transform="translate(1912,0)"><path data-c="1D44F" d="M73 647Q73 657 77 670T89 683Q90 683 161 688T234 694Q246 694 246 685T212 542Q204 508 195 472T180 418L176 399Q176 396 182 402Q231 442 283 442Q345 442 383 396T422 280Q422 169 343 79T173 -11Q123 -11 82 27T40 150V159Q40 180 48 217T97 414Q147 611 147 623T109 637Q104 637 101 637H96Q86 637 83 637T76 640T73 647ZM336 325V331Q336 405 275 405Q258 405 240 397T207 376T181 352T163 330L157 322L136 236Q114 150 114 114Q114 66 138 42Q154 26 178 26Q211 26 245 58Q270 81 285 114T318 219Q336 291 336 325Z" style="stroke-width:3"></path></g><g data-mml-node="mi" transform="translate(2341,0)"><path data-c="1D45C" d="M201 -11Q126 -11 80 38T34 156Q34 221 64 279T146 380Q222 441 301 441Q333 441 341 440Q354 437 367 433T402 417T438 387T464 338T476 268Q476 161 390 75T201 -11ZM121 120Q121 70 147 48T206 26Q250 26 289 58T351 142Q360 163 374 216T388 308Q388 352 370 375Q346 405 306 405Q243 405 195 347Q158 303 140 230T121 120Z" style="stroke-width:3"></path></g><g data-mml-node="mi" transform="translate(2826,0)"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z" style="stroke-width:3"></path></g><g data-mml-node="mi" transform="translate(3426,0)"><path data-c="1D452" d="M39 168Q39 225 58 272T107 350T174 402T244 433T307 442H310Q355 442 388 420T421 355Q421 265 310 237Q261 224 176 223Q139 223 138 221Q138 219 132 186T125 128Q125 81 146 54T209 26T302 45T394 111Q403 121 406 121Q410 121 419 112T429 98T420 82T390 55T344 24T281 -1T205 -11Q126 -11 83 42T39 168ZM373 353Q367 405 305 405Q272 405 244 391T199 357T170 316T154 280T149 261Q149 260 169 260Q282 260 327 284T373 353Z" style="stroke-width:3"></path></g><g data-mml-node="mo" transform="translate(3892,0)"><path data-c="5B" d="M118 -250V750H255V710H158V-210H255V-250H118Z" style="stroke-width:3"></path></g><g data-mml-node="mi" transform="translate(4170,0)"><path data-c="1D458" d="M121 647Q121 657 125 670T137 683Q138 683 209 688T282 694Q294 694 294 686Q294 679 244 477Q194 279 194 272Q213 282 223 291Q247 309 292 354T362 415Q402 442 438 442Q468 442 485 423T503 369Q503 344 496 327T477 302T456 291T438 288Q418 288 406 299T394 328Q394 353 410 369T442 390L458 393Q446 405 434 405H430Q398 402 367 380T294 316T228 255Q230 254 243 252T267 246T293 238T320 224T342 206T359 180T365 147Q365 130 360 106T354 66Q354 26 381 26Q429 26 459 145Q461 153 479 153H483Q499 153 499 144Q499 139 496 130Q455 -11 378 -11Q333 -11 305 15T277 90Q277 108 280 121T283 145Q283 167 269 183T234 206T200 217T182 220H180Q168 178 159 139T145 81T136 44T129 20T122 7T111 -2Q98 -11 83 -11Q66 -11 57 -1T48 16Q48 26 85 176T158 471L195 616Q196 629 188 632T149 637H144Q134 637 131 637T124 640T121 647Z" style="stroke-width:3"></path></g><g data-mml-node="mi" transform="translate(4691,0)"><path data-c="1D44F" d="M73 647Q73 657 77 670T89 683Q90 683 161 688T234 694Q246 694 246 685T212 542Q204 508 195 472T180 418L176 399Q176 396 182 402Q231 442 283 442Q345 442 383 396T422 280Q422 169 343 79T173 -11Q123 -11 82 27T40 150V159Q40 180 48 217T97 414Q147 611 147 623T109 637Q104 637 101 637H96Q86 637 83 637T76 640T73 647ZM336 325V331Q336 405 275 405Q258 405 240 397T207 376T181 352T163 330L157 322L136 236Q114 150 114 114Q114 66 138 42Q154 26 178 26Q211 26 245 58Q270 81 285 114T318 219Q336 291 336 325Z" style="stroke-width:3"></path></g><g data-mml-node="mi" transform="translate(5120,0)"><path data-c="1D45D" d="M23 287Q24 290 25 295T30 317T40 348T55 381T75 411T101 433T134 442Q209 442 230 378L240 387Q302 442 358 442Q423 442 460 395T497 281Q497 173 421 82T249 -10Q227 -10 210 -4Q199 1 187 11T168 28L161 36Q160 35 139 -51T118 -138Q118 -144 126 -145T163 -148H188Q194 -155 194 -157T191 -175Q188 -187 185 -190T172 -194Q170 -194 161 -194T127 -193T65 -192Q-5 -192 -24 -194H-32Q-39 -187 -39 -183Q-37 -156 -26 -148H-6Q28 -147 33 -136Q36 -130 94 103T155 350Q156 355 156 364Q156 405 131 405Q109 405 94 377T71 316T59 280Q57 278 43 278H29Q23 284 23 287ZM178 102Q200 26 252 26Q282 26 310 49T356 107Q374 141 392 215T411 325V331Q411 405 350 405Q339 405 328 402T306 393T286 380T269 365T254 350T243 336T235 326L232 322Q232 321 229 308T218 264T204 212Q178 106 178 102Z" style="stroke-width:3"></path></g><g data-mml-node="mo" transform="translate(5623,0)"><path data-c="5D" d="M22 710V750H159V-250H22V-210H119V710H22Z" style="stroke-width:3"></path></g></g><rect width="13250.8" height="60" x="120" y="220"></rect></g><g data-mml-node="mo" transform="translate(13713,0)"><path data-c="2217" d="M229 286Q216 420 216 436Q216 454 240 464Q241 464 245 464T251 465Q263 464 273 456T283 436Q283 419 277 356T270 286L328 328Q384 369 389 372T399 375Q412 375 423 365T435 338Q435 325 425 315Q420 312 357 282T289 250L355 219L425 184Q434 175 434 161Q434 146 425 136T401 125Q393 125 383 131T328 171L270 213Q283 79 283 63Q283 53 276 44T250 35Q231 35 224 44T216 63Q216 80 222 143T229 213L171 171Q115 130 110 127Q106 124 100 124Q87 124 76 134T64 161Q64 166 64 169T67 175T72 181T81 188T94 195T113 204T138 215T170 230T210 250L74 315Q65 324 65 338Q65 353 74 363T98 374Q106 374 116 368T171 328L229 286Z" style="stroke-width:3"></path></g><g data-mml-node="mn" transform="translate(14435.2,0)"><path data-c="33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z" style="stroke-width:3"></path></g><g data-mml-node="mo" transform="translate(15213,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z" style="stroke-width:3"></path></g><g data-mml-node="mi" transform="translate(16268.8,0)"><path data-c="1D45A" d="M21 287Q22 293 24 303T36 341T56 388T88 425T132 442T175 435T205 417T221 395T229 376L231 369Q231 367 232 367L243 378Q303 442 384 442Q401 442 415 440T441 433T460 423T475 411T485 398T493 385T497 373T500 364T502 357L510 367Q573 442 659 442Q713 442 746 415T780 336Q780 285 742 178T704 50Q705 36 709 31T724 26Q752 26 776 56T815 138Q818 149 821 151T837 153Q857 153 857 145Q857 144 853 130Q845 101 831 73T785 17T716 -10Q669 -10 648 17T627 73Q627 92 663 193T700 345Q700 404 656 404H651Q565 404 506 303L499 291L466 157Q433 26 428 16Q415 -11 385 -11Q372 -11 364 -4T353 8T350 18Q350 29 384 161L420 307Q423 322 423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 181Q151 335 151 342Q154 357 154 369Q154 405 129 405Q107 405 92 377T69 316T57 280Q55 278 41 278H27Q21 284 21 287Z" style="stroke-width:3"></path></g><g data-mml-node="mi" transform="translate(17146.8,0)"><path data-c="1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z" style="stroke-width:3"></path></g><g data-mml-node="mi" transform="translate(17675.8,0)"><path data-c="1D460" d="M131 289Q131 321 147 354T203 415T300 442Q362 442 390 415T419 355Q419 323 402 308T364 292Q351 292 340 300T328 326Q328 342 337 354T354 372T367 378Q368 378 368 379Q368 382 361 388T336 399T297 405Q249 405 227 379T204 326Q204 301 223 291T278 274T330 259Q396 230 396 163Q396 135 385 107T352 51T289 7T195 -10Q118 -10 86 19T53 87Q53 126 74 143T118 160Q133 160 146 151T160 120Q160 94 142 76T111 58Q109 57 108 57T107 55Q108 52 115 47T146 34T201 27Q237 27 263 38T301 66T318 97T323 122Q323 150 302 164T254 181T195 196T148 231Q131 256 131 289Z" style="stroke-width:3"></path></g><g data-mml-node="msub" transform="translate(18144.8,0)"><g data-mml-node="mi"><path data-c="1D460" d="M131 289Q131 321 147 354T203 415T300 442Q362 442 390 415T419 355Q419 323 402 308T364 292Q351 292 340 300T328 326Q328 342 337 354T354 372T367 378Q368 378 368 379Q368 382 361 388T336 399T297 405Q249 405 227 379T204 326Q204 301 223 291T278 274T330 259Q396 230 396 163Q396 135 385 107T352 51T289 7T195 -10Q118 -10 86 19T53 87Q53 126 74 143T118 160Q133 160 146 151T160 120Q160 94 142 76T111 58Q109 57 108 57T107 55Q108 52 115 47T146 34T201 27Q237 27 263 38T301 66T318 97T323 122Q323 150 302 164T254 181T195 196T148 231Q131 256 131 289Z" style="stroke-width:3"></path></g><g data-mml-node="mi" transform="translate(502,-150) scale(0.707)"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z" style="stroke-width:3"></path></g></g><g data-mml-node="mi" transform="translate(18940.7,0)"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z" style="stroke-width:3"></path></g><g data-mml-node="mi" transform="translate(19540.7,0)"><path data-c="1D460" d="M131 289Q131 321 147 354T203 415T300 442Q362 442 390 415T419 355Q419 323 402 308T364 292Q351 292 340 300T328 326Q328 342 337 354T354 372T367 378Q368 378 368 379Q368 382 361 388T336 399T297 405Q249 405 227 379T204 326Q204 301 223 291T278 274T330 259Q396 230 396 163Q396 135 385 107T352 51T289 7T195 -10Q118 -10 86 19T53 87Q53 126 74 143T118 160Q133 160 146 151T160 120Q160 94 142 76T111 58Q109 57 108 57T107 55Q108 52 115 47T146 34T201 27Q237 27 263 38T301 66T318 97T323 122Q323 150 302 164T254 181T195 196T148 231Q131 256 131 289Z" style="stroke-width:3"></path></g><g data-mml-node="mi" transform="translate(20009.7,0)"><path data-c="1D452" d="M39 168Q39 225 58 272T107 350T174 402T244 433T307 442H310Q355 442 388 420T421 355Q421 265 310 237Q261 224 176 223Q139 223 138 221Q138 219 132 186T125 128Q125 81 146 54T209 26T302 45T394 111Q403 121 406 121Q410 121 419 112T429 98T420 82T390 55T344 24T281 -1T205 -11Q126 -11 83 42T39 168ZM373 353Q367 405 305 405Q272 405 244 391T199 357T170 316T154 280T149 261Q149 260 169 260Q282 260 327 284T373 353Z" style="stroke-width:3"></path></g><g data-mml-node="mi" transform="translate(20475.7,0)"><path data-c="1D45F" d="M21 287Q22 290 23 295T28 317T38 348T53 381T73 411T99 433T132 442Q161 442 183 430T214 408T225 388Q227 382 228 382T236 389Q284 441 347 441H350Q398 441 422 400Q430 381 430 363Q430 333 417 315T391 292T366 288Q346 288 334 299T322 328Q322 376 378 392Q356 405 342 405Q286 405 239 331Q229 315 224 298T190 165Q156 25 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 114 189T154 366Q154 405 128 405Q107 405 92 377T68 316T57 280Q55 278 41 278H27Q21 284 21 287Z" style="stroke-width:3"></path></g><g data-mml-node="mi" transform="translate(20926.7,0)"><path data-c="1D461" d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z" style="stroke-width:3"></path></g><g data-mml-node="mo" transform="translate(21287.7,0)"><path data-c="5B" d="M118 -250V750H255V710H158V-210H255V-250H118Z" style="stroke-width:3"></path></g><g data-mml-node="mi" transform="translate(21565.7,0)"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z" style="stroke-width:3"></path></g><g data-mml-node="mi" transform="translate(22165.7,0)"><path data-c="1D454" d="M311 43Q296 30 267 15T206 0Q143 0 105 45T66 160Q66 265 143 353T314 442Q361 442 401 394L404 398Q406 401 409 404T418 412T431 419T447 422Q461 422 470 413T480 394Q480 379 423 152T363 -80Q345 -134 286 -169T151 -205Q10 -205 10 -137Q10 -111 28 -91T74 -71Q89 -71 102 -80T116 -111Q116 -121 114 -130T107 -144T99 -154T92 -162L90 -164H91Q101 -167 151 -167Q189 -167 211 -155Q234 -144 254 -122T282 -75Q288 -56 298 -13Q311 35 311 43ZM384 328L380 339Q377 350 375 354T369 368T359 382T346 393T328 402T306 405Q262 405 221 352Q191 313 171 233T151 117Q151 38 213 38Q269 38 323 108L331 118L384 328Z" style="stroke-width:3"></path></g><g data-mml-node="mo" transform="translate(22642.7,0)"><path data-c="5D" d="M22 710V750H159V-250H22V-210H119V710H22Z" style="stroke-width:3"></path></g></g></g></svg><mjx-assistive-mml unselectable="on" display="block" style="top:0;left:0;clip:rect(1px,1px,1px,1px);-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;position:absolute;padding:1px 0 0 0;border:0;display:block;overflow:hidden;width:100%"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mfrac><mrow><mi>m</mi><mi>a</mi><mi>s</mi><msub><mi>s</mi><mi>b</mi></msub><mi>a</mi><mi>c</mi><mi>k</mi><mi>b</mi><mi>o</mi><mi>n</mi><mi>e</mi><mo stretchy="false">[</mo><mi>n</mi><mi>g</mi><mo stretchy="false">]</mo><mo>∗</mo><mi>P</mi><mi>C</mi><mi>R</mi><mo stretchy="false">[</mo><mi>k</mi><mi>b</mi><mi>p</mi><mo stretchy="false">]</mo></mrow><mrow><mi>b</mi><mi>a</mi><mi>c</mi><mi>k</mi><mi>b</mi><mi>o</mi><mi>n</mi><mi>e</mi><mo stretchy="false">[</mo><mi>k</mi><mi>b</mi><mi>p</mi><mo stretchy="false">]</mo></mrow></mfrac><mo>∗</mo><mn>3</mn><mo>=</mo><mi>m</mi><mi>a</mi><mi>s</mi><msub><mi>s</mi><mi>i</mi></msub><mi>n</mi><mi>s</mi><mi>e</mi><mi>r</mi><mi>t</mi><mo stretchy="false">[</mo><mi>n</mi><mi>g</mi><mo stretchy="false">]</mo></math></mjx-assistive-mml></mjx-container><figure id="tbl:digest" class="align-left" style="width:100%;float:left;margin-right:1em">
+<figcaption style="font-size:.9em;color:#555;margin-bottom:.5em;line-height:1.5;font-style:normal;display:block">
+<strong style="color:#333">Table 9.</strong> Pipetting scheme of for your sample. In addition, think of a suitable negative control and add it as a second sample.
+</figcaption>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Volume</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Digested backbone</td>
+<td>x µL</td>
+</tr>
+<tr>
+<td>PCR product</td>
+<td>x µL</td>
+</tr>
+<tr>
+<td>H<span class="math inline"><sub>2</sub></span>O</td>
+<td>x µL</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>10 µL</strong></td>
+</tr>
+</tbody>
+</table>
+</figure>
+<ul>
+<li>Incubate at RT for 60 min.</li>
+<li>Put samples on ice, 5 min.</li>
+</ul>
+<h6 id="ligation-protocol" tabindex="-1">Ligation Protocol</h6>
+<figure id="tbl:ligation" class="align-left" style="width:100%;float:left;margin-right:1em">
+<figcaption style="font-size:.9em;color:#555;margin-bottom:.5em;line-height:1.5;font-style:normal;display:block">
+<strong style="color:#333">Table 10.</strong> DNA ligation
+</figcaption>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Volume</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vector (30-50 ng)</td>
+<td>x µL</td>
+</tr>
+<tr>
+<td>Insert (3x excess)</td>
+<td>y µL</td>
+</tr>
+<tr>
+<td>H<span class="math inline"><sub>2</sub></span>O (qsf 20 µL)</td>
+<td>z µL</td>
+</tr>
+<tr>
+<td>T4 DNA ligase Buffer 10x</td>
+<td>2 µL</td>
+</tr>
+<tr>
+<td>T4 DNA ligase</td>
+<td>1 µL</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>20 µL</strong></td>
+</tr>
+</tbody>
+</table>
+</figure>
+<ul>
+<li>Incubate at RT for 60 min.</li>
+<li>Heat inactivate the T4 DNA ligase by incubating 10 min at 65 °C.</li>
+</ul>
+<h5 id="transformation-of-em-e-coli-em-competent-cells" tabindex="-1">Transformation of <em>E. coli</em> competent cells</h5>
+<ol>
+<li>AQUA/Ligation mixture and Negative control mixture</li>
+<li>Thaw cells on ice. Carefully add AQUA mix/ negative control (10 µL) or ligation mix/negative control (5 µL). Do not resuspend, just slightly stir using the pipette tip or gently flicking against the tube.</li>
+<li>Incubate for 30 min on ice, heat-shock for 45 s at 42°C, place on ice for 2 min, add 250 µL LB‑medium and incubate for 1 h at 37°C, 550 rpm.</li>
+<li>Finally, plate cells on ampicillin (100 µg/mL) or kanamycin (50 µg/mL) LBagar plates. For AQUA, use 250 µL/plate and for ligation 100 µL/plate. (In this way, one may ensure the convenient isolation of colonies the next day).</li>
+<li>Distribute cells uniformly on the plates using glass beads.</li>
+<li>Incubate plates for 14 - 18 h at 37°C.</li>
+</ol>
+<h4 id="day-3" tabindex="-1">Day 3</h4>
+<h5 id="streaking-single-colonies-on-new-lb-ampicillin-plates" tabindex="-1">Streaking Single Colonies on New LB-Ampicillin Plates</h5>
+<ul>
+<li>Pick 4 single clones and streak out onto LB plates with ampicillin (100 μg/mL) or kanamycin (50 μg/mL). Streak 2 colonies on each plate. Incubate for 14 - 18 h at 37°C. Make sure to evenly spread the picked colony over the <strong>whole surface</strong> of the LB agar plate.</li>
+</ul>
+<h4 id="day-4" tabindex="-1">Day 4</h4>
+<h5 id="plasmid-dna-isolation-4-samples" tabindex="-1">Plasmid DNA Isolation (4 samples)</h5>
+<ol>
+<li>Using a sterile inoculating loop, scrape bacteria off the plate and resuspend in 250 μL of Cell Resuspension Solution (W1) by vortexing.</li>
+<li>Add 250 μL of Cell Lysis Solution (W2) to each sample; <strong>invert</strong> 4 times to mix.</li>
+<li>Incubate for 5 min at RT.</li>
+<li>Add 350 μL of Neutralization Solution (W3); <strong>invert</strong> 4–6 times to mix.</li>
+<li>Centrifuge at max speed for 8 min at RT.</li>
+<li>During the centrifugation insert spin columns into collection tubes.</li>
+<li>Equilibrate columns with 700 µL ddH<sub>2</sub>O, centrifuge for 60 s at max speed and discard the flow‑through.</li>
+<li>After centrifugation, transfer cleared lysates into spin columns.</li>
+<li>Centrifuge at max speed for 60 s at RT.</li>
+<li>Discard flow-through and reinsert columns into collection tubes.</li>
+<li>Add 750 μl of Wash Solution (W4). Centrifuge at top speed for 60 s. Discard flow-through and reinsert the column into the collection tube.</li>
+<li>Repeat the previous step with 250 μl of Wash Solution (W4).</li>
+<li>Centrifuge at max speed for 60 s at RT.</li>
+<li>Transfer Spin Column into a sterile 1.5 mL tube.</li>
+<li>Add 60 μl of prewarmed (70°C) MilliQ-Water to the Spin Column and incubate for 4 min at RT. Centrifuge at max speed for 90 s at RT and <strong>KEEP</strong> the tube with the flow through.</li>
+<li>Store extracted plasmids at -20°C.</li>
+<li>Wash the mini column four times with 700 µl of ddH<sub>2</sub>O and keep them. Do not throw them away.</li>
+</ol>
+<h5 id="analytical-restriction-enzyme-digestion" tabindex="-1">Analytical Restriction Enzyme Digestion</h5>
+<p>For each clone, perform one digest of 5 µL as follows. Calculate a Master-Mix for the amount of samples and one additional smample to compensate for pipetting errors:</p>
+<figure id="tbl:testdigest" class="align-left" style="width:100%;float:left;margin-right:1em">
+<figcaption style="font-size:.9em;color:#555;margin-bottom:.5em;line-height:1.5;font-style:normal;display:block">
+<strong style="color:#333">Table 11.</strong> Test digestion for one sample. Calculate volumes for a Master-Mix.
+</figcaption>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Volume</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Plasmid DNA</td>
+<td>4 µL</td>
+</tr>
+<tr>
+<td>Cut Smart buffer (10x)</td>
+<td>0.5 µL</td>
+</tr>
+<tr>
+<td>Enzyme 1</td>
+<td>0.25 µL</td>
+</tr>
+<tr>
+<td>Enzyme 2</td>
+<td>0.25 µL</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>5 µL</strong></td>
+</tr>
+</tbody>
+</table>
+</figure>
+<ol>
+<li>Incubate at 37°C for 1–2 h.</li>
+<li>Analyze your digest via agarose-gel electrophoresis: 1% agarose in TAE Buffer, 1:10000 GelRed working solution (Caution! DNA dyes intercalate, thus are mutagenic agents. Handle it with care).</li>
+<li>Sample preparation: Mix 5 µL digest with 1–2 µL of 6× loading buffer.</li>
+<li>Run the gel at 120 V for 20–30 min. Perform graphical analysis of gel.</li>
+</ol>
+<h5 id="sequencing" tabindex="-1">Sequencing</h5>
+<p>Verification of positive colonies.</p>
+<p>Send a 12 µL aliquot with a concentration of 40–100 ng/µL. Dilute if necessary.</p>
+<p>Sequencing primer:</p>
+<p>PET-T7side: <em>5’-GGGAATTGTGAGCGGATAAC</em> (pDD259, pDD260, pDD262)</p>
+<p>pBAD-F+50: <em>5’-TTATCGCAACTCTCTACTGT</em> (pDD261)</p>
+<hr>
+<p><a href="garden_02-Background.md" target="_blank" class="external-link">← Previous</a> | <a href="garden_04-Experiment2.md" target="_blank" class="external-link">Next →</a></p>
+</main>
+<aside>
+<div class="sidebar">
+<div class="sidebar-container">
+<div class="toc">
+<div class="toc-title-container">
+<div class="toc-title">
+On this page
+</div>
+</div>
+<div class="toc-container">
+<nav class="toc">
+<ol>
+<li><a href="#experiment-i-molecular-cloning-of-bacterial-inducible-plasmids">Experiment I: Molecular Cloning of Bacterial Inducible Plasmids</a>
+<ol>
+<li><a href="#protocols">Protocols</a>
+<ol>
+<li><a href="#day-1">Day 1</a>
+<ol>
+<li><a href="#pcr">PCR</a>
+</li>
+<li><a href="#dna-purification-from-agarose-gel">DNA Purification from Agarose Gel</a>
+</li>
+<li><a href="#dna-purification">DNA Purification</a>
+</li>
+<li><a href="#backbone-digestion-performed-by-the-supervisors">Backbone Digestion (Performed by the Supervisors)</a>
+</li>
+<li><a href="#pcr-products-digestion-only-for-ligation-cloning">PCR Products Digestion (Only for Ligation Cloning)</a>
+</li>
+</ol>
+</li>
+<li><a href="#day-2">Day 2</a>
+<ol>
+<li><a href="#digested-pcr-products-purification-only-for-ligation-cloning">Digested PCR Products Purification (Only for Ligation Cloning)</a>
+</li>
+<li><a href="#assembly-of-the-new-vector">Assembly of the New Vector</a>
+<ol>
+<li><a href="#aqua-cloning">AQUA Cloning</a>
+</li>
+<li><a href="#ligation-protocol">Ligation Protocol</a>
+</li>
+</ol>
+</li>
+<li><a href="#transformation-of-em-e-coli-em-competent-cells">Transformation of E. coli competent cells</a>
+</li>
+</ol>
+</li>
+<li><a href="#day-3">Day 3</a>
+<ol>
+<li><a href="#streaking-single-colonies-on-new-lb-ampicillin-plates">Streaking Single Colonies on New LB-Ampicillin Plates</a>
+</li>
+</ol>
+</li>
+<li><a href="#day-4">Day 4</a>
+<ol>
+<li><a href="#plasmid-dna-isolation-4-samples">Plasmid DNA Isolation (4 samples)</a>
+</li>
+<li><a href="#analytical-restriction-enzyme-digestion">Analytical Restriction Enzyme Digestion</a>
+</li>
+<li><a href="#sequencing">Sequencing</a>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</aside>
+<script>window.location.hash&&document.getElementById(window.location.hash.slice(1)).classList.add("referred"),window.addEventListener("hashchange",(e=>{const t=e.oldURL.split("#");t[1]&&document.getElementById(t[1]).classList.remove("referred");const n=e.newURL.split("#");n[1]&&document.getElementById(n[1]).classList.add("referred")}),!1);const url_parts=window.location.href.split("#"),url=url_parts[0],referrence=url_parts[1];document.querySelectorAll(".cm-s-obsidian > *[id]").forEach((function(e){e.ondblclick=function(e){const t=url+"#"+e.target.id;navigator.clipboard.writeText(t)}}))</script>
+<script src="https://fastly.jsdelivr.net/npm/luxon@3.2.1/build/global/luxon.min.js"></script>
+<script defer="defer">TIMESTAMP_FORMAT="MMM dd, yyyy h:mm a",document.querySelectorAll(".human-date").forEach((function(e){date=e.getAttribute("data-date")||e.innerText,parsed_date=luxon.DateTime.fromISO(date),null!=parsed_date.invalid&&(parsed_date=luxon.DateTime.fromSQL(date)),null!=parsed_date.invalid&&(parsed_date=luxon.DateTime.fromHTML(date)),e.innerHTML=parsed_date.toFormat(TIMESTAMP_FORMAT)}))</script>
+<script>lucide.createIcons({attrs:{class:["svg-icon"]}})</script>
+<script>!function(){function e(){const e=document.createElement("div");e.id="password-overlay",e.style.cssText="\n      position: fixed;\n      top: 0;\n      left: 0;\n      width: 100%;\n      height: 100%;\n      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);\n      z-index: 999999;\n      display: flex;\n      align-items: center;\n      justify-content: center;\n      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;\n    ";const t=document.createElement("div");t.style.cssText="\n      background: white;\n      padding: 2rem;\n      border-radius: 10px;\n      box-shadow: 0 15px 35px rgba(0,0,0,0.1);\n      width: 100%;\n      max-width: 400px;\n      margin: 1rem;\n    ",t.innerHTML='\n      <div style="text-align: center; margin-bottom: 2rem;">\n        <h1 style="color: #333; margin: 0; font-size: 1.8rem;">M2205</h1>\n        <p style="color: #666; margin: 0.5rem 0 0 0;">Please enter the course password to access materials</p>\n      </div>\n      <div id="error-message" style="background: #fee; color: #c33; padding: 0.75rem; border-radius: 5px; margin-bottom: 1rem; border: 1px solid #fcc; display: none;">\n        Incorrect password. Please try again.\n      </div>\n      <form id="password-form" style="margin: 0;">\n        <div style="margin-bottom: 1.5rem;">\n          <label for="password-input" style="display: block; margin-bottom: 0.5rem; color: #333; font-weight: 500;">Course Password</label>\n          <input type="password" id="password-input" required autofocus style="width: 100%; padding: 0.75rem; border: 2px solid #e1e5e9; border-radius: 5px; font-size: 1rem; transition: border-color 0.3s;">\n        </div>\n        <button type="submit" style="width: 100%; padding: 0.75rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; border-radius: 5px; font-size: 1rem; font-weight: 500; cursor: pointer; transition: transform 0.2s;">\n          Access Course\n        </button>\n      </form>\n    ',e.appendChild(t),document.body.appendChild(e),document.getElementById("password-input").focus(),document.getElementById("password-form").addEventListener("submit",(function(t){t.preventDefault();"M2205-2026"===document.getElementById("password-input").value?(sessionStorage.setItem("digitalGardenAuth","true"),document.body.removeChild(e)):(document.getElementById("error-message").style.display="block",document.getElementById("password-input").value="",document.getElementById("password-input").focus())})),document.getElementById("password-input").addEventListener("focus",(function(){this.style.borderColor="#667eea"})),document.getElementById("password-input").addEventListener("blur",(function(){this.style.borderColor="#e1e5e9"}))}"true"!==sessionStorage.getItem("digitalGardenAuth")&&("loading"===document.readyState?document.addEventListener("DOMContentLoaded",e):e())}()</script>
+</body>
+</html>
