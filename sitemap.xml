@@ -3,47 +3,77 @@
     
         <url>
             <loc>/404.html</loc>
-            <lastmod>2026-03-02T23:43:35.106Z</lastmod>
+            <lastmod>2026-03-05T09:22:42.137Z</lastmod>
+        </url>
+    
+        <url>
+            <loc>/py-mol/1-pdb-intro/</loc>
+            <lastmod>2026-03-05T09:22:42.174Z</lastmod>
+        </url>
+    
+        <url>
+            <loc>/py-mol/2-pymol-basics/</loc>
+            <lastmod>2026-03-05T09:22:42.174Z</lastmod>
+        </url>
+    
+        <url>
+            <loc>/py-mol/3-figures-contacts/</loc>
+            <lastmod>2026-03-05T09:22:42.174Z</lastmod>
+        </url>
+    
+        <url>
+            <loc>/py-mol/4-styling-mutagenesis/</loc>
+            <lastmod>2026-03-05T09:22:42.174Z</lastmod>
+        </url>
+    
+        <url>
+            <loc>/py-mol/5-mcherry-intein/</loc>
+            <lastmod>2026-03-05T09:22:42.174Z</lastmod>
+        </url>
+    
+        <url>
+            <loc>/py-mol/6-scripting/</loc>
+            <lastmod>2026-03-05T09:22:42.174Z</lastmod>
         </url>
     
         <url>
             <loc>/</loc>
-            <lastmod>2026-03-02T23:43:35.135Z</lastmod>
+            <lastmod>2026-03-05T09:22:42.174Z</lastmod>
         </url>
     
         <url>
             <loc>/garden-02-background/</loc>
-            <lastmod>2026-03-02T23:43:35.135Z</lastmod>
+            <lastmod>2026-03-05T09:22:42.174Z</lastmod>
         </url>
     
         <url>
             <loc>/garden-03-experiment1/</loc>
-            <lastmod>2026-03-02T23:43:35.135Z</lastmod>
+            <lastmod>2026-03-05T09:22:42.175Z</lastmod>
         </url>
     
         <url>
             <loc>/garden-04-experiment2/</loc>
-            <lastmod>2026-03-02T23:43:35.135Z</lastmod>
+            <lastmod>2026-03-05T09:22:42.175Z</lastmod>
         </url>
     
         <url>
             <loc>/garden-05-experiment3/</loc>
-            <lastmod>2026-03-02T23:43:35.136Z</lastmod>
+            <lastmod>2026-03-05T09:22:42.175Z</lastmod>
         </url>
     
         <url>
             <loc>/garden-06-experiment4/</loc>
-            <lastmod>2026-03-02T23:43:35.136Z</lastmod>
+            <lastmod>2026-03-05T09:22:42.175Z</lastmod>
         </url>
     
         <url>
             <loc>/garden-07-experiment5/</loc>
-            <lastmod>2026-03-02T23:43:35.136Z</lastmod>
+            <lastmod>2026-03-05T09:22:42.175Z</lastmod>
         </url>
     
         <url>
             <loc>/garden-08-references/</loc>
-            <lastmod>2026-03-02T23:43:35.136Z</lastmod>
+            <lastmod>2026-03-05T09:22:42.175Z</lastmod>
         </url>
     
 </urlset>
