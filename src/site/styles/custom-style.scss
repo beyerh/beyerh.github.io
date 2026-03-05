@@ -1,13 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Serif+Pro:wght@400;600&family=Inter:wght@400;500&display=swap');
+
 body {
     /***
       ADD YOUR CUSTOM STYLING HERE. (INSIDE THE body {...} section.)
       IT WILL TAKE PRECEDENCE OVER THE STYLING IN THE STYLE.CSS FILE.
    ***/
-    //  background-color: white;
-    //  .content {
-    //   font-size: 14px;
-    //  }
-    //  h1 {
-    //   color: black;
-    //  }
+   
+   // Modern serif font stack
+   --font-default: 'Source Serif Pro', Georgia, 'Times New Roman', serif;
+   --font-interface: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+   --font-text: 'Playfair Display', Georgia, serif;
+   
+   // Apply serif fonts to content
+   font-family: var(--font-text);
+   
+   .content {
+     font-family: var(--font-text);
+     font-size: 16px;
+     line-height: 1.7;
+   }
+   
+   // Headers with Playfair Display
+   h1, h2, h3, h4, h5, h6 {
+     font-family: 'Playfair Display', Georgia, serif;
+     font-weight: 700;
+     line-height: 1.3;
+   }
+   
+   h1 { font-size: 2.5rem; }
+   h2 { font-size: 2rem; }
+   h3 { font-size: 1.5rem; }
+   h4 { font-size: 1.25rem; }
+   h5 { font-size: 1.1rem; }
+   h6 { font-size: 1rem; }
+   
+   // Body text with Source Serif Pro
+   p, li, td, th {
+     font-family: 'Source Serif Pro', Georgia, serif;
+   }
+   
+   // Keep UI elements with Inter (sans-serif)
+   button, .navbar, .sidebar, .search-container, input, textarea, select {
+     font-family: var(--font-interface);
+   }
+   
+   // Blockquotes
+   blockquote {
+     font-style: italic;
+     border-left: 4px solid #81A1C1;
+     background: rgba(129, 161, 193, 0.1);
+     padding: 1em 1.5em;
+     margin: 1.5em 0;
+   }
+   
+   // Code blocks remain monospace
+   code, pre {
+     font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+   }
 }
