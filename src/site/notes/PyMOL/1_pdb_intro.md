@@ -75,10 +75,10 @@ Before looking at the 3D model, it is crucial to understand the experimental dat
     - **Quality Metrics:** Identify the `R` and `FREE R` values (for X-ray) or the `NUMBER OF PARTICLES` (for Cryo-EM).
     - **Chains:** How many molecules/chains does the structure coordinate file contain?
 
-> [!figure] #fig:yourfigurelabel width=100% align=center pos=!ht
-> ![](/img/user/figures/pdb.png)
->
-> PDB file data columns.
+
+![](/img/user/figures/pdb.png)
+
+PDB file data columns.
 
 ---
 
