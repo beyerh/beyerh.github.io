@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Serif+Pro:wght@400;600&family=Inter:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Inter:wght@400;500&display=swap');
 
 body {
     /***
@@ -7,9 +7,9 @@ body {
    ***/
    
    // Modern serif font stack
-   --font-default: 'Source Serif Pro', Georgia, 'Times New Roman', serif;
+   --font-default: 'Lora', Georgia, 'Times New Roman', serif;
    --font-interface: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-   --font-text: 'Playfair Display', Georgia, serif;
+   --font-text: 'Lora', Georgia, serif;
    
    // Apply serif fonts to content
    font-family: var(--font-text);
@@ -20,23 +20,24 @@ body {
      line-height: 1.7;
    }
    
-   // Headers with Playfair Display
+   // Headers with Lora
    h1, h2, h3, h4, h5, h6 {
-     font-family: 'Playfair Display', Georgia, serif;
-     font-weight: 700;
+     font-family: 'Lora', Georgia, serif;
+     font-weight: 600;
      line-height: 1.3;
    }
    
-   h1 { font-size: 2.5rem; }
-   h2 { font-size: 2rem; }
-   h3 { font-size: 1.5rem; }
-   h4 { font-size: 1.25rem; }
-   h5 { font-size: 1.1rem; }
-   h6 { font-size: 1rem; }
+   h1 { font-size: 2.5rem; font-weight: 700; }
+   h2 { font-size: 2rem; font-weight: 600; }
+   h3 { font-size: 1.5rem; font-weight: 600; }
+   h4 { font-size: 1.25rem; font-weight: 500; }
+   h5 { font-size: 1.1rem; font-weight: 500; }
+   h6 { font-size: 1rem; font-weight: 500; }
    
-   // Body text with Source Serif Pro
+   // Body text with Lora
    p, li, td, th {
-     font-family: 'Source Serif Pro', Georgia, serif;
+     font-family: 'Lora', Georgia, serif;
+     font-weight: 400;
    }
    
    // Keep UI elements with Inter (sans-serif)
