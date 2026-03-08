@@ -7,7 +7,7 @@
 
 **Supervisors:** Josepha Grewer, Maria Evangelopoulou, Hannes Beyer
 
-In this experiment, we adapt the naturally occurring protein *cis*- and *trans*-splicing catalyzed by the DnaE intein from *Nostoc punctiforme* (*Npu*DnaE intein) to engineer a synthetic protein logic gate. As previously explained in section 1.1.2, inteins are protein domains with autocatalytic activity that give rise to a reconstituted functional protein after self-excising from the host or precursor protein. Protein splicing can occur either in *cis* (excision of an intein) or in *trans*, leading to the ligation of two individual proteins, each fused to one fragment of a split intein. In Experiment I, we have cloned the bacterial inducible plasmids that we need for this experiment (**[[garden_03-Experiment1#fig:cloning-strategy\|Figure 13]]**):
+In this experiment, we adapt the naturally occurring protein *cis*- and *trans*-splicing catalyzed by the DnaE intein from *Nostoc punctiforme* (*Npu*DnaE intein) to engineer a synthetic protein logic gate. As previously explained in the introduction, inteins are protein domains with autocatalytic activity that give rise to a reconstituted functional protein after self-excising from the host or precursor protein. Protein splicing can occur either in *cis* (excision of an intein) or in *trans*, leading to the ligation of two individual proteins, each fused to one fragment of a split intein. In Experiment I, we have cloned the bacterial inducible plasmids that we need for this experiment (**[[garden_03-Experiment1#fig:cloning-strategy\|Figure 13]]**):
 
 - pDD259: IPTG-inducible promoter guiding the expression of mCherry fluorescent protein hosting a *cis*-splicing intein.
 - pDD262: IPTG-inducible promoter guiding the expression of mCherry fluorescent protein hosting a *cis*-splicing intein with an inactivating mutation of Cys1 to Ala (C1A).
@@ -30,7 +30,7 @@ Questions:
 ![Figure 17](/img/user/figures/inteins_boolean_gates.png)
 <figcaption style="font-size: 0.9em; color: #555; margin-top: 0.5em; line-height: 1.5; font-style: normal; display: block;">
 
-<strong style="color: #333;">Figure 17.</strong> ** Scheme for the protein <em>trans</em>-splicing experiment to design logic gates.
+<strong style="color: #333;">Figure 17.</strong> Scheme for the protein <em>trans</em>-splicing experiment to design logic gates.
 
 </figcaption>
 
