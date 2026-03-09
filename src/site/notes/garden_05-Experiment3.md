@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/garden-05-experiment3/","title":"Experiment 3: Protein Splicing Bacteria"}
+{"dg-publish":true,"permalink":"/garden-05-experiment3/","title":"Experiment : Protein Splicing Bacteria"}
 ---
 
 
@@ -124,6 +124,7 @@ Na<sub>2</sub>HPO<sub>4</sub>, 137 mM NaCl in dH<sub>2</sub>O</td>
 <th>Gr. 7</th>
 <th>Gr. 8</th>
 <th>Gr. 9</th>
+<th>Gr. 10</th>
 </tr>
 </thead>
 <tbody>
@@ -138,6 +139,7 @@ Na<sub>2</sub>HPO<sub>4</sub>, 137 mM NaCl in dH<sub>2</sub>O</td>
 <td>I</td>
 <td>I</td>
 <td>I</td>
+<td>-</td>
 </tr>
 <tr>
 <td>pDD262</td>
@@ -146,9 +148,10 @@ Na<sub>2</sub>HPO<sub>4</sub>, 137 mM NaCl in dH<sub>2</sub>O</td>
 <td>I</td>
 <td>-</td>
 <td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>-</td>
 </tr>
 <tr>
@@ -162,18 +165,20 @@ Na<sub>2</sub>HPO<sub>4</sub>, 137 mM NaCl in dH<sub>2</sub>O</td>
 <td>I/A</td>
 <td>I/A</td>
 <td>I/A</td>
+<td>I/A</td>
 </tr>
 <tr>
 <td>pDD260/261 (alt)</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>I</td>
 <td>I</td>
 <td>A</td>
 <td>A</td>
+<td></td>
 </tr>
 </tbody>
 </table>
