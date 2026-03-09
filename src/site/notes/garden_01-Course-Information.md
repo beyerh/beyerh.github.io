@@ -13,7 +13,7 @@ Benjamin McLean, Cha San Koh, Daniel Wiebensohn, Dominic Schirmer, Josepha Grewe
 
 [Shared Sciebo folder](https://uni-duesseldorf.sciebo.de/s/AQNWFnw45HqJKQe)
 
-[Download Script PDF](https://uni-duesseldorf.sciebo.de/s/QCJQcLzk6qm4qiq)
+[Download Script PDF](https://uni-duesseldorf.sciebo.de/s/b6fFaSjtRPmAt9H)
 
 ## Important Dates
 
