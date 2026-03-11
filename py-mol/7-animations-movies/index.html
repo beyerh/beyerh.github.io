@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-<title>References</title>
+<title>Exercise 7: Animations and Movies</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <script async type="module">import mermaid from"https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs"</script>
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js" integrity="sha512-hpZ5pDCF2bRCweL5WoA0/N1elet1KYL5mx3LP555Eg/0ZguaHawxNvEjF6O3rufAChs16HVNhEc6blF/rZoowQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -98,7 +98,7 @@ CTRL + K
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="filelist">
-<div @click.stop class="notelink"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration:none" class="filename" href="/py-mol/7-animations-movies/">Exercise 7: Animations and Movies </a>
+<div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration:none" class="filename" href="/py-mol/7-animations-movies/">Exercise 7: Animations and Movies </a>
 </div>
 </div>
 </div>
@@ -132,7 +132,7 @@ CTRL + K
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="">
-<div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration:none" class="filename" href="/garden-08-references/">References </a>
+<div @click.stop class="notelink"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration:none" class="filename" href="/garden-08-references/">References </a>
 </div>
 </div>
 </div>
@@ -164,16 +164,79 @@ CTRL + K
 <div class="header-meta">
 </div>
 </header>
-<h1 id="references" tabindex="-1">References</h1>
-<p>Akimzhanov, A.M., and Boehning, D. (2015). Rapid and transient palmitoylation of the tyrosine kinase Lck mediates Fas signaling. Proc. Natl. Acad. Sci. U. S. A. 112, 11876–11880.</p>
-<p>Beyer, H.M., Gonschorek, P., Samodelov, S.L., Meier, M., Weber, W., and Zurbriggen, M.D. (2015). AQUA Cloning: A Versatile and Simple Enzyme-Free Cloning Approach. PLOS ONE 10, e0137652.</p>
-<p>Friedel, K., Popp, M.A., Matern, J.C.J., Gazdag, E.M., Thiel, I.V., Volkmann, G., Blankenfeldt, W., and Mootz, H.D. (2019). A functional interplay between intein and extein sequences in protein splicing compensates for the essential block B histidine. Chem. Sci. 10, 239–251.</p>
-<p>Mátés, L., Chuah, M.K.L., Belay, E., Jerchow, B., Manoj, N., Acosta-Sanchez, A., Grzela, D.P., Schmitt, A., Becker, K., Matrai, J., et al. (2009). Molecular evolution of a novel hyperactive Sleeping Beauty transposase enables robust stable gene transfer in vertebrates. Nat. Genet. 41, 753–761.</p>
-<p>Müller, K., Naumann, S., Weber, W., and Zurbriggen, M.D. (2015). Optogenetics for gene expression in mammalian cells. Biol. Chem. 396, 145–152.</p>
-<p>Randolph LN, Bao X, Zhou C, Lian X. An all-in-one, Tet-On 3G inducible PiggyBac system for human pluripotent stem cells and derivatives. Sci Rep. 2017 May 8;7:1549.</p>
-<p>T. Das A, Tenenbaum L, Berkhout B. Tet-On Systems For Doxycycline-inducible Gene Expression. Current Gene Therapy. 2016 June 1;16(3):156–67.</p>
+<h1 id="py-mol-exercise-6-animations-and-movies" tabindex="-1">PyMOL Exercise 6: Animations and Movies</h1>
+<p>This exercise will teach you how to create simple animations and export movies directly from PyMOL. Animations are an excellent way to visualize structural changes, binding events, or showcase a complex molecule from different angles.</p>
 <hr>
-<p><a class="internal-link" target="" data-note-icon="" href="/garden-07-experiment5/">← Previous</a></p>
+<h2 id="strong-step-1-the-basics-of-py-mol-movie-making-strong" tabindex="-1"><strong>Step 1: The Basics of PyMOL Movie Making</strong></h2>
+<p>Before creating a movie, you need to set the total number of frames. PyMOL uses a frame-based animation system.</p>
+<ol>
+<li>
+<p>Open PyMOL and load a structure, for example: <code>fetch 1mbo</code> (Myoglobin).</p>
+</li>
+<li>
+<p>Set up your initial view (e.g., <code>show cartoon</code>, <code>color cyan</code>).</p>
+</li>
+<li>
+<p>Set the total number of frames to 120 (for a 4-second movie at 30 frames per second):</p>
+<pre><code class="language-pymol">mset 1 x120
+</code></pre>
+<p><em><code>mset</code> stands for movie set. <code>1 x120</code> means state 1 will be duplicated across 120 frames.</em></p>
+</li>
+<li>
+<p>You should now see the movie timeline bar at the bottom of the PyMOL viewer. You can click play to run through the frames (nothing will move yet).</p>
+</li>
+</ol>
+<hr>
+<h2 id="strong-step-2-simple-camera-rotation-y-axis-spin-strong" tabindex="-1"><strong>Step 2: Simple Camera Rotation (Y-axis Spin)</strong></h2>
+<p>The easiest animation is a simple 360-degree rotation of the molecule.</p>
+<ol>
+<li>Tell PyMOL to rotate the camera along the Y-axis over the course of the movie:<pre><code class="language-pymol">util.mroll 1, 120, 1
+</code></pre>
+<em>(This tells PyMOL to roll the camera from frame 1 to 120, completing 1 full rotation).</em></li>
+<li>Press the <strong>Play</strong> button in the bottom right corner to see your molecule spin.</li>
+<li>If you want to clear the movie and start over, type <code>mclear</code>.</li>
+</ol>
+<hr>
+<h2 id="strong-step-3-keyframe-animation-interpolating-views-strong" tabindex="-1"><strong>Step 3: Keyframe Animation (Interpolating Views)</strong></h2>
+<p>For more complex camera movements, you can store specific views (keyframes) at different frames, and PyMOL will automatically calculate the smooth transitions between them.</p>
+<ol>
+<li>Clear any previous movie: <code>mclear</code></li>
+<li>Set up a 90-frame movie: <code>mset 1 x90</code></li>
+<li>Go to <strong>frame 1</strong> by clicking on the timeline or typing <code>frame 1</code>.</li>
+<li>Position your molecule so you see the whole structure. Store this view as a keyframe:<pre><code class="language-pymol">mview store
+</code></pre>
+</li>
+<li>Go to <strong>frame 30</strong> (<code>frame 30</code>). Zoom in on the heme group (<code>zoom resn HEM</code>).</li>
+<li>Store this new view:<pre><code class="language-pymol">mview store
+</code></pre>
+</li>
+<li>Go to <strong>frame 90</strong> (<code>frame 90</code>). Zoom back out to the full structure.</li>
+<li>Store this final view:<pre><code class="language-pymol">mview store
+</code></pre>
+</li>
+<li>Play the movie. PyMOL will smoothly interpolate the camera between your stored views.</li>
+</ol>
+<hr>
+<h2 id="strong-step-4-exporting-the-movie-strong" tabindex="-1"><strong>Step 4: Exporting the Movie</strong></h2>
+<p>Once your animation is ready, you can export it as a video file.</p>
+<ol>
+<li>Set the movie generation quality (ray tracing makes it look better but takes longer):<pre><code class="language-pymol">set ray_trace_frames, 1
+</code></pre>
+<em>(Set to <code>0</code> for a faster, lower-quality export without ray tracing).</em></li>
+<li>Save the movie as an MPEG or MP4 file:<pre><code class="language-pymol">movie.produce my_animation.mp4, quality=90
+</code></pre>
+<em>(Note: Depending on your PyMOL installation, you may need to export as individual PNG frames (<code>mpng frame_</code>) and compile them with a tool like FFmpeg if the direct video export fails).</em></li>
+</ol>
+<hr>
+<h3 id="summary" tabindex="-1">Summary</h3>
+<ol>
+<li>Use <code>mset</code> to define the length of your movie.</li>
+<li>Use <code>util.mroll</code> for quick, automated rotations.</li>
+<li>Use <code>mview store</code> at specific frames to create custom, interpolated camera paths.</li>
+<li>Export the final animation using <code>movie.produce</code>.</li>
+</ol>
+<hr>
+<p><a class="internal-link" target="" data-note-icon="" href="/py-mol/6-scripting/">← Previous</a></p>
 </main>
 <aside>
 <div class="sidebar">
@@ -187,7 +250,21 @@ On this page
 <div class="toc-container">
 <nav class="toc">
 <ol>
-<li><a href="#references">References</a>
+<li><a href="#py-mol-exercise-6-animations-and-movies">PyMOL Exercise 6: Animations and Movies</a>
+<ol>
+<li><a href="#strong-step-1-the-basics-of-py-mol-movie-making-strong">Step 1: The Basics of PyMOL Movie Making</a>
+</li>
+<li><a href="#strong-step-2-simple-camera-rotation-y-axis-spin-strong">Step 2: Simple Camera Rotation (Y-axis Spin)</a>
+</li>
+<li><a href="#strong-step-3-keyframe-animation-interpolating-views-strong">Step 3: Keyframe Animation (Interpolating Views)</a>
+</li>
+<li><a href="#strong-step-4-exporting-the-movie-strong">Step 4: Exporting the Movie</a>
+<ol>
+<li><a href="#summary">Summary</a>
+</li>
+</ol>
+</li>
+</ol>
 </li>
 </ol>
 </nav>

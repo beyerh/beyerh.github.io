@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-<title>References</title>
+<title>Exercise 3: Annotation, Polar Contacts, Figures</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <script async type="module">import mermaid from"https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs"</script>
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js" integrity="sha512-hpZ5pDCF2bRCweL5WoA0/N1elet1KYL5mx3LP555Eg/0ZguaHawxNvEjF6O3rufAChs16HVNhEc6blF/rZoowQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -82,7 +82,7 @@ CTRL + K
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="filelist">
-<div @click.stop class="notelink"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration:none" class="filename" href="/py-mol/3-figures-contacts/">Exercise 3: Annotation, Polar Contacts, Figures </a>
+<div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration:none" class="filename" href="/py-mol/3-figures-contacts/">Exercise 3: Annotation, Polar Contacts, Figures </a>
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="filelist">
@@ -132,7 +132,7 @@ CTRL + K
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="">
-<div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration:none" class="filename" href="/garden-08-references/">References </a>
+<div @click.stop class="notelink"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration:none" class="filename" href="/garden-08-references/">References </a>
 </div>
 </div>
 </div>
@@ -164,16 +164,67 @@ CTRL + K
 <div class="header-meta">
 </div>
 </header>
-<h1 id="references" tabindex="-1">References</h1>
-<p>Akimzhanov, A.M., and Boehning, D. (2015). Rapid and transient palmitoylation of the tyrosine kinase Lck mediates Fas signaling. Proc. Natl. Acad. Sci. U. S. A. 112, 11876–11880.</p>
-<p>Beyer, H.M., Gonschorek, P., Samodelov, S.L., Meier, M., Weber, W., and Zurbriggen, M.D. (2015). AQUA Cloning: A Versatile and Simple Enzyme-Free Cloning Approach. PLOS ONE 10, e0137652.</p>
-<p>Friedel, K., Popp, M.A., Matern, J.C.J., Gazdag, E.M., Thiel, I.V., Volkmann, G., Blankenfeldt, W., and Mootz, H.D. (2019). A functional interplay between intein and extein sequences in protein splicing compensates for the essential block B histidine. Chem. Sci. 10, 239–251.</p>
-<p>Mátés, L., Chuah, M.K.L., Belay, E., Jerchow, B., Manoj, N., Acosta-Sanchez, A., Grzela, D.P., Schmitt, A., Becker, K., Matrai, J., et al. (2009). Molecular evolution of a novel hyperactive Sleeping Beauty transposase enables robust stable gene transfer in vertebrates. Nat. Genet. 41, 753–761.</p>
-<p>Müller, K., Naumann, S., Weber, W., and Zurbriggen, M.D. (2015). Optogenetics for gene expression in mammalian cells. Biol. Chem. 396, 145–152.</p>
-<p>Randolph LN, Bao X, Zhou C, Lian X. An all-in-one, Tet-On 3G inducible PiggyBac system for human pluripotent stem cells and derivatives. Sci Rep. 2017 May 8;7:1549.</p>
-<p>T. Das A, Tenenbaum L, Berkhout B. Tet-On Systems For Doxycycline-inducible Gene Expression. Current Gene Therapy. 2016 June 1;16(3):156–67.</p>
+<h1 id="py-mol-exercise-3-annotation-polar-contacts-and-figures" tabindex="-1">PyMOL Exercise 3: Annotation, Polar Contacts, and Figures</h1>
+<p>This exercise focuses on preparing figures. You will learn how to label atoms, identify hydrogen bonds, and use high-quality rendering (ray tracing).</p>
 <hr>
-<p><a class="internal-link" target="" data-note-icon="" href="/garden-07-experiment5/">← Previous</a></p>
+<h2 id="strong-step-1-annotation-and-labeling-strong" tabindex="-1"><strong>Step 1: Annotation and Labeling</strong></h2>
+<p>Labels are essential for communicating specific details in a structure. Visualize the ligand in <code>1mbo</code> and then add annotations as follows:</p>
+<pre><code class="language-pymol"># Label the iron atom in 1MBO
+label iron, &quot;Fe2+&quot;
+
+# Customize label appearance
+set label_size, 20
+set label_font_id, 7   # Bold font
+set label_color, red
+
+# To hide labels again
+hide labels, all
+</code></pre>
+<hr>
+<h2 id="strong-step-2-visualize-polar-contacts-strong" tabindex="-1"><strong>Step 2: Visualize Polar Contacts</strong></h2>
+<p>Polar contacts (hydrogen bonds and salt bridges) are important forces that stabilize structures.</p>
+<ol>
+<li>Ensure you have the <code>1mbo</code> cartoon and the <strong>heme</strong> sticks visible.</li>
+<li>Go to <strong>Action (A) &gt; find &gt; polar contacts &gt; excluding solvent</strong>.</li>
+<li><strong>Task:</strong> Observe the dashed lines. Which residues in the protein are interacting with the heme group?</li>
+</ol>
+<hr>
+<h2 id="strong-step-3-high-quality-rendering-strong" tabindex="-1"><strong>Step 3: High-Quality Rendering</strong></h2>
+<p>The standard view in PyMOL is optimized for speed. For a publication-quality image, use the <strong>Ray</strong> command.</p>
+<pre><code class="language-pymol"># Prepare the scene
+orient
+zoom 1mbo, 2
+
+# Set quality parameters
+set antialias, 2                   # Smooth edges
+set ray_opaque_background, off     # Transparent background
+set ray_shadows, on                # Add depth with shadows
+set ambient, 0.2                   # Soften lighting
+set specular, off                  # Remove &quot;plastic&quot; highlights
+
+# Render the image (e.g., 1200x900 pixels)
+ray 1200, 900                      # Or better use the Draw/Ray button
+</code></pre>
+<ul>
+<li>After ray tracing, use the <strong>Draw/Ray</strong> button menu to <strong>Save Image as PNG</strong>.</li>
+</ul>
+<hr>
+<h2 id="strong-step-4-advanced-rendering-modes-strong" tabindex="-1"><strong>Step 4: Advanced Rendering Modes</strong></h2>
+<p>PyMOL has special modes to make secondary structure &quot;pop&quot;.</p>
+<pre><code class="language-pymol"># Black outline mode (good for cartoons)
+set ray_trace_mode, 1
+ray
+</code></pre>
+<hr>
+<h3 id="summary" tabindex="-1">Summary</h3>
+<ol>
+<li>Add and customize <strong>text labels</strong> in 3D space.</li>
+<li>Automatically identify and display <strong>polar contacts</strong>.</li>
+<li>Configure <strong>lighting and shadow settings</strong> for better depth.</li>
+<li>Generate and export <strong>high-resolution images</strong> using Ray tracing.</li>
+</ol>
+<hr>
+<p><a class="internal-link" target="" data-note-icon="" href="/py-mol/2-pymol-basics/">← Previous</a> | <a class="internal-link" target="" data-note-icon="" href="/py-mol/4-styling-mutagenesis/">Next →</a></p>
 </main>
 <aside>
 <div class="sidebar">
@@ -187,7 +238,21 @@ On this page
 <div class="toc-container">
 <nav class="toc">
 <ol>
-<li><a href="#references">References</a>
+<li><a href="#py-mol-exercise-3-annotation-polar-contacts-and-figures">PyMOL Exercise 3: Annotation, Polar Contacts, and Figures</a>
+<ol>
+<li><a href="#strong-step-1-annotation-and-labeling-strong">Step 1: Annotation and Labeling</a>
+</li>
+<li><a href="#strong-step-2-visualize-polar-contacts-strong">Step 2: Visualize Polar Contacts</a>
+</li>
+<li><a href="#strong-step-3-high-quality-rendering-strong">Step 3: High-Quality Rendering</a>
+</li>
+<li><a href="#strong-step-4-advanced-rendering-modes-strong">Step 4: Advanced Rendering Modes</a>
+<ol>
+<li><a href="#summary">Summary</a>
+</li>
+</ol>
+</li>
+</ol>
 </li>
 </ol>
 </nav>

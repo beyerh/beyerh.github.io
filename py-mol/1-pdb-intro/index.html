@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-<title>References</title>
+<title>Exercise 1: PyMOL Introduction</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <script async type="module">import mermaid from"https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs"</script>
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js" integrity="sha512-hpZ5pDCF2bRCweL5WoA0/N1elet1KYL5mx3LP555Eg/0ZguaHawxNvEjF6O3rufAChs16HVNhEc6blF/rZoowQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -74,7 +74,7 @@ CTRL + K
 <span class="foldername">PyMOL</span>
 </div>
 <div x-show="isOpen" style="display:none" class="filelist">
-<div @click.stop class="notelink"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration:none" class="filename" href="/py-mol/1-pdb-intro/">Exercise 1: PyMOL Introduction </a>
+<div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration:none" class="filename" href="/py-mol/1-pdb-intro/">Exercise 1: PyMOL Introduction </a>
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="filelist">
@@ -132,7 +132,7 @@ CTRL + K
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="">
-<div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration:none" class="filename" href="/garden-08-references/">References </a>
+<div @click.stop class="notelink"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration:none" class="filename" href="/garden-08-references/">References </a>
 </div>
 </div>
 </div>
@@ -164,16 +164,111 @@ CTRL + K
 <div class="header-meta">
 </div>
 </header>
-<h1 id="references" tabindex="-1">References</h1>
-<p>Akimzhanov, A.M., and Boehning, D. (2015). Rapid and transient palmitoylation of the tyrosine kinase Lck mediates Fas signaling. Proc. Natl. Acad. Sci. U. S. A. 112, 11876–11880.</p>
-<p>Beyer, H.M., Gonschorek, P., Samodelov, S.L., Meier, M., Weber, W., and Zurbriggen, M.D. (2015). AQUA Cloning: A Versatile and Simple Enzyme-Free Cloning Approach. PLOS ONE 10, e0137652.</p>
-<p>Friedel, K., Popp, M.A., Matern, J.C.J., Gazdag, E.M., Thiel, I.V., Volkmann, G., Blankenfeldt, W., and Mootz, H.D. (2019). A functional interplay between intein and extein sequences in protein splicing compensates for the essential block B histidine. Chem. Sci. 10, 239–251.</p>
-<p>Mátés, L., Chuah, M.K.L., Belay, E., Jerchow, B., Manoj, N., Acosta-Sanchez, A., Grzela, D.P., Schmitt, A., Becker, K., Matrai, J., et al. (2009). Molecular evolution of a novel hyperactive Sleeping Beauty transposase enables robust stable gene transfer in vertebrates. Nat. Genet. 41, 753–761.</p>
-<p>Müller, K., Naumann, S., Weber, W., and Zurbriggen, M.D. (2015). Optogenetics for gene expression in mammalian cells. Biol. Chem. 396, 145–152.</p>
-<p>Randolph LN, Bao X, Zhou C, Lian X. An all-in-one, Tet-On 3G inducible PiggyBac system for human pluripotent stem cells and derivatives. Sci Rep. 2017 May 8;7:1549.</p>
-<p>T. Das A, Tenenbaum L, Berkhout B. Tet-On Systems For Doxycycline-inducible Gene Expression. Current Gene Therapy. 2016 June 1;16(3):156–67.</p>
+<h1 id="py-mol-exercise-1-introduction-and-pdb-exploration" tabindex="-1">PyMOL Exercise 1: Introduction and PDB Exploration</h1>
+<h2 id="strong-what-is-py-mol-strong" tabindex="-1"><strong>What is PyMOL?</strong></h2>
+<p><strong>PyMOL</strong> is a powerful, user-sponsored molecular visualization system used for viewing, rendering, and analyzing 3D structures of biological macromolecules such as proteins, DNA, RNA, and small molecules. It is built on an open-source foundation (Python) and is the gold standard for creating publication-quality images and animations in structural biology.</p>
+<h3 id="strong-what-is-py-mol-used-for-strong" tabindex="-1"><strong>What is PyMOL used for?</strong></h3>
+<ul>
+<li><strong>Visualization:</strong> Interactively rotate, zoom, and inspect molecular details.</li>
+<li><strong>Analysis:</strong> Measure distances, identify hydrogen bonds, and analyze surface properties.</li>
+<li><strong>Rendering:</strong> Generate high-resolution, ray-traced images for journals and presentations.</li>
+<li><strong>Scripting:</strong> Automate complex tasks using Python or PyMOL's command language (.pml scripts).</li>
+</ul>
 <hr>
-<p><a class="internal-link" target="" data-note-icon="" href="/garden-07-experiment5/">← Previous</a></p>
+<h2 id="strong-installation-guide-open-source-py-mol-via-miniconda-strong" tabindex="-1"><strong>Installation Guide: Open-Source PyMOL (via Miniconda)</strong></h2>
+<p>Follow these instructions to install the open-source version of PyMOL using the <strong>Miniconda</strong> package manager. This method is the most reliable way to manage dependencies across different operating systems.</p>
+<p>If you do not want to install PyMOL with the Miniconda environment, try the portable versions available on the <a href="https://uni-duesseldorf.sciebo.de/s/AQNWFnw45HqJKQe" target="_blank" class="external-link">Shared Sciebo folder</a>.</p>
+<h3 id="strong-step-1-install-miniconda-strong" tabindex="-1"><strong>Step 1: Install Miniconda</strong></h3>
+<ol>
+<li><strong>Download:</strong> Visit the <a href="https://docs.anaconda.com/miniconda/miniconda-other-installer-links/" target="_blank" class="external-link">Miniconda Download Page</a> and download the installer for your operating system:
+<ul>
+<li><strong>macOS:</strong> Choose the <code>pkg</code> or <code>sh</code> installer (select <code>Apple M1/M2/M3</code> for modern Macs or <code>Intel</code> for older ones).</li>
+<li><strong>Windows:</strong> Choose the <code>Windows 64-bit</code> installer.</li>
+</ul>
+</li>
+<li><strong>Install:</strong> Run the installer and follow the prompts. Do not add Miniconda to your PATH if prompted; you can simply use the &quot;Anaconda Prompt&quot; created after installation.</li>
+</ol>
+<h3 id="strong-step-2-install-py-mol-strong" tabindex="-1"><strong>Step 2: Install PyMOL</strong></h3>
+<p>Open your terminal (macOS) or <strong>Anaconda Prompt</strong> (Windows) and run the following commands:</p>
+<pre><code class="language-bash"># 1. Create a new environment named 'pymol'
+conda create -n pymol
+
+# 2. Activate the environment and install software
+conda activate pymol
+conda install conda-forge::pymol-open-source
+
+# 1.1 for movie support, install also ffmpeg
+conda install -c conda-forge ffmpeg
+
+# 3. Launch PyMOL
+pymol
+</code></pre>
+<h3 id="strong-step-3-launching-py-mol-in-the-future-strong" tabindex="-1"><strong>Step 3: Launching PyMOL in the future</strong></h3>
+<p>Whenever you want to use PyMOL again, simply open your terminal/prompt and type:</p>
+<pre><code class="language-bash">conda activate pymol
+pymol
+</code></pre>
+<p><em>Note: Please bring a computer mouse to the course for efficient navigation!</em></p>
+<hr>
+<h2 id="strong-step-1-visit-the-rcsb-pdb-strong" tabindex="-1"><strong>Step 1: Visit the RCSB PDB</strong></h2>
+<ol>
+<li>Go to <a href="https://www.rcsb.org/" target="_blank" class="external-link">https://www.rcsb.org/</a>.</li>
+<li>Identify one of the <strong>&quot;Molecules of the Month&quot;</strong> on the homepage.</li>
+<li>Note down its <strong>4-digit PDB code</strong> (e.g., <code>1MBO</code>, <code>4HHB</code>).</li>
+</ol>
+<hr>
+<h2 id="strong-step-2-inspect-the-pdb-header-strong" tabindex="-1"><strong>Step 2: Inspect the PDB Header</strong></h2>
+<p>Before looking at the 3D model, it is crucial to understand the experimental data.</p>
+<ol>
+<li>Download the structure coordinate file in <strong>PDB format</strong>.</li>
+<li>Open the file using a <strong>text editor</strong> (e.g., Textadept, Zed).</li>
+<li>Look for the following information in the header:
+<ul>
+<li><strong>Experimental Method:</strong> Was it solved using <code>X-RAY DIFFRACTION</code> or <code>CRYO-ELECTRON MICROSCOPY</code>?</li>
+<li><strong>Resolution:</strong> Identify the high-resolution cutoff (look for <code>RESOLUTION RANGE HIGH</code> or <code>EFFECTIVE RESOLUTION</code> in Ångströms).</li>
+<li><strong>Quality Metrics:</strong> Identify the <code>R</code> and <code>FREE R</code> values (for X-ray) or the <code>NUMBER OF PARTICLES</code> (for Cryo-EM).</li>
+<li><strong>Chains:</strong> How many molecules/chains does the structure coordinate file contain?</li>
+</ul>
+</li>
+</ol>
+<p><img src="/img/user/figures/pdb.png" alt=""></p>
+<p>PDB file data columns.</p>
+<hr>
+<h2 id="strong-step-3-load-into-py-mol-strong" tabindex="-1"><strong>Step 3: Load into PyMOL</strong></h2>
+<p>Now, visualize the structure you just inspected.</p>
+<pre><code class="language-pymol"># Option 1: Load the file you downloaded (or drag &amp; drop)
+load path/to/your/file.pdb
+
+# Option 2: Fetch directly from the PDB (replace xxxx with your code)
+fetch xxxx
+
+# Color by chain to see the individual molecules
+color bychain
+</code></pre>
+<ul>
+<li>If you need to start over:</li>
+</ul>
+<pre><code class="language-pymol"># Delete the current object
+delete xxxx
+
+# Alternatively, reset PyMOL entirely 
+reinitialize
+
+# Reload
+fetch xxxx
+</code></pre>
+<p>In the command line, use the keyboard arrow buttons ↑ and ↓. What happens?</p>
+<p>Your best friend: <a href="https://pymolwiki.org/" target="_blank" class="external-link">https://pymolwiki.org/</a></p>
+<hr>
+<h3 id="summary" tabindex="-1">Summary</h3>
+<ol>
+<li>Navigate the <strong>RCSB PDB</strong> interface.</li>
+<li>Understand the <strong>metadata</strong> contained in a PDB header (Resolution, R-factors).</li>
+<li>Differentiate between <strong>X-ray</strong> and <strong>Cryo-EM</strong> structural data.</li>
+<li>Perform basic <strong>loading and coloring</strong> in PyMOL.</li>
+</ol>
+<hr>
+<p><a class="internal-link" target="" data-note-icon="" href="/py-mol/2-pymol-basics/">Next →</a></p>
 </main>
 <aside>
 <div class="sidebar">
@@ -187,7 +282,35 @@ On this page
 <div class="toc-container">
 <nav class="toc">
 <ol>
-<li><a href="#references">References</a>
+<li><a href="#py-mol-exercise-1-introduction-and-pdb-exploration">PyMOL Exercise 1: Introduction and PDB Exploration</a>
+<ol>
+<li><a href="#strong-what-is-py-mol-strong">What is PyMOL?</a>
+<ol>
+<li><a href="#strong-what-is-py-mol-used-for-strong">What is PyMOL used for?</a>
+</li>
+</ol>
+</li>
+<li><a href="#strong-installation-guide-open-source-py-mol-via-miniconda-strong">Installation Guide: Open-Source PyMOL (via Miniconda)</a>
+<ol>
+<li><a href="#strong-step-1-install-miniconda-strong">Step 1: Install Miniconda</a>
+</li>
+<li><a href="#strong-step-2-install-py-mol-strong">Step 2: Install PyMOL</a>
+</li>
+<li><a href="#strong-step-3-launching-py-mol-in-the-future-strong">Step 3: Launching PyMOL in the future</a>
+</li>
+</ol>
+</li>
+<li><a href="#strong-step-1-visit-the-rcsb-pdb-strong">Step 1: Visit the RCSB PDB</a>
+</li>
+<li><a href="#strong-step-2-inspect-the-pdb-header-strong">Step 2: Inspect the PDB Header</a>
+</li>
+<li><a href="#strong-step-3-load-into-py-mol-strong">Step 3: Load into PyMOL</a>
+<ol>
+<li><a href="#summary">Summary</a>
+</li>
+</ol>
+</li>
+</ol>
 </li>
 </ol>
 </nav>
