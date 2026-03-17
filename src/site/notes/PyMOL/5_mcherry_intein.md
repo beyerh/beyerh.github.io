@@ -71,9 +71,9 @@ Inspect the fluorophore region. Did AlphaFold model it correctly?
 
 ## **Step 5: Challenge - Design a New Intein Insertion**
 
-Use AlphaFold3 to generate a protein structure model with the *Npu*DnaE intein inserted. Retrieve the *Npu*DnaE intein sequence from Benchling and insert it into any of the proteins below (or choose your own target). Choose an appropriate insertion site and modify it if needed. (You can also look for insertion sites in the literature, but here, it is just about practice).
+Use AlphaFold3 to generate a protein structure model with the *Npu*DnaE intein inserted. Retrieve the *Npu*DnaE intein sequence from Benchling and insert it into any of the proteins below (or choose your own target). Choose an appropriate insertion site and modify it if needed (remember the +1 residue insertion site). You can also look for insertion sites in the literature, but here, it is just about practice.
 
-- Streptococcus pyogenes Cas9 nuclease
+- *Streptococcus pyogenes* Cas9 nuclease
 - T7 RNA Polymerase
 - Bacillus amyloliquifaciens Barnase
 - Human Caspase-3

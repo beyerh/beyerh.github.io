@@ -237,7 +237,7 @@ The different plasmids are distributed as follows:
 
 **Even group numbers:** pDD131 and pDD132
 
-Please refer to Experiment I for the transformation protocol. Use 1 µL of the provided plasmid DNA per transformation into one tube of competent *E. coli* TOP10 cells. Spread 50 µL of culture on one LB-Amp plate (asymmetrically, you want to be able to pick a single colony the next day). Incubate the plate overnight at 37°C.
+Please refer to Experiment I for the transformation protocol. Use 1 µL of the provided plasmid DNA per transformation into one tube of competent *E. coli* TOP10 cells. You can shorten the incubation time on ice to 15 min (this is a plasmid retransformation, not a transformation of a cloning mixture). Spread 50 µL of culture on one LB-Amp plate (asymmetrically, you want to be able to pick a single colony the next day). Incubate the plate overnight at 37°C.
 
 #### Day 8: Culture Inoculation
 
@@ -247,8 +247,8 @@ Please refer to Experiment I for the transformation protocol. Use 1 µL of the p
 
 #### Day 9: Culture Harvesting
 
-1.  Harvest 100 mL culture by centrifugation twice for 5 min at 5,000 *xg* at RT in a 50 mL Falcon tube.
-2.  Remove the supernatant (SN).
+1.  Harvest 120 mL culture by centrifugation using one 50 mL Falcon tube. Sequentially spin down 3x 40 mL for 5 min at 5,000 *xg* at RT.
+2.  Discard the supernatant (SN).
 3.  Store the cell pellet at -20°C.
 
 #### Day 10: Plasmid Midiprep
@@ -294,8 +294,8 @@ This step should be performed only by one member of each group to prevent overcr
 12. Determine the number of cells: counted cells/mL * 10 mL (volume) = total cells.
 13. Seed HeLa cells as follows:
 
-- Prepare a cell suspension with a concentration of 60,000 cells/mL (→ *c2)* by dilution with DMEMcomplete medium. Prepare 35 mL (→ *v2)* of cell suspension in order to have enough for all groups. Use a 50 mL Falcon tube. The required dilution volume *v1* can be calculated according to the formula *c1* * *v1* = *c2* * *v2*.
-- Seed 500 µL of cell suspension (containing 30,000 HeLa cells) into each well of a 24-well plate **containing a glass cover slip** (prepared by supervisors in advance). Each group should seed 6 wells into an individual plate.
+- **Each group:** Prepare a cell suspension with a concentration of 60,000 cells/mL (→ *c2)* by dilution with DMEMcomplete medium. Prepare 6 mL (→ *v2)* of cell suspension in order to have more than enough cell suspension for all conditions (see below). Use a 15 mL Falcon tube. The required dilution volume *v1* can be calculated according to the formula *c1* * *v1* = *c2* * *v2*.
+- Seed 500 µL of cell suspension (containing 30,000 HeLa cells) into each well of a 24-well plate **containing a glass cover slip** (prepared by supervisors in advance). Each group should seed 6 wells into an individual plate. Before placing the cell suspension, remove the PBS.
 
 <figure id="tbl:yourtablelabel" class="align-center" style="width: 30%; display: block; margin-left: auto; margin-right: auto">
   <figcaption style="font-size: 0.9em; color: #555; margin-bottom: 0.5em; line-height: 1.5; font-style: normal; display: block;">
@@ -444,18 +444,18 @@ This step should be performed only by one member of each group to prevent overcr
 <tr>
 <td>PEI Mix</td>
 <td>PEI</td>
-<td>8 wells</td>
+<td>12 wells</td>
 <td>-</td>
 <td>2.5 µL</td>
-<td>20 µL</td>
+<td>30 µL</td>
 </tr>
 <tr>
 <td>-</td>
 <td>OptiMEM</td>
-<td>8 wells</td>
+<td>12 wells</td>
 <td>-</td>
 <td>47.5 µL</td>
-<td>380 µL</td>
+<td>570 µL</td>
 </tr>
 </tbody>
 </table>
@@ -528,18 +528,18 @@ This step should be performed only by one member of each group to prevent overcr
 <tr>
 <td>PEI Mix</td>
 <td>PEI</td>
-<td>8 wells</td>
+<td>12 wells</td>
 <td>-</td>
 <td>2.5 µL</td>
-<td>20 µL</td>
+<td>30 µL</td>
 </tr>
 <tr>
 <td>-</td>
 <td>OptiMEM</td>
-<td>8 wells</td>
+<td>12 wells</td>
 <td>-</td>
 <td>47.5 µL</td>
-<td>380 µL</td>
+<td>570 µL</td>
 </tr>
 </tbody>
 </table>
