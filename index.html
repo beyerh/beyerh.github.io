@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-<title>Exercise 5: Modeling mCherry and Intein Splicing</title>
+<title>Course Information</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <script async type="module">import mermaid from"https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs"</script>
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js" integrity="sha512-hpZ5pDCF2bRCweL5WoA0/N1elet1KYL5mx3LP555Eg/0ZguaHawxNvEjF6O3rufAChs16HVNhEc6blF/rZoowQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -90,7 +90,7 @@ CTRL + K
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="filelist">
-<div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration:none" class="filename" href="/py-mol/5-mcherry-intein/">Exercise 5: Modeling mCherry and Intein Splicing </a>
+<div @click.stop class="notelink"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration:none" class="filename" href="/py-mol/5-mcherry-intein/">Exercise 5: Modeling mCherry and Intein Splicing </a>
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="filelist">
@@ -104,7 +104,7 @@ CTRL + K
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="">
-<div @click.stop class="notelink"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration:none" class="filename" href="/">Course Information </a>
+<div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration:none" class="filename" href="/">Course Information </a>
 </div>
 </div>
 <div x-show="isOpen" style="display:none" class="">
@@ -164,79 +164,52 @@ CTRL + K
 <div class="header-meta">
 </div>
 </header>
-<h1 id="py-mol-exercise-4-modeling-m-cherry-and-intein-splicing" tabindex="-1">PyMOL Exercise 4: Modeling mCherry and Intein Splicing</h1>
-<p>This exercise combines experimental structural data with AI-based modeling (AlphaFold3). You will explore the structure of <strong>mCherry</strong>, a fluorescent protein, and model the insertion of the <strong><em>Npu</em>DnaE intein</strong> used in the course.</p>
-<hr>
-<h2 id="strong-step-1-explore-the-m-cherry-chromophore-strong" tabindex="-1"><strong>Step 1: Explore the mCherry Chromophore</strong></h2>
-<ol>
-<li>Search for <strong>mCherry</strong> on the PDB and fetch a structure.</li>
-<li>Identify the <strong>chromophore</strong> (often labeled as <code>CH6</code> or similar HETATM).</li>
-</ol>
-<pre><code class="language-pymol"># Select and visualize the chromophore
-select chromophore, resn CH6
-show sticks, chromophore
-zoom chromophore, 8
-</code></pre>
-<hr>
-<h2 id="strong-step-2-modeling-intein-insertion-with-alpha-fold3-strong" tabindex="-1"><strong>Step 2: modeling Intein Insertion with AlphaFold3</strong></h2>
-<p>In the laboratory course, you used the <strong><em>Npu</em>DnaE intein</strong> inserted into <strong>mCherry</strong>.</p>
-<ol>
-<li>Retrieve the amino acid sequence of your <strong>mCherry-intein construct</strong> (e.g., from Benchling).</li>
-<li>Go to the <a href="https://alphafoldserver.com/" target="_blank" class="external-link">AlphaFold3 Server</a> and run a structure prediction using the sequence of mCherry with intein insertion.</li>
-<li>Download the resulting <code>.cif</code> model.</li>
-</ol>
-<hr>
-<h2 id="strong-step-3-analyze-the-model-in-py-mol-strong" tabindex="-1"><strong>Step 3: Analyze the Model in PyMOL</strong></h2>
-<p>Load your AlphaFold model and compare it to the experimental templates.</p>
-<pre><code class="language-pymol"># Load your AF model
-load your_model_af3.pdb, my_model
-
-# Color the model by modelling confidence (pLDDT)
-# Note: Requires a script like coloraf.py or a manual spectrum
-spectrum b, blue_white_red, my_model, minimum=50, maximum=90
-
-# Or better using a script:
-run https://raw.githubusercontent.com/cbalbin-bio/pymol-color-alphafold/master/coloraf.py
-
-coloraf my_model
-</code></pre>
+<h1 id="course-information" tabindex="-1">Course Information</h1>
+<h2 id="supervisors" tabindex="-1">Supervisors</h2>
+<p>Benjamin McLean, Cha San Koh, Daniel Wiebensohn, Dominic Schirmer, Josepha Grewer, Maria Evangelopoulou, Micail David Müller, Miriam Labusch, Hannes Beyer</p>
+<h2 id="course-links" tabindex="-1">Course Links</h2>
+<p><a href="https://uni-duesseldorf.sciebo.de/s/AQNWFnw45HqJKQe" target="_blank" class="external-link">Shared Sciebo folder</a></p>
+<p><a href="https://uni-duesseldorf.sciebo.de/s/MrenCtxeR9rEaiN" target="_blank" class="external-link">Download Script PDF</a></p>
+<h2 id="important-dates" tabindex="-1">Important Dates</h2>
 <ul>
-<li><strong>plDDT Score:</strong> High confidence (&gt;90) is blue, low confidence (&lt;50) is red. Which parts of your model are flexible?</li>
+<li><strong>Meeting:</strong> March 2, 2026, at 9.00 am in room 26.24.00.084</li>
+<li><strong>Protocol submission deadline (admission for the final exam):</strong> March 23<sup>rd</sup>, end of the day</li>
+<li><strong>Tentative Exam date:</strong> April 1, 2026, at 9.30 am in 26.24.HS.6K</li>
 </ul>
+<h2 id="time-schedule" tabindex="-1">Time Schedule</h2>
+<figure id="fig:schedule-part1" class="align-left" style="width:100%;display:block;margin-right:auto">
+<p><img src="/img/user/figures/schedule_part1.png" alt="Figure 1"></p>
+<figcaption style="font-size:.9em;color:#555;margin-top:.5em;line-height:1.5;font-style:normal;display:block">
+<p><strong style="color:#333">Figure 1.</strong> Time Schedule for the first two weeks of the course.</p>
+</figcaption>
+</figure>
+<figure id="fig:schedule-part2" class="align-left" style="width:100%;display:block;margin-right:auto">
+<p><img src="/img/user/figures/schedule_part2.png" alt="Figure 2"></p>
+<figcaption style="font-size:.9em;color:#555;margin-top:.5em;line-height:1.5;font-style:normal;display:block">
+<p><strong style="color:#333">Figure 2.</strong> Time Schedule for the third week of the course.</p>
+</figcaption>
+</figure>
+<h2 id="notes" tabindex="-1">Notes</h2>
+<p><strong>Welcome to the course.</strong> We are looking forward to the next two weeks together with you and hope that you enjoy the course content.</p>
+<p><strong>Preparation</strong></p>
+<p>To understand and enjoy all parts of this practical course, it is required that you work through the script before you perform the experiments. The background section serves as a basis for understanding the individual experiments and will be complemented by our lecture series. Your preparations also allow you to read up on topics where you would like to know more, or that still seem confusing to you. Take the opportunity to ask as many questions as you would like during the course. All experiments provide ample room for discussion among students and between students and supervisors.</p>
+<p><strong>Protocol</strong></p>
+<p>Keep constant documentation of your work. You will need all the information for your protocol. The final protocol must include all experimental parts, and they must be introduced scientifically. The protocol must further comprise raw and analyzed results, which should be presented in a comprehensive format (e.g., Tables, Figures, Schemes, etc.) with clear labels. Each experiment requires a discussion of the results. When referencing other works, these must be clearly cited.</p>
+<p><strong>Information on protocols</strong></p>
+<p>Keep constant documentation of your work. You will need all the information for your protocol. The final protocol must include all experimental parts, and they must be introduced scientifically.</p>
+<p>The protocol of each part of the experiments should include the following sections:</p>
+<p><strong>1) Goal</strong></p>
+<p>3-10 sentences to describe what you would like to achieve with the experiments.</p>
+<p><strong>2) Method and materials</strong></p>
+<p>Describe suitable approaches you need to perform and reproduce the experiment; materials, including the plasmids, cell types, software, or provided datasets, etc. This part can be brief, as we have detailed lists in the script to which you can refer; however, the differences from the information and protocols outlined in the script must be mentioned.</p>
+<p><strong>3) Procedure and results</strong></p>
+<p>Description of how you have performed the experiments. This part cannot simply refer to the script, as you may modify some of the steps. The results part should show annotated, analyzed data such as labeled gels, plots of measurements including axis titles and error estimates, statistics information, representative images of microscopic data, etc. If any source or dataset was from someone or elsewhere, they should be clearly referenced.</p>
+<p><strong>4) Discussion and conclusion</strong></p>
+<p>The discussion and conclusion parts are based on your analyzed data. Did the result achieve your goals? What have I learned? What went wrong? What should be improved?</p>
+<p><strong>Scope</strong></p>
+<p>Limit the text of each experiment to 1–2 pages (depending on font size and formatting), excluding graphical elements and their captions.</p>
 <hr>
-<h2 id="strong-step-4-measure-distances-and-superimpose-structures-strong" tabindex="-1"><strong>Step 4: Measure Distances and Superimpose Structures</strong></h2>
-<ol>
-<li><strong>Catalytic Residues:</strong> Identify the residues involved in protein splicing at the junctions and highlight them as colored sticks.</li>
-<li><strong>Measure:</strong> Use <strong>Wizard</strong> &gt; <strong>Measuremet</strong> to check the proximity of the nucleophilic atoms.</li>
-<li><strong>Superposition:</strong> Align the AF model to the original mCherry structure.</li>
-</ol>
-<pre><code class="language-pymol"># Align the AF model to the native mCherry or use the (A)ction button
-align my_model, 2H5Q
-</code></pre>
-<p>Inspect the fluorophore region. Did AlphaFold model it correctly?</p>
-<hr>
-<h2 id="strong-step-5-challenge-design-a-new-intein-insertion-strong" tabindex="-1"><strong>Step 5: Challenge - Design a New Intein Insertion</strong></h2>
-<p>Use AlphaFold3 to generate a protein structure model with the <em>Npu</em>DnaE intein inserted. Retrieve the <em>Npu</em>DnaE intein sequence from Benchling and insert it into any of the proteins below (or choose your own target). Choose an appropriate insertion site and modify it if needed (remember the +1 residue insertion site). You can also look for insertion sites in the literature, but here, it is just about practice.</p>
-<ul>
-<li><em>Streptococcus pyogenes</em> Cas9 nuclease</li>
-<li>T7 RNA Polymerase</li>
-<li>Bacillus amyloliquifaciens Barnase</li>
-<li>Human Caspase-3</li>
-<li>An aminoacyl tRNA synthetase (with or without tRNA), e.g. a human asparaginyl-tRNA synthetase</li>
-<li><em>Providencia stuartii Pst</em>I restriction enzyme</li>
-</ul>
-<p><strong>Goal:</strong> Choose a site that likely breaks the protein function when the intein is present, but allows it to restore function after splicing.</p>
-<hr>
-<h3 id="summary" tabindex="-1">Summary</h3>
-<ol>
-<li>Identify and visualize <strong>post-translationally modified chromophores</strong>.</li>
-<li>Integrate <strong>AI-predicted models</strong> into the PyMOL workflow.</li>
-<li>Interpret <strong>confidence scores (pLDDT)</strong> from AlphaFold.</li>
-<li>Perform <strong>structural superposition</strong> to compare models and templates.</li>
-<li>Apply structural knowledge to <strong>protein engineering</strong> (intein insertion).</li>
-</ol>
-<hr>
-<p><a class="internal-link" target="" data-note-icon="" href="/py-mol/4-styling-mutagenesis/">← Previous</a> | <a class="internal-link" target="" data-note-icon="" href="/py-mol/6-scripting/">Next →</a></p>
+<p><a class="internal-link" target="" data-note-icon="" href="/garden-02-background/">Next →</a></p>
 </main>
 <aside>
 <div class="sidebar">
@@ -250,21 +223,17 @@ On this page
 <div class="toc-container">
 <nav class="toc">
 <ol>
-<li><a href="#py-mol-exercise-4-modeling-m-cherry-and-intein-splicing">PyMOL Exercise 4: Modeling mCherry and Intein Splicing</a>
+<li><a href="#course-information">Course Information</a>
 <ol>
-<li><a href="#strong-step-1-explore-the-m-cherry-chromophore-strong">Step 1: Explore the mCherry Chromophore</a>
+<li><a href="#supervisors">Supervisors</a>
 </li>
-<li><a href="#strong-step-2-modeling-intein-insertion-with-alpha-fold3-strong">Step 2: modeling Intein Insertion with AlphaFold3</a>
+<li><a href="#course-links">Course Links</a>
 </li>
-<li><a href="#strong-step-3-analyze-the-model-in-py-mol-strong">Step 3: Analyze the Model in PyMOL</a>
+<li><a href="#important-dates">Important Dates</a>
 </li>
-<li><a href="#strong-step-4-measure-distances-and-superimpose-structures-strong">Step 4: Measure Distances and Superimpose Structures</a>
+<li><a href="#time-schedule">Time Schedule</a>
 </li>
-<li><a href="#strong-step-5-challenge-design-a-new-intein-insertion-strong">Step 5: Challenge - Design a New Intein Insertion</a>
-<ol>
-<li><a href="#summary">Summary</a>
-</li>
-</ol>
+<li><a href="#notes">Notes</a>
 </li>
 </ol>
 </li>
@@ -275,9 +244,6 @@ On this page
 </div>
 </div>
 </aside>
-<script>window.location.hash&&document.getElementById(window.location.hash.slice(1)).classList.add("referred"),window.addEventListener("hashchange",(e=>{const t=e.oldURL.split("#");t[1]&&document.getElementById(t[1]).classList.remove("referred");const n=e.newURL.split("#");n[1]&&document.getElementById(n[1]).classList.add("referred")}),!1);const url_parts=window.location.href.split("#"),url=url_parts[0],referrence=url_parts[1];document.querySelectorAll(".cm-s-obsidian > *[id]").forEach((function(e){e.ondblclick=function(e){const t=url+"#"+e.target.id;navigator.clipboard.writeText(t)}}))</script>
-<script src="https://fastly.jsdelivr.net/npm/luxon@3.2.1/build/global/luxon.min.js"></script>
-<script defer="defer">TIMESTAMP_FORMAT="MMM dd, yyyy h:mm a",document.querySelectorAll(".human-date").forEach((function(e){date=e.getAttribute("data-date")||e.innerText,parsed_date=luxon.DateTime.fromISO(date),null!=parsed_date.invalid&&(parsed_date=luxon.DateTime.fromSQL(date)),null!=parsed_date.invalid&&(parsed_date=luxon.DateTime.fromHTML(date)),e.innerHTML=parsed_date.toFormat(TIMESTAMP_FORMAT)}))</script>
 <script>lucide.createIcons({attrs:{class:["svg-icon"]}})</script>
 <script>!function(){function e(){const e=document.createElement("div");e.id="password-overlay",e.style.cssText="\n      position: fixed;\n      top: 0;\n      left: 0;\n      width: 100%;\n      height: 100%;\n      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);\n      z-index: 999999;\n      display: flex;\n      align-items: center;\n      justify-content: center;\n      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;\n    ";const t=document.createElement("div");t.style.cssText="\n      background: white;\n      padding: 2rem;\n      border-radius: 10px;\n      box-shadow: 0 15px 35px rgba(0,0,0,0.1);\n      width: 100%;\n      max-width: 400px;\n      margin: 1rem;\n    ",t.innerHTML='\n      <div style="text-align: center; margin-bottom: 2rem;">\n        <h1 style="color: #333; margin: 0; font-size: 1.8rem;">M2205</h1>\n        <p style="color: #666; margin: 0.5rem 0 0 0;">Please enter the course password to access materials</p>\n      </div>\n      <div id="error-message" style="background: #fee; color: #c33; padding: 0.75rem; border-radius: 5px; margin-bottom: 1rem; border: 1px solid #fcc; display: none;">\n        Incorrect password. Please try again.\n      </div>\n      <form id="password-form" style="margin: 0;">\n        <div style="margin-bottom: 1.5rem;">\n          <label for="password-input" style="display: block; margin-bottom: 0.5rem; color: #333; font-weight: 500;">Course Password</label>\n          <input type="password" id="password-input" required autofocus style="width: 100%; padding: 0.75rem; border: 2px solid #e1e5e9; border-radius: 5px; font-size: 1rem; transition: border-color 0.3s;">\n        </div>\n        <button type="submit" style="width: 100%; padding: 0.75rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; border-radius: 5px; font-size: 1rem; font-weight: 500; cursor: pointer; transition: transform 0.2s;">\n          Access Course\n        </button>\n      </form>\n    ',e.appendChild(t),document.body.appendChild(e),document.getElementById("password-input").focus(),document.getElementById("password-form").addEventListener("submit",(function(t){t.preventDefault();"M2205-2026"===document.getElementById("password-input").value?(sessionStorage.setItem("digitalGardenAuth","true"),document.body.removeChild(e)):(document.getElementById("error-message").style.display="block",document.getElementById("password-input").value="",document.getElementById("password-input").focus())})),document.getElementById("password-input").addEventListener("focus",(function(){this.style.borderColor="#667eea"})),document.getElementById("password-input").addEventListener("blur",(function(){this.style.borderColor="#e1e5e9"}))}"true"!==sessionStorage.getItem("digitalGardenAuth")&&("loading"===document.readyState?document.addEventListener("DOMContentLoaded",e):e())}()</script>
 </body>
