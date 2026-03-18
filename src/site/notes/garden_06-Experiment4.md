@@ -558,7 +558,8 @@ This step should be performed only by one member of each group to prevent overcr
 9.  Briefly dip the cover slip into water.
 10. Carefully get rid of water droplets with the help of fine tissue.
 11. Place the coverslips with the cells facing down onto the Mowiol droplet. Avoid air bubbles.
-12. Dry slides at 37°C for 30 min.
+12. Dispose the left over PBS in the PFA waste as it might contain residuals.
+13. Dry slides at 37°C for 30 min.
 
 #### Confocal Microscopy
 
